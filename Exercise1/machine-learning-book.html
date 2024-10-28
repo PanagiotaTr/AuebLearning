@@ -57,9 +57,252 @@
         </nav>
     </header>
 
+    <main>
+
+        <h1>Grokking Machine Learning</h1>
+
+        <section> <!-- Πληροφορίες Βιβλίου-->
+
+            <header>
+                <h2>Πληροφορίες σχετικά με το βιβλίο</h2>
+            </header>
+
+            <img source="images/machine-learning-third-book" width="150" height="200">
+
+            <ul>
+                <li><em>Τίτλος: </em>Grokking Machine Learning</li>
+                <li><em>Συντελεστής/ές: </em>Luis G. Serrano</li>
+                <li><em>Έτος έκδοσης: </em> 2021</li>
+                <li><em>Αξιολόγηση: </em><abbr title="4.8">★ ★ ★ ★ ★</abbr></li>
+                <li><em>Πλήθος αξιολογήσεων: </em>25</li>
+            </ul>
+
+        </section>
+
+        <section> <!-- Περιεχόμενα βιβλίου-->
+            <header>
+                <h2>Περιεχόμενα Βιβλίου</h2>
+            </header>
+
+            <table id="chapter-table">
+
+                <caption>Πίνακας Περιεχομένων</caption>
+
+                <tr>
+                    <th>Κεφάλαιο</th>
+                    <th>Τίτλος</th>
+                    <th>Σύνδεσμος</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>What is machine learning? It is common sense, except done by a computer</td>
+                    <td><a href="#chapter1">Κεφάλαιο 1</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Types of machine learning</td>
+                    <td><a href="#chapter2">Κεφάλαιο 2</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Drawing a line close to our points: Linear regression</td>
+                    <td><a href="#chapter3">Κεφάλαιο 3</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Optimizing the training process: Underfitting, overfitting, testing, and regularization</td>
+                    <td><a href="#chapter4">Κεφάλαιο 4</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Using lines to split our points: The perceptron algorithm</td>
+                    <td><a href="#chapter5">Κεφάλαιο 5</a></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>A continuous approach to splitting points: Logistic classifiers</td>
+                    <td><a href="#chapter6">Κεφάλαιο 6</a></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>How do you measure classification models? Accuracy and its friends</td>
+                    <td><a href="#chapter7">Κεφάλαιο 7</a></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Using probability to its maximum: The naive Bayes model</td>
+                    <td><a href="#chapter8">Κεφάλαιο 8</a></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Splitting data by asking questions: Decision trees</td>
+                    <td><a href="#chapter9">Κεφάλαιο 9</a></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Combining building blocks to gain more power: Neural networks</td>
+                    <td><a href="#chapter10">Κεφάλαιο 10</a></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Finding boundaries with style: Support vector machines and the kernel method</td>
+                    <td><a href="#chapter11">Κεφάλαιο 11</a></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Combining models to maximize results: Ensemble learning</td>
+                    <td><a href="#chapter12">Κεφάλαιο 12</a></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Putting it all in practice: A real-life example of data engineering and machine learning</td>
+                    <td><a href="#chapter13">Κεφάλαιο 13</a></td>
+                </tr>
+
+            </table>
 
 
-    
+            <ul>
+                <article id="chapter1">
+                    <h3>What is machine learning? It is common sense, except done by a computer</h3>
+                    <p>Το πρώτο κεφάλαιο εξηγεί τι είναι η μηχανική μάθηση και πώς διαφέρει από τους παραδοσιακούς
+                        αλγόριθμους. Αναλύει τη θεμελιώδη ιδέα της εκπαίδευσης ενός μοντέλου με δεδομένα και εισάγει τα
+                        βασικά προβλήματα που επιλύονται μέσω της μηχανικής μάθησης.</p>
+                    <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+                </article>
+
+                <article id="chapter2">
+                    <h3>Types of machine learning</h3>
+                    <p>Εδώ, ο συγγραφέας επικεντρώνεται στη σημασία της απεικόνισης δεδομένων. Παρουσιάζονται βασικές
+                        τεχνικές και γραφήματα, όπως scatter plots και histograms, τα οποία βοηθούν στην κατανόηση των
+                        δεδομένων πριν την ανάλυση.</p>
+                        <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+                </article>
+
+                <article id="chapter3">
+                    <h3>Drawing a line close to our points: Linear regression</h3>
+                    <p>Αυτό το κεφάλαιο παρουσιάζει την έννοια της γραμμικής παλινδρόμησης (linear regression). Δείχνει
+                        πώς μπορεί να χρησιμοποιηθεί μια ευθεία γραμμή για να προβλέψει τιμές και εξηγεί τη χρήση της
+                        παραμέτρου κλίσης και εκτομής.</p>
+                        <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+                </article>
+
+                <article id="chapter4">
+                    <h3>Optimizing the training process: Underfitting, overfitting, testing, and regularization</h3>
+                    <p>Εδώ εισάγεται η έννοια της ελαχιστοποίησης του σφάλματος με τη χρήση της μεθόδου του gradient
+                        descent. Εξηγείται η σημασία της συνάρτησης κόστους και του τρόπου με τον οποίο μπορούμε να την
+                        ελαχιστοποιήσουμε για να βελτιώσουμε τις προβλέψεις.</p>
+                        <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+                </article>
+
+                <article id="chapter5">
+                    <h3>Using lines to split our points: The perceptron algorithm</h3>
+                    <p></p>
+                    <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+                </article>
+
+                <article id="chapter6">
+                    <h3>A continuous approach to splitting points: Logistic classifiers</h3>
+                    <p></p>
+                    <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+                </article>
+
+                <article id="chapter7">
+                    <h3>How do you measure classification models? Accuracy and its friends</h3>
+                    <p></p>
+                    <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+                </article>
+
+                <article id="chapter8">
+                    <h3>Using probability to its maximum: The naive Bayes model</h3>
+                    <p></p>
+                    <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+                </article>
+
+                <article id="chapter9">
+                    <h3>Splitting data by asking questions: Decision trees</h3>
+                    <p></p>
+                    <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+                </article>
+
+                <article id="chapter10">
+                    <h3>Combining building blocks to gain more power: Neural networks</h3>
+                    <p></p>
+                    <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+                </article>
+
+                <article id="chapter11">
+                    <h3>Finding boundaries with style: Support vector machines and the kernel method</h3>
+                    <p></p>
+                    <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+                </article>
+
+                <article id="chapter12">
+                    <h3>Combining models to maximize results: Ensemble learning</h3>
+                    <p></p>
+                    <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+                </article>
+
+                <article id="chapter13">
+                    <h3>Putting it all in practice: A real-life example of data engineering and machine learning</h3>
+                    <p></p>
+                    <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+                </article>
+
+            </ul>
+
+            <a href="machine-learning.html">Επιστροφή στην υποκατηγορία «Μηχανική Μάθηση»</a>
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+        <div id="upper-footer">
+            <div>
+                <h2>Τα Γραφεία μας</h2>
+                <address>
+                    28ης Οκτωβρίου 76, Αθήνα<br>
+                    Αθήνα, Ελλάδα 10434<br>
+                    Phone: <a href="tel:+302109620030">(+30) 2109620030</a><br>
+                    Email: <a href="mailto:info@aueblearning.com">info@aueblearning.com</a>
+                </address>
+            </div>
+
+            <div>
+                <h2>Όροι & Πολιτικές</h2>
+                <ul>
+                    <li><a href="#">Πολιτική Cookies</a></li>
+                    <li><a href="#">Πολιτική Απορρήτου</a></li>
+                    <li><a href="#">Όροι Χρήσης</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Βρείτε μας</h2>
+                <ul>
+                    <li><a href="https://www.facebook.com/auebgreece" target=”_blank”><img
+                                src="images/facebook.jpg"></a></li>
+                    <li><a href="https://www.instagram.com/aueb.gr" target=”_blank”><img src="images/instagram.png"></a>
+                    </li>
+                    <li><a href="https://x.com/AUEB" target=”_blank”><img src="images/x.png"></a></li>
+                    <li><a href="https://gr.linkedin.com/school/athens-university-of-economics-and-business/"
+                            target=”_blank”><img src="images/linkedin.png"></a></li>
+                </ul>
+            </div>
+
+
+        </div>
+
+        <div id="lower-footer">
+            <p>©Copyright 2024 | Παναγιώτα Τριανταφυλλοπούλου - Γεώργιος Σόρογκας</p>
+        </div>
+
+    </footer>
+
 </body>
 
 
