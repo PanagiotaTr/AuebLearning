@@ -1,3 +1,7 @@
+<!--4. Μια ιστοσελίδα με το πλήρες περιεχόμενο ενός βιβλίου, πχ. macchine-learning-book.html.
+Η πλοήγηση στην ιστοσελίδα θα γίνεται από κατάλληλο σύνδεσμο της αντίστοιχης σελίδας υποκατηγορίας εκπαιδευτικού υλικού 
+(machine-learning.html) .-->
+
 <!DOCTYPE html>
 
 <html>
@@ -13,7 +17,7 @@
     <header>
         <img src="images/aueb-header.png">
         <nav>
-            <img src="images/logo.png"> <!-- Tha mpei to logo tou AUEBLEARNING-->
+            <img src="images/logo.png">
             <ul>
                 <li> <a href="index.html">Αρχική Σελίδα</a></li>
                 <li> <a href="categories.html">Μαθήματα</a>
@@ -59,9 +63,10 @@
 
     <main>
 
-        <h1>Grokking Machine Learning</h1>
+        <h1><cite>Grokking Machine Learning</cite></h1>
 
-        <section> <!-- Πληροφορίες Βιβλίου-->
+        <!-- Πληροφορίες Βιβλίου-->
+        <section>
 
             <header>
                 <h2>Πληροφορίες σχετικά με το βιβλίο</h2>
@@ -77,16 +82,23 @@
                 <li><em>Πλήθος αξιολογήσεων: </em>25</li>
             </ul>
 
+            <p>Το βιβλίο "Grokking Machine Learning" παρουσιάζει αλγορίθμους και τεχνικές μηχανικής μάθησης με τρόπο που
+                μπορεί να κατανοηθεί από οποιονδήποτε, αποφεύγοντας τη σύγχυση της ακαδημαϊκής ορολογίας και παρέχοντας
+                απλές εξηγήσεις που απαιτούν μόνο βασική άλγεβρα. Οι αναγνώστες δημιουργούν ενδιαφέροντα projects με
+                Python, όπως μοντέλα για ανίχνευση spam και αναγνώριση εικόνας, ενώ μαθαίνουν πρακτικές δεξιότητες για
+                καθαρισμό και προετοιμασία δεδομένων.</p>
+
         </section>
 
-        <section> <!-- Περιεχόμενα βιβλίου-->
+        <!-- Περιεχόμενα βιβλίου-->
+        <section>
             <header>
                 <h2>Περιεχόμενα Βιβλίου</h2>
             </header>
 
             <table id="chapter-table">
 
-                <caption>Πίνακας Περιεχομένων</caption>
+                <caption>Πίνακας περιεχομένων με τις ενότητες της διάλεξης</caption>
 
                 <tr>
                     <th>Κεφάλαιο</th>
@@ -161,6 +173,7 @@
 
             </table>
 
+            <!--Κεφάλαιο 1-->
             <article id="chapter1">
                 <h3>1. What is machine learning? It is common sense, except done by a computer</h3>
                 <p>Στο κεφάλαιο αυτό, εισάγεται η έννοια της μηχανικής μάθησης, διευκρινίζοντας ότι δεν είναι τόσο
@@ -176,6 +189,7 @@
                 <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
             </article>
 
+            <!--Κεφάλαιο 2-->
             <article id="chapter2">
                 <h3>2. Types of machine learning</h3>
                 <p>Στο κεφάλαιο αυτό, παρουσιάζονται τρεις διαφορετικοί τύποι μηχανικής μάθησης: η εποπτευόμενη
@@ -193,6 +207,7 @@
                 <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
             </article>
 
+            <!--Κεφάλαιο 3-->
             <article id="chapter3">
                 <h3>3. Drawing a line close to our points: Linear regression</h3>
                 <p>Στο κεφάλαιο αυτό, εισάγεται η έννοια της γραμμικής παλινδρόμησης (linear regression) και η
@@ -210,6 +225,7 @@
                 <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
             </article>
 
+            <!--Κεφάλαιο 4-->
             <article id="chapter4">
                 <h3>4. Optimizing the training process: Underfitting, overfitting, testing, and regularization</h3>
                 <p>Στο κεφάλαιο αυτό, αναλύονται οι έννοιες της υποπροσαρμογής (underfitting) και της υπερπροσαρμογής
@@ -226,6 +242,7 @@
                 <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
             </article>
 
+            <!--Κεφάλαιο 5-->
             <article id="chapter5">
                 <h3>5. Using lines to split our points: The perceptron algorithm</h3>
                 <p>Στο κεφάλαιο αυτό, εξετάζεται η έννοια της κατηγοριοποίησης (classification) στη μηχανική μάθηση,
@@ -243,6 +260,7 @@
                 <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
             </article>
 
+            <!--Κεφάλαιο 6-->
             <article id="chapter6">
                 <h3>6. A continuous approach to splitting points: Logistic classifiers</h3>
                 <p>Στο κεφάλαιο αυτό, εξετάζεται η διαφορά μεταξύ σκληρών (hard) και μαλακών (soft) αναθέσεων στα
@@ -260,6 +278,7 @@
                 <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
             </article>
 
+            <!--Κεφάλαιο 7-->
             <article id="chapter7">
                 <h3>7. How do you measure classification models? Accuracy and its friends</h3>
                 <p>Στο κεφάλαιο αυτό, εξετάζονται οι τύποι λαθών που μπορεί να κάνει ένα μοντέλο, όπως οι ψευδείς
@@ -277,6 +296,7 @@
                 <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
             </article>
 
+            <!--Κεφάλαιο 8-->
             <article id="chapter8">
                 <h3>8. Using probability to its maximum: The naive Bayes model</h3>
                 <p>Στο κεφάλαιο αυτό, εισάγεται το θεώρημα του Bayes και οι έννοιες των εξαρτημένων και ανεξάρτητων
@@ -292,6 +312,7 @@
                 <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
             </article>
 
+            <!--Κεφάλαιο 9-->
             <article id="chapter9">
                 <h3>9. Splitting data by asking questions: Decision trees</h3>
                 <p>Στο κεφάλαιο αυτό, παρουσιάζεται η έννοια του δέντρου απόφασης (decision tree) και η χρήση του για
@@ -308,6 +329,7 @@
                 <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
             </article>
 
+            <!--Κεφάλαιο 10-->
             <article id="chapter10">
                 <h3>10. Combining building blocks to gain more power: Neural networks</h3>
                 <p>Στο κεφάλαιο αυτό, εισάγεται η έννοια του νευρωνικού δικτύου (neural network) και αναλύεται η
@@ -326,6 +348,7 @@
                 <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
             </article>
 
+            <!--Κεφάλαιο 11-->
             <article id="chapter11">
                 <h3>11. Finding boundaries with style: Support vector machines and the kernel method</h3>
                 <p>Στο κεφάλαιο αυτό, παρουσιάζεται η έννοια της μηχανής υποστήριξης διανυσμάτων (support vector
@@ -341,6 +364,7 @@
                 <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
             </article>
 
+            <!--Κεφάλαιο 12-->
             <article id="chapter12">
                 <h3>12. Combining models to maximize results: Ensemble learning</h3>
                 <p>Στο κεφάλαιο αυτό, εξετάζεται η έννοια της συνδυαστικής μάθησης (ensemble learning) και πώς αυτή
@@ -357,6 +381,7 @@
                 <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
             </article>
 
+            <!--Κεφάλαιο 13-->
             <article id="chapter13">
                 <h3>13. Putting it all in practice: A real-life example of data engineering and machine learning</h3>
                 <p>Στο κεφάλαιο αυτό, εστιάζουμε στην καθαριότητα και την προεπεξεργασία των δεδομένων, ώστε να είναι
@@ -371,15 +396,11 @@
                 </figure>
                 <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
             </article>
-
-            <a href="machine-learning.html">Επιστροφή στην υποκατηγορία «Μηχανική Μάθηση»</a>
-
         </section>
 
-
+        <a href="machine-learning.html">Επιστροφή στην υποκατηγορία «Μηχανική Μάθηση»</a>
+        
     </main>
-
-
 
     <footer>
         <div id="upper-footer">

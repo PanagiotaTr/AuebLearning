@@ -1,3 +1,8 @@
+<!--3. Μια σελίδα με λίστα βιβλίων και διαλέξεων για 2 επιλεγμένες υποκατηγορίες 
+(συνολικά 2 ιστοσελίδες, cryptography-cyber-security.html, machine-learning.html). 
+Κάθε σελίδα θα περιλαμβάνει πληροφορίες για μια σειρά βιβλίων και βιντεοσκοπημένων διαλέξεων 
+(τουλάχιστον 3 βιβλία και 3 διαλέξεις) της υποκατηγορίας.-->
+
 <!DOCTYPE html>
 
 <html lang="el">
@@ -13,7 +18,7 @@
     <header>
         <img src="images/aueb-header.png">
         <nav>
-            <img src="images/logo.png"> <!-- Tha mpei to logo tou AUEBLEARNING-->
+            <img src="images/logo.png">
             <ul>
                 <li> <a href="index.html">Αρχική Σελίδα</a></li>
                 <li> <a href="categories.html">Μαθήματα</a>
@@ -57,197 +62,208 @@
         </nav>
     </header>
 
-    <h1>Μηχανική Μάθηση</h1>
+    <main>
+        <h1>Μηχανική Μάθηση</h1>
+        <img src="images/machinelearning.png">
 
-    <section>
-        <h2>Βιβλία</h2>
-
-        <article>
+        <!--Βιβλία-->
+        <section>
             <header>
-                <h3>Machine Learning System Design</h3>
+                <h2>Βιβλία</h2>
             </header>
 
-            <img src="images/machine-learning-first-book.jpg">
+            <!--Πρώτο Βιβλίο στην Μηχανική Μάθηση-->
+            <article>
+                <header>
+                    <h3><cite>Machine Learning System Design</cite></h3>
+                </header>
 
-            <p>
-                Το βιβλίο Machine Learning System Design από τις εκδόσεις Manning επικεντρώνεται στον σχεδιασμό και την
-                ανάπτυξη συστημάτων μηχανικής μάθησης. Παρουσιάζει αρχιτεκτονικές πρακτικές, διαχείριση δεδομένων,
-                ανάπτυξη μοντέλων και στρατηγικές κλιμάκωσης, βοηθώντας τους επαγγελματίες να εφαρμόσουν <abbr
-                    title="Machine Learning">ML</abbr> λύσεις σε
-                πραγματικά περιβάλλοντα.
-            </p>
+                <img src="images/machine-learning-first-book.jpg">
 
-            <ul>
-                <li><em>Συγγραφέας/είς: </em>Valerii Babushkin, Arseny Kravchenko</li>
-                <li><em>Εκδότης: </em>Manning</li>
-                <li><em>Σελίδες: </em>384</li>
-                <li><em>Αξιολόγηση: </em><abbr title="4.6">★ ★ ★ ★ ☆</abbr></li>
-                <li><em>Πλήθος αξιολογήσεων: </em>9</li>
-            </ul>
+                <p>
+                    Το βιβλίο Machine Learning System Design από τις εκδόσεις Manning επικεντρώνεται στον σχεδιασμό και την
+                    ανάπτυξη συστημάτων μηχανικής μάθησης. Παρουσιάζει αρχιτεκτονικές πρακτικές, διαχείριση δεδομένων,
+                    ανάπτυξη μοντέλων και στρατηγικές κλιμάκωσης, βοηθώντας τους επαγγελματίες να εφαρμόσουν <abbr
+                        title="Machine Learning">ML</abbr> λύσεις σε
+                    πραγματικά περιβάλλοντα.
+                </p>
 
-            <p>Περισσότερα για το συγκεκριμένο βιβλίο θα βρείτε <a
-                    href="https://www.manning.com/books/machine-learning-system-design" target="_blank">ΕΔΩ</a></p>
+                <ul>
+                    <li><em>Συγγραφέας/είς: </em>Valerii Babushkin, Arseny Kravchenko</li>
+                    <li><em>Εκδότης: </em>Manning</li>
+                    <li><em>Σελίδες: </em>384</li>
+                    <li><em>Αξιολόγηση: </em><abbr title="4.6">★ ★ ★ ★ ☆</abbr></li>
+                    <li><em>Πλήθος αξιολογήσεων: </em>9</li>
+                </ul>
 
+                <p>Περισσότερα για το συγκεκριμένο βιβλίο θα βρείτε <a
+                        href="https://www.manning.com/books/machine-learning-system-design" target="_blank">ΕΔΩ</a></p>
 
-        </article>
+            </article>
 
-        <article>
+            <!--Δεύτερο Βιβλίο στην Μηχανική Μάθηση-->
+            <article>
+                <header>
+                    <h3><cite>Machine Learning with R, the tidyverse, and mlr</cite></h3>
+                </header>
+
+                <img src="images/machine-learning-second-book.png">
+
+                <p>Το βιβλίο Machine Learning with R, the tidyverse, and mlr είναι ένας πρακτικός οδηγός για την εφαρμογή
+                    τεχνικών μηχανικής μάθησης με τη χρήση του R Studio και του πακέτου mlr. Εστιάζει στην απλοποίηση της
+                    θεωρίας, αποφεύγοντας την περίπλοκη στατιστική και τα δύσκολα μαθηματικά. Μέσα από ξεκάθαρα διαγράμματα
+                    και κατανοητά παραδείγματα, εξηγεί όλες τις βασικές τεχνικές <abbr title="Machine Learning">ML</abbr>.
+                    Σε κάθε κεφάλαιο, ο αναγνώστης εφαρμόζει έναν νέο αλγόριθμο για την επίλυση ενδιαφέροντων προβλημάτων,
+                    όπως η πρόβλεψη επιβίωσης στον Τιτανικό, η φιλτράρισμα ανεπιθύμητων email και η διερεύνηση
+                    δηλητηριασμένου κρασιού.</p>
+
+                <ul>
+                    <li><em>Συγγραφέας/είς: </em>Hefin I. Rhys</li>
+                    <li><em>Εκδότης: </em>Manning</li>
+                    <li><em>Σελίδες: </em>536</li>
+                    <li><em>Αξιολόγηση: </em><abbr title="4.7">★ ★ ★ ★ ★</abbr></li>
+                    <li><em>Πλήθος αξιολογήσεων: </em>9</li>
+                </ul>
+
+                <p>Περισσότερα για το συγκεκριμένο βιβλίο θα βρείτε <a
+                        href="https://www.manning.com/books/machine-learning-with-r-the-tidyverse-and-mlr"
+                        target="_blank">ΕΔΩ</a>
+                </p>
+
+            </article>
+
+            <!--Τρίτο Βιβλίο στην Μηχανική Μάθηση-->
+            <article>
+                <header>
+                    <h3><cite>Grokking Machine Learning</cite></h3>
+                </header>
+
+                <img src="images/machine-learning-third-book.png">
+
+                <p>Το βιβλίο Grokking Machine Learning παρουσιάζει αλγόριθμους και τεχνικές μηχανικής μάθησης με έναν τρόπο
+                    που μπορεί να κατανοήσει ο καθένας. Αποφεύγει την περίπλοκη ακαδημαϊκή ορολογία και προσφέρει σαφείς
+                    εξηγήσεις που απαιτούν μόνο βασική άλγεβρα. Μέσα από το βιβλίο, θα δημιουργήσεις ενδιαφέροντα έργα με
+                    Python, όπως μοντέλα για ανίχνευση ανεπιθύμητης αλληλογραφίας και αναγνώριση εικόνας. Παράλληλα, θα
+                    αποκτήσεις πρακτικές δεξιότητες για τον καθαρισμό και την προετοιμασία δεδομένων.
+                </p>
+
+                <ul>
+                    <li><em>Συγγραφέας/είς: </em>Luis G. Serrano</li>
+                    <li><em>Εκδότης: </em>Manning</li>
+                    <li><em>Σελίδες: </em>512</li>
+                    <li><em>Αξιολόγηση: </em><abbr title="4.8">★ ★ ★ ★ ★</abbr></li>
+                    <li><em>Πλήθος αξιολογήσεων: </em>25</li>
+                </ul>
+
+                <p>Περισσότερα για το συγκεκριμένο βιβλίο θα βρείτε <a href="machine-learning-book.html"
+                        target="_blank">ΕΔΩ</a></p>
+
+            </article>
+        </section>
+
+        <!-------------------------------------------------------------------------------------------------------------------------->
+
+        <!--Διαλέξεις-->
+        <section>
+
             <header>
-                <h3>Machine Learning with R, the tidyverse, and mlr</h3>
+                <h2>Διαλέξεις</h2>
             </header>
 
-            <img src="images/machine-learning-second-book.png">
+            <!--Πρώτη Διάλεξη στην Μηχανική Μάθηση-->
+            <article>
+                <header>
+                    <h3><cite>Machine Learning</cite></h3>
+                </header>
 
-            <p>Το βιβλίο Machine Learning with R, the tidyverse, and mlr είναι ένας πρακτικός οδηγός για την εφαρμογή
-                τεχνικών μηχανικής μάθησης με τη χρήση του R Studio και του πακέτου mlr. Εστιάζει στην απλοποίηση της
-                θεωρίας, αποφεύγοντας την περίπλοκη στατιστική και τα δύσκολα μαθηματικά. Μέσα από ξεκάθαρα διαγράμματα
-                και κατανοητά παραδείγματα, εξηγεί όλες τις βασικές τεχνικές <abbr title="Machine Learning">ML</abbr>.
-                Σε κάθε κεφάλαιο, ο αναγνώστης εφαρμόζει έναν νέο αλγόριθμο για την επίλυση ενδιαφέροντων προβλημάτων,
-                όπως η πρόβλεψη επιβίωσης στον Τιτανικό, η φιλτράρισμα ανεπιθύμητων email και η διερεύνηση
-                δηλητηριασμένου κρασιού.</p>
+                <img src="images/machinelearninglecture.png">
 
-            <ul>
-                <li><em>Συγγραφέας/είς: </em>Hefin I. Rhys</li>
-                <li><em>Εκδότης: </em>Manning</li>
-                <li><em>Σελίδες: </em>536</li>
-                <li><em>Αξιολόγηση: </em><abbr title="4.7">★ ★ ★ ★ ★</abbr></li>
-                <li><em>Πλήθος αξιολογήσεων: </em>9</li>
-            </ul>
+                <p>Αυτό το μάθημα με εισηγητή τον Andrew Ng παρέχει μια συνολική εισαγωγή στη μηχανική μάθηση και την
+                    ανάλυση στατιστικών δεδομένων. Καλύπτει βασικές έννοιες, όπως η επιβλεπόμενη μάθηση (μεθοδολογίες όπως
+                    γενετική και διακριτική μάθηση, παραμετρική και μη παραμετρική προσέγγιση, νευρωνικά δίκτυα και μηχανές
+                    διανυσμάτων υποστήριξης) και η μη επιβλεπόμενη μάθηση (όπως ομαδοποίηση, μείωση διαστάσεων και πυρηνικές
+                    μέθοδοι). Εξετάζει, επίσης, τη θεωρία μάθησης (με έμφαση στο συμβιβασμό μεταξύ προκατάληψης και
+                    διακύμανσης και πρακτικές συμβουλές), καθώς και την ενισχυτική μάθηση και τον προσαρμοστικό έλεγχο.
+                    Επιπλέον, το μάθημα καλύπτει σύγχρονες εφαρμογές της μηχανικής μάθησης σε τομείς όπως ο έλεγχος
+                    ρομποτικών συστημάτων, η εξόρυξη δεδομένων, η αυτόνομη πλοήγηση, η βιοπληροφορική, η αναγνώριση ομιλίας
+                    και η επεξεργασία δεδομένων κειμένου και διαδικτύου.
+                </p>
 
-            <p>Περισσότερα για το συγκεκριμένο βιβλίο θα βρείτε <a
-                    href="https://www.manning.com/books/machine-learning-with-r-the-tidyverse-and-mlr" target="_blank">ΕΔΩ</a>
-            </p>
+                <ul>
+                    <li><em>Συντελεστής/ές: </em>Andrew Ng</li>
+                    <li><em>Διανομή: </em>Stanford CS229</li>
+                    <li><em>Συνολική Διάρκεια: </em>20 Ώρες</li>
+                    <li><em>Αξιολόγηση: </em><abbr title="4.0">★ ★ ★ ★ </abbr></li>
+                    <li><em>Πλήθος αξιολογήσεων: </em>40</li>
+                </ul>
 
+                <p>Περισσότερα για το συγκεκριμένη διάλεξη θα βρείτε <a href="machine-learning-lecture.html"
+                        target="_blank">ΕΔΩ</a></p>
 
-        </article>
+            </article>
 
-        <article>
-            <header>
-                <h3>Grokking Machine Learning</h3>
-            </header>
+            <!--Δεύτερη Διάλεξη στην Μηχανική Μάθηση-->
+            <article>
+                <header>
+                    <h3><cite>Machine Learning for Mere Mortals</cite></h3>
+                </header>
 
-            <img src="images/machine-learning-third-book.png">
+                <img src="images/machine-learning-second-lec.png">
 
-            <p>Το βιβλίο Grokking Machine Learning παρουσιάζει αλγόριθμους και τεχνικές μηχανικής μάθησης με έναν τρόπο
-                που μπορεί να κατανοήσει ο καθένας. Αποφεύγει την περίπλοκη ακαδημαϊκή ορολογία και προσφέρει σαφείς
-                εξηγήσεις που απαιτούν μόνο βασική άλγεβρα. Μέσα από το βιβλίο, θα δημιουργήσεις ενδιαφέροντα έργα με
-                Python, όπως μοντέλα για ανίχνευση ανεπιθύμητης αλληλογραφίας και αναγνώριση εικόνας. Παράλληλα, θα
-                αποκτήσεις πρακτικές δεξιότητες για τον καθαρισμό και την προετοιμασία δεδομένων.
-            </p>
+                <p>Ο συγγραφέας Nick Chase φέρνει την εμπειρία του από τη συγγραφή εκατοντάδων άρθρων και
+                    εκπαιδευτικών οδηγών στον κόσμο των βίντεο, καθοδηγώντας σε προσεκτικά σε κάθε πτυχή της μηχανικής
+                    μάθησης που πρέπει να γνωρίζεις. Αναλύει βασικές έννοιες και όρους, ώστε να μπορείς να συζητήσεις το
+                    θέμα αυτό με άλλους στον χώρο της μηχανικής μάθησης χρησιμοποιώντας τη δική τους γλώσσα. Με αυτό το
+                    εκπαιδευτικό βίντεο και με τον Nick στο πλευρό σου, θα είσαι πλήρως έτοιμος να αναπτύξεις τις δικές σου
+                    εφαρμογές μηχανικής μάθησης και να εξάγεις πραγματικές, χρήσιμες πληροφορίες από τα δεδομένα σου.
+                </p>
 
-            <ul>
-                <li><em>Συγγραφέας/είς: </em>Luis G. Serrano</li>
-                <li><em>Εκδότης: </em>Manning</li>
-                <li><em>Σελίδες: </em>512</li>
-                <li><em>Αξιολόγηση: </em><abbr title="4.8">★ ★ ★ ★ ★</abbr></li>
-                <li><em>Πλήθος αξιολογήσεων: </em>25</li>
-            </ul>
+                <ul>
+                    <li><em>Συντελεστής/ές: </em>Nick Chase</li>
+                    <li><em>Διανομή: </em>Manning</li>
+                    <li><em>Συνολική Διάρκεια: </em>11 Ώρες</li>
+                    <li><em>Αξιολόγηση: </em><abbr title="3.4">★ ★ ★ ☆ </abbr></li>
+                    <li><em>Πλήθος αξιολογήσεων: </em>5</li>
+                </ul>
 
-            <p>Περισσότερα για το συγκεκριμένο βιβλίο θα βρείτε <a
-                    href="machine-learning-book.html" target="_blank">ΕΔΩ</a></p>
+                <p>Περισσότερα για το συγκεκριμένη διάλεξη θα βρείτε <a
+                        href="https://www.manning.com/livevideo/machine-learning-for-mere-mortals" target="_blank">ΕΔΩ</a>
+                </p>
 
+            </article>
 
-        </article>
+            <!--Τρίτη Διάλεξη στην Μηχανική Μάθηση-->
+            <article>
+                <header>
+                    <h3><cite>Python for Data Science and Machine Learning: Zero to Hero</cite></h3>
+                </header>
 
-    </section>
+                <img src="images/machine-learning-third-lec.png">
 
-    <section>
+                <p>Το μάθημα Python for Data Science and Machine Learning: Zero to Hero από τις Εκδόσεις Manning απευθύνεται
+                    σε αρχάριους και προσφέρει μια ολοκληρωμένη εισαγωγή στον προγραμματισμό Python για εφαρμογές επιστήμης
+                    δεδομένων και μηχανικής μάθησης. Οι συμμετέχοντες θα μάθουν βασικές βιβλιοθήκες όπως οι Pandas, NumPy
+                    και Matplotlib, αποκτώντας πρακτική εμπειρία μέσω έργων. Σκοπός του μαθήματος είναι να εξοπλίσει τους
+                    μαθητές με τις απαραίτητες δεξιότητες για την ανάλυση δεδομένων και την ανάπτυξη μοντέλων μηχανικής
+                    μάθησης.
+                </p>
 
-        <header>
-            <h2>Διαλέξεις</h2>
-        </header>
+                <ul>
+                    <li><em>Συντελεστής/ές: </em>Meta Brains</li>
+                    <li><em>Διανομή: </em>Manning</li>
+                    <li><em>Συνολική Διάρκεια: </em>10 Ώρες</li>
+                    <li><em>Αξιολόγηση: </em><abbr title="4.5">★ ★ ★ ★ ☆ </abbr></li>
+                    <li><em>Πλήθος αξιολογήσεων: </em>13</li>
+                </ul>
 
-        <article>
-            <header>
-                <h3>Machine Learning, Data Science and Deep Learning with Python</h3>
-            </header>
+                <p>Περισσότερα για το συγκεκριμένη διάλεξη θα βρείτε <a
+                        href="https://www.manning.com/livevideo/python-for-data-science-and-machine-learning-zero-to-hero"
+                        target="_blank">ΕΔΩ</a>
+                </p>
 
-            <img src="images/machine-learning-first-lec.png">
-
-            <p>Το βιβλίο Machine Learning, Data Science and Deep Learning with Python καλύπτει τεχνικές μηχανικής
-                μάθησης, TensorFlow, τεχνητή νοημοσύνη και νευρωνικά δίκτυα —δεξιότητες που είναι περιζήτητες από
-                τις μεγαλύτερες τεχνολογικές εταιρείες. Με παραδείγματα γραμμένα σε κατανοητό κώδικα Python, προσφέρει
-                έναν ολοκληρωμένο, πρακτικό οδηγό για την επιστήμη δεδομένων. Διδάσκει τεχνικές που χρησιμοποιούν οι
-                πραγματικοί επιστήμονες δεδομένων και σε προετοιμάζει για να ακολουθήσεις μια καριέρα σε αυτόν τον
-                ανερχόμενο τομέα.
-            </p>
-
-            <ul>
-                <li><em>Συντελεστής/ές: </em>Frank Kane</li>
-                <li><em>Διανομή: </em>Manning</li>
-                <li><em>Διάρκεια: </em>10 Ώρες</li>
-                <li><em>Αξιολόγηση: </em><abbr title="4.0">★ ★ ★ ★ </abbr></li>
-                <li><em>Πλήθος αξιολογήσεων: </em>2</li>
-            </ul>
-
-            <p>Περισσότερα για το συγκεκριμένη διάλεξη θα βρείτε <a href="machine-learning-lecture.html" target="_blank">ΕΔΩ</a></p>
-
-
-        </article>
-
-        <article>
-            <header>
-                <h3>Machine Learning for Mere Mortals</h3>
-            </header>
-
-            <img src="images/machine-learning-second-lec.png">
-
-            <p>Ο συγγραφέας Nick Chase φέρνει την εμπειρία του από τη συγγραφή εκατοντάδων άρθρων και
-                εκπαιδευτικών οδηγών στον κόσμο των βίντεο, καθοδηγώντας σε προσεκτικά σε κάθε πτυχή της μηχανικής
-                μάθησης που πρέπει να γνωρίζεις. Αναλύει βασικές έννοιες και όρους, ώστε να μπορείς να συζητήσεις το
-                θέμα αυτό με άλλους στον χώρο της μηχανικής μάθησης χρησιμοποιώντας τη δική τους γλώσσα. Με αυτό το
-                εκπαιδευτικό βίντεο και με τον Nick στο πλευρό σου, θα είσαι πλήρως έτοιμος να αναπτύξεις τις δικές σου
-                εφαρμογές μηχανικής μάθησης και να εξάγεις πραγματικές, χρήσιμες πληροφορίες από τα δεδομένα σου.
-            </p>
-
-            <ul>
-                <li><em>Συντελεστής/ές: </em>Nick Chase</li>
-                <li><em>Διανομή: </em>Manning</li>
-                <li><em>Διάρκεια: </em>11 Ώρες</li>
-                <li><em>Αξιολόγηση: </em><abbr title="3.4">★ ★ ★ ☆ </abbr></li>
-                <li><em>Πλήθος αξιολογήσεων: </em>5</li>
-            </ul>
-
-            <p>Περισσότερα για το συγκεκριμένη διάλεξη θα βρείτε <a
-                    href="https://www.manning.com/livevideo/machine-learning-for-mere-mortals" target="_blank">ΕΔΩ</a>
-            </p>
-
-
-        </article>
-
-        <article>
-            <header>
-                <h3>Python for Data Science and Machine Learning: Zero to Hero</h3>
-            </header>
-
-            <img src="images/machine-learning-third-lec.png">
-
-            <p>Το μάθημα Python for Data Science and Machine Learning: Zero to Hero από τις Εκδόσεις Manning απευθύνεται
-                σε αρχάριους και προσφέρει μια ολοκληρωμένη εισαγωγή στον προγραμματισμό Python για εφαρμογές επιστήμης
-                δεδομένων και μηχανικής μάθησης. Οι συμμετέχοντες θα μάθουν βασικές βιβλιοθήκες όπως οι Pandas, NumPy
-                και Matplotlib, αποκτώντας πρακτική εμπειρία μέσω έργων. Σκοπός του μαθήματος είναι να εξοπλίσει τους
-                μαθητές με τις απαραίτητες δεξιότητες για την ανάλυση δεδομένων και την ανάπτυξη μοντέλων μηχανικής
-                μάθησης.
-            </p>
-
-            <ul>
-                <li><em>Συντελεστής/ές: </em>Meta Brains</li>
-                <li><em>Διανομή: </em>Manning</li>
-                <li><em>Διάρκεια: </em>10 Ώρες</li>
-                <li><em>Αξιολόγηση: </em><abbr title="4.5">★ ★ ★ ★ ☆ </abbr></li>
-                <li><em>Πλήθος αξιολογήσεων: </em>13</li>
-            </ul>
-
-            <p>Περισσότερα για το συγκεκριμένη διάλεξη θα βρείτε <a
-                    href="https://www.manning.com/livevideo/python-for-data-science-and-machine-learning-zero-to-hero" target="_blank">ΕΔΩ</a>
-            </p>
-
-
-        </article>
-
-
-    </section>
-
+            </article>
+        </section>
+    </main>
 
     <footer>
         <div id="upper-footer">
