@@ -1,6 +1,15 @@
+:root {
+    --primary-color: #74282b;
+}
+
 body{
     margin: 0em;
-    font-family: 'Roboto';
+    font-family: serif;
+}
+
+h1{
+    color :var(--primary-color);
+    font-family: 'Roboto', sans-serif;
 }
 
 #aueb-header  > img{
@@ -13,25 +22,32 @@ body{
 
 nav > img{
     float: left;
-    height: 5em;
-    width: 5em;
+    height: 4em;
+    width: 4em;
     border: 2px solid rgb(89, 12, 6);
+    margin: 0px;
 }
 
 .nav-style{
     background-color: rgb(255, 255, 255);
+    margin: 0px;
 }
 
-.nav-content  a{
+.nav-content a {
     color: white;
-    padding: 14px 16px;
+    padding: 20px 25px;
     text-decoration: none;
 }
 
 .nav-style li{
     list-style-type: none;
     background-color: rgb(89, 12, 6);
-    border: 1px solid white;
-    line-height: 2em;
-    width: 15em;
+    border: 2px solid white;
+    line-height: 4em;
+    width: 20em;
+}
+
+.site-img-header > img{
+    height: 12em;
+    width: 25em;
 }
