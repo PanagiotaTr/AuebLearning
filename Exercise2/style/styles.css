@@ -1,0 +1,25 @@
+#aueb-header  > img{
+    background: linear-gradient(to left, rgb(255, 255, 255), rgb(89, 12, 6));
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100px;
+}
+
+.nav-style{
+    background-color: rgb(255, 255, 255);
+}
+
+.nav-content  a{
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-style li{
+    list-style-type: none;
+    background-color: rgb(89, 12, 6);
+    border: 1px solid white;
+    line-height: 2em;
+    width: 15em;
+    margin: 0px;
+}
