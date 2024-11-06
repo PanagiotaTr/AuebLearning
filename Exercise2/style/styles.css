@@ -1,8 +1,21 @@
+body{
+    margin: 0em;
+    font-family: 'Roboto';
+}
+
 #aueb-header  > img{
     background: linear-gradient(to left, rgb(255, 255, 255), rgb(89, 12, 6));
     background-position: center;
     background-repeat: no-repeat;
-    height: 100px;
+    padding: 0.5em;
+    clear: both;
+}
+
+nav > img{
+    float: left;
+    height: 5em;
+    width: 5em;
+    border: 2px solid rgb(89, 12, 6);
 }
 
 .nav-style{
@@ -21,5 +34,4 @@
     border: 1px solid white;
     line-height: 2em;
     width: 15em;
-    margin: 0px;
 }
