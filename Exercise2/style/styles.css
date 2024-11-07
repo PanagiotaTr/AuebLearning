@@ -28,6 +28,10 @@ nav > img{
     margin: 0px;
 }
 
+nav > ul{
+    padding: 0px;
+}
+
 .nav-style{
     background-color: rgb(255, 255, 255);
     margin: 0px;
@@ -50,4 +54,86 @@ nav > img{
 .site-img-header > img{
     height: 12em;
     width: 25em;
+}
+
+.site-img-header + p{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+footer {
+    background-color: #590c06;
+    color: #fffbfb;
+    clear: both;
+}
+
+#upper-footer {
+    margin: 0px;
+    padding: 0px;
+    height: 150px;
+}
+
+#office-info{
+    float: left;
+}
+
+footer h2{
+    font-size: 1.3em;
+    margin-bottom: 0px;
+    color: #e0e0e0;
+    margin: 0px;
+}
+
+#upper-footer h2 + address{
+    padding: 10px 0px;
+    font-size: 1em;
+}
+
+#upper-footer  a {
+    font-size: 1em;
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+#policies{
+    float: left;
+    text-align: center;
+    padding-left: 5px;
+}
+
+footer  ul{
+    padding: 0px 0px;
+    list-style-type: none;
+    margin: 0px;
+    text-align: center;
+}
+
+#policies a {
+    font-size: 1em;
+    width: 150px;
+    height: 100px;
+    color: #e0e0e0;
+    margin: 0px;
+}
+
+#social-links {
+    float: left;
+    padding-left: 15px;
+}
+
+#social-links img{
+    height: 20px;
+    width: 20px;
+}
+
+#lower-footer{
+    height: 30px;
+}
+
+#social-links img:hover{
+    transform: scale(1.2);
+}
+
+#upper-footer a:hover{
+    font-weight: bold;
 }
