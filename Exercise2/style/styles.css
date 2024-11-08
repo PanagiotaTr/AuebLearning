@@ -137,3 +137,52 @@ footer  ul{
 #upper-footer a:hover{
     font-weight: bold;
 }
+
+/* --------------- My work from here ------------------------- */
+
+#books h2, #lectures h2 {
+    color: var(--primary-color);
+    font-size: x-large;
+    font-family: 'Roboto',sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    padding: 0em;
+}
+
+.information{
+    margin: 4em 0.5em;
+    background-color: var(--primary-color);
+    border-radius: 2rem;
+    padding: 1em;
+    font-size: 10pt;
+    overflow: hidden;
+}
+
+.information h3{
+    color: white;
+    font-size: large;
+    font-family: 'Roboto',sans-serif;
+    text-align: center;
+}
+
+.information img{
+    float: left;
+    width: 12em;
+    height: 15em;
+    padding: 0.5em;
+}
+
+.information ul em{
+    font-weight: bold;
+    font-size: 11pt;
+}
+
+.information > p ~ p{
+    font-size: 11pt;
+    text-align: center;
+}
+
+.information > p ~ p a{
+    text-decoration: none;
+    color: black;
+}
