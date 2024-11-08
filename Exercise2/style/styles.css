@@ -262,3 +262,127 @@ footer  ul{
     background-color: rgb(0, 255, 102);
 }
 
+#info-book{
+    height: 700px;
+}
+
+#info-book > img{
+    height: 600px;
+    width: 450px;
+    border: 2px solid black;
+    float: left;
+    margin-bottom: 50px;
+}
+
+.info-box {
+    border: 1px solid black;
+    background-color: #f9f9f9;
+    padding: 15px;             
+    border-radius: 5px;         
+    margin: 10px;     
+    font-size: large; 
+    float: left;
+    margin-bottom: 40px;
+}
+
+.info-box > ul{
+    font-size:x-large;
+    text-align: center;
+    color: rgb(232, 19, 19);
+    list-style-type: none;
+    padding: 30px;
+}
+
+.info-box li{
+    line-height: 1.5em;
+}
+
+#chapter-table {
+    width: 100%;                    
+    border-collapse: collapse;      
+    margin-top: 20px;          
+}
+
+#chapter-table caption {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333333; 
+    caption-side: bottom;      
+    text-align: center;        
+}
+
+#chapter-table th,
+#chapter-table td {
+    padding: 12px 15px;          
+    text-align: left;        
+}
+
+#chapter-table td:first-child {
+    text-align: center;          
+    color: var(--primary-color);  
+    font-weight: bold;        
+}
+
+#chapter-table th {
+    background-color: var(--primary-color);;      
+    color: white;                   
+    font-weight: bold;
+}
+
+#chapter-table tr:nth-child(even) {
+    background-color: #f2f2f2;      
+}
+
+#chapter-table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+#chapter-table td a {
+    color: var(--primary-color);              
+    text-decoration: none;     
+    font-weight: bold;
+}
+
+#chapter-table td a:hover {
+    color: var(--primary-color);               
+    text-decoration: underline;
+}
+
+#chapter-table th, #chapter-table td {
+    border: 1px solid #dddddd;      
+}
+
+figure{
+    text-align: center;
+    font-style: italic;
+}
+
+table ~ article img{ /*μπορεί να το αλλάξω όταν πάω στην διάλεξη - images*/
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+table ~ article  a, #info-book ~ a{
+    color: var(--primary-color); 
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: underline;
+    font-size: large;
+}
+
+table ~ article  a:hover, #info-book ~ a:hover {
+    color: black; 
+    font-weight: bold;
+}
+
+
+table ~ article > h3{
+    color: var(--primary-color); 
+    font-size: large;
+    font-family: 'Roboto',sans-serif;
+    margin-top: 30px;
+}
