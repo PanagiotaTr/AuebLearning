@@ -39,8 +39,8 @@ nav > ul{
 
 .nav-content a {
     color: white;
-    padding: 20px 25px;
     text-decoration: none;
+    font-size: small;
 }
 
 .nav-style li{
@@ -48,7 +48,9 @@ nav > ul{
     background-color: rgb(89, 12, 6);
     border: 2px solid white;
     line-height: 4em;
-    width: 20em;
+    width: 12em;
+    text-align: center;
+    font-weight: bold;
 }
 
 .site-img-header > img{
@@ -65,6 +67,7 @@ footer {
     background-color: #590c06;
     color: #fffbfb;
     clear: both;
+    margin-top: 100px;
 }
 
 #upper-footer {
@@ -186,3 +189,75 @@ footer  ul{
     text-decoration: none;
     color: black;
 }
+
+/*categories css*/
+
+#title h2{
+    color: white;
+    font-size: x-large;
+    font-family: 'Roboto',sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    padding: 0em;
+}
+
+#title > h1{
+    text-align: center;
+}
+
+.articlebox{
+    float: left;
+    width: 450px;
+    margin: 20px;
+}
+
+.articlebox > img{
+    width: 435px;
+    height: 250px;
+}
+
+.articlebox li{
+    list-style-type: none;
+    font-size: 1em;
+    display: inline-block;  
+    padding: 9px 15px;          
+    margin: 5px;           
+    background-color: lightgray;
+    color: white;           
+    border-radius: 8px; 
+    font-weight: bold;
+    text-align: center;
+}
+
+.articlebox ul li:nth-child(1) {
+    background-color: red;
+}
+
+.articlebox ul li:nth-child(2) {
+    background-color: rgb(255, 0, 187);
+}
+
+.articlebox ul li:nth-child(3) {
+    background-color: rgb(79, 214, 79);
+}
+
+.articlebox ul li:nth-child(4) {
+    background-color: rgb(249, 252, 80);
+}
+
+.articlebox li:nth-of-type(3){
+    color:rgb(20, 14, 5);
+}
+
+.changecolorbox article:first-of-type{
+    background-color: rgb(0, 179, 255);
+}
+
+.changecolorbox article:nth-of-type(3) {
+    background-color: rgb(255, 162, 0);
+}
+
+.changecolorbox article:last-of-type {
+    background-color: rgb(0, 255, 102);
+}
+
