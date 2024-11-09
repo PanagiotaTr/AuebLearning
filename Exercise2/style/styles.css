@@ -353,6 +353,12 @@ footer  ul{
     border: 1px solid #dddddd;      
 }
 
+#chapter-table > thead > tr:first-child th{
+    background-color: white;
+    color: var(--primary-color);   
+    text-align: center;
+}
+
 figure{
     text-align: center;
     font-style: italic;
@@ -360,7 +366,7 @@ figure{
 
 table ~ article img{ /*μπορεί να το αλλάξω όταν πάω στην διάλεξη - images*/
     width: 400px;
-    height: 200px;
+    height: 230px;
     border: 1px solid black;
 }
 
@@ -385,4 +391,41 @@ table ~ article > h3{
     font-size: large;
     font-family: 'Roboto',sans-serif;
     margin-top: 30px;
+}
+
+.makeh1header h1 {
+    text-align: center;
+    font-size:30px; 
+    font-weight:bold; 
+    color: var(--primary-color); 
+    letter-spacing:1px;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+}
+    
+.makeh1header h1:after,.makeh1header h1:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #c50000;
+    border-top: 1px solid #c50000;
+    height: 5px;
+    background-color:#f8f8f8;
+}
+
+.stars {
+    color: gold;
+    text-decoration: none;
+}
+
+.videos{
+    width: 100%;
+    height: 350px;
+}
+
+#imageofvideo > img{
+    width: 470px;
+    height: 500px;
 }

@@ -69,48 +69,52 @@
         </nav>
     </header>
 
-    <main>
+    <main class="makeh1header">
 
         <h1>CS229 - Machine Learning</h1>
 
         <!-- Πληροφορίες Διάλεξης-->
-        <section>
-            <header>
+        <section id="info-book">
+            <header id="books">
                 <h2>Πληροφορίες σχετικά με την διάλεξη</h2>
             </header>
 
-            <!--Αριστερό τμήμα-->
-            <img src="../images/machinelearninglecture.png">
+            <div id="imageofvideo">
+                <!--Αριστερό τμήμα-->
+                <img src="../images/machinelearninglecture.png">
+            </div>
 
-            <!-- Δεξιό τμήμα-->
-            <ul>
-                <li><em>Τίτλος: </em> CS229 - Machine Learning</li>
-                <li><em>Συντελεστής/ές: </em> Yaser Abu-Mostafa</li>
-                <li><em>Έτος λήψης: </em> 2020</li>
-                <li><em>Αξιολόγηση: </em><abbr title="4.0">★ ★ ★ ★</abbr></li>
-                <li><em>Πλήθος αξιολογήσεων: </em>40</li>
-            </ul>
+            <div class="info-box">
+                <!-- Δεξιό τμήμα-->
+                <ul>
+                    <li><em>Τίτλος: </em> CS229 - Machine Learning</li>
+                    <li><em>Συντελεστής/ές: </em> Yaser Abu-Mostafa</li>
+                    <li><em>Έτος λήψης: </em> 2020</li>
+                    <li><em>Αξιολόγηση: </em><abbr title="4.0" class="stars">★ ★ ★ ★</abbr></li>
+                    <li><em>Πλήθος αξιολογήσεων: </em>40</li>
+                </ul>
 
-            <p>
-                Η εισαγωγική διάλεξη του μαθήματος "Machine Learning" του καθηγητή Yaser Abu-Mostafa
-                επικεντρώνεται στην έννοια του "Learning Problem" (το πρόβλημα της μάθησης). Η διάλεξη εξετάζει τα
-                βασικά είδη μηχανικής μάθησης, συμπεριλαμβανομένης της εποπτευόμενης και μη εποπτευόμενης μάθησης,
-                καθώς και της μάθησης ενίσχυσης. Εισάγει επίσης τη διαδικασία και τις προκλήσεις της δημιουργίας
-                μοντέλων που μπορούν να μάθουν από δεδομένα, προσδιορίζοντας τα στοιχεία που απαιτούνται για να
-                αναπτυχθούν αποτελεσματικοί αλγόριθμοι μάθησης.</p>
+                <p>
+                    Η εισαγωγική διάλεξη του μαθήματος "Machine Learning" του καθηγητή Yaser Abu-Mostafa
+                    επικεντρώνεται στην έννοια του "Learning Problem" (το πρόβλημα της μάθησης). Η διάλεξη εξετάζει τα
+                    βασικά είδη μηχανικής μάθησης, συμπεριλαμβανομένης της εποπτευόμενης και μη εποπτευόμενης μάθησης,
+                    καθώς και της μάθησης ενίσχυσης. Εισάγει επίσης τη διαδικασία και τις προκλήσεις της δημιουργίας
+                    μοντέλων που μπορούν να μάθουν από δεδομένα, προσδιορίζοντας τα στοιχεία που απαιτούνται για να
+                    αναπτυχθούν αποτελεσματικοί αλγόριθμοι μάθησης.</p>
 
-            <p>Ο καθηγητής εξηγεί πώς οι αλγόριθμοι προσπαθούν να "μάθουν" από παραδείγματα και αναλύει το κεντρικό
-                πρόβλημα της γενίκευσης – δηλαδή, πώς οι αλγόριθμοι μπορούν να εφαρμόζουν τις γνώσεις τους σε νέα
-                δεδομένα πέρα από τα αρχικά παραδείγματα εκπαίδευσης.</p>
+                <p>Ο καθηγητής εξηγεί πώς οι αλγόριθμοι προσπαθούν να "μάθουν" από παραδείγματα και αναλύει το κεντρικό
+                    πρόβλημα της γενίκευσης – δηλαδή, πώς οι αλγόριθμοι μπορούν να εφαρμόζουν τις γνώσεις τους σε νέα
+                    δεδομένα πέρα από τα αρχικά παραδείγματα εκπαίδευσης.</p>
+            </div>
         </section>
 
         <!-- Περιεχόμενα διάλεξης-->
         <section>
-            <header>
+            <header id="books">
                 <h2 id="table">Περιεχόμενα Διάλεξης</h2>
             </header>
 
-            <table>
+            <table id="chapter-table">
                 <caption>Πίνακας περιεχομένων με τις ενότητες της διάλεξης</caption>
                 <thead>
                     <tr>
@@ -184,7 +188,7 @@
                     αξιολόγηση της απόδοσης των μοντέλων μάθησης.</p>
 
                 <figure>
-                    <iframe src="https://www.youtube.com/embed/mbyG85GZ0PI" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/mbyG85GZ0PI" allowfullscreen class="videos"></iframe>
                     <figcaption>Διάλεξη Μηχανικής Μάθησης (1)</figcaption>
                 </figure>
 
@@ -202,7 +206,7 @@
                     της γενίκευσης και ο τρόπος με τον οποίο η στατιστική αξιολόγηση μπορεί να ενισχύσει την απόδοση
                     ενός μοντέλου σε προβλέψεις πέρα από τα δεδομένα εκπαίδευσης.</p>
                 <figure>
-                    <iframe src="https://www.youtube.com/embed/MEG35RDD7RA" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/MEG35RDD7RA" allowfullscreen class="videos"></iframe>
                     <figcaption>Διάλεξη Μηχανικής Μάθησης (2)</figcaption>
                 </figure>
 
@@ -221,7 +225,7 @@
                     γραμμικούς μετασχηματισμούς επιτρέπει τη δημιουργία μοντέλων με μεγαλύτερη ευελιξία και ικανότητα
                     γενίκευσης σε πιο περίπλοκα σύνολα δεδομένων.</p>
                 <figure>
-                    <iframe src="https://www.youtube.com/embed/FIbVs5GbBlQ" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/FIbVs5GbBlQ" allowfullscreen class="videos"></iframe>
                     <figcaption>Διάλεξη Μηχανικής Μάθησης (3)</figcaption>
                 </figure>
 
@@ -239,7 +243,7 @@
                     στόχου. Γίνεται λόγος για το πώς τα μοντέλα μπορούν να είναι ανθεκτικά στον θόρυβο και να
                     επιτυγχάνουν πιο αξιόπιστες προβλέψεις παρά τις ατέλειες στα δεδομένα εκπαίδευσης.</p>
                 <figure>
-                    <iframe src="https://www.youtube.com/embed/L_0efNkdGMc" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/L_0efNkdGMc" allowfullscreen class="videos"></iframe>
                     <figcaption>Διάλεξη Μηχανικής Μάθησης (4)</figcaption>
                 </figure>
 
@@ -256,7 +260,7 @@
                     γενίκευση εξαρτάται από την ισορροπία του μοντέλου: πρέπει να αποφεύγει τόσο την υπερεκπαίδευση
                     (overfitting) όσο και την υποεκπαίδευση (underfitting) για να αποδίδει καλά και σε νέα δεδομένα.</p>
                 <figure>
-                    <iframe src="https://www.youtube.com/embed/SEYAnnLazMU" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/SEYAnnLazMU" allowfullscreen class="videos"></iframe>
                     <figcaption>Διάλεξη Μηχανικής Μάθησης (5)</figcaption>
                 </figure>
 
@@ -274,7 +278,7 @@
                     νέα δεδομένα, πρέπει να διατηρεί ισορροπία μεταξύ απλότητας και προσαρμοστικότητας στα εκπαιδευτικά
                     δεδομένα.</p>
                 <figure>
-                    <iframe src="https://www.youtube.com/embed/6FWRijsmLtE" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/6FWRijsmLtE" allowfullscreen class="videos"></iframe>
                     <figcaption>Διάλεξη Μηχανικής Μάθησης (6)</figcaption>
                 </figure>
 
@@ -293,7 +297,7 @@
                     γενίκευσης και την απόδοσή του σε νέα, άγνωστα δεδομένα.
                 </p>
                 <figure>
-                    <iframe src="https://www.youtube.com/embed/Dc0sr0kdBVI" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/Dc0sr0kdBVI" allowfullscreen class="videos"></iframe>
                     <figcaption>Διάλεξη Μηχανικής Μάθησης (7)</figcaption>
                 </figure>
 
@@ -314,7 +318,7 @@
                     πληροφορίες για την επιλογή και τη ρύθμιση των μοντέλων​.
                 </p>
                 <figure>
-                    <iframe src="https://www.youtube.com/embed/zrEyxfl2-a8" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/zrEyxfl2-a8" allowfullscreen class="videos"></iframe>
                     <figcaption>Διάλεξη Μηχανικής Μάθησης (8)</figcaption>
                 </figure>
 
@@ -335,7 +339,7 @@
                     προσαρμογή των παραμέτρων του μοντέλου σε κάθε βήμα.
                 </p>
                 <figure>
-                    <iframe src="https://www.youtube.com/embed/qSTHZvN8hzs" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/qSTHZvN8hzs" allowfullscreen class="videos"></iframe>
                     <figcaption>Διάλεξη Μηχανικής Μάθησης (9)</figcaption>
                 </figure>
 
