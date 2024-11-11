@@ -6,8 +6,8 @@ body{
     margin: 0em;
     font-family: serif;
 }
-
-h1{
+/* ALLAGH check*/
+h1, h2, h3, h4, h5, h6{
     color :var(--primary-color);
     font-family: 'Roboto', sans-serif;
 }
@@ -142,11 +142,9 @@ footer  ul{
 }
 
 /* --------------- My work from here ------------------------- */
-
+/* ALLAGH check*/
 #books h2, #lectures h2 {
-    color: var(--primary-color);
     font-size: x-large;
-    font-family: 'Roboto',sans-serif;
     text-align: center;
     text-decoration: underline;
     padding: 0em;
@@ -180,14 +178,31 @@ footer  ul{
     font-size: 11pt;
 }
 
+/* ALLAGH check*/
+.information>ul {
+    margin-left: 10rem;
+
+}
+
+/* ALLAGH check*/
+.information>p {
+    margin-top: 2em;
+}
+
 .information > p ~ p{
     font-size: 11pt;
     text-align: center;
 }
 
-.information > p ~ p a{
+/* ALLAGH check*/
+.information a {
     text-decoration: none;
     color: black;
+}
+/* ALLAGH check*/
+.information a:hover {
+    text-decoration: none;
+    color: white;
 }
 
 /*categories css*/
@@ -248,6 +263,10 @@ footer  ul{
 
 .articlebox li:nth-of-type(3){
     color:rgb(20, 14, 5);
+}
+
+.articlebox > ul{
+    margin-left: 0rem;
 }
 
 .changecolorbox article:first-of-type{
@@ -325,7 +344,7 @@ footer  ul{
 }
 
 #chapter-table th {
-    background-color: var(--primary-color);;      
+    background-color: var(--primary-color);    
     color: white;                   
     font-weight: bold;
 }
@@ -364,7 +383,7 @@ figure{
     font-style: italic;
 }
 
-table ~ article img{ /*μπορεί να το αλλάξω όταν πάω στην διάλεξη - images*/
+table ~ article img{ 
     width: 400px;
     height: 230px;
     border: 1px solid black;
@@ -428,4 +447,109 @@ table ~ article > h3{
 #imageofvideo > img{
     width: 470px;
     height: 500px;
+}
+
+/* TO ABOUT US APO EDW KAI PERA - EXW KANEI KAPOIES ALLAGES PANW */
+
+.about-card {
+    overflow: hidden;
+    padding: 0.4rem;
+    /* background-color: var(--primary-color); */
+    width: 10rem;
+    height: 15rem;
+    float: left;
+}
+
+.change-color-info-box > article{
+    background: linear-gradient(to left, rgb(255, 255, 255), rgb(255, 192, 235), rgb(255, 128, 192), rgb(180, 120, 200));
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.change-color-info-box > article:last-of-type{
+    background: linear-gradient(to left, rgb(240, 248, 255), rgb(173, 216, 230), rgb(100, 149, 237), rgb(70, 130, 180));
+}
+
+.change-color-info-box h2{
+    text-align: center;
+}
+
+.change-color-info-box p{
+    /* text-align: center; */
+    margin-top: 3%;
+}
+
+.about-card-inside {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 2s;
+}
+
+.about-card:hover .about-card-inside {
+    transform: rotateY(180deg);
+}
+
+.about-card-front,
+.about-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.about-card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(0deg);
+}
+
+.about-card-back {
+    background-color: rgb(100, 149, 237);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    border: solid 2px white;
+    border-radius: 1rem;
+
+}
+
+.about-card-front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.about-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-card ul a {
+    text-decoration: none;
+    color: white;
+    font-size: 11pt;
+}
+
+.about-card h3 {
+    text-decoration: underline;
+    text-align: center;
+    font-size: 13pt;
+    color: white;
+    position: absolute;
+    top: 1em
+}
+
+
+#change-color-card-back{
+    background-color: rgb(255, 128, 192);
+}
+
+#site-img-header > img{
+    width: 500px;
+    margin-bottom: 10%;
 }
