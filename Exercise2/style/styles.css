@@ -553,3 +553,95 @@ table ~ article > h3{
     width: 500px;
     margin-bottom: 10%;
 }
+
+.background-3-box-items {
+    background-color: rgba(255, 0, 0, 0.2);
+
+}
+
+.background-3-box-items-grey{
+    background-color: rgb(203, 201, 201);
+} 
+
+.background-3-box-items h3, .background-3-box-items-grey h3{
+    color: var(--primary-color);
+}
+
+.background-3-box-items article, .background-3-box-items-grey article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.information .info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.book-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 480px;
+    position: relative;
+}
+
+.book-cover {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.book-image > img{
+    max-width: 100%;
+    transition: opacity 0.6s ease;
+    width: 465px;
+    height: 636px;
+}
+
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 1px;
+    opacity: 0; /* Αρχικά κρυμμένο */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+
+details[open] .book-info {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px);
+}
+
+details[open] .book-image > img{
+    float: left;
+}
+
+.background-3-box-items .change-background-color-link-box{
+    background:rgb(167, 78, 78);
+    color: white;
+}
+
+.background-3-box-items-grey .change-background-color-link-box{
+    background-color: rgb(203, 201, 201);
+    color: black;
+}
