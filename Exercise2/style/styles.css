@@ -693,7 +693,7 @@ a[href^="#table"]:hover,
     text-decoration: underline;
 }
 
-/*  */
+/* Κλάση lesson box περιέχει τα βιβλία και τις διαλέξεις */
 .lesson-box {
     border: 1px solid black;
     background-color: #f9f9f9;
@@ -706,6 +706,7 @@ a[href^="#table"]:hover,
     background-color: var(--primary-color);
 }
 
+/* Κλάση για τα article των μαθημάτων */
 .information {
     margin: 4em 0.5em;
     background-color: var(--primary-color);
@@ -715,12 +716,14 @@ a[href^="#table"]:hover,
     overflow: hidden;
 }
 
+/* Θέτουμε το h3 που είναι απόγονοι element με κλάση information */
 .information h3 {
     color: var(--primary-color);
     font-size: large;
     text-align: center;
 }
 
+/* Θέτουμε το img που είναι απόγονοι element με κλάση information */
 .information img {
     float: left;
     width: 12em;
@@ -728,26 +731,30 @@ a[href^="#table"]:hover,
     padding: 0%;
 }
 
+/* Θέτουμε το em που είναι απόγονος του ul, το οποίο είναι απόγονος element με κλάση information */
 .information ul em {
     font-weight: bold;
     font-size: 11pt;
 }
 
-
+/* Θέτουμε το ul που είναι παιδί element με κλάση information και περιέχει τις πληροφορίες των βιβλίων-μαθημάτων */
 .information>ul {
     margin-left: 10rem;
 
 }
 
+/* Θέτουμε το p που είναι παιδί element με κλάση information και περιέχει την περιγραφή των βιβλίων-μαθημάτων */
 .information>p {
     margin-top: 2em;
 }
 
+
 .information>p~p {
-    font-size: 11pt;
+    font-size: 11pt;    /* ΠΡΟΣΟΧΗ ΔΕΝ ΝΟΜΙΖΩ ΟΤΙ ΠΙΑΝΕΙ ΚΑΤΙ ΑΥΤΟ ΤΟ SELECTOR | ισως information p~p */
     text-align: center;
 }
 
+/* Κλάση για το details που περιέχει την εικόνα και τις πληροφορίες του βιβλίου-διάλεξης*/
 .lesson-container {
     display: flex;
     flex-direction: row;
@@ -757,7 +764,9 @@ a[href^="#table"]:hover,
     position: relative;
 }
 
-.lesson-cover {
+/* Κλάση για το μήνυμα που εφμανίζεται πάνω από την εικόνα. Το θέλουμε σταθερό στο κέντρο και να μην αλλάζει όταν το detail 
+γίνεται open */
+.lesson-cover {             
     position: relative;
     display: flex;
     justify-content: center;
@@ -765,6 +774,7 @@ a[href^="#table"]:hover,
     color: #333;
 }
 
+/* Θέτουμε την εικόνα για το βιβλίο-διάλεξη */
 .lesson-image>img {
     max-width: 100%;
     transition: opacity 0.6s ease;
@@ -772,10 +782,11 @@ a[href^="#table"]:hover,
     height: 636px;
 }
 
-.info-box {
+
+.info-box {         /* ΠΡΟΣΟΧΗ ΣΤΟ ΣΚΡΙΝΣΟΤ ΔΕΝ ΧΡΗΣΙΜΟΠΟΙΟΥΝΤΑΙ ΤΗΣ ΑΛΛΗΣ ΚΛΑΣΗΣ(information). ΑΝ ΓΙΝΕΤΑΙ ΝΑ ΓΙΝΕΙ ΜΙΑ ΚΛΑΣΗ*/
     border: 1px solid black;
     background-color: #f9f9f9;
-    padding: 0px;
+    padding: 0px;           
     border-radius: 5px;
     margin: 10px;
     font-size: medium;
@@ -787,19 +798,21 @@ a[href^="#table"]:hover,
     text-align: center;
 }
 
-.info-box>ul {
-    font-size: x-large;
+
+.info-box>ul {              /* ΠΡΟΣΟΧΗ Δεν λειτουργει ο σελεκτορ οπως και σε ενα πιο πανω ισως θες info-box ul*/
+    font-size: x-large;         /* Το ul ειναι μεσα σε detail αρα παει info-box>detail>ul*/
     text-align: center;
     color: rgb(232, 19, 19);
     list-style-type: none;
     padding: 30px;
 }
 
+/* Θέτουμε τα list items στο info box (απογονοι) */
 .info-box li {
     line-height: 1.5em;
 }
 
-
+/* Το μήνυμα που εμφανίζεται πάνω από την εικόνα όταν την κάνουμε hover */
 .hover-message-book-lecture {
     position: absolute;
     top: 50%;
