@@ -1,17 +1,27 @@
 :root {
     --primary-color: #74282b;
+    --about-us-color1: rgb(255, 128, 192);
+    --about-us-color2: rgb(100, 149, 237);
+    --categories-color1:rgb(0, 179, 255);;
+    --categories-color2:rgb(255, 162, 0);
+    --categories-color3:rgb(0, 255, 102);
+    --sub-categories-color1:red;
+    --sub-categories-color2:rgb(255, 0, 187);
+    --sub-categories-color3:rgb(79, 214, 79);
+    --sub-categories-color4:rgb(249, 252, 80);
 }
 
 body{
     margin: 0em;
     font-family: serif;
 }
-/* ALLAGH check*/
+
 h1, h2, h3, h4, h5, h6{
     color :var(--primary-color);
     font-family: 'Roboto', sans-serif;
 }
 
+/******************** header + footer (gia oles tis selides) ******************/
 #aueb-header  > img{
     background: linear-gradient(to left, rgb(255, 255, 255), rgb(89, 12, 6));
     background-position: center;
@@ -19,6 +29,7 @@ h1, h2, h3, h4, h5, h6{
     padding: 0.5em;
     clear: both;
 }
+
 
 nav > img{
     float: left;
@@ -141,181 +152,35 @@ footer  ul{
     font-weight: bold;
 }
 
-/* --------------- My work from here ------------------------- */
-/* ALLAGH check*/
-#books h2, #lectures h2 {
-    font-size: x-large;
+/**********************************************************/
+
+/* h1 header (gia oles tis selides) ===== title ==== */
+.main-title h1 {
     text-align: center;
-    text-decoration: underline;
-    padding: 0em;
+    font-size:30px; 
+    font-weight:bold; 
+    color: var(--primary-color); 
+    letter-spacing:1px;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+}
+    
+.main-title h1:after,.main-title h1:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #c50000;
+    border-top: 1px solid #c50000;
+    height: 5px;
+    background-color:#f8f8f8;
 }
 
-.information{
-    margin: 4em 0.5em;
-    background-color: var(--primary-color);
-    border-radius: 2rem;
-    padding: 1em;
-    font-size: 10pt;
-    overflow: hidden;
-}
 
-.information h3{
-    color: white;
-    font-size: large;
-    font-family: 'Roboto',sans-serif;
-    text-align: center;
-}
+/**********************************************************/
 
-.information img{
-    float: left;
-    width: 12em;
-    height: 15em;
-    padding: 0.5em;
-}
-
-.information ul em{
-    font-weight: bold;
-    font-size: 11pt;
-}
-
-/* ALLAGH check*/
-.information>ul {
-    margin-left: 10rem;
-
-}
-
-/* ALLAGH check*/
-.information>p {
-    margin-top: 2em;
-}
-
-.information > p ~ p{
-    font-size: 11pt;
-    text-align: center;
-}
-
-/* ALLAGH check*/
-.information a {
-    text-decoration: none;
-    color: black;
-}
-/* ALLAGH check*/
-.information a:hover {
-    text-decoration: none;
-    color: white;
-}
-
-/*categories css*/
-
-#title h2{
-    color: white;
-    font-size: x-large;
-    font-family: 'Roboto',sans-serif;
-    text-align: center;
-    text-decoration: underline;
-    padding: 0em;
-}
-
-#title > h1{
-    text-align: center;
-}
-
-.articlebox{
-    border: 4px solid black;
-    float: left;
-    width: 450px;
-    margin: 20px;
-}
-
-.articlebox > img{
-    width: 435px;
-    height: 250px;
-}
-
-.articlebox li{
-    list-style-type: none;
-    font-size: 1em;
-    display: inline-block;  
-    padding: 9px 15px;          
-    margin: 5px;           
-    background-color: lightgray;
-    color: white;           
-    border-radius: 8px; 
-    font-weight: bold;
-    text-align: center;
-}
-
-.articlebox ul li:nth-child(1) {
-    background-color: red;
-}
-
-.articlebox ul li:nth-child(2) {
-    background-color: rgb(255, 0, 187);
-}
-
-.articlebox ul li:nth-child(3) {
-    background-color: rgb(79, 214, 79);
-}
-
-.articlebox ul li:nth-child(4) {
-    background-color: rgb(249, 252, 80);
-}
-
-.articlebox li:nth-of-type(3){
-    color:rgb(20, 14, 5);
-}
-
-.articlebox > ul{
-    margin-left: 0rem;
-}
-
-.changecolorbox article:first-of-type{
-    background-color: rgb(0, 179, 255);
-}
-
-.changecolorbox article:nth-of-type(3) {
-    background-color: rgb(255, 162, 0);
-}
-
-.changecolorbox article:last-of-type {
-    background-color: rgb(0, 255, 102);
-}
-
-#info-book{
-    height: 700px;
-}
-
-#info-book > img{
-    height: 600px;
-    width: 450px;
-    border: 2px solid black;
-    float: left;
-    margin-bottom: 50px;
-}
-
-.info-box {
-    border: 1px solid black;
-    background-color: #f9f9f9;
-    padding: 15px;             
-    border-radius: 5px;         
-    margin: 10px;     
-    font-size: large; 
-    float: left;
-    margin-bottom: 40px;
-}
-
-.info-box > ul{
-    font-size:x-large;
-    text-align: center;
-    color: rgb(232, 19, 19);
-    list-style-type: none;
-    padding: 30px;
-}
-
-.info-box li{
-    line-height: 1.5em;
-}
-
+/****************** ftiaximo twn pinakwn (gia book + lecture) ****************/
 #chapter-table {
     width: 100%;                    
     border-collapse: collapse;      
@@ -378,106 +243,59 @@ footer  ul{
     text-align: center;
 }
 
-figure{
-    text-align: center;
-    font-style: italic;
-}
+/*********************************************************/
 
-table ~ article img{ 
-    width: 400px;
-    height: 230px;
-    border: 1px solid black;
-}
-
-table ~ article  a, #info-book ~ a{
-    color: var(--primary-color); 
-    margin-top: 30px;
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    text-decoration: underline;
-    font-size: large;
-}
-
-table ~ article  a:hover, #info-book ~ a:hover {
-    color: black; 
-    font-weight: bold;
-}
-
-
-table ~ article > h3{
-    color: var(--primary-color); 
-    font-size: large;
-    font-family: 'Roboto',sans-serif;
-    margin-top: 30px;
-}
-
-.makeh1header h1 {
-    text-align: center;
-    font-size:30px; 
-    font-weight:bold; 
-    color: var(--primary-color); 
-    letter-spacing:1px;
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    grid-template-rows: 27px 0;
-    grid-gap: 20px;
-    align-items: center;
-}
-    
-.makeh1header h1:after,.makeh1header h1:before {
-    content: " ";
-    display: block;
-    border-bottom: 1px solid #c50000;
-    border-top: 1px solid #c50000;
-    height: 5px;
-    background-color:#f8f8f8;
-}
-
+/************* ta asteria apo thn axiologhsh *************/
 .stars {
     color: gold;
     text-decoration: none;
 }
 
-.videos{
-    width: 100%;
-    height: 350px;
+/********************************************************/
+
+
+/* index.html */
+
+.index-info-box {
+    border: 1px solid black;
+    background-color: #f9f9f9;
+    padding: 15px;             
+    border-radius: 5px;         
+    margin: 10px;     
+    font-size: large; 
+    float: left;
+    margin-bottom: 40px;
 }
 
-#imageofvideo > img{
-    width: 470px;
-    height: 500px;
+/********************************************************/
+
+/* about-us.html */
+
+.about-us{
+    border: 1px solid black;
+    background-color: #f9f9f9;
+    padding: 15px;             
+    border-radius: 5px;         
+    margin: 10px;     
+    font-size: large; 
+    float: left;
+    margin-bottom: 40px;
 }
 
-/* TO ABOUT US APO EDW KAI PERA - EXW KANEI KAPOIES ALLAGES PANW */
+.about-us h2{
+    text-align: center;
+}
+
+.about-us p{
+    margin-top: 4%;
+}
 
 .about-card {
     overflow: hidden;
     padding: 0.4rem;
-    /* background-color: var(--primary-color); */
     width: 10rem;
     height: 15rem;
     float: left;
-}
-
-.change-color-info-box > article{
-    background: linear-gradient(to left, rgb(255, 255, 255), rgb(255, 192, 235), rgb(255, 128, 192), rgb(180, 120, 200));
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.change-color-info-box > article:last-of-type{
-    background: linear-gradient(to left, rgb(240, 248, 255), rgb(173, 216, 230), rgb(100, 149, 237), rgb(70, 130, 180));
-}
-
-.change-color-info-box h2{
-    text-align: center;
-}
-
-.change-color-info-box p{
-    /* text-align: center; */
-    margin-top: 3%;
 }
 
 .about-card-inside {
@@ -508,7 +326,6 @@ table ~ article > h3{
 }
 
 .about-card-back {
-    background-color: rgb(100, 149, 237);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -541,56 +358,353 @@ table ~ article > h3{
     font-size: 13pt;
     color: white;
     position: absolute;
-    top: 1em
+    top: 0.5em
+}
+
+.about-us-change-box-color ~ article{
+    background: linear-gradient(to left, rgb(255, 255, 255), rgb(255, 192, 235), rgb(255, 128, 192), rgb(180, 120, 200));
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-change-box-color ~ article:last-of-type{
+    background: linear-gradient(to left, rgb(240, 248, 255), rgb(173, 216, 230), rgb(100, 149, 237), rgb(70, 130, 180));
+}
+
+.about-us-change-box-color ~ article .about-card-back{
+    background-color: var(--about-us-color1);
+}
+
+.about-us-change-box-color ~ article:last-of-type .about-card-back{
+    background-color: var(--about-us-color2);
+}
+
+/********************************************************/
+
+/* machine-learning-book.html */
+
+#books h2, #lectures h2 {
+    font-size: x-large;
+    text-align: center;
+    text-decoration: underline;
+    padding: 0em;
+}
+
+#info-book{
+    height: 700px;
+}
+
+#info-book > img{
+    height: 600px;
+    width: 450px;
+    border: 2px solid black;
+    float: left;
+    margin-bottom: 50px;
+}
+
+.book-lecture-information {
+    border: 1px solid black;
+    background-color: #f9f9f9;
+    padding: 15px;             
+    border-radius: 5px;         
+    margin: 10px;     
+    font-size: large; 
+    float: left;
+    margin-bottom: 40px;
+}
+
+.book-lecture-information  > ul{
+    font-size:x-large;
+    text-align: center;
+    color: rgb(232, 19, 19);
+    list-style-type: none;
+    padding: 30px;
+}
+
+.book-lecture-information  li{
+    line-height: 1.5em;
+}
+
+figure{
+    text-align: center;
+    font-style: italic;
+}
+
+#books ~ article img{ 
+    width: 400px;
+    height: 230px;
+    border: 1px solid black;
+}
+
+#books ~ article  a, #info-book ~ a{
+    color: var(--primary-color); 
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: large;
+    text-decoration: none;
+}
+
+#books ~ article  a:hover, #info-book ~ a:hover{
+    text-decoration: underline;
 }
 
 
-#change-color-card-back{
-    background-color: rgb(255, 128, 192);
+#books ~ article > h3{
+    color: var(--primary-color); 
+    font-size: large;
+    margin-top: 30px;
 }
 
-#site-img-header > img{
-    width: 500px;
-    margin-bottom: 10%;
+/********************************************************/
+
+/* machine-learning-lecture.html */
+
+#info-lecture{
+    height: 700px;
 }
 
-.background-3-box-items {
-    background-color: rgba(255, 0, 0, 0.2);
+#info-lecture > img{
+    height: 600px;
+    width: 450px;
+    border: 2px solid black;
+    float: left;
+    margin-bottom: 50px;
+}
+
+.videos{
+    width: 100%;
+    height: 350px;
+}
+
+#imageofvideo > img{
+    width: 470px;
+    height: 500px;
+}
+
+#lectures ~ article img{ 
+    width: 400px;
+    height: 230px;
+    border: 1px solid black;
+}
+
+#lectures ~ article  a, #info-lecture ~ a{
+    color: var(--primary-color); 
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: large;
+    text-decoration: none;
+}
+
+#lectures ~ article  a:hover, #info-lecture ~ a:hover{
+    text-decoration: underline;
+}
+
+/********************************************************/
+
+/* categories.html */
+
+.categories-info{
+    margin: 4em 0.5em;
+    background-color: var(--primary-color);
+    border-radius: 2rem;
+    padding: 1em;
+    font-size: 10pt;
+    overflow: hidden;
+}
+
+.categories-info img{
+    float: left;
+    width: 435px;
+    height: 250px;
+    padding: 0.5em;
+}
+
+.categories-info > ul {
+    margin-left: 10rem;
 
 }
 
-.background-3-box-items-grey{
-    background-color: rgb(203, 201, 201);
-} 
-
-.background-3-box-items h3, .background-3-box-items-grey h3{
-    color: var(--primary-color);
+.categories-info a {
+    text-decoration: none;
+    color: black;
 }
 
-.background-3-box-items article, .background-3-box-items-grey article{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.categories-info a:hover {
+    text-decoration: underline;
+    color: white;
 }
 
+.articlebox{
+    border: 4px solid black;
+    float: left;
+    width: 450px;
+    margin: 20px;
+}
 
-.information .info-box {
+.articlebox > h2{
+    color: white;
+    font-size: x-large;
+    text-align: center;
+    text-decoration: underline;
+    padding: 0em;
+}
+
+.articlebox li{
+    list-style-type: none;
+    font-size: 1em;
+    display: inline-block;  
+    padding: 9px 15px;          
+    margin: 5px;           
+    background-color: lightgray;
+    color: white;           
+    border-radius: 8px; 
+    font-weight: bold;
+    text-align: center;
+}
+
+.articlebox ul li:nth-child(1) {
+    background-color: var(--sub-categories-color1);
+}
+
+.articlebox ul li:nth-child(2) {
+    background-color: var(--sub-categories-color2);
+}
+
+.articlebox ul li:nth-child(3) {
+    background-color: var(--sub-categories-color3);
+}
+
+.articlebox ul li:nth-child(4) {
+    background-color: var(--sub-categories-color4);
+}
+
+.articlebox li:nth-of-type(3){
+    color:rgb(20, 14, 5);
+}
+
+.articlebox > ul{
+    margin-left: 0rem;
+}
+
+.articlebox ~ article:nth-of-type(2){
+    background-color: var(--categories-color1);
+}
+
+.articlebox ~ article:nth-of-type(3) {
+    background-color: var(--categories-color2);
+}
+
+.articlebox ~ article:last-of-type {
+    background-color: var(--categories-color3);
+}
+
+/********************************************************/
+
+/* cryptography-cyber-security.html  +  machine-learning.html*/
+
+.lesson h2{
+    font-size: x-large;
+    text-align: center;
+    text-decoration: underline;
+    padding: 0em;
+    color: white;
+}
+
+.lesson-box > article p:last-of-type{
+    text-decoration: none;
+    color: white;
+    border: 1px solid black;
+    background-color: var(--primary-color);
+    padding: 0px;             
+    border-radius: 5px;         
+    margin: 10px;     
+    font-size: medium; 
+    float: left;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.book-container {
+.lesson-box > article p:last-of-type a{
+    color: white;
+    text-decoration: none;
+}
+
+.lesson-box > article p:last-of-type a:hover{
+    text-decoration: underline;
+}
+
+.lesson-box {
+    border: 1px solid black;
+    background-color: #f9f9f9;
+    padding: 15px;             
+    border-radius: 5px;         
+    margin: 0.3em;     
+    font-size: large; 
+    float: left;
+    margin-bottom: 40px;
+    background-color: var(--primary-color);
+}
+
+.information{
+    margin: 4em 0.5em;
+    background-color: var(--primary-color);
+    border-radius: 2rem;
+    padding: 1em;
+    font-size: 10pt;
+    overflow: hidden;
+}
+
+.information h3{
+    color: var(--primary-color);
+    font-size: large;
+    text-align: center;
+}
+
+.information img{
+    float: left;
+    width: 12em;
+    height: 15em;
+    padding: 0%;
+}
+
+.information ul em{
+    font-weight: bold;
+    font-size: 11pt;
+}
+
+
+.information > ul {
+    margin-left: 10rem;
+
+}
+
+.information>p {
+    margin-top: 2em;
+}
+
+.information > p ~ p{
+    font-size: 11pt;
+    text-align: center;
+}
+
+.lesson-container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 20px;
-    max-width: 480px;
+    max-width: 470px;
     position: relative;
 }
 
-.book-cover {
+.lesson-cover {
     position: relative;
     display: flex;
     justify-content: center;
@@ -598,50 +712,56 @@ table ~ article > h3{
     color: #333;
 }
 
-.book-image > img{
+.lesson-image > img{
     max-width: 100%;
     transition: opacity 0.6s ease;
-    width: 465px;
+    width: 470px;
     height: 636px;
 }
 
-
-.book-info {
+.info-box {
+    border: 1px solid black;
+    background-color: #f9f9f9;
+    padding: 0px;             
+    border-radius: 5px;         
+    margin: 10px;     
+    font-size: medium; 
+    float: left;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    align-items: center;
     text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    letter-spacing: 1px;
-    opacity: 0; /* Αρχικά κρυμμένο */
-    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+.info-box > ul{
+    font-size:x-large;
+    text-align: center;
+    color: rgb(232, 19, 19);
+    list-style-type: none;
+    padding: 30px;
+}
 
-details[open] .book-info {
+.info-box li{
+    line-height: 1.5em;
+}
+
+.hover-message-book-lecture {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.lesson-image:hover .hover-message-book-lecture {
     opacity: 1;
-    transform: translateX(-50%) translateY(-10px);
 }
 
-details[open] .book-image > img{
-    float: left;
-}
-
-.background-3-box-items .change-background-color-link-box{
-    background:rgb(167, 78, 78);
-    color: white;
-}
-
-.background-3-box-items-grey .change-background-color-link-box{
-    background-color: rgb(203, 201, 201);
-    color: black;
-}
+/********************************************************/
