@@ -1,28 +1,37 @@
+/* Θέτουμε στην ψευδο-κλάση root τα χρώματα που θα χρησιμοποιήσουμε */
 :root {
     --primary-color: #74282b;
     --about-us-color1: rgb(255, 128, 192);
     --about-us-color2: rgb(100, 149, 237);
-    --categories-color1:rgb(0, 179, 255);;
-    --categories-color2:rgb(255, 162, 0);
-    --categories-color3:rgb(0, 255, 102);
-    --sub-categories-color1:red;
-    --sub-categories-color2:rgb(255, 0, 187);
-    --sub-categories-color3:rgb(79, 214, 79);
-    --sub-categories-color4:rgb(249, 252, 80);
+    --categories-color1: rgb(0, 179, 255);
+    ;
+    --categories-color2: rgb(255, 162, 0);
+    --categories-color3: rgb(0, 255, 102);
+    --sub-categories-color1: red;
+    --sub-categories-color2: rgb(255, 0, 187);
+    --sub-categories-color3: rgb(79, 214, 79);
+    --sub-categories-color4: rgb(249, 252, 80);
 }
 
-body{
+/* Θέτουμε στο body το font και το margin καθε σελίδας */
+body {
     margin: 0em;
     font-family: serif;
 }
 
-h1, h2, h3, h4, h5, h6{
-    color :var(--primary-color);
+/* Θέτουμε χρώμα και font για όλα τα header */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-color);
     font-family: 'Roboto', sans-serif;
 }
 
-/******************** header + footer (gia oles tis selides) ******************/
-#aueb-header  > img{
+/* Θέτουμε στο img του header όλων των σελίδων το background το padding και clear */
+#aueb-header>img {
     background: linear-gradient(to left, rgb(255, 255, 255), rgb(89, 12, 6));
     background-position: center;
     background-repeat: no-repeat;
@@ -30,8 +39,8 @@ h1, h2, h3, h4, h5, h6{
     clear: both;
 }
 
-
-nav > img{
+/* Θέτουμε στο logo του navigation (παιδί του nav) float ώστε να είναι αριστερά ύψος, πλάτος και border*/
+nav>img {
     float: left;
     height: 4em;
     width: 4em;
@@ -39,22 +48,22 @@ nav > img{
     margin: 0px;
 }
 
-nav > ul{
+/* Θέτουμε color,padding,margin για την λίστα (ul) του navigation bar */
+.nav-style {
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
     padding: 0px;
 }
 
-.nav-style{
-    background-color: rgb(255, 255, 255);
-    margin: 0px;
-}
-
+/* Θέτουμε χρώμα γραμμάτων, font και text-decoration για όλα τα a της λίστας (ul) του navigation bar  */
 .nav-content a {
     color: white;
     text-decoration: none;
     font-size: small;
 }
 
-.nav-style li{
+/* Θέτουμε σε όλα τα list items του της λίστας (ul) του navigation bar */
+.nav-style li {
     list-style-type: none;
     background-color: rgb(89, 12, 6);
     border: 2px solid white;
@@ -64,16 +73,17 @@ nav > ul{
     font-weight: bold;
 }
 
-.site-img-header > img{
-    height: 12em;
+/* .site-img-header > img{      ΔΕΝ ΝΟΜΙΖΩ ΟΤΙ ΧΡΗΣΙΜΟΠΟΙΟΥΝΤΑΙ ΚΑΠΟΥ ΤΣΕΚ ΣΟΣΣΣΣ
+    height: 12em;               ΠΡΟΣΟΧΗ
     width: 25em;
 }
 
 .site-img-header + p{
     font-weight: bold;
     font-size: 1.5em;
-}
+} */
 
+/* Θέτουμε background color, χρώμα γραμμάτων, margin-top και clear στο footer κάθε σελίδας */
 footer {
     background-color: #590c06;
     color: #fffbfb;
@@ -81,215 +91,233 @@ footer {
     margin-top: 100px;
 }
 
+/* Το footer χωρίζεται σε 2 μέρη (upper/lower), αυτό είναι το upper  */
 #upper-footer {
     margin: 0px;
     padding: 0px;
     height: 150px;
 }
 
-#office-info{
+/* Το αριστερό κομμάτι του upper footer, το κάνουμε float αριστερά */
+#office-info {
     float: left;
+    margin-right: 1em;
 }
 
-footer h2{
+/* Θέτουμε τα h2 του footer margin, color και font size*/
+footer h2 {
     font-size: 1.3em;
-    margin-bottom: 0px;
     color: #e0e0e0;
     margin: 0px;
 }
 
-#upper-footer h2 + address{
+/* Θέτουμε τα address που είναι αδέρφια του h2 (επόμενα) και βρίσκονται στο upper footer padding και font size*/
+#upper-footer h2+address {
     padding: 10px 0px;
     font-size: 1em;
 }
 
-#upper-footer  a {
+/* Θέτουμε στα <a> που βρίσκονται στο upper footer (παιδιά του) font size, color και text-decoration */
+#upper-footer a {
     font-size: 1em;
     color: #e0e0e0;
     text-decoration: none;
 }
 
-#policies{
+/* Θέτουμε το div policies (upper footer) να είναι float left, padding left και text-align*/
+#policies {
     float: left;
     text-align: center;
     padding-left: 5px;
 }
 
-footer  ul{
+/* Θέτουμε τις λίστες του footer padding, margin, text-align, list-style-type */
+footer ul {
     padding: 0px 0px;
     list-style-type: none;
     margin: 0px;
     text-align: center;
 }
 
+/* Θέτουμε σε όλα  */
 #policies a {
     font-size: 1em;
     width: 150px;
+    /* ΠΡΟΣΟΧΗ ΙΔΙΟ ΜΕ ΤΟ #upper-footer a*/
     height: 100px;
     color: #e0e0e0;
     margin: 0px;
 }
 
+/* Θέτουμε το div του footer που περιέχει τα social media links */
 #social-links {
     float: left;
     padding-left: 15px;
 }
 
-#social-links img{
+/* Θέτουμε τις εικόνες που βρίσκονται μέσα στα social links (είναι απόγονοι) */
+#social-links img {
     height: 20px;
     width: 20px;
 }
 
-#lower-footer{
+/* Θέτουμε το height του lower footer */
+#lower-footer {
     height: 30px;
 }
 
-#social-links img:hover{
+/* Θέτουμε την μετατροπή στις εικόνες του social links όταν γίνονται hover */
+#social-links img:hover {
     transform: scale(1.2);
 }
 
-#upper-footer a:hover{
-    font-weight: bold;
+/* Θέτουμε το hover σε όλα τα a του upper footer */
+#upper-footer a:hover {
+    text-decoration: underline;
 }
 
 /**********************************************************/
 
-/* h1 header (gia oles tis selides) ===== title ==== */
+/* Θέτουμε τον τίτλο h1 που υπάρχει σε κάθε σελίδα*/
 .main-title h1 {
     text-align: center;
-    font-size:30px; 
-    font-weight:bold; 
-    color: var(--primary-color); 
-    letter-spacing:1px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--primary-color);
+    letter-spacing: 1px;
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
     grid-template-rows: 27px 0;
     grid-gap: 20px;
     align-items: center;
 }
-    
-.main-title h1:after,.main-title h1:before {
+
+/* Δημιουργούμε 2 γραμμές πριν και μετά το main-title h1 για στυλιστικους λογους */
+.main-title h1:after,
+.main-title h1:before {
     content: " ";
     display: block;
     border-bottom: 1px solid #c50000;
     border-top: 1px solid #c50000;
     height: 5px;
-    background-color:#f8f8f8;
+    background-color: #f8f8f8;
 }
 
-
-/**********************************************************/
-
-/****************** ftiaximo twn pinakwn (gia book + lecture) ****************/
+/* Ο πίνακας των lecture και book έχει width, το border γινεται collapse και έχει ένα margin top */
 #chapter-table {
-    width: 100%;                    
-    border-collapse: collapse;      
-    margin-top: 20px;          
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
+/* Θέτουμε το caption του πίνακα */
 #chapter-table caption {
     font-size: 1em;
     font-weight: bold;
     margin-top: 10px;
-    color: #333333; 
-    caption-side: bottom;      
-    text-align: center;        
+    color: #333333;
+    caption-side: bottom;
+    text-align: center;
 }
 
+/* Θέτουμε τα table header και table data του πίνακα */
 #chapter-table th,
 #chapter-table td {
-    padding: 12px 15px;          
-    text-align: left;        
+    padding: 12px 15px;
+    text-align: left;
 }
 
+/* Θέτουμε την πρώτη στήλη με data του πίνακα  */
 #chapter-table td:first-child {
-    text-align: center;          
-    color: var(--primary-color);  
-    font-weight: bold;        
-}
-
-#chapter-table th {
-    background-color: var(--primary-color);    
-    color: white;                   
+    text-align: center;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
-#chapter-table tr:nth-child(even) {
-    background-color: #f2f2f2;      
+/* Θέτουμε τα table header του πίνακα */
+#chapter-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
 }
 
+/* ΠΡΟΣΟΧΗ (Γιατι;) */
+#chapter-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* ΠΡΟΣΟΧΗ (Γιατι;) */
 #chapter-table tr:nth-child(odd) {
     background-color: #ffffff;
 }
 
+/* Θέτουμε τα a που είναι απόγονοι των table data -επίσης απόγονοι- του chapter table*/
 #chapter-table td a {
-    color: var(--primary-color);              
-    text-decoration: none;     
+    color: var(--primary-color);
+    text-decoration: none;
     font-weight: bold;
 }
 
+/* Θέτουμε την ψευδοκλάση hover στα a που είναι απόγονοι του table data -επίσης απόγονοι- του chapter table  */
 #chapter-table td a:hover {
-    color: var(--primary-color);               
     text-decoration: underline;
 }
 
-#chapter-table th, #chapter-table td {
-    border: 1px solid #dddddd;      
+/* Θέτουμε τα th και td του chapter table */
+#chapter-table th,
+#chapter-table td {
+    border: 1px solid #dddddd;
 }
 
-#chapter-table > thead > tr:first-child th{
+/* ΠΡΟΣΟΧΗ (ΔΕΝ ΞΕΡΩ ΤΙ ΚΑΝΕΙ) */
+#chapter-table>thead>tr:first-child th {
     background-color: white;
-    color: var(--primary-color);   
+    color: var(--primary-color);
     text-align: center;
 }
 
-/*********************************************************/
-
-/************* ta asteria apo thn axiologhsh *************/
+/* Θέτουμε τα αστέρια της αξιολόγησης των βιβλίων και των διαλέξεων */
 .stars {
     color: gold;
     text-decoration: none;
 }
 
-/********************************************************/
-
-
-/* index.html */
-
+/* Θέτουμε το index-info-box το οποίο αποτελεί ένα container για το κείμενο της αρχικής σελίδας  */
 .index-info-box {
     border: 1px solid black;
     background-color: #f9f9f9;
-    padding: 15px;             
-    border-radius: 5px;         
-    margin: 10px;     
-    font-size: large; 
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: large;
     float: left;
     margin-bottom: 40px;
 }
 
-/********************************************************/
-
-/* about-us.html */
-
-.about-us{
+/* Κλάση about-us για τα article που περιέχουν τα στοιχεία */
+.about-us {
     border: 1px solid black;
     background-color: #f9f9f9;
-    padding: 15px;             
-    border-radius: 5px;         
-    margin: 10px;     
-    font-size: large; 
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: large;
     float: left;
     margin-bottom: 40px;
 }
 
-.about-us h2{
+/* Θέτουμε το text-align για τα h2 των about-us */
+.about-us h2 {
     text-align: center;
 }
 
-.about-us p{
-    margin-top: 4%;
+/* Θέτουμε τα p που είναι απόγονοι των about-us */
+.about-us p {
+    margin-top: 2em;
 }
 
+/* Το about-card αποτελεί κλάση για ένα div (container) το οποίο έχει 2 όψεις. Από τη μία πλευρά βρίσκεται η εικόνα και από την 
+άλλη τα social media */
 .about-card {
     overflow: hidden;
     padding: 0.4rem;
@@ -298,6 +326,8 @@ footer  ul{
     float: left;
 }
 
+/* Το εσωτερικό του about-card. Κλάση για div που είναι παιδί του about-card. Θέτουμε width, height, 
+3d transform-style και transition time */
 .about-card-inside {
     width: 100%;
     height: 100%;
@@ -305,10 +335,12 @@ footer  ul{
     transition: transform 2s;
 }
 
+/* Θέτουμε about-card-inside να κάνει rotate στον άξονα y όταν γίνεται hover το about-card*/
 .about-card:hover .about-card-inside {
     transform: rotateY(180deg);
 }
 
+/* Θέτουμε τις δύο όψεις του about-card front και back */
 .about-card-front,
 .about-card-back {
     width: 100%;
@@ -317,16 +349,18 @@ footer  ul{
     backface-visibility: hidden;
 }
 
+/* Θέτουμε την μπροστά όψη του about-card */
 .about-card-front {
-    display: flex;
+    display: flex;  /* ΠΡΟΣΟΧΗ*/
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transform: rotateY(0deg);
 }
 
+/* Θέτουμε την πίσω όψη του about-card */
 .about-card-back {
-    display: flex;
+    display: flex; /* ΠΡΟΣΟΧΗ*/
     align-items: center;
     justify-content: center;
     transform: rotateY(180deg);
@@ -335,23 +369,27 @@ footer  ul{
 
 }
 
+/* Θέτουμε την εικόνα που είναι απόγονος του about-card-front */
 .about-card-front img {
     width: 100%;
     height: 100%;
     border-radius: 1rem;
 }
 
+/* Θέτουμε τη λίστα που είναι απόγονος του about-card (λίστα με links) */
 .about-card ul {
     list-style-type: none;
     padding: 0;
 }
 
+/* Θέτουμε τα a που είναι απόγονοι του ul -επίσης απόγονοι- του about-card*/
 .about-card ul a {
     text-decoration: none;
     color: white;
     font-size: 11pt;
 }
 
+/* Θέτουμε το h3 που είναι απόγονος του about-card */
 .about-card h3 {
     text-decoration: underline;
     text-align: center;
@@ -361,41 +399,45 @@ footer  ul{
     top: 0.5em
 }
 
-.about-us-change-box-color ~ article{
+/* Αλλαγή του χρώματος του 1ου article */
+.about-us:first-of-type { /* ΠΡΟΣΟΧΗ ΠΡΙΝ ΗΤΑΝ .about-us-change-box-color~article ΕΒΓΑΛΑ ΑΠΟ HTML TΟ about-us-change...*/
     background: linear-gradient(to left, rgb(255, 255, 255), rgb(255, 192, 235), rgb(255, 128, 192), rgb(180, 120, 200));
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.about-us-change-box-color ~ article:last-of-type{
+/* Αλλαγή του χρώματος του 2ου article */
+.about-us:last-of-type { /* ΠΡΟΣΟΧΗ ΠΡΙΝ ΗΤΑΝ .about-us-change-box-color~article ΕΒΓΑΛΑ ΑΠΟ HTML TΟ about-us-change...*/
     background: linear-gradient(to left, rgb(240, 248, 255), rgb(173, 216, 230), rgb(100, 149, 237), rgb(70, 130, 180));
 }
 
-.about-us-change-box-color ~ article .about-card-back{
+/* Αλλαγή του χρώματος της πίσω όψης του about-card 2ου article */
+.about-us .about-card-back { /* ΠΡΟΣΟΧΗ ΟΜΟΙΑ ΜΕ ΠΑΝΩ*/
     background-color: var(--about-us-color1);
 }
 
-.about-us-change-box-color ~ article:last-of-type .about-card-back{
+/* Αλλαγή του χρώματος της πίσω όψης του about-card 2ου article */
+.about-us:last-of-type .about-card-back { /* ΠΡΟΣΟΧΗ ΟΜΟΙΑ ΜΕ ΠΑΝΩ*/
     background-color: var(--about-us-color2);
 }
 
-/********************************************************/
-
-/* machine-learning-book.html */
-
-#books h2, #lectures h2 {
+/* Θέτουμε τα h2 για τα header με id books και lectures */
+#books h2,
+#lectures h2 {
     font-size: x-large;
     text-align: center;
     text-decoration: underline;
     padding: 0em;
 }
 
-#info-book{
+/* Κλάση για τα article των βιβλίων */
+#info-book {
     height: 700px;
 }
 
-#info-book > img{
+/* Θέτουμε την εικόνα που είναι παιδί του info-book */
+#info-book>img {
     height: 600px;
     width: 450px;
     border: 2px solid black;
@@ -403,42 +445,48 @@ footer  ul{
     margin-bottom: 50px;
 }
 
+/* Θέτουμε το div με class book-lecture-information το οποίο περιέχει τις πληροφορίες των βιβλίων και των lecture */
 .book-lecture-information {
     border: 1px solid black;
     background-color: #f9f9f9;
-    padding: 15px;             
-    border-radius: 5px;         
-    margin: 10px;     
-    font-size: large; 
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: large;
     float: left;
     margin-bottom: 40px;
 }
 
-.book-lecture-information  > ul{
-    font-size:x-large;
+/* Θέτουμε τα ul που είναι παιδιά του book-lecture-information */
+.book-lecture-information>ul {
+    font-size: x-large;
     text-align: center;
-    color: rgb(232, 19, 19);
     list-style-type: none;
     padding: 30px;
 }
 
-.book-lecture-information  li{
+/* Θέτουμε τα list items που είναι απόγονοι του book-lecture-information */
+.book-lecture-information li {
     line-height: 1.5em;
 }
 
-figure{
+/* Θέτουμε τα figure που βρίσκονται στις σελίδες με το lecture και το book */
+figure {
     text-align: center;
     font-style: italic;
 }
 
-#books ~ article img{ 
+/* Θέτουμε τις εικόνες που είναι απόγονοι του article, τα οποία είναι αδέρφια element με id books */
+#books~article img {
     width: 400px;
     height: 230px;
     border: 1px solid black;
 }
 
-#books ~ article  a, #info-book ~ a{
-    color: var(--primary-color); 
+/* Θέτουμε τα a που το href ξεκινάει με #chapter και τα a που είναι αδέρφια element με id info-book */
+a[href^="#chapter"],
+#info-book~a {
+    color: var(--primary-color);
     margin-top: 30px;
     display: block;
     text-align: center;
@@ -447,26 +495,25 @@ figure{
     text-decoration: none;
 }
 
-#books ~ article  a:hover, #info-book ~ a:hover{
+/* Θέτουμε την ψευδοκλάση hover στα a που αναφέρθηκαν παραπάνω */
+a[href^="#chapter"]:hover,
+#info-book~a:hover {
     text-decoration: underline;
 }
 
-
-#books ~ article > h3{
-    color: var(--primary-color); 
+/* Θέτουμε τα h3 που είναι παιδιά του article, τα οποία είναι αδέρφια element με id books */
+#books~article>h3 {
+    color: var(--primary-color);
     font-size: large;
     margin-top: 30px;
 }
 
-/********************************************************/
-
-/* machine-learning-lecture.html */
-
-#info-lecture{
+/* Θέτουμε  */
+#info-lecture {
     height: 700px;
 }
 
-#info-lecture > img{
+#info-lecture>img {
     height: 600px;
     width: 450px;
     border: 2px solid black;
@@ -474,24 +521,25 @@ figure{
     margin-bottom: 50px;
 }
 
-.videos{
+.videos {
     width: 100%;
     height: 350px;
 }
 
-#imageofvideo > img{
+#imageofvideo>img {
     width: 470px;
     height: 500px;
 }
 
-#lectures ~ article img{ 
+#lectures~article img {
     width: 400px;
     height: 230px;
     border: 1px solid black;
 }
 
-#lectures ~ article  a, #info-lecture ~ a{
-    color: var(--primary-color); 
+#lectures~article a,
+#info-lecture~a {
+    color: var(--primary-color);
     margin-top: 30px;
     display: block;
     text-align: center;
@@ -500,7 +548,8 @@ figure{
     text-decoration: none;
 }
 
-#lectures ~ article  a:hover, #info-lecture ~ a:hover{
+#lectures~article a:hover,
+#info-lecture~a:hover {
     text-decoration: underline;
 }
 
@@ -508,7 +557,7 @@ figure{
 
 /* categories.html */
 
-.categories-info{
+.categories-info {
     margin: 4em 0.5em;
     background-color: var(--primary-color);
     border-radius: 2rem;
@@ -517,14 +566,14 @@ figure{
     overflow: hidden;
 }
 
-.categories-info img{
+.categories-info img {
     float: left;
     width: 435px;
     height: 250px;
     padding: 0.5em;
 }
 
-.categories-info > ul {
+.categories-info>ul {
     margin-left: 10rem;
 
 }
@@ -539,14 +588,14 @@ figure{
     color: white;
 }
 
-.articlebox{
+.articlebox {
     border: 4px solid black;
     float: left;
     width: 450px;
     margin: 20px;
 }
 
-.articlebox > h2{
+.articlebox>h2 {
     color: white;
     font-size: x-large;
     text-align: center;
@@ -554,15 +603,15 @@ figure{
     padding: 0em;
 }
 
-.articlebox li{
+.articlebox li {
     list-style-type: none;
     font-size: 1em;
-    display: inline-block;  
-    padding: 9px 15px;          
-    margin: 5px;           
+    display: inline-block;
+    padding: 9px 15px;
+    margin: 5px;
     background-color: lightgray;
-    color: white;           
-    border-radius: 8px; 
+    color: white;
+    border-radius: 8px;
     font-weight: bold;
     text-align: center;
 }
@@ -583,23 +632,23 @@ figure{
     background-color: var(--sub-categories-color4);
 }
 
-.articlebox li:nth-of-type(3){
-    color:rgb(20, 14, 5);
+.articlebox li:nth-of-type(3) {
+    color: rgb(20, 14, 5);
 }
 
-.articlebox > ul{
+.articlebox>ul {
     margin-left: 0rem;
 }
 
-.articlebox ~ article:nth-of-type(2){
+.articlebox~article:nth-of-type(2) {
     background-color: var(--categories-color1);
 }
 
-.articlebox ~ article:nth-of-type(3) {
+.articlebox~article:nth-of-type(3) {
     background-color: var(--categories-color2);
 }
 
-.articlebox ~ article:last-of-type {
+.articlebox~article:last-of-type {
     background-color: var(--categories-color3);
 }
 
@@ -607,7 +656,7 @@ figure{
 
 /* cryptography-cyber-security.html  +  machine-learning.html*/
 
-.lesson h2{
+.lesson h2 {
     font-size: x-large;
     text-align: center;
     text-decoration: underline;
@@ -615,15 +664,15 @@ figure{
     color: white;
 }
 
-.lesson-box > article p:last-of-type{
+.lesson-box>article p:last-of-type {
     text-decoration: none;
     color: white;
     border: 1px solid black;
     background-color: var(--primary-color);
-    padding: 0px;             
-    border-radius: 5px;         
-    margin: 10px;     
-    font-size: medium; 
+    padding: 0px;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: medium;
     float: left;
     margin-bottom: 40px;
     display: flex;
@@ -632,28 +681,28 @@ figure{
     text-align: center;
 }
 
-.lesson-box > article p:last-of-type a{
+.lesson-box>article p:last-of-type a {
     color: white;
     text-decoration: none;
 }
 
-.lesson-box > article p:last-of-type a:hover{
+.lesson-box>article p:last-of-type a:hover {
     text-decoration: underline;
 }
 
 .lesson-box {
     border: 1px solid black;
     background-color: #f9f9f9;
-    padding: 15px;             
-    border-radius: 5px;         
-    margin: 0.3em;     
-    font-size: large; 
+    padding: 15px;
+    border-radius: 5px;
+    margin: 0.3em;
+    font-size: large;
     float: left;
     margin-bottom: 40px;
     background-color: var(--primary-color);
 }
 
-.information{
+.information {
     margin: 4em 0.5em;
     background-color: var(--primary-color);
     border-radius: 2rem;
@@ -662,26 +711,26 @@ figure{
     overflow: hidden;
 }
 
-.information h3{
+.information h3 {
     color: var(--primary-color);
     font-size: large;
     text-align: center;
 }
 
-.information img{
+.information img {
     float: left;
     width: 12em;
     height: 15em;
     padding: 0%;
 }
 
-.information ul em{
+.information ul em {
     font-weight: bold;
     font-size: 11pt;
 }
 
 
-.information > ul {
+.information>ul {
     margin-left: 10rem;
 
 }
@@ -690,7 +739,7 @@ figure{
     margin-top: 2em;
 }
 
-.information > p ~ p{
+.information>p~p {
     font-size: 11pt;
     text-align: center;
 }
@@ -712,7 +761,7 @@ figure{
     color: #333;
 }
 
-.lesson-image > img{
+.lesson-image>img {
     max-width: 100%;
     transition: opacity 0.6s ease;
     width: 470px;
@@ -722,10 +771,10 @@ figure{
 .info-box {
     border: 1px solid black;
     background-color: #f9f9f9;
-    padding: 0px;             
-    border-radius: 5px;         
-    margin: 10px;     
-    font-size: medium; 
+    padding: 0px;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: medium;
     float: left;
     margin-bottom: 40px;
     display: flex;
@@ -734,15 +783,15 @@ figure{
     text-align: center;
 }
 
-.info-box > ul{
-    font-size:x-large;
+.info-box>ul {
+    font-size: x-large;
     text-align: center;
     color: rgb(232, 19, 19);
     list-style-type: none;
     padding: 30px;
 }
 
-.info-box li{
+.info-box li {
     line-height: 1.5em;
 }
 
