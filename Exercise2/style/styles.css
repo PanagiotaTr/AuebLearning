@@ -351,7 +351,8 @@ footer ul {
 
 /* Θέτουμε την μπροστά όψη του about-card */
 .about-card-front {
-    display: flex;  /* ΠΡΟΣΟΧΗ*/
+    display: flex;
+    /* ΠΡΟΣΟΧΗ*/
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -360,7 +361,8 @@ footer ul {
 
 /* Θέτουμε την πίσω όψη του about-card */
 .about-card-back {
-    display: flex; /* ΠΡΟΣΟΧΗ*/
+    display: flex;
+    /* ΠΡΟΣΟΧΗ*/
     align-items: center;
     justify-content: center;
     transform: rotateY(180deg);
@@ -400,7 +402,8 @@ footer ul {
 }
 
 /* Αλλαγή του χρώματος του 1ου article */
-.about-us:first-of-type { /* ΠΡΟΣΟΧΗ ΠΡΙΝ ΗΤΑΝ .about-us-change-box-color~article ΕΒΓΑΛΑ ΑΠΟ HTML TΟ about-us-change...*/
+.about-us:first-of-type {
+    /* ΠΡΟΣΟΧΗ ΠΡΙΝ ΗΤΑΝ .about-us-change-box-color~article ΕΒΓΑΛΑ ΑΠΟ HTML TΟ about-us-change...*/
     background: linear-gradient(to left, rgb(255, 255, 255), rgb(255, 192, 235), rgb(255, 128, 192), rgb(180, 120, 200));
     padding: 20px;
     border-radius: 10px;
@@ -408,17 +411,20 @@ footer ul {
 }
 
 /* Αλλαγή του χρώματος του 2ου article */
-.about-us:last-of-type { /* ΠΡΟΣΟΧΗ ΠΡΙΝ ΗΤΑΝ .about-us-change-box-color~article ΕΒΓΑΛΑ ΑΠΟ HTML TΟ about-us-change...*/
+.about-us:last-of-type {
+    /* ΠΡΟΣΟΧΗ ΠΡΙΝ ΗΤΑΝ .about-us-change-box-color~article ΕΒΓΑΛΑ ΑΠΟ HTML TΟ about-us-change...*/
     background: linear-gradient(to left, rgb(240, 248, 255), rgb(173, 216, 230), rgb(100, 149, 237), rgb(70, 130, 180));
 }
 
 /* Αλλαγή του χρώματος της πίσω όψης του about-card 2ου article */
-.about-us .about-card-back { /* ΠΡΟΣΟΧΗ ΟΜΟΙΑ ΜΕ ΠΑΝΩ*/
+.about-us .about-card-back {
+    /* ΠΡΟΣΟΧΗ ΟΜΟΙΑ ΜΕ ΠΑΝΩ*/
     background-color: var(--about-us-color1);
 }
 
 /* Αλλαγή του χρώματος της πίσω όψης του about-card 2ου article */
-.about-us:last-of-type .about-card-back { /* ΠΡΟΣΟΧΗ ΟΜΟΙΑ ΜΕ ΠΑΝΩ*/
+.about-us:last-of-type .about-card-back {
+    /* ΠΡΟΣΟΧΗ ΟΜΟΙΑ ΜΕ ΠΑΝΩ*/
     background-color: var(--about-us-color2);
 }
 
@@ -483,9 +489,12 @@ figure {
     border: 1px solid black;
 }
 
-/* Θέτουμε τα a που το href ξεκινάει με #chapter και τα a που είναι αδέρφια element με id info-book */
+/* Θέτουμε τα a που το href ξεκινάει με #chapter, είτε ξεκινάει με #table και τα a που είναι αδέρφια element με id 
+info-book είτε με id info-lecture */
 a[href^="#chapter"],
-#info-book~a {
+a[href^="#table"],
+#info-book~a,
+#info-lecture~a {
     color: var(--primary-color);
     margin-top: 30px;
     display: block;
@@ -497,7 +506,9 @@ a[href^="#chapter"],
 
 /* Θέτουμε την ψευδοκλάση hover στα a που αναφέρθηκαν παραπάνω */
 a[href^="#chapter"]:hover,
-#info-book~a:hover {
+a[href^="#table"]:hover,
+#info-book~a:hover,
+#info-lecture~a :hover {
     text-decoration: underline;
 }
 
@@ -508,11 +519,12 @@ a[href^="#chapter"]:hover,
     margin-top: 30px;
 }
 
-/* Θέτουμε  */
+/* Κλάση για τα article των lecture */
 #info-lecture {
     height: 700px;
 }
 
+/* Θέτουμε την img που είναι παιδί element με id info lectures */
 #info-lecture>img {
     height: 600px;
     width: 450px;
@@ -521,42 +533,27 @@ a[href^="#chapter"]:hover,
     margin-bottom: 50px;
 }
 
+/* Κλάση videos για τα lectures */
 .videos {
     width: 100%;
     height: 350px;
 }
 
+/* Θέτουμε την εικονα του lecture */
 #imageofvideo>img {
     width: 470px;
     height: 500px;
 }
 
+
 #lectures~article img {
     width: 400px;
+    /* ΠΡΟΣΟΧΗ Δεν εχει img το lectures ???*/
     height: 230px;
     border: 1px solid black;
 }
 
-#lectures~article a,
-#info-lecture~a {
-    color: var(--primary-color);
-    margin-top: 30px;
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    font-size: large;
-    text-decoration: none;
-}
-
-#lectures~article a:hover,
-#info-lecture~a:hover {
-    text-decoration: underline;
-}
-
-/********************************************************/
-
-/* categories.html */
-
+/* Κλάση για τα articles της σελίδας με τις κατηγορίες */
 .categories-info {
     margin: 4em 0.5em;
     background-color: var(--primary-color);
@@ -566,6 +563,7 @@ a[href^="#chapter"]:hover,
     overflow: hidden;
 }
 
+/* Θέτουμε τις εικόνες των κατηγοριών */
 .categories-info img {
     float: left;
     width: 435px;
@@ -573,21 +571,24 @@ a[href^="#chapter"]:hover,
     padding: 0.5em;
 }
 
+/* Θέτουμε την λίστα με τις υποκατηγορίες της κάθε κατηγορίας μαθημάτων */
 .categories-info>ul {
     margin-left: 10rem;
-
 }
 
+/* Θέτουμε τα a των κατηγοριών */
 .categories-info a {
     text-decoration: none;
     color: black;
 }
 
+/* Θέτουμε την ψευδοκλάση hover σε κάθε a των κατηγοριών */
 .categories-info a:hover {
     text-decoration: underline;
     color: white;
 }
 
+/* Θέτουμε το articlebox, μία κλάση για τα articles των categories */
 .articlebox {
     border: 4px solid black;
     float: left;
@@ -595,6 +596,7 @@ a[href^="#chapter"]:hover,
     margin: 20px;
 }
 
+/* θετουμε τα h2 που είναι παιδιά των articlebox */
 .articlebox>h2 {
     color: white;
     font-size: x-large;
@@ -603,6 +605,7 @@ a[href^="#chapter"]:hover,
     padding: 0em;
 }
 
+/* Θέτουμε τα list items που είναι απόγονοι των articlebox */
 .articlebox li {
     list-style-type: none;
     font-size: 1em;
@@ -616,6 +619,7 @@ a[href^="#chapter"]:hover,
     text-align: center;
 }
 
+/* Θέτουμε το χρώμα στα articlebox και στα list items τους */
 .articlebox ul li:nth-child(1) {
     background-color: var(--sub-categories-color1);
 }
@@ -636,10 +640,12 @@ a[href^="#chapter"]:hover,
     color: rgb(20, 14, 5);
 }
 
+/* Θέτουμε marginleft στα ul που ειναι παιδιά των articlebox */
 .articlebox>ul {
     margin-left: 0rem;
 }
 
+/* ΠΡΟΣΟΧΗ Γιατι δεν βαζουμε articlebox nth of child(2) κλπ και βαζουμε ~ ???? */
 .articlebox~article:nth-of-type(2) {
     background-color: var(--categories-color1);
 }
@@ -652,10 +658,7 @@ a[href^="#chapter"]:hover,
     background-color: var(--categories-color3);
 }
 
-/********************************************************/
-
-/* cryptography-cyber-security.html  +  machine-learning.html*/
-
+/* Θέτουμε το h2 που είναι απόγονοι element με κλαση lesson */
 .lesson h2 {
     font-size: x-large;
     text-align: center;
@@ -664,6 +667,8 @@ a[href^="#chapter"]:hover,
     color: white;
 }
 
+/* Θέτουμε τα p που περιέχουν το link σε καθε βιβλίο-διάλεξη. Τα p αυτα είναι τα τελευταία p που βρίσκονται μέσα σε article (απόγονοι) 
+που είναι παιδιά element με class lesson-box */
 .lesson-box>article p:last-of-type {
     text-decoration: none;
     color: white;
@@ -673,23 +678,22 @@ a[href^="#chapter"]:hover,
     border-radius: 5px;
     margin: 10px;
     font-size: medium;
-    float: left;
     margin-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
 }
 
+/* Θέτουμε color και text decoration στα link προς το βιβλίο-διάλεξη */
 .lesson-box>article p:last-of-type a {
     color: white;
     text-decoration: none;
 }
 
+/* Θέτουμε τη hover ψευδο-κλάση στα a που αναφέρθηκαν */
 .lesson-box>article p:last-of-type a:hover {
     text-decoration: underline;
 }
 
+/*  */
 .lesson-box {
     border: 1px solid black;
     background-color: #f9f9f9;
@@ -795,6 +799,7 @@ a[href^="#chapter"]:hover,
     line-height: 1.5em;
 }
 
+
 .hover-message-book-lecture {
     position: absolute;
     top: 50%;
@@ -809,8 +814,14 @@ a[href^="#chapter"]:hover,
     pointer-events: none;
 }
 
+/* Θέτουμε το opacity για την εμφάνιση του μηνύματος όταν γίνεται hover η εικόνα */
 .lesson-image:hover .hover-message-book-lecture {
     opacity: 1;
+}
+
+/* Θέτουμε την ψευδοκλάση hover για τα a που περιέχει η πίσω όψη του about card */
+.about-card-back a:hover{
+    text-decoration: underline;
 }
 
 /********************************************************/
