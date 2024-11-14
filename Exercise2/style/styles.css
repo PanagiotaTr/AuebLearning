@@ -20,6 +20,7 @@ body {
     background-color: var(--background-color);
 }
 
+/* Θέτουμε σε όλα τα λινκς χρώμα και υπογράμμιση, όταν το ποντίκι πηγαίνει επάνω */
 .hover a:hover{
     color: white;
     text-decoration: underline !important;
