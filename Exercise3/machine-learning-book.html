@@ -1,0 +1,461 @@
+<!--4. Μια ιστοσελίδα με το πλήρες περιεχόμενο ενός βιβλίου, πχ. macchine-learning-book.html.
+Η πλοήγηση στην ιστοσελίδα θα γίνεται από κατάλληλο σύνδεσμο της αντίστοιχης σελίδας υποκατηγορίας εκπαιδευτικού υλικού 
+(machine-learning.html) .-->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Βιβλίο Μηχανικής Μάθησης</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , intial-scale="1">
+    <link rel="icon" href="../images/hermes.jpg" type="image/png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+
+<body>
+    <header id="aueb-header" class="hover">
+        <img src="../images/aueb-header.png" alt="AUEB Header">
+        <nav>
+            <img src="../images/logo.png" alt="Logo">
+            <ul class="nav-style nav-content">
+                <li> <a href="index.html">Αρχική Σελίδα</a></li>
+                <li> <a href="categories.html">Μαθήματα</a>
+                    <ul>
+                        <li>
+                            <a href="#">Τεχνητή Νοημοσύνη</a>
+                            <ul class="sub-menu">
+                                <li> <a href="machine-learning.html">Μηχανική Μάθηση</a></li>
+                                <li> <a href="#">Νευρωνικά Δίκτυα</a></li>
+                                <li> <a href="#">Επεξεργασία Φυσικής Γλώσσας</a></li>
+                                <li> <a href="#">Ενισχυτική Μάθηση</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-style nav-content">
+                            <a href="#">Προγραμματισμός στον Ιστό</a>
+                            <ul class="sub-menu">
+                                <li> <a href="#">HTML5</a></li>
+                                <li> <a href="#">CSS</a></li>
+                                <li> <a href="#">JavaScript</a></li>
+                                <li> <a href="#">PHP</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-style nav-content">
+                            <a href="#">Τεχνολογία Λογισμικού</a>
+                            <ul class="sub-menu">
+                                <li> <a href="#">Απαιτήσεις Λογισμικού</a></li>
+                                <li> <a href="#">Αρχιτεκτονική Σχεδίαση</a></li>
+                                <li> <a href="#">Αντικειμενοστρεφής Σχεδίαση</a></li>
+                                <li> <a href="#">Ποιότητα και Έλεγχος Λογισμικού</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-style nav-content">
+                            <a href="#">Κυβερνοασφάλεια</a>
+                            <ul class="sub-menu">
+                                <li> <a href="cryptography-cyber-security.html">Κρυπτογραφία</a></li>
+                                <li> <a href="#">Ασφάλεια Δικτύων</a></li>
+                                <li> <a href="#">Penetration Testing</a></li>
+                                <li> <a href="#">Έλεγχος Προσπέλασης</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li> <a href="about-us.html">Ποιοι Είμαστε</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="main-title">
+            <h1>Grokking Machine Learning</h1>
+        </div>
+
+        <!-- Πληροφορίες Βιβλίου-->
+        <section id="info-book">
+
+            <header id="books">
+                <h2>Πληροφορίες σχετικά με το βιβλίο</h2>
+            </header>
+
+            <img src="../images/machine-learning-third-book.png">
+
+            <div class="book-lecture-information">
+                <ul>
+                    <li><em>Τίτλος: </em>Grokking Machine Learning</li>
+                    <li><em>Συντελεστής/ές: </em>Luis G. Serrano</li>
+                    <li><em>Έτος έκδοσης: </em> 2021</li>
+                    <li><em>Αξιολόγηση: </em><abbr title="4.8" class="stars">★ ★ ★ ★ ★</abbr></li>
+                    <li><em>Πλήθος αξιολογήσεων: </em>25</li>
+                </ul>
+
+                <p>Το βιβλίο "Grokking Machine Learning" παρουσιάζει αλγορίθμους και τεχνικές μηχανικής μάθησης με τρόπο που
+                    μπορεί να κατανοηθεί από οποιονδήποτε, αποφεύγοντας τη σύγχυση της ακαδημαϊκής ορολογίας και παρέχοντας
+                    απλές εξηγήσεις που απαιτούν μόνο βασική άλγεβρα. Οι αναγνώστες δημιουργούν ενδιαφέροντα projects με
+                    Python, όπως μοντέλα για ανίχνευση spam και αναγνώριση εικόνας, ενώ μαθαίνουν πρακτικές δεξιότητες για
+                    καθαρισμό και προετοιμασία δεδομένων.</p>
+
+            </div>
+
+        </section>
+
+        <!-- Περιεχόμενα βιβλίου-->
+        <section class="hover">
+            <header id="books">
+                <h2>Περιεχόμενα Βιβλίου</h2>
+            </header>
+
+            <table id="chapter-table">
+
+                <caption>Πίνακας περιεχομένων με τις ενότητες της διάλεξης</caption>
+
+                <tr>
+                    <th>Κεφάλαιο</th>
+                    <th>Τίτλος</th>
+                    <th>Σύνδεσμος</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>What is machine learning? It is common sense, except done by a computer</td>
+                    <td><a href="#chapter1">Κεφάλαιο 1</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Types of machine learning</td>
+                    <td><a href="#chapter2">Κεφάλαιο 2</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Drawing a line close to our points: Linear regression</td>
+                    <td><a href="#chapter3">Κεφάλαιο 3</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Optimizing the training process: Underfitting, overfitting, testing, and regularization</td>
+                    <td><a href="#chapter4">Κεφάλαιο 4</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Using lines to split our points: The perceptron algorithm</td>
+                    <td><a href="#chapter5">Κεφάλαιο 5</a></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>A continuous approach to splitting points: Logistic classifiers</td>
+                    <td><a href="#chapter6">Κεφάλαιο 6</a></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>How do you measure classification models? Accuracy and its friends</td>
+                    <td><a href="#chapter7">Κεφάλαιο 7</a></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Using probability to its maximum: The naive Bayes model</td>
+                    <td><a href="#chapter8">Κεφάλαιο 8</a></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Splitting data by asking questions: Decision trees</td>
+                    <td><a href="#chapter9">Κεφάλαιο 9</a></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Combining building blocks to gain more power: Neural networks</td>
+                    <td><a href="#chapter10">Κεφάλαιο 10</a></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Finding boundaries with style: Support vector machines and the kernel method</td>
+                    <td><a href="#chapter11">Κεφάλαιο 11</a></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Combining models to maximize results: Ensemble learning</td>
+                    <td><a href="#chapter12">Κεφάλαιο 12</a></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Putting it all in practice: A real-life example of data engineering and machine learning</td>
+                    <td><a href="#chapter13">Κεφάλαιο 13</a></td>
+                </tr>
+
+            </table>
+
+            <!--Κεφάλαιο 1-->
+            <article id="chapter1">
+                <h3>1. What is machine learning? It is common sense, except done by a computer</h3>
+                <p>Στο κεφάλαιο αυτό, εισάγεται η έννοια της μηχανικής μάθησης, διευκρινίζοντας ότι δεν είναι τόσο
+                    δύσκολη όσο πολλοί μπορεί να πιστεύουν. Αναλύεται τι θα μάθουν οι αναγνώστες μέσα από το βιβλίο,
+                    καθώς και η διαφορά μεταξύ της τεχνητής νοημοσύνης και της μηχανικής μάθησης. Εξετάζεται ο τρόπος
+                    σκέψης των ανθρώπων και πώς αυτές οι ιδέες μπορούν να ενσωματωθούν σε μηχανές. Τέλος, παρατίθενται
+                    βασικά παραδείγματα μηχανικής μάθησης στην καθημερινή ζωή, προκειμένου να καταδειχθεί η πρακτική
+                    εφαρμογή της τεχνολογίας αυτής.</p>
+                <figure>
+                    <img src="../images/chapter1.png">
+                    <figcaption>Ενδεικτική εικόνα από το Κεφάλαιο 1</figcaption>
+                </figure>
+                <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+            </article>
+
+            <!--Κεφάλαιο 2-->
+            <article id="chapter2">
+                <h3>2. Types of machine learning</h3>
+                <p>Στο κεφάλαιο αυτό, παρουσιάζονται τρεις διαφορετικοί τύποι μηχανικής μάθησης: η εποπτευόμενη
+                    (supervised), η μη εποπτευόμενη (unsupervised) και η ενισχυτική μάθηση (reinforcement learning).
+                    Εξετάζεται η διαφορά μεταξύ δεδομένων με ετικέτες (labeled data) και χωρίς ετικέτες (unlabeled
+                    data), καθώς και οι διακριτές λειτουργίες της παλινδρόμησης (regression) και της κατηγοριοποίησης
+                    (classification). Το κεφάλαιο αναλύει πώς χρησιμοποιούνται αυτές οι μέθοδοι για την επίλυση διαφόρων
+                    προβλημάτων στην ανάλυση δεδομένων, επισημαίνοντας τη σημασία της σωστής επιλογής μεθόδου ανάλογα με
+                    το είδος των διαθέσιμων δεδομένων και τους στόχους της ανάλυσης.</p>
+
+                <figure>
+                    <img src="../images/chapter2.png">
+                    <figcaption>Ενδεικτική εικόνα από το Κεφάλαιο 2</figcaption>
+                </figure>
+                <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+            </article>
+
+            <!--Κεφάλαιο 3-->
+            <article id="chapter3">
+                <h3>3. Drawing a line close to our points: Linear regression</h3>
+                <p>Στο κεφάλαιο αυτό, εισάγεται η έννοια της γραμμικής παλινδρόμησης (linear regression) και η
+                    διαδικασία τοποθέτησης μιας γραμμής μέσα από ένα σύνολο δεδομένων. Παρουσιάζεται η κωδικοποίηση του
+                    αλγορίθμου γραμμικής παλινδρόμησης σε Python, καθώς και η χρήση του Turi Create για τη δημιουργία
+                    ενός μοντέλου γραμμικής παλινδρόμησης που προβλέπει τις τιμές στέγασης σε πραγματικά δεδομένα.
+                    Επίσης, εξετάζεται η πολυωνυμική παλινδρόμηση (polynomial regression) και η διαδικασία προσαρμογής
+                    πιο σύνθετων καμπυλών σε μη γραμμικά δεδομένα. Τέλος, γίνεται αναφορά σε πραγματικά παραδείγματα
+                    εφαρμογής της γραμμικής παλινδρόμησης, όπως οι ιατρικές εφαρμογές και τα συστήματα σύστασης,
+                    υπογραμμίζοντας τη σημασία της στην ανάλυση δεδομένων.</p>
+                <figure>
+                    <img src="../images/chapter3.png">
+                    <figcaption>Ενδεικτική εικόνα από το Κεφάλαιο 3</figcaption>
+                </figure>
+                <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+            </article>
+
+            <!--Κεφάλαιο 4-->
+            <article id="chapter4">
+                <h3>4. Optimizing the training process: Underfitting, overfitting, testing, and regularization</h3>
+                <p>Στο κεφάλαιο αυτό, αναλύονται οι έννοιες της υποπροσαρμογής (underfitting) και της υπερπροσαρμογής
+                    (overfitting) στη μηχανική μάθηση. Εξετάζονται λύσεις για την αποφυγή της υπερπροσαρμογής, όπως η
+                    αξιολόγηση του μοντέλου, η γραφική απεικόνιση της πολυπλοκότητας του μοντέλου και η κανονικοποίηση
+                    (regularization). Επιπλέον, παρουσιάζεται η διαδικασία υπολογισμού της πολυπλοκότητας του μοντέλου
+                    χρησιμοποιώντας τους κανόνες L1 και L2. Τέλος, το κεφάλαιο εστιάζει στην επιλογή του καλύτερου
+                    μοντέλου, λαμβάνοντας υπόψη τόσο την απόδοση όσο και την πολυπλοκότητά του, προκειμένου να
+                    επιτευχθεί η βέλτιστη ισορροπία ανάμεσα σε αυτές τις παραμέτρους.</p>
+                <figure>
+                    <img src="../images/chapter4.png">
+                    <figcaption>Ενδεικτική εικόνα από το Κεφάλαιο 4</figcaption>
+                </figure>
+                <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+            </article>
+
+            <!--Κεφάλαιο 5-->
+            <article id="chapter5">
+                <h3>5. Using lines to split our points: The perceptron algorithm</h3>
+                <p>Στο κεφάλαιο αυτό, εξετάζεται η έννοια της κατηγοριοποίησης (classification) στη μηχανική μάθηση,
+                    εστιάζοντας στην ανάλυση συναισθημάτων, όπου αναλύεται πώς μπορεί να προσδιοριστεί αν μια πρόταση
+                    εκφράζει θετικά ή αρνητικά συναισθήματα. Επίσης, παρουσιάζεται η διαδικασία σχεδίασης μιας γραμμής
+                    που διαχωρίζει σημεία διαφορετικών χρωμάτων, ένα βασικό πρόβλημα της κατηγοριοποίησης. Στη συνέχεια,
+                    εισάγεται ο αλγόριθμος του perceptron, που είναι ένα απλό νευρωνικό δίκτυο, και εξηγείται πώς
+                    εκπαιδεύεται. Τέλος, το κεφάλαιο περιλαμβάνει πρακτική εφαρμογή, με κωδικοποίηση του αλγορίθμου
+                    perceptron σε Python και Turi Create, δίνοντας στους αναγνώστες τη δυνατότητα να εφαρμόσουν αυτές
+                    τις θεωρίες στην πράξη.</p>
+                <figure>
+                    <img src="../images/chapter5.png">
+                    <figcaption>Ενδεικτική εικόνα από το Κεφάλαιο 5</figcaption>
+                </figure>
+                <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+            </article>
+
+            <!--Κεφάλαιο 6-->
+            <article id="chapter6">
+                <h3>6. A continuous approach to splitting points: Logistic classifiers</h3>
+                <p>Στο κεφάλαιο αυτό, εξετάζεται η διαφορά μεταξύ σκληρών (hard) και μαλακών (soft) αναθέσεων στα
+                    μοντέλα κατηγοριοποίησης. Αναλύεται η συνάρτηση sigmoid, η οποία είναι μια συνεχής συνάρτηση
+                    ενεργοποίησης, και συγκρίνονται οι διακριτοί perceptrons με τους συνεχείς perceptrons, γνωστούς και
+                    ως λογιστικοί ταξινομητές (logistic classifiers). Παρουσιάζεται ο αλγόριθμος λογιστικής
+                    παλινδρόμησης για την κατηγοριοποίηση δεδομένων, με οδηγίες για την κωδικοποίησή του σε Python.
+                    Επιπλέον, περιγράφεται η χρήση του λογιστικού ταξινομητή στο Turi Create για την ανάλυση
+                    συναισθημάτων κριτικών ταινιών. Τέλος, γίνεται αναφορά στη χρήση της συνάρτησης softmax για την
+                    κατασκευή ταξινομητών που μπορούν να διαχειριστούν περισσότερες από δύο κατηγορίες.</p>
+                <figure>
+                    <img src="../images/chapter6.png">
+                    <figcaption>Ενδεικτική εικόνα από το Κεφάλαιο 6</figcaption>
+                </figure>
+                <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+            </article>
+
+            <!--Κεφάλαιο 7-->
+            <article id="chapter7">
+                <h3>7. How do you measure classification models? Accuracy and its friends</h3>
+                <p>Στο κεφάλαιο αυτό, εξετάζονται οι τύποι λαθών που μπορεί να κάνει ένα μοντέλο, όπως οι ψευδείς
+                    θετικοί (false positives) και οι ψευδείς αρνητικοί (false negatives). Αυτά τα λάθη καταγράφονται σε
+                    έναν πίνακα, γνωστό ως πίνακας σύγχυσης (confusion matrix). Παρουσιάζονται οι μετρικές ακρίβειας
+                    (accuracy), ανάκλησης (recall), ακρίβειας (precision), F-score, ευαισθησίας (sensitivity) και
+                    ειδικότητας (specificity), καθώς και η χρήση τους για την αξιολόγηση των μοντέλων. Τέλος, αναλύεται
+                    η καμπύλη ROC (Receiver Operating Characteristic), η οποία παρακολουθεί ταυτόχρονα την ευαισθησία
+                    και την ειδικότητα, προσφέροντας μια οπτική αναπαράσταση της απόδοσης ενός ταξινομητή σε διάφορα
+                    επίπεδα κατωφλίου.</p>
+                <figure>
+                    <img src="../images/chapter7.png">
+                    <figcaption>Ενδεικτική εικόνα από το Κεφάλαιο 7</figcaption>
+                </figure>
+                <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+            </article>
+
+            <!--Κεφάλαιο 8-->
+            <article id="chapter8">
+                <h3>8. Using probability to its maximum: The naive Bayes model</h3>
+                <p>Στο κεφάλαιο αυτό, εισάγεται το θεώρημα του Bayes και οι έννοιες των εξαρτημένων και ανεξάρτητων
+                    γεγονότων. Εξετάζονται οι πιθανότητες πριν (prior) και μετά (posterior) από ένα γεγονός, καθώς και η
+                    διαδικασία υπολογισμού των συνθηκών πιθανοτήτων βάσει γεγονότων. Παρουσιάζεται το μοντέλο Naive
+                    Bayes για την πρόβλεψη του αν ένα email είναι spam ή ham, βασισμένο στις λέξεις που περιέχει. Τέλος,
+                    δίνονται οδηγίες για την κωδικοποίηση του αλγορίθμου Naive Bayes σε Python, προσφέροντας πρακτική
+                    εφαρμογή της θεωρίας.</p>
+                <figure>
+                    <img src="../images/chapter8.png">
+                    <figcaption>Ενδεικτική εικόνα από το Κεφάλαιο 8</figcaption>
+                </figure>
+                <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+            </article>
+
+            <!--Κεφάλαιο 9-->
+            <article id="chapter9">
+                <h3>9. Splitting data by asking questions: Decision trees</h3>
+                <p>Στο κεφάλαιο αυτό, παρουσιάζεται η έννοια του δέντρου απόφασης (decision tree) και η χρήση του για
+                    κατηγοριοποίηση και παλινδρόμηση. Εξετάζεται η κατασκευή ενός συστήματος σύστασης εφαρμογών,
+                    αξιοποιώντας πληροφορίες χρηστών. Αναλύονται οι μετρικές ακρίβειας, ο δείκτης Gini και η εντροπία,
+                    καθώς και ο ρόλος τους στη διαδικασία δημιουργίας δέντρων απόφασης. Τέλος, γίνεται χρήση της
+                    βιβλιοθήκης Scikit-Learn για την εκπαίδευση ενός δέντρου απόφασης με βάση ένα σύνολο δεδομένων
+                    σχετικά με τις εισαγωγές πανεπιστημίου, προσφέροντας μια πρακτική προσέγγιση στην εφαρμογή αυτής της
+                    μεθόδου.</p>
+                <figure>
+                    <img src="../images/chapter9.png">
+                    <figcaption>Ενδεικτική εικόνα από το Κεφάλαιο 9</figcaption>
+                </figure>
+                <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+            </article>
+
+            <!--Κεφάλαιο 10-->
+            <article id="chapter10">
+                <h3>10. Combining building blocks to gain more power: Neural networks</h3>
+                <p>Στο κεφάλαιο αυτό, εισάγεται η έννοια του νευρωνικού δικτύου (neural network) και αναλύεται η
+                    αρχιτεκτονική του, συμπεριλαμβανομένων των κόμβων, των επιπέδων, του βάθους και των συναρτήσεων
+                    ενεργοποίησης. Εξετάζεται η διαδικασία εκπαίδευσης των νευρωνικών δικτύων μέσω της μεθόδου της
+                    οπισθοδιάδοσης (backpropagation) και τα πιθανά προβλήματα που μπορεί να προκύψουν κατά την
+                    εκπαίδευση, όπως το πρόβλημα της εξαφάνισης του βαθμού (vanishing gradient problem) και η
+                    υπερπροσαρμογή (overfitting). Παρουσιάζονται τεχνικές βελτίωσης της εκπαίδευσης, όπως η
+                    κανονικοποίηση (regularization) και το dropout. Τέλος, δίνονται παραδείγματα χρήσης της βιβλιοθήκης
+                    Keras για την εκπαίδευση νευρωνικών δικτύων σε εφαρμογές ανάλυσης συναισθημάτων και ταξινόμησης
+                    εικόνων, καθώς και η χρήση τους ως μοντέλα παλινδρόμησης.</p>
+                <figure>
+                    <img src="../images/chapter10.png">
+                    <figcaption>Ενδεικτική εικόνα από το Κεφάλαιο 10</figcaption>
+                </figure>
+                <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+            </article>
+
+            <!--Κεφάλαιο 11-->
+            <article id="chapter11">
+                <h3>11. Finding boundaries with style: Support vector machines and the kernel method</h3>
+                <p>Στο κεφάλαιο αυτό, παρουσιάζεται η έννοια της μηχανής υποστήριξης διανυσμάτων (support vector
+                    machine) και εξετάζεται ποιος από τους γραμμικούς ταξινομητές ενός συνόλου δεδομένων έχει την
+                    καλύτερη οριακή γραμμή. Αναλύεται η μέθοδος πυρήνα (kernel method), η οποία επιτρέπει την κατασκευή
+                    μη γραμμικών ταξινομητών. Τέλος, παρέχονται οδηγίες για την κωδικοποίηση των μηχανών υποστήριξης
+                    διανυσμάτων και της μεθόδου πυρήνα στη βιβλιοθήκη Scikit-Learn, προσφέροντας πρακτική εφαρμογή των
+                    εννοιών αυτών.</p>
+                <figure>
+                    <img src="../images/chapter11.png">
+                    <figcaption>Ενδεικτική εικόνα από το Κεφάλαιο 11</figcaption>
+                </figure>
+                <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+            </article>
+
+            <!--Κεφάλαιο 12-->
+            <article id="chapter12">
+                <h3>12. Combining models to maximize results: Ensemble learning</h3>
+                <p>Στο κεφάλαιο αυτό, εξετάζεται η έννοια της συνδυαστικής μάθησης (ensemble learning) και πώς αυτή
+                    χρησιμοποιείται για να συνδυάσει αδύναμους ταξινομητές σε έναν ισχυρότερο. Παρουσιάζεται η μέθοδος
+                    bagging, η οποία συνδυάζει ταξινομητές με τυχαίο τρόπο, καθώς και η μέθοδος boosting, η οποία
+                    επιτυγχάνει συνδυασμό ταξινομητών με πιο έξυπνο και στρατηγικό τρόπο. Επίσης, αναφέρονται μερικές
+                    από τις πιο δημοφιλείς μεθόδους συνδυαστικής μάθησης, όπως οι τυχαίοι δάσοι (random forests), η
+                    AdaBoost, η gradient boosting και η XGBoost, αναδεικνύοντας την αποτελεσματικότητά τους σε διάφορες
+                    εφαρμογές μηχανικής μάθησης.</p>
+                <figure>
+                    <img src="../images/chapter12.png">
+                    <figcaption>Ενδεικτική εικόνα από το Κεφάλαιο 12</figcaption>
+                </figure>
+                <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+            </article>
+
+            <!--Κεφάλαιο 13-->
+            <article id="chapter13">
+                <h3>13. Putting it all in practice: A real-life example of data engineering and machine learning</h3>
+                <p>Στο κεφάλαιο αυτό, εστιάζουμε στην καθαριότητα και την προεπεξεργασία των δεδομένων, ώστε να είναι
+                    αναγνώσιμα από το μοντέλο μας. Χρησιμοποιούμε τη βιβλιοθήκη Scikit-Learn για να εκπαιδεύσουμε και να
+                    αξιολογήσουμε διάφορα μοντέλα. Παρουσιάζεται η μέθοδος grid search, η οποία μας βοηθά να επιλέξουμε
+                    κατάλληλες υπερπαραμέτρους για το μοντέλο μας. Τέλος, γίνεται χρήση της k-fold cross-validation, που
+                    επιτρέπει τη συγχρονισμένη χρήση των δεδομένων για εκπαίδευση και επικύρωση, βελτιώνοντας έτσι την
+                    απόδοση και την αξιοπιστία των μοντέλων μας.</p>
+                <figure>
+                    <img src="../images/chapter13.png">
+                    <figcaption>Ενδεικτική εικόνα από το Κεφάλαιο 13</figcaption>
+                </figure>
+                <a href="#chapter-table">Επιστροφή στον πίνακα περιεχομένων του βιβλίου</a>
+            </article>
+
+            <a href="machine-learning.html">Επιστροφή στην υποκατηγορία «Μηχανική Μάθηση»</a>
+            
+        </section>
+
+        
+        
+    </main>
+
+    <footer>
+        <div id="upper-footer" class="hover">
+            <div id="office-info">
+                <h2>Τα Γραφεία μας</h2>
+                <address>
+                    28ης Οκτωβρίου 76, Αθήνα<br>
+                    Αθήνα, Ελλάδα 10434<br>
+                    Phone: <a href="tel:+302109620030">(+30) 2109620030</a><br>
+                    Email: <a href="mailto:info@aueblearning.com">info@aueblearning.com</a>
+                </address>
+            </div>
+            <div id="policies">
+                <h2>Όροι & Πολιτικές</h2>
+                <ul>
+                    <li><a href="#">Πολιτική Cookies</a></li>
+                    <li><a href="#">Πολιτική Απορρήτου</a></li>
+                    <li><a href="#">Όροι Χρήσης</a></li>
+                </ul>
+            </div>
+            <div id="social-links">
+                <h2>Βρείτε μας</h2>
+                <ul>
+                    <li><a href="https://www.facebook.com/auebgreece" target="_blank"><img src="../images/facebook.jpg"
+                                alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/aueb.gr" target="_blank"><img src="../images/instagram.png"
+                                alt="Instagram"></a></li>
+                    <li><a href="https://x.com/AUEB" target="_blank"><img src="../images/x.png" alt="Twitter"></a></li>
+                    <li><a href="https://gr.linkedin.com/school/athens-university-of-economics-and-business/"
+                            target="_blank"><img src="../images/linkedin.png" alt="LinkedIn"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="lower-footer">
+            <p>©Copyright 2024 | Παναγιώτα Τριανταφυλλοπούλου - Γεώργιος Σόρογκας</p>
+        </div>
+    </footer>
+
+</body>
+
+
+</html>
