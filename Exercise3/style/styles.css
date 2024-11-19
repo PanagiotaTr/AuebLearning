@@ -13,10 +13,30 @@
     --sub-categories-color4: rgb(249, 252, 80);
 }
 
+/* greek */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2) format('woff2');
+    unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+  }
+
+/* latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v32/KFOkCnqEu92Fr1MmgVxIIzI.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
 /* Θέτουμε στο body το background, το font και το margin καθε σελίδας */
 body {
     margin: 0em;
-    font-family: serif;
+    font-family: sans-serif;
     background-color: var(--background-color);
 }
 
@@ -35,7 +55,7 @@ h4,
 h5,
 h6 {
     color: var(--primary-color);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
 }
 
 /* Θέτουμε στο logo του navigation (παιδί του nav) float ώστε να είναι αριστερά ύψος, πλάτος και border*/
@@ -179,7 +199,7 @@ footer ul {
 .main-title h1 {
     text-align: center;
     font-size: 30px;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: var(--primary-color);
     letter-spacing: 1px;
     display: grid;
@@ -200,6 +220,7 @@ footer ul {
     background-color: #f8f8f8;
 }
 
+/* Θέτουμε το h1 με μικρότερο μέγεθος για στυλιστικους λογους */
 .smaller-size h1{
     font-size: x-large;
 }
@@ -651,7 +672,7 @@ a[href^="#table"]:hover,
 
 /* Θέτουμε τα p που περιέχουν το link σε καθε βιβλίο-διάλεξη. Τα p αυτα είναι τα τελευταία p που βρίσκονται μέσα σε article (απόγονοι) 
 που είναι παιδιά element με class lesson-box */
-.lesson-box>article p:last-of-type {
+.lesson-box article p:last-of-type {
     text-decoration: none;
     color: white;
     border: 1px solid black;
@@ -665,7 +686,7 @@ a[href^="#table"]:hover,
 }
 
 /* Θέτουμε color και text decoration στα link προς το βιβλίο-διάλεξη */
-.lesson-box>article p:last-of-type a {
+.lesson-box article p:last-of-type a {
     color: white;
     text-decoration: none;
 }
@@ -701,7 +722,7 @@ a[href^="#table"]:hover,
 /* Θέτουμε το h3 που είναι απόγονοι element με κλάση information */
 .information h3 {
     color: var(--primary-color);
-    font-size: large;
+    font-size: medium;
     text-align: center;
 }
 
@@ -744,6 +765,9 @@ a[href^="#table"]:hover,
     gap: 20px;
     max-width: 470px;
     position: relative;
+    background-color: white;
+    border: 0px solid;
+    border-radius: 5px;
 }
 
 /* Κλάση για το μήνυμα που εφμανίζεται πάνω από την εικόνα. Το θέλουμε σταθερό στο κέντρο και να μην αλλάζει όταν το detail 
@@ -766,8 +790,8 @@ a[href^="#table"]:hover,
 
 /* Θέτουμε το πλαίσιο για την κάθε διάλεξη και για το κάθε βιβλίο στα 2 μαθήματα*/
 .info-box {
-    border: 1px solid black;
-    background-color: #f9f9f9;
+    border: 0px solid black;
+    /* background-color: #f9f9f9; */
     padding: 0px;           
     border-radius: 5px;
     margin: 10px;
@@ -1227,4 +1251,17 @@ aside #aside-more a{
     flex-direction: column;
     align-items: center;
     /* margin-top: 150px; */
+}
+
+/* Θέτουμε τη διάταξη για τα 2 πλαίσια που αφορούν τα βιβλία και 
+τις διαλέξεις των 2 μαθημάτων που έχουμε επιλέξει */
+.lecture-book-container{
+    display:flex;
+    flex-flow: row nowrap;
+}
+
+/* Θέτουμε το χρώμα και το μέγεθος του header */
+.lecture-book-container header{
+    background-color: white;
+    width: 100%;
 }
