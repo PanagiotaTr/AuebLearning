@@ -120,12 +120,6 @@ footer {
     justify-content: space-around;
     margin: 0px;
     padding: 0px;
-    height: 150px;
-}
-
-/* Το αριστερό κομμάτι του upper footer, καθορίζουμε το πλάτος */
-#office-info {
-    width: 210px;
 }
 
 /* Θέτουμε τα h2 του footer margin, color και font size*/
@@ -310,25 +304,31 @@ footer ul {
     margin-bottom: 40px;
 }
 
-/* Κλάση about-us για τα article που περιέχουν τα στοιχεία */
+/* Κλάση about-us για τα article που περιέχουν τα στοιχεία. Γίνεται χρήση του grid ώστε να τοποθετηθεί
+στην πρώτη γραμμή το ονοματεπώνυμο και στη δεύτερη η εικόνα και η περιγραφή*/
 .about-us {
     border: 1px solid black;
-    background-color: #f9f9f9;
     padding: 15px;
-    border-radius: 5px;
-    margin: 10px;
-    font-size: large;
-    margin-bottom: 40px;
+    border-radius: 10px;
+    margin: 1em;
+    font-size: 12pt;        /* ΑΛΛΑΓΗ*/
+    display: grid;
+    grid-template-areas: 
+        'name name'
+        'card text';
+    grid-template-columns: auto 1fr;
 }
 
-/* Θέτουμε το text-align για τα h2 των about-us */
+/* Θέτουμε το text-align για τα h2 των about-us. Καταλαμβάνει την περιοχή name στο grid*/
 .about-us h2 {
+    grid-area: name;
     text-align: center;
 }
 
-/* Θέτουμε τα p που είναι απόγονοι των about-us */
+/* Θέτουμε τα p που είναι απόγονοι των about-us. Καταλαμβάνει την περιοχή text στο grid */
 .about-us p {
-    margin-top: 3em;
+    grid-area: text;
+    margin-top: 2em;
 }
 
 /* Το about-card αποτελεί κλάση για ένα div (container) το οποίο έχει 2 όψεις. Από τη μία πλευρά βρίσκεται η εικόνα και από την 
@@ -338,7 +338,7 @@ footer ul {
     padding: 0.4rem;
     width: 10rem;
     height: 15rem;
-    float: left;
+    /* float: left; */
 }
 
 /* Το εσωτερικό του about-card. Κλάση για div που είναι παιδί του about-card. Θέτουμε width, height, 
@@ -355,7 +355,7 @@ footer ul {
     transform: rotateY(180deg);
 }
 
-/* Θέτουμε τις δύο όψεις του about-card front και back */
+/* Θέτουμε τις δύο όψεις του about-card front και back. Καταλαμβάνει την περιοχή card στο grid */
 .about-card-front,
 .about-card-back {
     width: 100%;
@@ -366,8 +366,9 @@ footer ul {
     left: 0;
     transition: transform 0.6s;
     border-radius: 1rem;
-    padding: 1rem;
+    /* padding: 1rem; */            /*ΑΛΛΑΓΗ*/
     box-sizing: border-box;
+    grid-area: card;
 }
 
 /* Θέτουμε την μπροστά όψη του about-card */
@@ -423,9 +424,6 @@ footer ul {
 /* Αλλαγή του χρώματος του 1ου article */
 .about-us:first-of-type {
     background: linear-gradient(to left, rgb(255, 255, 255), rgb(255, 192, 235), rgb(255, 128, 192), rgb(180, 120, 200));
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Αλλαγή του χρώματος του 2ου article */
@@ -580,10 +578,10 @@ a[href^="#table"]:hover,
     padding: 0.5em;
 }
 
-/* Θέτουμε την λίστα με τις υποκατηγορίες της κάθε κατηγορίας μαθημάτων */
-.categories-info>ul {
+/* Θέτουμε την λίστα με τις υποκατηγορίες της κάθε κατηγορίας μαθημάτων
+.categories-info>ul {                           ΑΛΛΑΓΗ ΕΧΟΥΜΕ ΔΥΟ ΦΟΡΕΣ ΤΟ ΙΔΙΟ ΣΤΟ .articlebox > ul ΑΛΛΑ ΜΕ 0
     margin-left: 10rem;
-}
+} */
 
 /* Θέτουμε τα a των κατηγοριών */
 .categories-info a {
@@ -591,8 +589,12 @@ a[href^="#table"]:hover,
     color: black;
 }
 
-/* Θέτουμε το articlebox, μία κλάση για τα articles των categories */
+/* Θέτουμε το articlebox, μία κλάση για τα articles των categories. Ορίζουμε τη διάταξη flex column ώστε να είναι διατεταγμένα
+σε μία στήλη, ενώ με το align-items:center το τοποθετούμε στο κέντρο του άξονα */
 .articlebox {
+    display: flex;                              /* ΑΛΛΑΓΗ */
+    flex-flow: column nowrap;
+    align-items: center;
     border: 4px solid black;
     /* float: left; */
     width: 450px;
@@ -643,9 +645,12 @@ a[href^="#table"]:hover,
     color: rgb(20, 14, 5);
 }
 
-/* Θέτουμε marginleft στα ul που ειναι παιδιά των articlebox */
-.articlebox>ul {
-    margin-left: 0rem;
+/* Θέτουμε τη διάταξη flex στη λίστα με τις υποκατηγορίες των μαθημάτων ώστε να τοποθετούνται σε μία στήλη*/
+.articlebox>ul {                                                /*ΑΛΛΑΓΗ*/
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 0px;
 }
 
 /* Θέτουμε κάθε πλαίσιο του μαθήματος με διαφορετικό χρώμα */
@@ -1006,7 +1011,7 @@ aside #aside-more a{
     line-height: 3em;
     text-align: left;
     padding-left: 1em;
-    border: 0%;
+    /* border: 0%; */                                       /* ΑΛΛΑΓΗ ΕΒΓΑΖΕ ERROR ΣΤΟ VALIDATION */
 }
 
 /* Θέτουμε το στυλ για τα λινκς του δεύτερου επιπέδου του μενού */
@@ -1104,13 +1109,13 @@ aside #aside-more a{
 /* Θέτουμε το στυλ για το τμήμα του main */
 .categories{
     grid-area: categories;
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;                               ΑΛΛΑΓΗ . ΕΒΑΛΑ ΕΞΩΤΕΡΙΚΟ DIV ΩΣΤΕ ΝΑ ΜΗΝ ΠΕΡΙΕΧΕΙ ΤΟ MAIN TITLE
+    flex-wrap: wrap;                                ΚΑΙ ΝΑ ΕΧΕΙ GRID ---> ΔΕΣ ΜΕΤΑ .categories-wrapper
     justify-content: space-around;
     align-items: stretch;
-    gap: 10px;
+    gap: 10px; */
     margin-top: 200px;
-    align-items: flex-start;
+    /* align-items: flex-start; */
 }
 
 /* Ορίζουμε την διάταξη της σελίδας about-us*/
@@ -1264,4 +1269,13 @@ aside #aside-more a{
 .lecture-book-container header{
     background-color: white;
     width: 100%;
+}
+
+/* Κλάση για το div που περιέχει τα article με τις κατηγορίες. Θέτουμε τη διάταξη grid με 2 στήλες */
+.categories-wrapper{
+    display:grid;                           /* ΑΛΛΑΓΗ ΠΡΟΣΘΗΚΗ ΤΟΥ DIV ΜΕ ΑΥΤΗ ΤΗΝ ΚΛΑΣΗ ΓΙΑ GRID*/
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    row-gap: 3em;
+    justify-items: center;
 }
