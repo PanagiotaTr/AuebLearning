@@ -58,7 +58,7 @@ h6 {
     font-family: 'Roboto';
 }
 
-/* Θέτουμε στο logo του navigation (παιδί του nav) float ώστε να είναι αριστερά ύψος, πλάτος και border*/
+/* Θέτουμε στο logo του navigation (παιδί του nav) ύψος, πλάτος, margin-right και border*/
 nav > img {
     height: 4em;
     width: 4em;
@@ -83,7 +83,6 @@ nav > img {
 .nav-style li {
     list-style-type: none;
     background-color: rgb(89, 12, 6);
-    /* border: 2px solid white; */
     line-height: 4em;
     width: 12em;
     text-align: center;
@@ -99,6 +98,7 @@ footer {
     margin-top: 100px;
 }
 
+/* Εφαρμόζουμε διάταξη στα άμεσα παιδιά του upper-footer */
 #upper-footer>*{
     flex: 0 1 auto;
     display: flex;
@@ -107,6 +107,7 @@ footer {
     text-align: center;
 }
 
+/* Θέτουμε το στυλ στην παράγραφο του upper-footer */
 #upper-footer p{
     font-size: 1em;
     max-width: 25rem; 
@@ -193,13 +194,12 @@ footer ul {
 .main-title h1 {
     text-align: center;
     font-size: 30px;
-    /* font-weight: bold; */
     color: var(--primary-color);
-    letter-spacing: 1px;
+    letter-spacing: 1px;    
     display: grid;
-    grid-template-columns: 4fr 2fr 4fr;
+    grid-template-columns: 5fr 1fr 5fr;
     grid-template-rows: 27px 0;
-    grid-gap: 20px;
+    grid-gap: 30px; /*20*/
     align-items: center;
 }
 
@@ -212,11 +212,6 @@ footer ul {
     border-top: 1px solid #c50000;
     height: 5px;
     background-color: #f8f8f8;
-}
-
-/* Θέτουμε το h1 με μικρότερο μέγεθος για στυλιστικους λογους */
-.smaller-size h1{
-    font-size: x-large;
 }
 
 /* Ο πίνακας των lecture και book έχει width, το border γινεται collapse και έχει ένα margin top */
@@ -311,7 +306,7 @@ footer ul {
     padding: 15px;
     border-radius: 10px;
     margin: 1em;
-    font-size: 12pt;        /* ΑΛΛΑΓΗ*/
+    font-size: 12pt;
     display: grid;
     grid-template-areas: 
         'name name'
@@ -338,7 +333,6 @@ footer ul {
     padding: 0.4rem;
     width: 10rem;
     height: 15rem;
-    /* float: left; */
 }
 
 /* Το εσωτερικό του about-card. Κλάση για div που είναι παιδί του about-card. Θέτουμε width, height, 
@@ -366,7 +360,6 @@ footer ul {
     left: 0;
     transition: transform 0.6s;
     border-radius: 1rem;
-    /* padding: 1rem; */            /*ΑΛΛΑΓΗ*/
     box-sizing: border-box;
     grid-area: card;
 }
@@ -452,15 +445,17 @@ footer ul {
 
 /* Κλάση για τα article των βιβλίων */
 #info-book {
-    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-around;
+    align-items: center; 
 }
 
 /* Θέτουμε την εικόνα που είναι παιδί του info-book */
 #info-book>img {
-    height: 600px;
     width: 450px;
     border: 2px solid black;
-    float: left;
     margin-bottom: 50px;
 }
 
@@ -470,15 +465,12 @@ footer ul {
     background-color: #f9f9f9;
     padding: 15px;
     border-radius: 5px;
-    margin: 10px;
     font-size: large;
-    float: left;
-    margin-bottom: 40px;
 }
 
 /* Θέτουμε τα ul που είναι παιδιά του book-lecture-information */
 .book-lecture-information>ul {
-    font-size: x-large;
+    font-size: large;
     text-align: center;
     color: rgb(232, 19, 19);
     list-style-type: none;
@@ -488,6 +480,11 @@ footer ul {
 /* Θέτουμε τα list items που είναι απόγονοι του book-lecture-information */
 .book-lecture-information li {
     line-height: 1.5em;
+}
+
+/* Θέτουμε το μέγεθος των γραμμάτων της παραγράφου*/
+.book-lecture-information p{
+    font-size: medium;
 }
 
 /* Θέτουμε τα figure που βρίσκονται στις σελίδες με το lecture και το book */
@@ -535,16 +532,17 @@ a[href^="#table"]:hover,
 
 /* Κλάση για τα article των lecture */
 #info-lecture {
-    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-around;
+    align-items: center;
 }
 
 /* Θέτουμε την img που είναι παιδί element με id info lectures */
 #info-lecture>img {
-    height: 600px;
     width: 450px;
     border: 2px solid black;
-    float: left;
-    margin-bottom: 50px;
 }
 
 /* Κλάση videos για τα lectures */
@@ -562,26 +560,22 @@ a[href^="#table"]:hover,
 
 /* Κλάση για τα articles της σελίδας με τις κατηγορίες */
 .categories-info {
-    /* margin: 4em 0.5em; */
     background-color: var(--primary-color);
     border-radius: 2rem;
-    /* padding: 1em; */
     font-size: 10pt;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 /* Θέτουμε τις εικόνες των κατηγοριών */
 .categories-info img {
-    float: left;
     width: 435px;
     height: 250px;
     padding: 0.5em;
 }
-
-/* Θέτουμε την λίστα με τις υποκατηγορίες της κάθε κατηγορίας μαθημάτων
-.categories-info>ul {                           ΑΛΛΑΓΗ ΕΧΟΥΜΕ ΔΥΟ ΦΟΡΕΣ ΤΟ ΙΔΙΟ ΣΤΟ .articlebox > ul ΑΛΛΑ ΜΕ 0
-    margin-left: 10rem;
-} */
 
 /* Θέτουμε τα a των κατηγοριών */
 .categories-info a {
@@ -592,13 +586,11 @@ a[href^="#table"]:hover,
 /* Θέτουμε το articlebox, μία κλάση για τα articles των categories. Ορίζουμε τη διάταξη flex column ώστε να είναι διατεταγμένα
 σε μία στήλη, ενώ με το align-items:center το τοποθετούμε στο κέντρο του άξονα */
 .articlebox {
-    display: flex;                              /* ΑΛΛΑΓΗ */
+    display: flex;
     flex-flow: column nowrap;
     align-items: center;
     border: 4px solid black;
-    /* float: left; */
     width: 450px;
-    /* margin: 20px; */
 }
 
 /* θετουμε τα h2 που είναι παιδιά των articlebox */
@@ -646,7 +638,7 @@ a[href^="#table"]:hover,
 }
 
 /* Θέτουμε τη διάταξη flex στη λίστα με τις υποκατηγορίες των μαθημάτων ώστε να τοποθετούνται σε μία στήλη*/
-.articlebox>ul {                                                /*ΑΛΛΑΓΗ*/
+.articlebox>ul {
     display:flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -696,11 +688,6 @@ a[href^="#table"]:hover,
     text-decoration: none;
 }
 
-/* Θέτουμε τη hover ψευδο-κλάση στα a που αναφέρθηκαν */
-/* .lesson-box>article p:last-of-type a:hover {
-    text-decoration: underline;
-} */
-
 /* Κλάση lesson box περιέχει τα βιβλία και τις διαλέξεις */
 .lesson-box {
     border: 1px solid black;
@@ -709,7 +696,6 @@ a[href^="#table"]:hover,
     border-radius: 5px;
     margin: 0.3em;
     font-size: large;
-    float: left;
     margin-bottom: 40px;
     background-color: var(--primary-color);
 }
@@ -733,7 +719,6 @@ a[href^="#table"]:hover,
 
 /* Θέτουμε το img που είναι απόγονοι element με κλάση information */
 .information img {
-    float: left;
     width: 12em;
     height: 15em;
     padding: 0%;
@@ -796,12 +781,10 @@ a[href^="#table"]:hover,
 /* Θέτουμε το πλαίσιο για την κάθε διάλεξη και για το κάθε βιβλίο στα 2 μαθήματα*/
 .info-box {
     border: 0px solid black;
-    /* background-color: #f9f9f9; */
     padding: 0px;           
     border-radius: 5px;
     margin: 10px;
     font-size: medium;
-    /* float: left; */
     margin-bottom: 40px;
     text-align: center;
     display: flex;
@@ -847,10 +830,7 @@ aside {
     font-size: 1rem;
     height: 400px;
     grid-area: aside;
-    /* αν θέλουμε το aside να πιάνει μέχρι και το τελευταίο λινκ*/
     height: fit-content;
-    /* αν θέλουμε το aside να πιάνει μέχρι το τέλος της σελίδας*/
-    /* height: 95%; */ 
 }
 
 /* Θέτουμε το στυλ του τίτλου του aside-bar*/
@@ -1011,7 +991,6 @@ aside #aside-more a{
     line-height: 3em;
     text-align: left;
     padding-left: 1em;
-    /* border: 0%; */                                       /* ΑΛΛΑΓΗ ΕΒΓΑΖΕ ERROR ΣΤΟ VALIDATION */
 }
 
 /* Θέτουμε το στυλ για τα λινκς του δεύτερου επιπέδου του μενού */
@@ -1088,8 +1067,6 @@ aside #aside-more a{
 
 /* Θέτουμε το μέγεθος της εικόνας και το περίγραμμά της*/
 #introduction-wrapper img{
-    /* width: 850px;
-    height: 590px; */
     max-width: 100%;
     height: auto;           
     border: 0.5px solid black;
@@ -1107,15 +1084,21 @@ aside #aside-more a{
 }
 
 /* Θέτουμε το στυλ για το τμήμα του main */
-.categories{
+.categories {
     grid-area: categories;
-    /* display: flex;                               ΑΛΛΑΓΗ . ΕΒΑΛΑ ΕΞΩΤΕΡΙΚΟ DIV ΩΣΤΕ ΝΑ ΜΗΝ ΠΕΡΙΕΧΕΙ ΤΟ MAIN TITLE
-    flex-wrap: wrap;                                ΚΑΙ ΝΑ ΕΧΕΙ GRID ---> ΔΕΣ ΜΕΤΑ .categories-wrapper
-    justify-content: space-around;
-    align-items: stretch;
-    gap: 10px; */
     margin-top: 200px;
-    /* align-items: flex-start; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    row-gap: 3em;
+    column-gap: 2em;
+    justify-items: center;
+}
+
+/* Θέτουμε το main-title να πιάνει και τις 2 στήλες 
+που έχουμε ορίσει στο categories */
+.categories .main-title{
+    grid-column: span 2;
 }
 
 /* Ορίζουμε την διάταξη της σελίδας about-us*/
@@ -1132,56 +1115,41 @@ aside #aside-more a{
 .wr-about-us{
     grid-area: about-us;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: stretch;
     gap: 10px;
     margin-top: 200px;
-    align-items: flex-start;
 }
 
-/* Ορίζουμε την διάταξη της σελίδας cyber-security*/
-.wrapper-cyber-sec{
+/* Ορίζουμε την διάταξη των σελιδών cyber-security και machine-learning*/
+.wrapper-lesson{
     row-gap: 0;
     grid-template-areas:
         'header header header'
-        'cyber cyber aside'
-        'cyber cyber aside'
+        'lesson lesson aside'
+        'lesson lesson aside'
         'footer footer footer';
 }
 
 /* Θέτουμε το στυλ για το τμήμα του main */
-.cyber-sec{
-    grid-area: cyber;
+.wr-lesson{
+    grid-area: lesson;
+    flex-direction: column;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: stretch;
     gap: 10px;
     margin-top: 200px;
-    align-items: flex-start;
 }
 
-/* Ορίζουμε την διάταξη της σελίδας machine-learning*/
-.wrapper-machine-learning{
-    row-gap: 0;
-    grid-template-areas:
-        'header header header'
-        'machine machine aside'
-        'machine machine aside'
-        'footer footer footer';
-}
-
-/* Θέτουμε το στυλ για το τμήμα του main */
-.machine-learning{
-    grid-area: machine;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: stretch;
-    gap: 10px;
-    margin-top: 200px;
-    align-items: flex-start;
+/* Θέτουμε τις στήλες του main-title στις σελίδες που
+παρουσιάζουμε το βιβλίο και την διάλεξη, λόγω του 
+μεγάλου σε μήκους τίτλου*/
+.wr-lecture .main-title h1, .wr-book .main-title h1{
+    grid-template-columns: 7fr 6fr 7fr;
 }
 
 /* Ορίζουμε την διάταξη της σελίδας με το βιβλίο*/
@@ -1210,7 +1178,11 @@ aside #aside-more a{
 .flex-container {
     display: flex;
     align-items: flex-start;
-    gap: 20px;
+    gap: 100px;
+}
+
+.flex-container img{
+    height: 570px;
 }
 
 /* Θέτουμε τη διάταξη με τα περιεχόμενα του βιβλίου*/
@@ -1218,7 +1190,6 @@ aside #aside-more a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 300px;
 }
 
 /* Ορίζουμε την διάταξη της σελίδας με την διάλεξη*/
@@ -1269,13 +1240,4 @@ aside #aside-more a{
 .lecture-book-container header{
     background-color: white;
     width: 100%;
-}
-
-/* Κλάση για το div που περιέχει τα article με τις κατηγορίες. Θέτουμε τη διάταξη grid με 2 στήλες */
-.categories-wrapper{
-    display:grid;                           /* ΑΛΛΑΓΗ ΠΡΟΣΘΗΚΗ ΤΟΥ DIV ΜΕ ΑΥΤΗ ΤΗΝ ΚΛΑΣΗ ΓΙΑ GRID*/
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    row-gap: 3em;
-    justify-items: center;
 }

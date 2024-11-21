@@ -87,14 +87,28 @@ footer {
     color: #fffbfb;
     clear: both;
     margin-top: 100px;
+    height: 375px;
 }
 
 /* Το footer χωρίζεται σε 2 μέρη (upper/lower), αυτό είναι το upper  */
 #upper-footer {
     margin: 0px;
     padding: 0px;
-    height: 150px;
+    height: 310px;
 }
+
+/* Στυλ για το πρώτο div στο upper-footer */
+#upper-footer > div:first-child {
+    width: 100%;
+    text-align: center;
+}
+
+#upper-footer > div:first-child p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
 
 /* Το αριστερό κομμάτι του upper footer, το κάνουμε float αριστερά */
 #office-info {
@@ -158,6 +172,8 @@ footer ul {
 
 /* Θέτουμε το height του lower footer */
 #lower-footer {
+    /* float: left; */
+    margin-top: 30px;
     height: 30px;
 }
 
@@ -166,10 +182,6 @@ footer ul {
     transform: scale(1.2);
 }
 
-/* Θέτουμε το hover σε όλα τα a του upper footer */
-/* #upper-footer a:hover {
-    text-decoration: underline;
-} */
 
 /**********************************************************/
 
@@ -247,11 +259,6 @@ footer ul {
     text-decoration: none;
     font-weight: bold;
 }
-
-/* Θέτουμε την ψευδοκλάση hover στα a που είναι απόγονοι του table data -επίσης απόγονοι- του chapter table  */
-/* #chapter-table td a:hover {
-    text-decoration: underline;
-} */
 
 /* Θέτουμε τα th και td του chapter table */
 #chapter-table th,
@@ -560,12 +567,6 @@ a[href^="#table"]:hover,
     color: black;
 }
 
-/* Θέτουμε την ψευδοκλάση hover σε κάθε a των κατηγοριών */
-/* .categories-info a:hover {
-    text-decoration: underline;
-    color: white;
-} */
-
 /* Θέτουμε το articlebox, μία κλάση για τα articles των categories */
 .articlebox {
     border: 4px solid black;
@@ -665,11 +666,6 @@ a[href^="#table"]:hover,
     color: white;
     text-decoration: none;
 }
-
-/* Θέτουμε τη hover ψευδο-κλάση στα a που αναφέρθηκαν */
-/* .lesson-box>article p:last-of-type a:hover {
-    text-decoration: underline;
-} */
 
 /* Κλάση lesson box περιέχει τα βιβλία και τις διαλέξεις */
 .lesson-box {
@@ -786,24 +782,19 @@ a[href^="#table"]:hover,
     opacity: 1;
 }
 
-/* Θέτουμε την ψευδοκλάση hover για τα a που περιέχει η πίσω όψη του about card */
-/* .about-card-back a:hover{
-    text-decoration: underline;
-} */
-
 /* Θέτουμε το στυλ του aside-bar*/
 aside {
-    margin-top: 10em;
     background-color: var(--primary-color);
     color: #ecf0f1;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 300px;
-    margin: 20px auto;
+    margin: 20px 0px 70px 0px;
     font-size: 1rem;
-    height: 400px;
+    height: 430px;
     float:left;
+    text-align: center;
 }
 
 /* Θέτουμε το στυλ του τίτλου του aside-bar*/
