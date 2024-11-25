@@ -13,6 +13,7 @@
     --sub-categories-color4: rgb(249, 252, 80);
 }
 
+
 /* greek */
 @font-face {
     font-family: 'Roboto';
@@ -831,6 +832,9 @@ aside {
     height: 400px;
     grid-area: aside;
     height: fit-content;
+    position: sticky;
+    top: 200px;
+    margin-bottom: 220px;
 }
 
 /* Θέτουμε το στυλ του τίτλου του aside-bar*/
@@ -853,7 +857,7 @@ aside ul {
 /* Θέτουμε το στυλ για τη λίστα του aside-bar*/
 aside ul li {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     padding: 10px;
     background-color: white;
     border-radius: 5px;
@@ -885,7 +889,6 @@ aside ul li span {
 
 /* Θέτουμε το "περισσότερα" του aside-bar να είναι στο κέντρο*/
 aside #aside-more{
-    margin-top: 3em;
     text-align: center;
 }
 
