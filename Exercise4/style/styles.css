@@ -1244,3 +1244,118 @@ aside #aside-more a{
     background-color: white;
     width: 100%;
 }
+
+/* TASK 4 */
+
+img {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        font-size: 0.65rem;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .wrapper-index {
+        grid-template-areas:
+            'header'
+            'introduction'
+            'aside'
+            'footer';
+    }
+
+    #aueb-header {
+        position: relative;
+        z-index: 10;
+        padding: 0.3em;
+        width: auto;
+    }
+
+    #aueb-header > img {
+        width: 100%;
+        padding: 0.5em 0;
+    }
+
+    #aueb-header>nav {
+        flex-wrap: wrap;
+    }
+
+    .nav-style > li {
+        width: 100%;
+    }
+
+    #aueb-header .nav-style li ul{
+        left: auto;
+    }
+
+    .introduction {
+        margin-top: 20px;
+    }
+
+    #introduction-wrapper img {
+        width: 90%;
+    }
+
+    aside {
+        margin-top: 0px;
+        margin-left: 0;
+        padding: 10px;
+        max-width: 100%;
+        position: relative;
+        height: auto;
+        top: 0px;
+        margin-bottom: 0px;
+    }
+
+    aside ul li {
+        font-size: 0.8rem;
+    }
+
+    footer {
+        text-align: center;
+        padding: 1em;
+    }
+
+    #upper-footer {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    #social-links ul {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .main-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .main-title h1:after,
+    .main-title h1:before {
+        height: 3px;
+    }
+
+    #aueb-header .nav-style li ul li{
+        width: auto;
+    }
+
+    #introduction-wrapper img {
+        width: 90%;
+    }
+
+    #introduction-wrapper p {
+        padding: 10px;
+        font-size: 0.9rem;
+        text-align: justify;
+    }
+}
+
+
