@@ -1511,3 +1511,64 @@ img {
     }
 }
 
+@media screen and (min-width:481px) and (max-width: 960px) {
+    .wrapper{
+        grid-template-columns: 3fr 1fr;
+        min-height: 100vh;
+    }
+
+    .wrapper-index{
+        grid-template-areas: 
+            'header header'
+            'introduction aside'
+            'footer footer';
+    }
+    
+    .wrapper-about-us{
+        grid-template-areas: 
+            'header header'
+            'about-us aside'
+            'footer footer';
+    }
+
+    .about-us{
+        display:flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .wrapper-categories{
+        grid-template-areas:
+            'header header'
+            'categories aside'
+            'footer footer';
+    }
+
+    .categories{
+        display:flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .categories-info{
+        width: 90%;
+    }
+
+    .wrapper-lesson{
+        grid-template-areas: 
+            'header header'
+            'lesson aside'
+            'footer footer';
+    }
+
+    .lecture-book-container{
+        flex-wrap: wrap;            /* ΠΡΟΣΟΧΗ ΜΕΓΕΘΟΣ ΕΙΚΟΝΩΝ ΚΑΙ ΔΙΟΡΘΩΣΗ WRAP ΠΑΝΩ ΚΑΙ ΣΤΟ 3*/
+        justify-content: space-around;
+    }
+
+
+    #upper-footer{
+        flex-flow: row wrap;
+    }
+}
+
