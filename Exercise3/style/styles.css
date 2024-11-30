@@ -1,3 +1,29 @@
+/* Εύρεση τμημάτων κώδικα - αναζήτηση με βάση τα παρακάτω σχόλια
+ * Γενικές ρυθμίσεις σελιδών
+ * Δημιουργία μενού
+ * Δημιουργία aside
+ * Δημιουργία footer
+ * Δημιουργία βασικού τίτλου h1
+ * Δημιουργία πινάκων - περιεχομένων
+ * Δημιουργία αστεριών για αξιολόγηση
+ * Στοιχεία αρχικής σελίδας - index
+ * Στοιχεία σελίδας - about-us
+ * Στοιχεία σελιδών που περιέχουν το book / το lecture 
+    - machine-learning-book / lecture
+ * Στοιχεία σελίδας - categories
+ * Στοιχεία σελιδών που περιέχουν το book + το lecture
+    - machine-learning / cyber-security
+ **************************************************************************
+ * Θέτουμε μια γενική διάταξη της σελίδας (κοινή για όλες)
+ * Θέτουμε την διάταξη στην σελίδα index
+ * Θέτουμε την διάταξη στην σελίδα categories
+ * Θέτουμε την διάταξη στην σελίδα about-us
+ * Θέτουμε την διάταξη στις σελίδες machine-learning / cyber-security
+ * Θέτουμε την διάταξη στην σελίδα machine-learning-book
+ * Θέτουμε την διάταξη στην σελίδα machine-learning-lecture
+*/
+
+/* Γενικές ρυθμίσεις σελιδών */
 /* Θέτουμε στην ψευδο-κλάση root τα χρώματα που θα χρησιμοποιήσουμε */
 :root {
     --background-color: #fae5d3;
@@ -59,37 +85,7 @@ h6 {
     font-family: 'Roboto';
 }
 
-/* Θέτουμε στο logo του navigation (παιδί του nav) ύψος, πλάτος, margin-right και border*/
-nav > img {
-    height: 4em;
-    width: 4em;
-    border: 2px solid var(--primary-color);
-    margin-right: 1rem;
-}
-
-/* Θέτουμε color,padding,margin για την λίστα (ul) του navigation bar */
-.nav-style {
-    margin: 0;
-    padding: 0;
-}
-
-/* Θέτουμε χρώμα γραμμάτων, font και text-decoration για όλα τα a της λίστας (ul) του navigation bar  */
-.nav-content a {
-    color: white;
-    text-decoration: none;
-    font-size: large;
-}
-
-/* Θέτουμε σε όλα τα list items του της λίστας (ul) του navigation bar */
-.nav-style li {
-    list-style-type: none;
-    background-color: rgb(89, 12, 6);
-    line-height: 4em;
-    width: 12em;
-    text-align: center;
-    font-weight: bold;
-}
-
+/* Δημιουργία footer */
 /* Θέτουμε background color, χρώμα γραμμάτων, margin-top και clear στο footer κάθε σελίδας */
 footer {
     grid-area: footer;
@@ -176,7 +172,7 @@ footer ul {
 /* Θέτουμε το height του lower footer */
 #lower-footer {
     padding: 0.5em 0 0 0.5em;
-    height: 30px;
+    /* height: 30px; */
     border-top: 0.5px solid black;
     margin-top: 0.5em;
 }
@@ -191,6 +187,7 @@ footer ul {
 
 /**********************************************************/
 
+/* Δημιουργία βασικού τίτλου h1 */
 /* Θέτουμε τον τίτλο h1 που υπάρχει σε κάθε σελίδα*/
 .main-title h1 {
     text-align: center;
@@ -215,6 +212,7 @@ footer ul {
     background-color: #f8f8f8;
 }
 
+/* Δημιουργία πινάκων - περιεχομένων */
 /* Ο πίνακας των lecture και book έχει width, το border γινεται collapse και έχει ένα margin top */
 #chapter-table {
     width: 100%;
@@ -283,12 +281,14 @@ footer ul {
     text-align: center;
 }
 
+/* Δημιουργία αστεριών για αξιολόγηση */
 /* Θέτουμε τα αστέρια της αξιολόγησης των βιβλίων και των διαλέξεων */
 .stars {
     color: gold;
     text-decoration: none;
 }
 
+/* Στοιχεία αρχικής σελίδας - index */
 /* Θέτουμε το index-info-box το οποίο αποτελεί ένα container για το κείμενο της αρχικής σελίδας  */
 .index-info-box {
     border: 1px solid black;
@@ -300,6 +300,7 @@ footer ul {
     margin-bottom: 40px;
 }
 
+/* Στοιχεία σελίδας - about-us */
 /* Κλάση about-us για τα article που περιέχουν τα στοιχεία. Γίνεται χρήση του grid ώστε να τοποθετηθεί
 στην πρώτη γραμμή το ονοματεπώνυμο και στη δεύτερη η εικόνα και η περιγραφή*/
 .about-us {
@@ -435,6 +436,8 @@ footer ul {
     background-color: var(--about-us-color2);
 }
 
+/* Στοιχεία σελιδών που περιέχουν το book / το lecture 
+    - machine-learning-book / lecture */
 /* Θέτουμε τα h2 για τα header με id books και lectures */
 #books h2,
 #lectures h2 {
@@ -559,6 +562,7 @@ a[href^="#table"]:hover,
     border: 1px solid black;
 }
 
+/* Στοιχεία σελίδας - categories */
 /* Κλάση για τα articles της σελίδας με τις κατηγορίες */
 .categories-info {
     background-color: var(--primary-color);
@@ -591,7 +595,7 @@ a[href^="#table"]:hover,
     flex-flow: column nowrap;
     align-items: center;
     border: 4px solid black;
-    width: 450px;
+    /* width: 450px; */
 }
 
 /* θετουμε τα h2 που είναι παιδιά των articlebox */
@@ -659,6 +663,8 @@ a[href^="#table"]:hover,
     background-color: var(--categories-color3);
 }
 
+/* Στοιχεία σελιδών που περιέχουν το book + το lecture
+    - machine-learning / cyber-security */
 /* Θέτουμε το h2 που είναι απόγονοι element με κλαση lesson */
 .lesson h2 {
     font-size: x-large;
@@ -813,11 +819,11 @@ a[href^="#table"]:hover,
     opacity: 1;
 }
 
+/* Δημιουργία aside */
 /* Θέτουμε το στυλ του aside-bar*/
 aside {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 20px;
     align-items: center;
     margin-top: 400px;
@@ -829,7 +835,6 @@ aside {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 300px;
     font-size: 1rem;
-    height: 400px;
     grid-area: aside;
     height: fit-content;
     position: sticky;
@@ -901,6 +906,132 @@ aside #aside-more a{
 
 /********************************************************/
 
+
+/* Δημιουργία μενού */
+/* Φτιάχνουμε την εμφάνιση του μενού */
+/* Θέτουμε συγκεκριμένο μέγεθος γραμμάτων στα στοιχεία του aueb-header*/
+#aueb-header * {
+    font-size: 12px;
+}
+
+/* Ρυθμίζουμε την εμφάνιση του header */
+#aueb-header {
+    grid-area: header;
+    position: fixed;
+    z-index: 10;
+    background-color: var(--primary-color);
+    width: 100%;
+    text-align: center;
+}
+
+/* Ορίζουμε την εικόνα να βρίσκεται στην ίδια γραμμή με άλλα στοιχεία */
+#aueb-header > img {
+    display: inline-block;
+}
+
+/* Θέτουμε την διάταξη για το navigation */
+#aueb-header > nav {
+    border-top: 0.5px solid black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Θέτουμε την βασική διάταξη της λίστας */
+.nav-style {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* width: 100%; */
+}
+
+/* Θέτουμε το χρώμα και το decoration στα a στοιχεία */
+.nav-content a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Θέτουμε το στυλ για τα στοιχεία του πρώτου επιπέδου */
+.nav-style > li {
+    position: relative;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1rem;
+    border-right: 1px solid black;
+    width: 10em;
+}
+
+/* Θέτουμε την διάταξη για το δεύτερο επίπεδο της λίστας */
+.nav-style li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(89, 12, 6);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    z-index: 10;
+    list-style: none;
+}
+
+/* Θέτουμε το στυλ για τα στοιχεία του υπομενού */
+.nav-style li ul li {
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    background-color: rgb(89, 12, 6);
+    border-bottom: 1px solid black;
+    list-style: none;
+}
+
+/* Θέτουμε την εμφάνιση του υπομενού όταν το ποντίκι βρίσκεται πάνω */
+.nav-style > li:hover > ul {
+    display: block;
+}
+
+/* Θέτουμε το χρώμα του υπομενού όταν το ποντίκι βρίσκεται πάνω */
+.nav-style li ul li:hover {
+    background-color: #9e4a4d;
+}
+
+/* Θέτουμε την διάταξη για το τρίτο επίπεδο της λίστας */
+.nav-style li ul li ul {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #9e4a4d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    list-style: none;
+}
+
+/* Θέτουμε την εμφάνιση του υπομενού όταν το ποντίκι βρίσκεται πάνω */
+.nav-style li ul li:hover > ul {
+    display: block;
+}
+
+/* Θέτουμε στο logo του navigation (παιδί του nav) ύψος, πλάτος, margin-right και border*/
+nav > img {
+    height: 4em;
+    width: 4em;
+    border: 2px solid var(--primary-color);
+    margin-left: 2rem;
+    text-align:start;
+}
+
+/* Θέτουμε την κεντρική εικόνα του header */
+#aueb-header>img {
+    padding: 0.5em;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
 /* Θέτουμε μια γενική διάταξη της σελίδας (κοινή για όλες)*/
 /* Αποτελείται από 3 στήλες */
 .wrapper{
@@ -914,6 +1045,7 @@ aside #aside-more a{
     width: 100%;
 }
 
+/* Θέτουμε την διάταξη στην σελίδα index */
 /* Ορίζουμε την διάταξη της αρχικής σελίδας */
 .wrapper-index{
     row-gap: 0;
@@ -922,130 +1054,6 @@ aside #aside-more a{
         'introduction introduction aside'
         'introduction introduction aside'
         'footer footer footer';
-}
-
-/* Θέτουμε το στυλ για το τμήμα του header */
-#aueb-header {
-    grid-area: header;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    position: fixed;
-    z-index: 10;
-    background-color: var(--primary-color);
-    width: 100%;
-}
-
-/* Θέτουμε το στυλ για το τμήμα του μενού που βρίσκεται στο navigation */
-#aueb-header>nav{
-    border-top: 0.5px solid black;
-    display: flex;
-    flex-flow: row nowrap;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-}
-
-/* Θέτουμε την διάταξη για το πρώτο επίπεδο του μενού */
-#aueb-header .nav-style {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-/* Θέτουμε την κεντρική εικόνα του header */
-#aueb-header>img {
-    padding: 0.5em;
-    clear: both;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-}
-
-/* Θέτουμε το στυλ για το πρώτο επίπεδο του μενού */
-#aueb-header .nav-style > li {
-    list-style-type: none;
-    border-right: 1px solid black;
-    background-color: var(--primary-color);
-    font-weight: bold;
-    text-align: center;
-    position: relative;
-}
-
-/* Θέτουμε την διάταξη για το δεύτερο επίπεδο του μενού */
-#aueb-header .nav-style li ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    padding: 0;
-    margin: 0;
-    z-index: 1;
-}
-
-/* Εμφανίζουμε το δεύτερο επίπεδο του μενού όταν το ποντίκι βρεθεί επάνω */
-#aueb-header .nav-style > li:hover > ul {
-    display: block;
-}
-
-/* Θέτουμε το στυλ για το δεύτερο επίπεδο του μενού */
-#aueb-header .nav-style li ul li {
-    list-style-type: none;
-    border-left: 1px solid black;
-    line-height: 3em;
-    text-align: left;
-    padding-left: 1em;
-}
-
-/* Θέτουμε το στυλ για τα λινκς του δεύτερου επιπέδου του μενού */
-#aueb-header .nav-style li ul li a {
-    color: white;
-    padding: 12px 12px;
-    text-decoration: none;
-    display: block;
-    font-size: small;
-}
-
-/* Εφαρμόζουμε αλλαγή χρώματος όταν το ποντίκι βρεθεί 
-επάνω από τις επιλογές του πρώτου επιπέδου του μενού */
-#aueb-header .nav-style > li:hover {
-    background-color: #9e4a4d;
-}
-
-/* Θέτουμε το στυλ για το τρίτο επίπεδο του μενού */
-#aueb-header .nav-style .sub-menu {
-    display: none;
-    position: absolute;
-    background-color: #9e4a4d;
-    min-width: 200px;
-    box-shadow: 0 8px 8px;
-    color: white;
-}
-
-/* Εφαρμόζουμε αλλαγή χρώματος όταν το ποντίκι βρεθεί 
-επάνω από τις επιλογές του δευτέρου επιπέδου του μενού */
-#aueb-header .nav-style li ul li:hover {
-    background-color: #9e4a4d;
-}
-
-/* Εμφανίζουμε το τρίτο επίπεδο του μενού όταν το ποντίκι βρεθεί επάνω */
-#aueb-header .nav-style li ul li:hover > ul {
-    display: block;
-    margin-left: 12em;
-}
-
-/* Θέτουμε το στυλ για τα λινκς του τρίτου επιπέδου του μενού */
-#aueb-header .nav-style .sub-menu a{
-    color: white;
-    padding: 12px 12px;
-    text-decoration: none;
-    display: block;
-    font-size: small;
-}
-
-/* Θέτουμε την εμφάνιση του τρίτου επιπέδου το μενού 
-δεξία από την εμφάνιση του δεύτερου επιπέδου του μενού */
-#aueb-header .nav-style li ul li ul {
-    top: 0;
 }
 
 /* Θέτουμε το στυλ για το τμήμα του main */
@@ -1075,7 +1083,7 @@ aside #aside-more a{
     border: 0.5px solid black;
 }
 
-
+/* Θέτουμε την διάταξη στην σελίδα categories */
 /* Ορίζουμε την διάταξη της σελίδας categories*/
 .wrapper-categories{
     row-gap: 0;
@@ -1104,6 +1112,7 @@ aside #aside-more a{
     grid-column: span 2;
 }
 
+/* Θέτουμε την διάταξη στην σελίδα about-us */
 /* Ορίζουμε την διάταξη της σελίδας about-us*/
 .wrapper-about-us{
     row-gap: 0;
@@ -1126,6 +1135,7 @@ aside #aside-more a{
     margin-top: 200px;
 }
 
+/* Θέτουμε την διάταξη στις σελίδες machine-learning / cyber-security */
 /* Ορίζουμε την διάταξη των σελιδών cyber-security και machine-learning*/
 .wrapper-lesson{
     row-gap: 0;
@@ -1155,6 +1165,20 @@ aside #aside-more a{
     grid-template-columns: 7fr 6fr 7fr;
 }
 
+/* Θέτουμε τη διάταξη για τα 2 πλαίσια που αφορούν τα βιβλία και 
+τις διαλέξεις των 2 μαθημάτων που έχουμε επιλέξει */
+.lecture-book-container{
+    display:flex;
+    flex-flow: row nowrap;
+}
+
+/* Θέτουμε το χρώμα και το μέγεθος του header */
+.lecture-book-container header{
+    background-color: white;
+    width: 100%;
+}
+
+/* Θέτουμε την διάταξη στην σελίδα machine-learning-book */
 /* Ορίζουμε την διάταξη της σελίδας με το βιβλίο*/
 .wrapper-book{
     row-gap: 0;
@@ -1195,6 +1219,7 @@ aside #aside-more a{
     align-items: center;
 }
 
+/* Θέτουμε την διάταξη στην σελίδα machine-learning-lecture */
 /* Ορίζουμε την διάταξη της σελίδας με την διάλεξη*/
 .wrapper-lecture{
     row-gap: 0;
@@ -1230,17 +1255,4 @@ aside #aside-more a{
     flex-direction: column;
     align-items: center;
     /* margin-top: 150px; */
-}
-
-/* Θέτουμε τη διάταξη για τα 2 πλαίσια που αφορούν τα βιβλία και 
-τις διαλέξεις των 2 μαθημάτων που έχουμε επιλέξει */
-.lecture-book-container{
-    display:flex;
-    flex-flow: row nowrap;
-}
-
-/* Θέτουμε το χρώμα και το μέγεθος του header */
-.lecture-book-container header{
-    background-color: white;
-    width: 100%;
 }

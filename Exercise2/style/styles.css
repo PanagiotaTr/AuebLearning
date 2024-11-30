@@ -1,3 +1,21 @@
+/* Εύρεση τμημάτων κώδικα - αναζήτηση με βάση τα παρακάτω σχόλια
+ * Γενικές ρυθμίσεις σελιδών
+ * Δημιουργία μενού
+ * Δημιουργία aside
+ * Δημιουργία footer
+ * Δημιουργία βασικού τίτλου h1
+ * Δημιουργία πινάκων - περιεχομένων
+ * Δημιουργία αστεριών για αξιολόγηση
+ * Στοιχεία αρχικής σελίδας - index
+ * Στοιχεία σελίδας - about-us
+ * Στοιχεία σελιδών που περιέχουν το book / το lecture 
+    - machine-learning-book / lecture
+ * Στοιχεία σελίδας - categories
+ * Στοιχεία σελιδών που περιέχουν το book + το lecture
+    - machine-learning / cyber-security
+*/
+
+/* Γενικές ρυθμίσεις σελιδών */
 /* Θέτουμε στην ψευδο-κλάση root τα χρώματα που θα χρησιμοποιήσουμε */
 :root {
     --background-color: #fae5d3;
@@ -38,6 +56,7 @@ h6 {
     font-family: 'Roboto', sans-serif;
 }
 
+/* Δημιουργία μενού */
 /* Θέτουμε στο img του header όλων των σελίδων το background το padding και clear */
 #aueb-header>img {
     background: linear-gradient(to left, rgb(255, 255, 255), rgb(89, 12, 6));
@@ -81,6 +100,7 @@ nav>img {
     font-weight: bold;
 }
 
+/* Δημιουργία footer */
 /* Θέτουμε background color, χρώμα γραμμάτων, margin-top και clear στο footer κάθε σελίδας */
 footer {
     background-color: #590c06;
@@ -185,6 +205,7 @@ footer ul {
 
 /**********************************************************/
 
+/* Δημιουργία βασικού τίτλου h1 */
 /* Θέτουμε τον τίτλο h1 που υπάρχει σε κάθε σελίδα*/
 .main-title h1 {
     font-size: 30px;
@@ -205,6 +226,7 @@ footer ul {
     background-color: #f8f8f8;
 }
 
+/* Δημιουργία πινάκων - περιεχομένων */
 /* Ο πίνακας των lecture και book έχει width, το border γινεται collapse και έχει ένα margin top */
 #chapter-table {
     width: 100%;
@@ -273,12 +295,14 @@ footer ul {
     text-align: center;
 }
 
+/* Δημιουργία αστεριών για αξιολόγηση */
 /* Θέτουμε τα αστέρια της αξιολόγησης των βιβλίων και των διαλέξεων */
 .stars {
     color: gold;
     text-decoration: none;
 }
 
+/* Στοιχεία αρχικής σελίδας - index */
 /* Θέτουμε το index-info-box το οποίο αποτελεί ένα container για το κείμενο της αρχικής σελίδας  */
 .index-info-box {
     border: 1px solid black;
@@ -291,6 +315,7 @@ footer ul {
     margin-bottom: 40px;
 }
 
+/* Στοιχεία σελίδας - about-us */
 /* Κλάση about-us για τα article που περιέχουν τα στοιχεία */
 .about-us {
     border: 1px solid black;
@@ -418,7 +443,8 @@ footer ul {
     background-color: var(--about-us-color2);
 }
 
-
+/* Στοιχεία σελιδών που περιέχουν το book / το lecture 
+    - machine-learning-book / lecture */
 /* Θέτουμε τα h2 για τα header με id books και lectures */
 #books h2,
 #lectures h2 {
@@ -538,6 +564,7 @@ a[href^="#table"]:hover,
     border: 1px solid black;
 }
 
+/* Στοιχεία σελίδας - categories */
 /* Κλάση για τα articles της σελίδας με τις κατηγορίες */
 .categories-info {
     margin: 4em 0.5em;
@@ -637,6 +664,8 @@ a[href^="#table"]:hover,
     background-color: var(--categories-color3);
 }
 
+* /* Στοιχεία σελιδών που περιέχουν το book + το lecture
+    - machine-learning / cyber-security */
 /* Θέτουμε το h2 που είναι απόγονοι element με κλαση lesson */
 .lesson h2 {
     font-size: x-large;
@@ -782,6 +811,7 @@ a[href^="#table"]:hover,
     opacity: 1;
 }
 
+/* Δημιουργία aside */
 /* Θέτουμε το στυλ του aside-bar*/
 aside {
     background-color: var(--primary-color);
