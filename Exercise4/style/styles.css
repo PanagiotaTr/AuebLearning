@@ -505,8 +505,8 @@ figure {
 
 /* Θέτουμε τις εικόνες που είναι απόγονοι του article, τα οποία είναι αδέρφια element με id books */
 #books~article img {
-    width: 400px;
-    height: 230px;
+    /* width: 400px;  ΑΛΛΑΓΗ */  
+    height: auto;
     border: 1px solid black;
 }
 
@@ -576,8 +576,8 @@ a[href^="#table"]:hover,
 
 /* Θέτουμε τις εικόνες των κατηγοριών */
 .categories-info img {
-    width: 435px;
-    height: 250px;
+    /* width: 435px;
+    height: 250px;    ΑΛΛΑΓΗ */
     padding: 0.5em;
 }
 
@@ -1022,10 +1022,11 @@ nav > img {
 /* Θέτουμε την κεντρική εικόνα του header */
 #aueb-header>img {
     padding: 0.5em;
+    height: 5em; /*ΑΛΛΑΓΗ*/
     clear: both;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    /* width: 30%; ΑΛΛΑΓΗ*/
 }
 
 /* Θέτουμε μια γενική διάταξη της σελίδας (κοινή για όλες)*/
@@ -1209,12 +1210,12 @@ nav > img {
 .flex-container {
     display: flex;
     align-items: flex-start;
-    gap: 100px;
+    gap: 2em;  /*ΑΛΛΑΓΗ ΔΕΝ ΦΑΙΝΟΤΑΝ ΩΡΑΙΟ*/
 }
 
 /* Θέτουμε το ύψος της εικόνας */
 .flex-container img{
-    height: 570px;
+    height: auto;    /*ΑΛΛΑΓΗ*/
 }
 
 /* Θέτουμε τη διάταξη με τα περιεχόμενα του βιβλίου*/
@@ -1382,7 +1383,9 @@ img {
 
     /* Ρυθμίζουμε τα στοιχεία έτσι ώστε να μεταφέρονται σε επόμενες γραμμές */
     .flex-container{
+        flex-direction: column;         /*ΑΛΛΑΓΗ ΝΑ ΕΙΝΑΙ ΣΤΗΛΗ*/
         flex-wrap: wrap;
+        align-items: center;            /*ΑΛΛΑΓΗ*/
     }
 
     /* Θέτουμε την διάταξη στην σελίδα machine-learning-lecture */
@@ -1548,7 +1551,7 @@ img {
     }
 
     aside ul li{
-        padding: 5px;
+        padding: 0px;       /*ΑΛΛΑΓΗ ΜΠΟΡΕΙ ΚΑΙ ΝΑ ΤΟ ΑΛΛΑΞΟΥΜΕ*/
     }
 }
 
