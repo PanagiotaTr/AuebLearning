@@ -561,13 +561,6 @@ a[href^="#table"]:hover,
     height: 350px;
 }
 
-/* Θέτουμε την εικονα του lecture */
-#imageofvideo>img {
-    width: 470px;
-    height: 500px;
-    border: 1px solid black;
-}
-
 /* Στοιχεία σελίδας - categories */
 /* Κλάση για τα articles της σελίδας με τις κατηγορίες */
 .categories-info {
@@ -1023,7 +1016,6 @@ nav > img {
     height: 4em;
     width: 4em;
     border: 2px solid var(--primary-color);
-    margin-left: 2rem;
     text-align:start;
 }
 
@@ -1376,6 +1368,7 @@ img {
     .categories{
         display: flex;
         flex-flow: column nowrap;
+        align-items: center;
     }
 
     /* Θέτουμε την διάταξη στην σελίδα machine-learning-book */
@@ -1399,11 +1392,6 @@ img {
         'lecture'
         'aside'
         'footer';
-    }
-
-    /* Ρυθμίζουμε τα στοιχεία έτσι ώστε να μεταφέρονται σε επόμενες γραμμές */
-    .flex-lecture-container{
-        flex-wrap: wrap;
     }
 
     /* Θέτουμε την διάταξη στις σελίδες machine-learning / cyber-security */
@@ -1434,6 +1422,10 @@ img {
         display:flex;
         flex-flow: column nowrap;
         align-items: center;
+    }
+
+    .articlebox{
+        width: 90%;
     }
 }
 
@@ -1504,10 +1496,59 @@ img {
             'footer footer';
     }
 
+    .wrapper-lecture{
+        grid-template-areas:
+            'header header'
+            'lecture aside'
+            'footer footer';
+    }
+
+    .wrapper-book{
+        grid-template-areas: 
+            'header header'
+            'book aside'
+            'footer footer';
+    }
+
     /* Ρυθμίζουμε τα στοιχεία έτσι ώστε να μεταφέρονται σε επόμενες γραμμές */
     .lecture-book-container{
         flex-wrap: wrap;
         justify-content: space-around;
+    }
+
+    .flex-container{
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    .book-lecture-information{
+        width: 90%;
+    }
+
+    .flex-lecture-table{
+        width: 90%;
+    }
+
+    aside{
+        width: 80%;
+        position: static;
+        margin-left: 5px;
+    }
+
+    aside h2{
+        font-size: 1.2rem;
+    }
+
+    aside ul li span{
+        font-size: 0.9rem;
+    }
+
+    aside ul li a{
+        font-size: 0.9rem;
+    }
+
+    aside ul li{
+        padding: 5px;
     }
 }
 
