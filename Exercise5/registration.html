@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <title>Εγγραφή</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/hermes.jpg" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+
+<body>
+
+    <header id="aueb-header" class="hover">
+        <img src="../images/aueb-header.png" alt="AUEB Header">
+    </header>
+
+    <div class="wrapper wrapper-register">
+        <form class="register-form" name="gbForm" method="post" action="/register-user">
+            <header class="main-title">
+                <h1>Εγγραφή</h1>
+            </header>
+
+            <div id="register-container">
+                <fieldset>
+                    <legend>Προσωπικά Στοιχεία</legend>
+
+                    <p>
+                        <label for="name"><b>Όνομα</b></label>
+                        <input type="text" placeholder="Συμπληρώστε όνομα" name="name" id="name" required>
+                    </p>
+                    <p>
+                        <label for="surname"><b>Επώνυμο</b></label>
+                        <input type="text" placeholder="Συμπληρώστε επώνυμο" name="surname" id="surname" required>
+                    </p>
+                    <p>
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Συμπληρώστε mail" name="email" id="email" required>
+                    </p>
+                    <p>
+                        <label for="address"><b>Διεύθυνση κατοικίας</b></label>
+                        <input type="text" placeholder="Συμπληρώστε διεύθυνση" name="address" id="address" required>
+                    </p>
+                    <p>
+                        <label for="birth-date"><b>Ημερομηνία γέννησης</b></label>
+                        <input type="date" name="birth-date" id="birth-date" required>
+                    </p>
+                    <p>
+                        <label for="number"><b>Τηλέφωνο επικοινωνίας</b></label>
+                        <input type="tel" placeholder="Συμπληρώστε τηλέφωνο" name="number" id="number" required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Στοιχεία Ταυτοποίησης</legend>
+
+                    <p>
+                        <label for="username"><b>Όνομα Χρήστη (Username)</b></label>
+                        <input type="text" placeholder="Συμπληρώστε όνομα χρήστη" name="username" id="username"
+                            required>
+                    </p>
+                    <p>
+                        <label for="password"><b>Κωδικός (Password)</b></label>
+                        <input type="password" placeholder="Συμπληρώστε κωδικό" name="password" id="password" required>
+                    </p>
+                    <p>
+                        <label for="verify-password"><b>Επιβεβαίωση Κωδικού</b></label>
+                        <input type="password" placeholder="Επαληθεύστε τον κωδικό" name="verify-password"
+                            id="verify-password" required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Τρόποι Επικοινωνίας</legend>
+
+                    <div class="multiple-choices">
+                        <p>
+                            <label class="container">SMS
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                        </p>
+                        <p>
+                            <label class="container">Email
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </p>
+                        <p>
+                            <label class="container">Viber
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </p>
+                        <p>
+                            <label class="container">WhatsApp
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </p>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Ερωτηματολόγιο</legend>
+
+                    <p>
+                        <label for="education-level"><b>1. Ποιο είναι το υψηλότερο επίπεδο εκπαίδευσης που έχετε
+                                ολοκληρώσει;</b></label>
+                        <select id="education-level" name="education-level" required>
+                            <option value="" disabled selected>Επιλέξτε</option>
+                            <option value="high-school">Γυμνάσιο</option>
+                            <option value="high-school">Λύκειο</option>
+                            <option value="bachelor">ΑΕΙ/ΤΕΙ</option>
+                            <option value="master">Μεταπτυχιακές σπουδές</option>
+                            <option value="phd">Διδακτορικές σπουδές</option>
+                            <option value="phd">Μεταδιδακτορικές σπουδές</option>
+                            <option value="other">Άλλο</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="job-status"><b>2. Ποια είναι η επαγγελματική σας κατάσταση;</b></label>
+                        <select id="job-status" name="job-status" required>
+                            <option value="" disabled selected>Επιλέξτε</option>
+                            <option value="employed">Εργαζόμενος</option>
+                            <option value="self-employed">Ελεύθερος επαγγελματίας</option>
+                            <option value="student">Φοιτητής</option>
+                            <option value="unemployed">Άνεργος</option>
+                            <option value="retired">Συνταξιούχος</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="sector"><b>3. Ποιος/οι τομέας/είς σας ενδιαφέρουν περισσότερο;</b></label>
+                    <div class="multiple-choices">
+                        <label class="container-sector">Τεχνητή Νοημοσύνη (ΑΙ)
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container-sector">Κυβερνοασφάλεια
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container-sector">Τεχνολογία Λογισμικού
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container-sector">Προγραμματισμός στον Ιστό
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    </p>
+                    <p>
+                        <label for="years-experience"><b>4. Πόσα χρόνια επαγγελματικής εμπειρίας έχετε;</b></label>
+                        <select id="years-experience" name="years-experience" required>
+                            <option value="" disabled selected>Επιλέξτε</option>
+                            <option value="nothing">Καθόλου</option>
+                            <option value="less-than-year">Λιγότερο από 1 χρόνο</option>
+                            <option value="less-than-five-years">1 έως 5 χρόνια</option>
+                            <option value="more-than-five-years">Περισσότερα από 5 χρόνια</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label><b>5. Έχετε γνώση ξένων γλωσσών;</b></label>
+                    <div class="multiple-choices">
+                        <label class="container-language">Καμία
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container-language">Αγγλικά
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container-language">Γαλλικά
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container-language">Γερμανικά
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container-language">Άλλη
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    </p>
+                </fieldset>
+
+                <div id="btn-register">
+                    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                    <button type="submit" class="registerbtn">Register</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <div id="upper-footer" class="hover">
+            <div>
+                <h2>About Us</h2>
+                <p>Η Aueblearning είναι μια καινοτόμος πλατφόρμα e-learning που προσφέρει διαδραστικά μαθήματα και
+                    εξειδικευμένο περιεχόμενο για επαγγελματική και προσωπική ανάπτυξη. Στόχος μας είναι να εμπνεύσουμε
+                    και να ενισχύσουμε τη γνώση σε κάθε μαθητή.</p>
+            </div>
+            <div id="office-info">
+                <h2>Τα Γραφεία μας</h2>
+                <address>
+                    28ης Οκτωβρίου 76, Αθήνα<br>
+                    Αθήνα, Ελλάδα 10434<br>
+                    Phone: <a href="tel:+302109620030">(+30) 2109620030</a><br>
+                    Email: <a href="mailto:info@aueblearning.com">info@aueblearning.com</a>
+                </address>
+            </div>
+            <div id="policies">
+                <h2>Όροι & Πολιτικές</h2>
+                <ul>
+                    <li><a href="#">Πολιτική Cookies</a></li>
+                    <li><a href="#">Πολιτική Απορρήτου</a></li>
+                    <li><a href="#">Όροι Χρήσης</a></li>
+                </ul>
+            </div>
+            <div id="social-links">
+                <h2>Βρείτε μας</h2>
+                <ul>
+                    <li><a href="https://www.facebook.com/auebgreece" target="_blank">
+                        <img srcset="../images/facebook-LR.jpg 320w,
+                                    ../images/facebook-MR.jpg 768w,
+                                    ../images/facebook-HR.jpg 1920w" 
+                            sizes="(max-width:480px) 5vw,
+                                    (max-width:960px) 2vw,
+                                    2vw" 
+                            src="../images/facebook-MR.jpg" alt="Facebook">
+                        </a>
+                    </li>
+                    <li><a href="https://www.instagram.com/aueb.gr" target="_blank">
+                        <img srcset="../images/instagram-LR.png 320w,
+                                    ../images/instagram-MR.png 768w,
+                                    ../images/instagram-HR.png 1920w" 
+                            sizes="(max-width:480px) 5vw,
+                                    (max-width:960px) 2vw,
+                                    2vw" 
+                            src="../images/instagram-MR.png" alt="Instagram">
+                        </a>
+                    </li>
+                    <li><a href="https://x.com/AUEB" target="_blank">
+                        <img srcset="../images/x-LR.png 320w,
+                                    ../images/x-MR.png 768w,
+                                    ../images/x-HR.png 1920w" 
+                            sizes="(max-width:480px) 5vw,
+                                    (max-width:960px) 2vw,
+                                    2vw" 
+                            src="../images/x-MR.png" alt="Twitter">
+                        </a>
+                    </li>
+                    <li><a href="https://gr.linkedin.com/school/athens-university-of-economics-and-business/"
+                            target="_blank">
+                            <img srcset="../images/linkedin-LR.png 320w,
+                                    ../images/linkedin-MR.png 768w,
+                                    ../images/linkedin-HR.png 1920w" 
+                            sizes="(max-width:480px) 5vw,
+                                    (max-width:960px) 2vw,
+                                    2vw" 
+                            src="../images/linkedin-MR.png" alt="LinkedIn">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="lower-footer">
+            <p>©Copyright 2024 | Παναγιώτα Τριανταφυλλοπούλου - Γεώργιος Σόρογκας</p>
+        </div>
+    </footer>
+</body>
+
+</html>

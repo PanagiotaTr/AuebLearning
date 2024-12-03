@@ -1,0 +1,488 @@
+<!--5. Μια ιστοσελίδα με το πλήρες περιεχόμενο μιας βιντεοσκοπημένης διάλεξης, πχ. machine-learning-lecture.html. 
+Η πλοήγηση στην ιστοσελίδα θα γίνεται από κατάλληλο σύνδεσμο της αντίστοιχης σελίδας υποκατηγορίας εκπαιδευτικού υλικού 
+(machine-learning.html) .-->
+
+<!DOCTYPE html>
+
+<html lang="el">
+
+<head>
+    <title>Διάλεξη Μηχανικής Μάθησης</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/hermes.jpg" type="image/png">
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+
+<body class="wrapper wrapper-lecture">
+    <header id="aueb-header" class="hover">
+        <img srcset="../images/aueb-header-LR.png 320w,
+                ../images/aueb-header-MR.png 768w,
+                ../images/aueb-header-HR.png 1920w" 
+            sizes="(max-width:480px) 100vw,
+                (max-width:960px) 100vw,
+                100vw" 
+            src="../images/aueb-header-MR.png" alt="AUEB Header">
+        <nav>
+            <img srcset="../images/logo-LR.png 320w,
+                        ../images/logo-MR.png 768w,
+                        ../images/logo-HR.png 1920w" 
+                sizes="(max-width:480px) 100vw,
+                    (max-width:960px) 100vw,
+                    100vw" 
+                src="../images/logo-MR.png" alt="Logo">
+            <ul class="nav-style nav-content">
+                <li> <a href="index.html">Αρχική Σελίδα</a></li>
+                <li> <a href="categories.html">Μαθήματα</a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="#">Τεχνητή Νοημοσύνη</a>
+                            <ul>
+                                <li> <a href="machine-learning.html">Μηχανική Μάθηση</a></li>
+                                <li> <a href="#">Νευρωνικά Δίκτυα</a></li>
+                                <li> <a href="#">MLP</a></li>
+                                <li> <a href="#">Ενισχυτική Μάθηση</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Προγρ/σμός στον Ιστό</a>
+                            <ul>
+                                <li> <a href="#">HTML5</a></li>
+                                <li> <a href="#">CSS</a></li>
+                                <li> <a href="#">JavaScript</a></li>
+                                <li> <a href="#">PHP</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Τεχνολογία Λογισμικού</a>
+                            <ul>
+                                <li> <a href="#">Απαιτήσεις Λογισμικού</a></li>
+                                <li> <a href="#">Αρχιτεκτονική Σχεδίαση</a></li>
+                                <li> <a href="#">Αντικ/φής Σχεδίαση</a></li>
+                                <li> <a href="#">Ποιότητα Λογισμικού</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Κυβερνοασφάλεια</a>
+                            <ul>
+                                <li> <a href="cryptography-cyber-security.html">Κρυπτογραφία</a></li>
+                                <li> <a href="#">Ασφάλεια Δικτύων</a></li>
+                                <li> <a href="#">Penetration Testing</a></li>
+                                <li> <a href="#">Έλεγχος Προσπέλασης</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li> <a href="about-us.html">Ποιοι Είμαστε</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="wr-lecture">
+
+        <header class="main-title">
+            <h1>CS229 - Machine Learning</h1>
+        </header>
+
+        <!-- Πληροφορίες Διάλεξης-->
+        <section id="info-lecture">
+            <header id="lectures">
+                <h2>Πληροφορίες σχετικά με την διάλεξη</h2>
+            </header>
+
+            <div class="flex-container">
+                    <!--Αριστερό τμήμα-->
+                    <img srcset="../images/machinelearninglecture-LR.png 320w,
+                                ../images/machinelearninglecture-MR.png 768w,
+                                ../images/machinelearninglecture-HR.png 1920w" 
+                        sizes="(max-width:480px) 70vw,
+                            (max-width:960px) 60vw,
+                            30vw"
+                        src="../images/machinelearninglecture-MR.png" alt="CS229 - Machine Learning">
+
+                <div class="book-lecture-information">
+                    <!-- Δεξιό τμήμα-->
+                    <ul>
+                        <li><em>Τίτλος: </em> CS229 - Machine Learning</li>
+                        <li><em>Συντελεστής/ές: </em> Yaser Abu-Mostafa</li>
+                        <li><em>Έτος λήψης: </em> 2020</li>
+                        <li><em>Αξιολόγηση: </em><abbr title="4.0" class="stars">★ ★ ★ ★</abbr></li>
+                        <li><em>Πλήθος αξιολογήσεων: </em>40</li>
+                    </ul>
+
+                    <p>
+                        Η εισαγωγική διάλεξη του μαθήματος "Machine Learning" του καθηγητή Yaser Abu-Mostafa
+                        επικεντρώνεται στην έννοια του "Learning Problem" (το πρόβλημα της μάθησης). Η διάλεξη εξετάζει τα
+                        βασικά είδη μηχανικής μάθησης, συμπεριλαμβανομένης της εποπτευόμενης και μη εποπτευόμενης μάθησης,
+                        καθώς και της μάθησης ενίσχυσης. Εισάγει επίσης τη διαδικασία και τις προκλήσεις της δημιουργίας
+                        μοντέλων που μπορούν να μάθουν από δεδομένα, προσδιορίζοντας τα στοιχεία που απαιτούνται για να
+                        αναπτυχθούν αποτελεσματικοί αλγόριθμοι μάθησης.</p>
+
+                    <p>Ο καθηγητής εξηγεί πώς οι αλγόριθμοι προσπαθούν να "μάθουν" από παραδείγματα και αναλύει το κεντρικό
+                        πρόβλημα της γενίκευσης – δηλαδή, πώς οι αλγόριθμοι μπορούν να εφαρμόζουν τις γνώσεις τους σε νέα
+                        δεδομένα πέρα από τα αρχικά παραδείγματα εκπαίδευσης.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Περιεχόμενα διάλεξης-->
+        <section class="hover flex-lecture-table">
+            <header id="lectures">
+                <h2 id="table">Περιεχόμενα Διάλεξης</h2>
+            </header>
+
+            <table id="chapter-table">
+                <caption>Πίνακας περιεχομένων με τις ενότητες της διάλεξης</caption>
+                <thead>
+                    <tr>
+                        <th colspan="3">Machine Learning Course - CS 156</th>
+                    </tr>
+                    <tr>
+                        <th>Αριθμός</th>
+                        <th>Τίτλος</th>
+                        <th>Σύνδεσμος</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>The Learning Problem</td>
+                        <td><a href="#section1">Ενότητα 1</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Is Learning Feasible?</td>
+                        <td><a href="#section2">Ενότητα 2</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>The Linear Model I</td>
+                        <td><a href="#section3">Ενότητα 3</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Error and Noise</td>
+                        <td><a href="#section4">Ενότητα 4</a></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Training Versus Testing</td>
+                        <td><a href="#section5">Ενότητα 5</a></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Theory of Generalization</td>
+                        <td><a href="#section6">Ενότητα 6</a></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>The VC Dimension</td>
+                        <td><a href="#section7">Ενότητα 7</a></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Bias-Variance Tradeoff</td>
+                        <td><a href="#section8">Ενότητα 8</a></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>The Linear Model II</td>
+                        <td><a href="#section9">Ενότητα 9</a></td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <!--Ενότητα 1-->
+            <article>
+                <h3 id="section1">Ενότητα 1. The Learning Problem</h3>
+                <p>Η εισαγωγική διάλεξη του μαθήματος "The Learning Problem" από το Caltech επικεντρώνεται στις βασικές
+                    προσεγγίσεις της μηχανικής μάθησης: εποπτευόμενη, μη εποπτευόμενη και μάθηση ενίσχυσης. Στη διάλεξη,
+                    ο καθηγητής αναλύει τις διαφορές αυτών των μεθόδων και τον τρόπο με τον οποίο επιτυγχάνουν τη
+                    "μάθηση" από δεδομένα για να επιλύσουν προβλήματα και να προβλέπουν αποτελέσματα. Αναφέρονται επίσης
+                    τα βασικά στοιχεία που συνθέτουν ένα "πρόβλημα μάθησης", όπως τα δεδομένα, οι αλγόριθμοι και η
+                    αξιολόγηση της απόδοσης των μοντέλων μάθησης.</p>
+
+                <figure>
+                    <iframe src="https://www.youtube.com/embed/mbyG85GZ0PI" allowfullscreen class="videos"></iframe>
+                    <figcaption>Διάλεξη Μηχανικής Μάθησης (1)</figcaption>
+                </figure>
+
+                <p><a href="#table">Επιστροφή στον πίνακα περιεχομένων με τις ενότητες της διάλεξης</a></p>
+            </article>
+
+            <!--Ενότητα 2-->
+            <article>
+                <h3 id="section2">Ενότητα 2. Is Learning Feasible?
+                </h3>
+                <p>Η διάλεξη "Is Learning Feasible?" διερευνά το αν είναι εφικτό να γενικεύσουμε τα αποτελέσματα της
+                    μηχανικής μάθησης από ένα περιορισμένο δείγμα δεδομένων στο ευρύτερο σύνολο. Αναλύεται η σχέση
+                    μεταξύ των in-sample (δεδομένα εκπαίδευσης) και out-of-sample (νέα δεδομένα), δηλαδή η ικανότητα του
+                    μοντέλου να εφαρμόζει τα συμπεράσματα που έμαθε σε νέα, άγνωστα δεδομένα. Εξετάζονται οι προκλήσεις
+                    της γενίκευσης και ο τρόπος με τον οποίο η στατιστική αξιολόγηση μπορεί να ενισχύσει την απόδοση
+                    ενός μοντέλου σε προβλέψεις πέρα από τα δεδομένα εκπαίδευσης.</p>
+                <figure>
+                    <iframe src="https://www.youtube.com/embed/MEG35RDD7RA" allowfullscreen class="videos"></iframe>
+                    <figcaption>Διάλεξη Μηχανικής Μάθησης (2)</figcaption>
+                </figure>
+
+                <p><a href="#table">Επιστροφή στον πίνακα περιεχομένων με τις ενότητες της διάλεξης</a></p>
+            </article>
+
+            <!--Ενότητα 3-->
+            <article>
+                <h3 id="section3">Ενότητα 3. The Linear Model I
+                </h3>
+                <p>Η διάλεξη "The Linear Model I" καλύπτει τις βασικές αρχές της γραμμικής ταξινόμησης και της γραμμικής
+                    παλινδρόμησης, δύο θεμελιώδεις τεχνικές στη μηχανική μάθηση για τη μοντελοποίηση δεδομένων.
+                    Παρουσιάζονται οι τρόποι με τους οποίους αυτά τα γραμμικά μοντέλα μπορούν να επεκταθούν
+                    χρησιμοποιώντας μη γραμμικούς μετασχηματισμούς, επιτρέποντας έτσι στα μοντέλα να αναγνωρίζουν πιο
+                    σύνθετα πρότυπα που δεν περιγράφονται εύκολα από γραμμικές σχέσεις. Αυτή η προέκταση με μη
+                    γραμμικούς μετασχηματισμούς επιτρέπει τη δημιουργία μοντέλων με μεγαλύτερη ευελιξία και ικανότητα
+                    γενίκευσης σε πιο περίπλοκα σύνολα δεδομένων.</p>
+                <figure>
+                    <iframe src="https://www.youtube.com/embed/FIbVs5GbBlQ" allowfullscreen class="videos"></iframe>
+                    <figcaption>Διάλεξη Μηχανικής Μάθησης (3)</figcaption>
+                </figure>
+
+                <p><a href="#table">Επιστροφή στον πίνακα περιεχομένων με τις ενότητες της διάλεξης</a></p>
+            </article>
+
+            <!--Ενότητα 4-->
+            <article>
+                <h3 id="section4">Ενότητα 4. Error and Noise
+                </h3>
+                <p>Στη διάλεξη "Error and Noise", εξετάζεται η σημασία της σωστής επιλογής μετρικών σφάλματος, δηλαδή
+                    των μεθόδων αξιολόγησης της απόκλισης μεταξύ των προβλέψεων ενός μοντέλου και των πραγματικών τιμών.
+                    Η διάλεξη αναλύει τις επιπτώσεις του θορύβου, ο οποίος μπορεί να προκύψει από μη ακριβή δεδομένα ή
+                    τυχαία λάθη και περιπλέκει τη διαδικασία μάθησης, κάνοντας δυσκολότερη την ακριβή αναπαράσταση του
+                    στόχου. Γίνεται λόγος για το πώς τα μοντέλα μπορούν να είναι ανθεκτικά στον θόρυβο και να
+                    επιτυγχάνουν πιο αξιόπιστες προβλέψεις παρά τις ατέλειες στα δεδομένα εκπαίδευσης.</p>
+                <figure>
+                    <iframe src="https://www.youtube.com/embed/L_0efNkdGMc" allowfullscreen class="videos"></iframe>
+                    <figcaption>Διάλεξη Μηχανικής Μάθησης (4)</figcaption>
+                </figure>
+
+                <p><a href="#table">Επιστροφή στον πίνακα περιεχομένων με τις ενότητες της διάλεξης</a></p>
+            </article>
+
+            <!--Ενότητα 5-->
+            <article>
+                <h3 id="section5">Ενότητα 5. Training Versus Testing</h3>
+                <p>Η διάλεξη "Training versus Testing" εξηγεί τη μαθηματική διαφορά μεταξύ εκπαίδευσης (training) και
+                    ελέγχου (testing) ενός μοντέλου. Κατά τη φάση της εκπαίδευσης, το μοντέλο «μαθαίνει» από δεδομένα,
+                    αναγνωρίζοντας μοτίβα που θα το βοηθήσουν να κάνει προβλέψεις. Στη φάση του ελέγχου, το μοντέλο
+                    αξιολογείται σε καινούργια, μη ορατά δεδομένα για να εξεταστεί η ικανότητά του να γενικεύει. Η
+                    γενίκευση εξαρτάται από την ισορροπία του μοντέλου: πρέπει να αποφεύγει τόσο την υπερεκπαίδευση
+                    (overfitting) όσο και την υποεκπαίδευση (underfitting) για να αποδίδει καλά και σε νέα δεδομένα.</p>
+                <figure>
+                    <iframe src="https://www.youtube.com/embed/SEYAnnLazMU" allowfullscreen class="videos"></iframe>
+                    <figcaption>Διάλεξη Μηχανικής Μάθησης (5)</figcaption>
+                </figure>
+
+                <p><a href="#table">Επιστροφή στον πίνακα περιεχομένων με τις ενότητες της διάλεξης</a></p>
+            </article>
+
+            <!--Ενότητα 6-->
+            <article>
+                <h3 id="section6">Ενότητα 6. Theory of Generalization</h3>
+                <p>Η διάλεξη "Theory of Generalization" ασχολείται με το πώς ένα μοντέλο μπορεί να μάθει από ένα
+                    πεπερασμένο δείγμα δεδομένων, ακόμα και όταν το σύνολο των πιθανών περιπτώσεων είναι άπειρο.
+                    Παρουσιάζεται το σημαντικότερο θεωρητικό αποτέλεσμα στη μηχανική μάθηση, το οποίο υποστηρίζει ότι η
+                    δυνατότητα γενίκευσης εξαρτάται από την πολυπλοκότητα του μοντέλου και το μέγεθος των δεδομένων
+                    εκπαίδευσης. Αυτή η θεωρία εξηγεί ότι, για να μπορεί ένα μοντέλο να κάνει αξιόπιστες προβλέψεις σε
+                    νέα δεδομένα, πρέπει να διατηρεί ισορροπία μεταξύ απλότητας και προσαρμοστικότητας στα εκπαιδευτικά
+                    δεδομένα.</p>
+                <figure>
+                    <iframe src="https://www.youtube.com/embed/6FWRijsmLtE" allowfullscreen class="videos"></iframe>
+                    <figcaption>Διάλεξη Μηχανικής Μάθησης (6)</figcaption>
+                </figure>
+
+                <p><a href="#table">Επιστροφή στον πίνακα περιεχομένων με τις ενότητες της διάλεξης</a></p>
+            </article>
+
+            <!--Ενότητα 7-->
+            <article>
+                <h3 id="section7">Ενότητα 7. The VC Dimension</h3>
+                <p>Η διάλεξη "The VC Dimension" εξετάζει την έννοια της διάστασης VC (Vapnik-Chervonenkis), η οποία
+                    είναι ένα μέτρο που υποδεικνύει την ικανότητα ενός μοντέλου να μάθει από δεδομένα. Αναλύεται η σχέση
+                    μεταξύ της διάστασης VC, του αριθμού των παραμέτρων του μοντέλου και των βαθμών ελευθερίας. Όσο
+                    μεγαλύτερη είναι η διάσταση VC ενός μοντέλου, τόσο πιο πολύπλοκες σχέσεις μπορεί να μάθει από τα
+                    δεδομένα, αλλά και τόσο μεγαλύτερος είναι ο κίνδυνος υπερεκπαίδευσης (overfitting). Η διάλεξη
+                    τονίζει τη σημασία του να κατανοήσουμε πώς οι παράμετροι ενός μοντέλου επηρεάζουν την ικανότητα
+                    γενίκευσης και την απόδοσή του σε νέα, άγνωστα δεδομένα.
+                </p>
+                <figure>
+                    <iframe src="https://www.youtube.com/embed/Dc0sr0kdBVI" allowfullscreen class="videos"></iframe>
+                    <figcaption>Διάλεξη Μηχανικής Μάθησης (7)</figcaption>
+                </figure>
+
+                <p><a href="#table">Επιστροφή στον πίνακα περιεχομένων με τις ενότητες της διάλεξης</a></p>
+            </article>
+
+            <!--Ενότητα 8-->
+            <article>
+                <h3 id="section8">Ενότητα 8. Bias-Variance Tradeoff
+                </h3>
+                <p>Η διάλεξη "Bias-Variance Tradeoff" αναλύει τη σύνθεση της απόδοσης ενός μοντέλου μάθησης σε δύο
+                    ανταγωνιζόμενες ποσότητες: το bias (προκατάληψη) και τη variance (διακύμανση). Η προκατάληψη
+                    αναφέρεται στην απλότητα του μοντέλου και στη συστηματική σφάλμα που μπορεί να προκύψει, ενώ η
+                    διακύμανση σχετίζεται με την ευαισθησία του μοντέλου σε μικρές αλλαγές στα δεδομένα εκπαίδευσης. Ο
+                    συνδυασμός αυτών των δύο παραγόντων επηρεάζει την ικανότητα του μοντέλου να γενικεύει σε νέα
+                    δεδομένα. Η διάλεξη επίσης εξετάζει τις καμπύλες μάθησης, που απεικονίζουν πώς η απόδοση του
+                    μοντέλου μεταβάλλεται με τη διαθεσιμότητα περισσότερων δεδομένων εκπαίδευσης, παρέχοντας πολύτιμες
+                    πληροφορίες για την επιλογή και τη ρύθμιση των μοντέλων​.
+                </p>
+                <figure>
+                    <iframe src="https://www.youtube.com/embed/zrEyxfl2-a8" allowfullscreen class="videos"></iframe>
+                    <figcaption>Διάλεξη Μηχανικής Μάθησης (8)</figcaption>
+                </figure>
+
+                <p><a href="#table">Επιστροφή στον πίνακα περιεχομένων με τις ενότητες της διάλεξης</a></p>
+            </article>
+
+            <!--Ενότητα 9-->
+            <article>
+                <h3 id="section9">Ενότητα 9. The Linear Model II</h3>
+                <p>Η διάλεξη "The Linear Model II" εμβαθύνει στα γραμμικά μοντέλα, επικεντρώνοντας την προσοχή της στη
+                    λογιστική παλινδρόμηση, τη μέγιστη πιθανότητα και την εκπαίδευση μέσω της μεθόδου του βαθμού
+                    κατιούσας (gradient descent). Η λογιστική παλινδρόμηση χρησιμοποιείται για τη δυαδική ταξινόμηση και
+                    αναλύει την πιθανότητα μιας κατηγορίας βασισμένη σε γραμμικούς συνδυασμούς χαρακτηριστικών. Η
+                    μέθοδος της μέγιστης πιθανότητας είναι ένα στατιστικό εργαλείο που χρησιμοποιείται για την εκτίμηση
+                    των παραμέτρων του μοντέλου, εξασφαλίζοντας ότι οι παρατηρούμενες πιθανότητες είναι όσο το δυνατόν
+                    πιο κοντά στις προβλέψεις του μοντέλου. Τέλος, η μέθοδος του gradient descent παρουσιάζεται ως ένας
+                    αποτελεσματικός τρόπος εκπαίδευσης μοντέλων, επιτρέποντας την ελαχιστοποίηση της απώλειας με την
+                    προσαρμογή των παραμέτρων του μοντέλου σε κάθε βήμα.
+                </p>
+                <figure>
+                    <iframe src="https://www.youtube.com/embed/qSTHZvN8hzs" allowfullscreen class="videos"></iframe>
+                    <figcaption>Διάλεξη Μηχανικής Μάθησης (9)</figcaption>
+                </figure>
+
+                <p><a href="#table">Επιστροφή στον πίνακα περιεχομένων με τις ενότητες της διάλεξης</a></p>
+
+            </article>
+
+            <a href="machine-learning.html">Επιστροφή στην υποκατηγορία «Μηχανική Μάθηση»</a>
+            
+        </section>
+
+    </main>
+
+    <aside>
+        <h2>E-Learning Προγράμματα</h2>
+        <ul class="hover">
+            <li>
+                <span>14 Νοεμβρίου 2024</span>
+                <a href="https://diaviou.aueb.gr/programs/1731-key-account-management-1000106" target="_blank">
+                    Key Account Management
+                </a>
+            </li>
+            <li>
+                <span>12 Οκτωβρίου 2024</span>
+                <a href="https://diaviou.aueb.gr/programs/1837-analysi-dedomenon-kai-programmatismos-se-python-3-1000109" target="_blank">
+                    Python 3
+                </a>
+            </li>
+            <li>
+                <span>29 Αυγούστου 2024</span>
+                <a href="https://diaviou.aueb.gr/programs/1735-anaptyksi-web-efarmogon-me-html-css-javascript-jquery-ajax" target="_blank">
+                    Ανάπτυξη Web εφαρμογών
+                </a>
+            </li>
+            <li>
+                <span>27 Αυγούστου 2024</span>
+                <a href="https://diaviou.aueb.gr/programs/1779-programmatismos-me-java-apo-to-a-sto-o-1000163" target="_blank">
+                    Προγραμματισμός με Java
+                </a>
+            </li>
+        </ul>
+
+        <div id="aside-more" class="hover">
+            <a href="https://diaviou.aueb.gr/advanced-search-programs-gr/tag/programfollow/2/" target="_blank">
+                Περισσότερα
+            </a>
+        </div>
+    </aside>
+
+    <footer>
+        <div id="upper-footer" class="hover">
+            <div>
+                <h2>About Us</h2>
+                <p>Η Aueblearning είναι μια καινοτόμος πλατφόρμα e-learning που προσφέρει διαδραστικά μαθήματα και
+                    εξειδικευμένο περιεχόμενο για επαγγελματική και προσωπική ανάπτυξη. Στόχος μας είναι να εμπνεύσουμε
+                    και να ενισχύσουμε τη γνώση σε κάθε μαθητή.</p>
+            </div>
+            <div id="office-info">
+                <h2>Τα Γραφεία μας</h2>
+                <address >
+                    28ης Οκτωβρίου 76, Αθήνα<br>
+                    Αθήνα, Ελλάδα 10434<br>
+                    Phone: <a href="tel:+302109620030">(+30) 2109620030</a><br>
+                    Email: <a href="mailto:info@aueblearning.com">info@aueblearning.com</a>
+                </address>
+            </div>
+            <div id="policies">
+                <h2>Όροι & Πολιτικές</h2>
+                <ul>
+                    <li><a href="#">Πολιτική Cookies</a></li>
+                    <li><a href="#">Πολιτική Απορρήτου</a></li>
+                    <li><a href="#">Όροι Χρήσης</a></li>
+                </ul>
+            </div>
+            <div id="social-links">
+                <h2>Βρείτε μας</h2>
+                <ul>
+                    <li><a href="https://www.facebook.com/auebgreece" target="_blank">
+                        <img srcset="../images/facebook-LR.jpg 320w,
+                                    ../images/facebook-MR.jpg 768w,
+                                    ../images/facebook-HR.jpg 1920w" 
+                            sizes="(max-width:480px) 5vw,
+                                    (max-width:960px) 2vw,
+                                    2vw" 
+                            src="../images/facebook-MR.jpg" alt="Facebook">
+                        </a>
+                    </li>
+                    <li><a href="https://www.instagram.com/aueb.gr" target="_blank">
+                        <img srcset="../images/instagram-LR.png 320w,
+                                    ../images/instagram-MR.png 768w,
+                                    ../images/instagram-HR.png 1920w" 
+                            sizes="(max-width:480px) 5vw,
+                                    (max-width:960px) 2vw,
+                                    2vw" 
+                            src="../images/instagram-MR.png" alt="Instagram">
+                        </a>
+                    </li>
+                    <li><a href="https://x.com/AUEB" target="_blank">
+                        <img srcset="../images/x-LR.png 320w,
+                                    ../images/x-MR.png 768w,
+                                    ../images/x-HR.png 1920w" 
+                            sizes="(max-width:480px) 5vw,
+                                    (max-width:960px) 2vw,
+                                    2vw" 
+                            src="../images/x-MR.png" alt="Twitter">
+                        </a>
+                    </li>
+                    <li><a href="https://gr.linkedin.com/school/athens-university-of-economics-and-business/"
+                            target="_blank">
+                            <img srcset="../images/linkedin-LR.png 320w,
+                                    ../images/linkedin-MR.png 768w,
+                                    ../images/linkedin-HR.png 1920w" 
+                            sizes="(max-width:480px) 5vw,
+                                    (max-width:960px) 2vw,
+                                    2vw" 
+                            src="../images/linkedin-MR.png" alt="LinkedIn">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="lower-footer">
+            <p>©Copyright 2024 | Παναγιώτα Τριανταφυλλοπούλου - Γεώργιος Σόρογκας</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

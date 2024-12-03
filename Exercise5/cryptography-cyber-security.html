@@ -1,0 +1,503 @@
+<!--3. Μια σελίδα με λίστα βιβλίων και διαλέξεων για 2 επιλεγμένες υποκατηγορίες 
+(συνολικά 2 ιστοσελίδες, cryptography-cyber-security.html, machine-learning.html). 
+Κάθε σελίδα θα περιλαμβάνει πληροφορίες για μια σειρά βιβλίων και βιντεοσκοπημένων διαλέξεων 
+(τουλάχιστον 3 βιβλία και 3 διαλέξεις) της υποκατηγορίας.-->
+
+<!DOCTYPE html>
+
+<html lang="el">
+
+<head>
+    <title>Κρυπτογραφία</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/hermes.jpg" type="image/png">
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+
+<body class="wrapper wrapper-lesson">
+    <header id="aueb-header" class="hover">
+        <img srcset="../images/aueb-header-LR.png 320w,
+                ../images/aueb-header-MR.png 768w,
+                ../images/aueb-header-HR.png 1920w" 
+            sizes="(max-width:480px) 100vw,
+                (max-width:960px) 100vw,
+                100vw" 
+            src="../images/aueb-header-MR.png" alt="AUEB Header">
+        <nav>
+            <img srcset="../images/logo-LR.png 320w,
+                        ../images/logo-MR.png 768w,
+                        ../images/logo-HR.png 1920w" 
+                sizes="(max-width:480px) 100vw,
+                    (max-width:960px) 100vw,
+                    100vw" 
+                src="../images/logo-MR.png" alt="Logo">
+            <ul class="nav-style nav-content">
+                <li> <a href="index.html">Αρχική Σελίδα</a></li>
+                <li> <a href="categories.html">Μαθήματα</a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="#">Τεχνητή Νοημοσύνη</a>
+                            <ul>
+                                <li> <a href="machine-learning.html">Μηχανική Μάθηση</a></li>
+                                <li> <a href="#">Νευρωνικά Δίκτυα</a></li>
+                                <li> <a href="#">MLP</a></li>
+                                <li> <a href="#">Ενισχυτική Μάθηση</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Προγρ/σμός στον Ιστό</a>
+                            <ul>
+                                <li> <a href="#">HTML5</a></li>
+                                <li> <a href="#">CSS</a></li>
+                                <li> <a href="#">JavaScript</a></li>
+                                <li> <a href="#">PHP</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Τεχνολογία Λογισμικού</a>
+                            <ul>
+                                <li> <a href="#">Απαιτήσεις Λογισμικού</a></li>
+                                <li> <a href="#">Αρχιτεκτονική Σχεδίαση</a></li>
+                                <li> <a href="#">Αντικ/φής Σχεδίαση</a></li>
+                                <li> <a href="#">Ποιότητα Λογισμικού</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Κυβερνοασφάλεια</a>
+                            <ul>
+                                <li> <a href="cryptography-cyber-security.html">Κρυπτογραφία</a></li>
+                                <li> <a href="#">Ασφάλεια Δικτύων</a></li>
+                                <li> <a href="#">Penetration Testing</a></li>
+                                <li> <a href="#">Έλεγχος Προσπέλασης</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li> <a href="about-us.html">Ποιοι Είμαστε</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="wr-lesson">
+        
+        <header class="main-title">
+            <h1>Κρυπτογραφία</h1>
+        </header>
+
+        <!--Βιβλία-->
+        <section class="lesson-box hover">
+            <header class="lesson">
+                <h2>Βιβλία</h2>
+            </header>
+
+            <div class="lecture-book-container">
+                <!--Πρώτο Βιβλίο στην Κρυπτογραφία-->
+                <article class="information info-box">
+                    <header>
+                        <h3>Real-World Cryptography</h3>
+                    </header>
+
+                    <!--Αριστερό τμήμα-->
+                    <details class="lesson-container">
+                        <summary class="lesson-cover lesson-image">
+                            <img srcset="../images/firstCryptographyBook-LR.png 320w,
+                                        ../images/firstCryptographyBook-MR.png 768w,
+                                        ../images/firstCryptographyBook-HR.png 1920w" 
+                                sizes="(max-width:480px) 90vw,
+                                    (max-width:960px) 60vw,
+                                    70vw"
+                                src="../images/firstCryptographyBook-MR.png" alt="First Cryptography Book">
+                            <div class="hover-message-book-lecture">Κάντε κλικ στην εικόνα!</div>
+                        </summary>
+                    
+                    <!-- Δεξιό τμήμα-->
+                    <p>
+                        Το «Real-World Cryptography» αποκαλύπτει τις κρυπτογραφικές τεχνικές που ενισχύουν την
+                        ασφάλεια των διαδικτυακών APIs, την εγγραφή και είσοδο χρηστών, και ακόμη και την
+                        blockchain. Διαβάζοντας το συγκεκριμένο βιβλίο, μπορείτε να μάθετε πώς αυτές οι
+                        τεχνικές τροφοδοτούν τη σύγχρονη ασφάλεια και πώς να τις
+                        εφαρμόσετε στα δικά σας έργα. Παράλληλα με τις σύγχρονες μεθόδους, το βιβλίο προβλέπει και
+                        το μέλλον της κρυπτογραφίας, εξερευνώντας τις αναδυόμενες και πρωτοποριακές εξελίξεις, όπως
+                        τα κρυπτονομίσματα και την κρυπτογραφία μετά την κβαντική υπολογιστική. Όλες οι τεχνικές
+                        απεικονίζονται πλήρως με διαγράμματα και παραδείγματα, ώστε να μπορέσετε εύκολα να δείτε
+                        πώς
+                        να τις εφαρμόσετε στην πράξη.
+                    </p>
+                    <ul>
+                        <li><em>Συγγραφέας/είς: </em>David Wong</li>
+                        <li><em>Εκδότης: </em>Manning</li>
+                        <li><em>Σελίδες: </em>400</li>
+                        <li><em>Αξιολόγηση: </em><abbr title="4.2" class="stars">★ ★ ★ ★ ☆</abbr></li>
+                        <li><em>Πλήθος αξιολογήσεων: </em>32</li>
+                    </ul>
+                    <p>Περισσότερα για το συγκεκριμένο βιβλίο θα βρείτε <cite><a
+                            href="https://www.manning.com/books/real-world-cryptography" target="_blank">ΕΔΩ</cite></a></p>
+                    </details>
+                </article>
+
+                <!--Δεύτερο Βιβλίο στην Κρυπτογραφία-->
+                <article class="information info-box">
+                    <header>
+                        <h3>Blockchain in Action</h3>
+                    </header>
+
+                    <!--Αριστερό τμήμα-->
+                    <details class="lesson-container">
+                        <summary class="lesson-cover lesson-image">
+                            <img srcset="../images/secondCryptographyBook-LR.png 320w,
+                                        ../images/secondCryptographyBook-MR.png 768w,
+                                        ../images/secondCryptographyBook-HR.png 1920w" 
+                                sizes="(max-width:480px) 90vw,
+                                    (max-width:960px) 60vw,
+                                    70vw"
+                                src="../images/secondCryptographyBook-MR.png" alt="Second Cryptography Book">
+                            <div class="hover-message-book-lecture">Κάντε κλικ στην εικόνα!</div>
+                        </summary>
+                    
+
+                    <!-- Δεξιό τμήμα-->
+                    <p>
+                        Το «Blockchain in Action» διδάσκει πώς μπορούμε να σχεδιάσουμε και να κατασκευάσουμε
+                        αποκεντρωμένες
+                        εφαρμογές βασισμένες σε blockchain, και είναι γραμμένο σε έναν καθαρό, χωρίς τεχνική
+                        ορολογία, στυλ. Αρχικά, θα αποκτήσετε μια επισκόπηση του πώς λειτουργεί το blockchain. Στη
+                        συνέχεια, θα κωδικοποιήσετε το πρώτο σας έξυπνο συμβόλαιο χρησιμοποιώντας το Ethereum και τη
+                        Solidity, προσθέτοντας μια διαδικτυακή διεπαφή, έλεγχο εμπιστοσύνης και άλλες δυνατότητες
+                        μέχρι η εφαρμογή σας να είναι έτοιμη για ανάπτυξη. Το μόνο που χρειάζεστε για να ξεκινήσετε
+                        είναι τυπικός εξοπλισμός και λογισμικό ανοιχτού κώδικα.
+                    </p>
+
+                    <ul>
+                        <li><em>Συγγραφέας/είς: </em>Bina Ramamurthy</li>
+                        <li><em>Εκδότης: </em>Manning</li>
+                        <li><em>Σελίδες: </em>352</li>
+                        <li><em>Αξιολόγηση: </em><abbr title="3.8" class="stars">★ ★ ★ ★ </abbr></li>
+                        <li><em>Πλήθος αξιολογήσεων: </em>11</li>
+                    </ul>
+
+                    <p>Περισσότερα για το συγκεκριμένο βιβλίο θα βρείτε <cite><a
+                            href="https://www.manning.com/books/blockchain-in-action" target="_blank">ΕΔΩ</a></cite></p>
+                    </details>
+                </article>
+
+                <!--Τρίτο Βιβλίο στην Κρυπτογραφία-->
+                <article class="information info-box">
+                    <header>
+                        <h3>Self-Sovereign Identity</h3>
+                    </header>
+
+                    <!--Αριστερό τμήμα-->
+                    <details class="lesson-container">
+                        <summary class="lesson-cover lesson-image">
+                            <img srcset="../images/thirdCryptographyBook-LR.png 320w,
+                                        ../images/thirdCryptographyBook-MR.png 768w,
+                                        ../images/thirdCryptographyBook-HR.png 1920w" 
+                                sizes="(max-width:480px) 90vw,
+                                    (max-width:960px) 60vw,
+                                    70vw"
+                                src="../images/thirdCryptographyBook-MR.png" alt="Third Cryptography Book">
+                            <div class="hover-message-book-lecture">Κάντε κλικ στην εικόνα!</div>
+                        </summary>
+                    
+
+                    <!-- Δεξιό τμήμα-->
+                    <p>
+                        Στο «Self-Sovereign Identity», θα
+                        μάθετε πώς η SSI (Αυτονομία Ταυτότητας) μας ενδυναμώνει να λαμβάνουμε ψηφιακά υπογεγραμμένα
+                        πιστοποιητικά, να τα αποθηκεύουμε σε ιδιωτικά πορτοφόλια και να αποδεικνύουμε με ασφάλεια
+                        τις διαδικτυακές μας ταυτότητες. Συνδυάζει μια καθαρή, χωρίς τεχνική ορολογία, εισαγωγή σε
+                        αυτήν την αλλαγή παραδείγματος που εμπνέεται από το blockchain με ενδιαφέροντα δοκίμια που
+                        έχουν γράψει οι κορυφαίοι επαγγελματίες του τομέα. Είτε πρόκειται για μεταβίβαση περιουσίας,
+                        ηλεκτρονική τραπεζική, ομαλή ταξιδιωτική εμπειρία ή εξατομικευμένες υπηρεσίες, το μοντέλο
+                        SSI για ψηφιακή εμπιστοσύνη θα μετασχηματίσει το συλλογικό μας μέλλον.
+                    </p>
+
+                    <ul> <!-- class="book-info"-->
+                        <li><em>Συγγραφέας/είς: </em>Alex Preukschat and Drummond Reed</li>
+                        <li><em>Εκδότης: </em>Manning</li>
+                        <li><em>Σελίδες: </em>504</li>
+                        <li><em>Αξιολόγηση: </em><abbr title="5.0" class="stars">★ ★ ★ ★ ★</abbr></li>
+                        <li><em>Πλήθος αξιολογήσεων: </em>14</li>
+                    </ul>
+
+                    <p>Περισσότερα για το συγκεκριμένο βιβλίο θα βρείτε <cite><a
+                            href="https://www.manning.com/books/self-sovereign-identity" target="_blank">ΕΔΩ</a></cite></p>
+                    </details>
+                </article>
+            </div>
+        </section>
+
+        <!-------------------------------------------------------------------------------------------------------------------------->
+
+        <!--Διαλέξεις-->
+        <section class="lesson-box hover">
+            <header class="lesson">
+                <h2>Διαλέξεις</h2>
+            </header>
+
+            <div class="lecture-book-container">
+                <!--Πρώτη Διάλεξη στην Κρυπτογραφία-->
+                <article class="information info-box">
+                    <header>
+                        <h3>Cryptography Full Course</h3>
+                    </header>
+
+                    <!--Αριστερό τμήμα-->
+                    <details class="lesson-container">
+                        <summary class="lesson-cover lesson-image">
+                            <img srcset="../images/firstCryptographyVideo-LR.png 320w,
+                                        ../images/firstCryptographyVideo-MR.png 768w,
+                                        ../images/firstCryptographyVideo-HR.png 1920w" 
+                                sizes="(max-width:480px) 90vw,
+                                    (max-width:960px) 60vw,
+                                    70vw"
+                                src="../images/firstCryptographyVideo-MR.png" alt="First Cryptography Lecture">
+                            <div class="hover-message-book-lecture">Κάντε κλικ στην εικόνα!</div>
+                        </summary>
+                    
+
+                    <!-- Δεξιό τμήμα-->
+                    <p>
+                        Η κρυπτογραφία είναι ένα απαραίτητο εργαλείο για την προστασία πληροφοριών σε υπολογιστικά
+                        συστήματα. Σε αυτό το μάθημα θα μάθετε τις εσωτερικές λειτουργίες των κρυπτογραφικών
+                        συστημάτων και πώς να τα χρησιμοποιείτε σωστά σε πραγματικές εφαρμογές. Το μάθημα ξεκινά με
+                        μια λεπτομερή συζήτηση σχετικά με το πώς δύο μέρη που έχουν ένα κοινό μυστικό κλειδί μπορούν
+                        να επικοινωνούν με ασφάλεια όταν ένας ισχυρός αντίπαλος υποκλέπτει και παρεμβαίνει στην
+                        κίνηση. Θα εξετάσουμε πολλά εγκατεστημένα πρωτόκολλα και θα αναλύσουμε λάθη σε υπάρχοντα
+                        συστήματα. Στη δεύτερη μισή του μαθήματος θα συζητηθούν οι τεχνικές δημόσιου κλειδιού που
+                        επιτρέπουν σε δύο μέρη να δημιουργήσουν ένα κοινό μυστικό κλειδί. Καθ' όλη τη διάρκεια του
+                        μαθήματος, οι συμμετέχοντες θα εκτεθούν σε πολλά ενδιαφέροντα ανοιχτά προβλήματα στον τομέα
+                        και θα εργαστούν σε διασκεδαστικά (προαιρετικά) προγραμματιστικά έργα. Σε ένα δεύτερο μάθημα
+                        (Crypto II) θα καλύψουμε πιο προχωρημένες κρυπτογραφικές εργασίες, όπως η μηδενική γνώση, οι
+                        μηχανισμοί απορρήτου και άλλες μορφές κρυπτογράφησης.
+                    </p>
+
+                    <ul>
+                        <li><em>Συντελεστής/ές: </em>Dan Bohen</li>
+                        <li><em>Διανομή: </em>Nerd's Lesson (youtube)</li>
+                        <li><em>Συνολική Διάρκεια: </em>8 Ώρες</li>
+                        <li><em>Αξιολόγηση: </em><abbr title="4.0" class="stars">★ ★ ★ ★ </abbr></li>
+                        <li><em>Πλήθος αξιολογήσεων: </em>97</li>
+                    </ul>
+
+                    <p>Περισσότερα για το συγκεκριμένη διάλεξη θα βρείτε <cite class="hover"><a
+                            href="https://www.youtube.com/watch?v=j_8PLI_wCVU&ab_channel=Nerd%27slesson"
+                            target="_blank">ΕΔΩ</a><cite></p>
+                    </details>
+                </article>
+
+                <!--Δεύτερη Διάλεξη στην Κρυπτογραφία-->
+                <article class="information info-box">
+                    <header>
+                        <h3>Introduction to Cryptography by Christof Paar</h3>
+                    </header>
+
+                    <!--Αριστερό τμήμα-->
+                    <details class="lesson-container">
+                        <summary class="lesson-cover lesson-image">
+                            <img srcset="../images/secondCryptographyVideo-LR.png 320w,
+                                        ../images/secondCryptographyVideo-MR.png 768w,
+                                        ../images/secondCryptographyVideo-HR.png 1920w" 
+                                sizes="(max-width:480px) 90vw,
+                                    (max-width:960px) 60vw,
+                                    70vw"
+                                src="../images/secondCryptographyVideo-MR.png" alt="Second Cryptography Lecture">
+                            <div class="hover-message-book-lecture">Κάντε κλικ στην εικόνα!</div>
+                        </summary>
+                    
+
+                    <!-- Δεξιό τμήμα-->
+                    <p>
+                        Στη διάλεξή του, ο Christof Paar αναλύει κρίσιμες πτυχές της κρυπτογραφίας και της ασφάλειας
+                        συστημάτων, επικεντρώνοντας σε σύγχρονα ζητήματα και τεχνικές. Ξεκινά με την ανάλυση των
+                        κρυπτογραφικών καναλιών, εξηγώντας πώς η κρυπτογράφηση διασφαλίζει την ασφαλή επικοινωνία
+                        ακόμα και υπό την απειλή κακόβουλων παρεμβάσεων. Στη συνέχεια, συζητά τη σημασία της
+                        ασφάλειας στη μηχανική λογισμικού και τα συστήματα ασφαλείας της λογοτεχνίας, δηλαδή την
+                        αξιοπιστία στη σχεδίαση ασφαλών πρωτοκόλλων και εφαρμογών. Η διάλεξη ολοκληρώνεται με την
+                        εξέταση της επικοινωνίας μεταξύ συσκευών (Machine-to-Machine) και τις προκλήσεις που
+                        δημιουργούν οι επιθέσεις Cross-Site Scripting (XSS) στον κυβερνοχώρο, θέματα που αποτελούν
+                        τη βάση για σύγχρονες στρατηγικές κυβερνοασφάλειας.
+                    </p>
+
+                    <ul>
+                        <li><em>Συντελεστής/ές: </em>Christof Paar</li>
+                        <li><em>Διανομή: </em>Introduction to Cryptography by Christof Paar (youtube)</li>
+                        <li><em>Συνολική Διάρκεια: </em>15 Ώρες</li>
+                        <li><em>Αξιολόγηση: </em><abbr title="3.1" class="stars">★ ★ ★</abbr></li>
+                        <li><em>Πλήθος αξιολογήσεων: </em>51</li>
+                    </ul>
+
+                    <p>Περισσότερα για το συγκεκριμένη διάλεξη θα βρείτε <cite><a
+                            href="https://www.youtube.com/watch?v=2aHkqB2-46k&ab_channel=IntroductiontoCryptographybyChristofPaar"
+                            target="_blank">ΕΔΩ</a></cite></p>
+                    </details>
+                </article>
+
+                <!--Τρίτη Διάλεξη στην Κρυπτογραφία-->
+                <article class="information info-box">
+                    <header>
+                        <h3>Course overview and introduction to cryptography</h3>
+                    </header>
+
+                    <!--Αριστερό τμήμα-->
+                    <details class="lesson-container">
+                        <summary class="lesson-cover lesson-image">
+                            <img srcset="../images/thirdCryptographyVideo-LR.png 320w,
+                                        ../images/thirdCryptographyVideo-MR.png 768w,
+                                        ../images/thirdCryptographyVideo-HR.png 1920w" 
+                                sizes="(max-width:480px) 90vw,
+                                    (max-width:960px) 60vw,
+                                    70vw"
+                                src="../images/thirdCryptographyVideo-MR.png" alt="Third Cryptography Lecture">
+                            <div class="hover-message-book-lecture">Κάντε κλικ στην εικόνα!</div>
+                        </summary>
+                    
+
+                    <!-- Δεξιό τμήμα-->
+                    <p>
+                        Στην εισαγωγική αυτή διάλεξη, παρουσιάζονται βασικές έννοιες της συμμετρικής και δημόσιου
+                        κλειδιού κρυπτογραφίας. Καλύπτονται τα μοντέλα ασφαλείας στην κρυπτογραφία και η ταξινόμηση
+                        των κρυπτογραφικών συστημάτων. Αναλύεται η αρχή των απόλυτα ασφαλών κρυπτοσυστημάτων, όπως
+                        το One-Time Pad, καθώς και ροής κρυπτοσυστήματα τύπου Vernam και οι γεννήτριες ψευδοτυχαίων
+                        αριθμών. Στη συνέχεια, εξετάζονται οι μονόδρομες συναρτήσεις ως βάση της σύγχρονης
+                        κρυπτογραφίας, οι αλγόριθμοι μπλοκ (block ciphers) και το Πρότυπο Προηγμένης Κρυπτογράφησης
+                        (AES). Εισάγονται επίσης τα βασικά της δημόσιου κλειδιού κρυπτογραφίας, με αναφορά στο
+                        πρωτόκολλο Diffie-Hellman για συμφωνία κλειδιού και τον αλγόριθμο RSA για κρυπτογράφηση
+                        δημόσιου κλειδιού, με αναφορές στην κβαντική υπολογιστική και την κρυπτογραφία μετά την
+                        κβαντική εποχή.
+                    </p>
+
+                    <ul>
+                        <li><em>Συντελεστής/ές: </em>Luca Mariot</li>
+                        <li><em>Διανομή: </em>Luca Mariot (youtube)</li>
+                        <li><em>Συνολική Διάρκεια: </em>13 Ώρες</li>
+                        <li><em>Αξιολόγηση: </em><abbr title="3.9" class="stars">★ ★ ★ ★</abbr></li>
+                        <li><em>Πλήθος αξιολογήσεων: </em>123</li>
+                    </ul>
+
+                    <p>Περισσότερα για το συγκεκριμένη διάλεξη θα βρείτε <cite><a
+                            href="https://www.youtube.com/watch?v=vxlUxhl_uEA&ab_channel=LucaMariot" target="_blank">ΕΔΩ</a></cite>
+                    </p>
+                    </details>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <aside>
+        <h2>E-Learning Προγράμματα</h2>
+        <ul class="hover">
+            <li>
+                <span>14 Νοεμβρίου 2024</span>
+                <a href="https://diaviou.aueb.gr/programs/1731-key-account-management-1000106" target="_blank">
+                    Key Account Management
+                </a>
+            </li>
+            <li>
+                <span>12 Οκτωβρίου 2024</span>
+                <a href="https://diaviou.aueb.gr/programs/1837-analysi-dedomenon-kai-programmatismos-se-python-3-1000109" target="_blank">
+                    Python 3
+                </a>
+            </li>
+            <li>
+                <span>29 Αυγούστου 2024</span>
+                <a href="https://diaviou.aueb.gr/programs/1735-anaptyksi-web-efarmogon-me-html-css-javascript-jquery-ajax" target="_blank">
+                    Ανάπτυξη Web εφαρμογών
+                </a>
+            </li>
+            <li>
+                <span>27 Αυγούστου 2024</span>
+                <a href="https://diaviou.aueb.gr/programs/1779-programmatismos-me-java-apo-to-a-sto-o-1000163" target="_blank">
+                    Προγραμματισμός με Java
+                </a>
+            </li>
+        </ul>
+
+        <div id="aside-more" class="hover">
+            <a href="https://diaviou.aueb.gr/advanced-search-programs-gr/tag/programfollow/2/" target="_blank">
+                Περισσότερα
+            </a>
+        </div>
+    </aside>
+    
+    <footer>
+        <div id="upper-footer" class="hover">
+            <div>
+                <h2>About Us</h2>
+                <p>Η Aueblearning είναι μια καινοτόμος πλατφόρμα e-learning που προσφέρει διαδραστικά μαθήματα και
+                    εξειδικευμένο περιεχόμενο για επαγγελματική και προσωπική ανάπτυξη. Στόχος μας είναι να εμπνεύσουμε
+                    και να ενισχύσουμε τη γνώση σε κάθε μαθητή.</p>
+            </div>
+            <div id="office-info">
+                <h2>Τα Γραφεία μας</h2>
+                <address >
+                    28ης Οκτωβρίου 76, Αθήνα<br>
+                    Αθήνα, Ελλάδα 10434<br>
+                    Phone: <a href="tel:+302109620030">(+30) 2109620030</a><br>
+                    Email: <a href="mailto:info@aueblearning.com">info@aueblearning.com</a>
+                </address>
+            </div>
+            <div id="policies">
+                <h2>Όροι & Πολιτικές</h2>
+                <ul>
+                    <li><a href="#">Πολιτική Cookies</a></li>
+                    <li><a href="#">Πολιτική Απορρήτου</a></li>
+                    <li><a href="#">Όροι Χρήσης</a></li>
+                </ul>
+            </div>
+            <div id="social-links">
+                <h2>Βρείτε μας</h2>
+                <ul>
+                    <li><a href="https://www.facebook.com/auebgreece" target="_blank">
+                        <img srcset="../images/facebook-LR.jpg 320w,
+                                    ../images/facebook-MR.jpg 768w,
+                                    ../images/facebook-HR.jpg 1920w" 
+                            sizes="(max-width:480px) 5vw,
+                                    (max-width:960px) 2vw,
+                                    2vw" 
+                            src="../images/facebook-MR.jpg" alt="Facebook">
+                        </a>
+                    </li>
+                    <li><a href="https://www.instagram.com/aueb.gr" target="_blank">
+                        <img srcset="../images/instagram-LR.png 320w,
+                                    ../images/instagram-MR.png 768w,
+                                    ../images/instagram-HR.png 1920w" 
+                            sizes="(max-width:480px) 5vw,
+                                    (max-width:960px) 2vw,
+                                    2vw" 
+                            src="../images/instagram-MR.png" alt="Instagram">
+                        </a>
+                    </li>
+                    <li><a href="https://x.com/AUEB" target="_blank">
+                        <img srcset="../images/x-LR.png 320w,
+                                    ../images/x-MR.png 768w,
+                                    ../images/x-HR.png 1920w" 
+                            sizes="(max-width:480px) 5vw,
+                                    (max-width:960px) 2vw,
+                                    2vw" 
+                            src="../images/x-MR.png" alt="Twitter">
+                        </a>
+                    </li>
+                    <li><a href="https://gr.linkedin.com/school/athens-university-of-economics-and-business/"
+                            target="_blank">
+                            <img srcset="../images/linkedin-LR.png 320w,
+                                    ../images/linkedin-MR.png 768w,
+                                    ../images/linkedin-HR.png 1920w" 
+                            sizes="(max-width:480px) 5vw,
+                                    (max-width:960px) 2vw,
+                                    2vw" 
+                            src="../images/linkedin-MR.png" alt="LinkedIn">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="lower-footer">
+            <p>©Copyright 2024 | Παναγιώτα Τριανταφυλλοπούλου - Γεώργιος Σόρογκας</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
