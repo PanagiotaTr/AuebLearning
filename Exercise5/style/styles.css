@@ -1268,46 +1268,68 @@ img {
     max-width: 100%;
 }
 
+/* Register */
+
 .wrapper-register {
     row-gap: 0;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas:
         'header header header'
+        '. title .'
         '. form .'
         'footer footer footer';
 }
 
-/* Register */
+.register-title{
+    margin-top: 150px;
+    grid-area: title;
+}
+
 .register-form{
     grid-area: form;
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
 }
 
 input[type=text], input[type=date], input[type=tel], input[type=password], input[type="checkbox"], input[type="number"]{
-    width: 95%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: 0.5px solid var(--primary-color);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+    margin-bottom: 0.5em;
+    border: 1px solid var(--primary-color);
+    border-radius: 0.5em;
     background: white;
 }
 
-#register-container {
-    display: grid;
-    gap: 20px;
+
+form{
+    display: flex;
+    flex-flow: column nowrap;
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 1em;
+    width: fit-content;
 }
 
-#register-container legend {
+form fieldset{
+    display: flex;
+    flex-flow: column nowrap;
+    border: 1px solid black;
+    border-radius: 1em;
+    margin-bottom: 2em;
+}
+
+form fieldset legend{
     color: var(--primary-color);
-    font-size: x-large;
+    font-size: 1.4em;
+    padding: 0.5em;
 }
 
 
 .multiple-choices{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     border: 2px solid var(--primary-color);
 }
@@ -1504,6 +1526,18 @@ input[type=text], input[type=date], input[type=tel], input[type=password], input
         flex-flow: column nowrap;
         align-items: center;
     }
+
+    .wrapper-register{
+        grid-template-areas:
+        'header'
+        'title'
+        'form'
+        'footer';
+    }
+
+    form{
+        justify-self: center;
+    }
 }
 
 /* Ρυθμίζουμε όλα τα στοιχεία έτσι ώστε να εμφανίζονται σε οθόνη 
@@ -1636,5 +1670,17 @@ input[type=text], input[type=date], input[type=tel], input[type=password], input
     /* Ρυθμίζουμε το padding των li της λίστας */
     aside ul li{
         padding: 0px;
+    }
+
+    .wrapper-register{
+        grid-template-areas: 
+        'header header' 
+        'title title'
+        'form form'
+        'footer footer';
+    }
+
+    form{
+        justify-self: center;
     }
 }

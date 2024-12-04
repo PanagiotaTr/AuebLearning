@@ -15,185 +15,259 @@
 <body>
 
     <header id="aueb-header" class="hover">
-        <img src="../images/aueb-header.png" alt="AUEB Header">
+        <img srcset="../images/aueb-header-LR.png 320w,
+                ../images/aueb-header-MR.png 768w,
+                ../images/aueb-header-HR.png 1920w" sizes="(max-width:480px) 100vw,
+                (max-width:960px) 100vw,
+                100vw" src="../images/aueb-header-MR.png" alt="AUEB Header">
+        <nav>
+            <img srcset="../images/logo-LR.png 320w,
+                        ../images/logo-MR.png 768w,
+                        ../images/logo-HR.png 1920w" sizes="(max-width:480px) 100vw,
+                    (max-width:960px) 100vw,
+                    100vw" src="../images/logo-MR.png" alt="Logo">
+            <ul class="nav-style nav-content">
+                <li> <a href="index.html">Αρχική Σελίδα</a></li>
+                <li> <a href="categories.html">Μαθήματα</a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="#">Τεχνητή Νοημοσύνη</a>
+                            <ul>
+                                <li> <a href="machine-learning.html">Μηχανική Μάθηση</a></li>
+                                <li> <a href="#">Νευρωνικά Δίκτυα</a></li>
+                                <li> <a href="#">MLP</a></li>
+                                <li> <a href="#">Ενισχυτική Μάθηση</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Προγρ/σμός στον Ιστό</a>
+                            <ul>
+                                <li> <a href="#">HTML5</a></li>
+                                <li> <a href="#">CSS</a></li>
+                                <li> <a href="#">JavaScript</a></li>
+                                <li> <a href="#">PHP</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Τεχνολογία Λογισμικού</a>
+                            <ul>
+                                <li> <a href="#">Απαιτήσεις Λογισμικού</a></li>
+                                <li> <a href="#">Αρχιτεκτονική Σχεδίαση</a></li>
+                                <li> <a href="#">Αντικ/φής Σχεδίαση</a></li>
+                                <li> <a href="#">Ποιότητα Λογισμικού</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Κυβερνοασφάλεια</a>
+                            <ul>
+                                <li> <a href="cryptography-cyber-security.html">Κρυπτογραφία</a></li>
+                                <li> <a href="#">Ασφάλεια Δικτύων</a></li>
+                                <li> <a href="#">Penetration Testing</a></li>
+                                <li> <a href="#">Έλεγχος Προσπέλασης</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li> <a href="about-us.html">Ποιοι Είμαστε</a></li>
+            </ul>
+        </nav>
     </header>
 
     <div class="wrapper wrapper-register">
-        <form class="register-form" name="gbForm" method="post" action="/register-user">
+
+        <div class="register-title">
             <header class="main-title">
                 <h1>Εγγραφή</h1>
             </header>
+        </div>
 
-            <div id="register-container">
-                <fieldset>
-                    <legend>Προσωπικά Στοιχεία</legend>
+        <form class="register-form" name="gbForm" method="post" action="/register-user">
 
-                    <p>
-                        <label for="name"><b>Όνομα</b></label>
-                        <input type="text" placeholder="Συμπληρώστε όνομα" name="name" id="name" required>
-                    </p>
-                    <p>
-                        <label for="surname"><b>Επώνυμο</b></label>
-                        <input type="text" placeholder="Συμπληρώστε επώνυμο" name="surname" id="surname" required>
-                    </p>
-                    <p>
-                        <label for="email"><b>Email</b></label>
-                        <input type="text" placeholder="Συμπληρώστε mail" name="email" id="email" required>
-                    </p>
-                    <p>
-                        <label for="address"><b>Διεύθυνση κατοικίας</b></label>
-                        <input type="text" placeholder="Συμπληρώστε διεύθυνση" name="address" id="address" required>
-                    </p>
-                    <p>
-                        <label for="birth-date"><b>Ημερομηνία γέννησης</b></label>
-                        <input type="date" name="birth-date" id="birth-date" required>
-                    </p>
-                    <p>
-                        <label for="number"><b>Τηλέφωνο επικοινωνίας</b></label>
-                        <input type="tel" placeholder="Συμπληρώστε τηλέφωνο" name="number" id="number" required>
-                    </p>
-                </fieldset>
+            <fieldset>
+                <legend>Προσωπικά Στοιχεία</legend>
 
-                <fieldset>
-                    <legend>Στοιχεία Ταυτοποίησης</legend>
+                <p>
+                    <label for="name"><b>Όνομα</b></label>
+                    <input type="text" placeholder="π.χ. Παναγιώτα" maxlength="20" pattern="[Α-ΩΆ-Ώ][α-ωά-ώ]*"
+                        title="Συμπληρώστε το όνομα σας (π.χ. Παναγιώτα)" name="name" id="name"
+                        autocomplete="given-name" required>
+                </p>
+                <p>
+                    <label for="surname"><b>Επώνυμο</b></label>
+                    <input type="text" placeholder="π.χ. Τριανταφυλλοπούλου" maxlength="20" pattern="[Α-ΩΆ-Ώ][α-ωά-ώ]*"
+                        title="Συμπληρώστε το επώνυμο σας (π.χ. Τριανταφυλλοπούλου)" name="surname" id="surname"
+                        autocomplete="family-name" required>
+                </p>
+                <p>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="π.χ. example@gmail.com"
+                        title="Συμπληρώστε το email σας (π.χ. example@gmail.com)" name="email" id="email"
+                        autocomplete="email" required>
+                </p>
+                <p>
+                    <label for="address"><b>Διεύθυνση κατοικίας</b></label>
+                    <input type="text" placeholder="π.χ. Λεωφόρος Αλεξάνδρας 160, Αθήνα 11521" name="address"
+                        id="address" pattern="^([Α-ΩΆ-Ώ][α-ωά-ώ]* )+[0-9]+, [Α-ΩΆ-Ώ][α-ωά-ώ]* [0-9]{5,6}$"
+                        title="Συμπληρώστε την διεύθυνση σας π.χ. Λεωφόρος Αλεξάνδρας 160, Αθήνα 11521"
+                        autocomplete="address-level1" required>
+                </p>
+                <p>
+                    <label for="birth-date"><b>Ημερομηνία γέννησης</b></label>
+                    <input type="date" name="birth-date" id="birth-date" autocomplete="bday" required>
+                </p>
+                <p>
+                    <label for="number"><b>Τηλέφωνο επικοινωνίας</b></label>
+                    <input type="tel" placeholder="π.χ. 6900000000" maxlength="10" pattern="69[0-9]{8,8}"
+                        title="Συμπληρώστε το τηλέφωνο σας π.χ. 6900000000" name="number" id="number" autocomplete="tel"
+                        required>
+                </p>
+            </fieldset>
 
-                    <p>
-                        <label for="username"><b>Όνομα Χρήστη (Username)</b></label>
-                        <input type="text" placeholder="Συμπληρώστε όνομα χρήστη" name="username" id="username"
-                            required>
-                    </p>
-                    <p>
-                        <label for="password"><b>Κωδικός (Password)</b></label>
-                        <input type="password" placeholder="Συμπληρώστε κωδικό" name="password" id="password" required>
-                    </p>
-                    <p>
-                        <label for="verify-password"><b>Επιβεβαίωση Κωδικού</b></label>
-                        <input type="password" placeholder="Επαληθεύστε τον κωδικό" name="verify-password"
-                            id="verify-password" required>
-                    </p>
-                </fieldset>
+            <fieldset>
+                <legend>Στοιχεία Ταυτοποίησης</legend>
 
-                <fieldset>
-                    <legend>Τρόποι Επικοινωνίας</legend>
+                <p>
+                    <label for="username"><b>Όνομα Χρήστη (Username)</b></label>
+                    <input type="text" placeholder="Συμπληρώστε όνομα χρήστη" maxlength="15" pattern="[A-Za-z0-9]+"
+                        title="Συμπληρώστε το όνομα χρήστη με λατινικούς χαρακτήρες και αριθμούς" name="username"
+                        id="username" autocomplete="username" required>
+                </p>
+                <p>
+                    <label for="password"><b>Κωδικός (Password)</b></label>
+                    <input type="password" placeholder="Συμπληρώστε τον κωδικό" name="password" id="password"
+                        maxlength="20" pattern="(?=.*?[A-Z])(?=.*?[@#$%^&*!])(?=.*?[0-9]).{8,}"
+                        title="Συμπληρώστε τον κωδικό, ο οποίος θα πρέπει να περιλαμβάνει 8-20 χαρακτήρες εκ των οποίων 1 κεφάλαιο, 1 ειδικό χαρακτήρα και 1 αριθμό"
+                        required>
+                </p>
+                <p>
+                    <label for="verify-password"><b>Επιβεβαίωση Κωδικού</b></label>
+                    <input type="password" placeholder="Επαληθεύστε τον κωδικό" name="verify-password"
+                        id="verify-password" maxlength="20" pattern="(?=.*?[A-Z])(?=.*?[@#$%^&*!])(?=.*?[0-9]).{8,}"
+                        title="Συμπληρώστε τον κωδικό, ο οποίος θα πρέπει να περιλαμβάνει 8-20 χαρακτήρες εκ των οποίων 1 κεφάλαιο, 1 ειδικό χαρακτήρα και 1 αριθμό"
+                        required>
+                </p>
+            </fieldset>
 
-                    <div class="multiple-choices">
-                        <p>
-                            <label class="container">SMS
-                                <input type="checkbox" checked="checked">
-                                <span class="checkmark"></span>
-                            </label>
-                        </p>
-                        <p>
-                            <label class="container">Email
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </p>
-                        <p>
-                            <label class="container">Viber
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </p>
-                        <p>
-                            <label class="container">WhatsApp
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </p>
-                    </div>
-                </fieldset>
+            <fieldset>
+                <legend>Τρόποι Επικοινωνίας</legend>
 
-                <fieldset>
-                    <legend>Ερωτηματολόγιο</legend>
-
+                <div class="multiple-choices">
                     <p>
-                        <label for="education-level"><b>1. Ποιο είναι το υψηλότερο επίπεδο εκπαίδευσης που έχετε
-                                ολοκληρώσει;</b></label>
-                        <select id="education-level" name="education-level" required>
-                            <option value="" disabled selected>Επιλέξτε</option>
-                            <option value="high-school">Γυμνάσιο</option>
-                            <option value="high-school">Λύκειο</option>
-                            <option value="bachelor">ΑΕΙ/ΤΕΙ</option>
-                            <option value="master">Μεταπτυχιακές σπουδές</option>
-                            <option value="phd">Διδακτορικές σπουδές</option>
-                            <option value="phd">Μεταδιδακτορικές σπουδές</option>
-                            <option value="other">Άλλο</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="job-status"><b>2. Ποια είναι η επαγγελματική σας κατάσταση;</b></label>
-                        <select id="job-status" name="job-status" required>
-                            <option value="" disabled selected>Επιλέξτε</option>
-                            <option value="employed">Εργαζόμενος</option>
-                            <option value="self-employed">Ελεύθερος επαγγελματίας</option>
-                            <option value="student">Φοιτητής</option>
-                            <option value="unemployed">Άνεργος</option>
-                            <option value="retired">Συνταξιούχος</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="sector"><b>3. Ποιος/οι τομέας/είς σας ενδιαφέρουν περισσότερο;</b></label>
-                    <div class="multiple-choices">
-                        <label class="container-sector">Τεχνητή Νοημοσύνη (ΑΙ)
+                        <label class="container">SMS
                             <input type="checkbox" checked="checked">
                             <span class="checkmark"></span>
                         </label>
-                        <label class="container-sector">Κυβερνοασφάλεια
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-sector">Τεχνολογία Λογισμικού
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-sector">Προγραμματισμός στον Ιστό
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
                     </p>
                     <p>
-                        <label for="years-experience"><b>4. Πόσα χρόνια επαγγελματικής εμπειρίας έχετε;</b></label>
-                        <select id="years-experience" name="years-experience" required>
-                            <option value="" disabled selected>Επιλέξτε</option>
-                            <option value="nothing">Καθόλου</option>
-                            <option value="less-than-year">Λιγότερο από 1 χρόνο</option>
-                            <option value="less-than-five-years">1 έως 5 χρόνια</option>
-                            <option value="more-than-five-years">Περισσότερα από 5 χρόνια</option>
-                        </select>
+                        <label class="container">Email
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
                     </p>
                     <p>
-                        <label><b>5. Έχετε γνώση ξένων γλωσσών;</b></label>
-                    <div class="multiple-choices">
-                        <label class="container-language">Καμία
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-language">Αγγλικά
+                        <label class="container">Viber
                             <input type="checkbox">
                             <span class="checkmark"></span>
                         </label>
-                        <label class="container-language">Γαλλικά
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-language">Γερμανικά
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-language">Άλλη
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
                     </p>
-                </fieldset>
-
-                <div id="btn-register">
-                    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-                    <button type="submit" class="registerbtn">Register</button>
+                    <p>
+                        <label class="container">WhatsApp
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </p>
                 </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Ερωτηματολόγιο</legend>
+
+                <p>
+                    <label for="education-level"><b>1. Ποιο είναι το υψηλότερο επίπεδο εκπαίδευσης που έχετε
+                            ολοκληρώσει;</b></label>
+                    <select id="education-level" name="education-level" required>
+                        <option value="" disabled selected>Επιλέξτε</option>
+                        <option value="high-school">Γυμνάσιο</option>
+                        <option value="high-school">Λύκειο</option>
+                        <option value="bachelor">ΑΕΙ/ΤΕΙ</option>
+                        <option value="master">Μεταπτυχιακές σπουδές</option>
+                        <option value="phd">Διδακτορικές σπουδές</option>
+                        <option value="phd">Μεταδιδακτορικές σπουδές</option>
+                        <option value="other">Άλλο</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="job-status"><b>2. Ποια είναι η επαγγελματική σας κατάσταση;</b></label>
+                    <select id="job-status" name="job-status" required>
+                        <option value="" disabled selected>Επιλέξτε</option>
+                        <option value="employed">Εργαζόμενος</option>
+                        <option value="self-employed">Ελεύθερος επαγγελματίας</option>
+                        <option value="student">Φοιτητής</option>
+                        <option value="unemployed">Άνεργος</option>
+                        <option value="retired">Συνταξιούχος</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="sector"><b>3. Ποιος/οι τομέας/είς σας ενδιαφέρουν περισσότερο;</b></label>
+                <div class="multiple-choices">
+                    <label class="container-sector">Τεχνητή Νοημοσύνη
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-sector">Κυβερνοασφάλεια
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-sector">Λογισμικό
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-sector">Προγραμματισμός στον Ιστό
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                </p>
+                <p>
+                    <label for="years-experience"><b>4. Πόσα χρόνια επαγγελματικής εμπειρίας έχετε;</b></label>
+                    <select id="years-experience" name="years-experience" required>
+                        <option value="" disabled selected>Επιλέξτε</option>
+                        <option value="nothing">Καθόλου</option>
+                        <option value="less-than-year">Λιγότερο από 1 χρόνο</option>
+                        <option value="less-than-five-years">1 έως 5 χρόνια</option>
+                        <option value="more-than-five-years">Περισσότερα από 5 χρόνια</option>
+                    </select>
+                </p>
+                <p>
+                    <label><b>5. Έχετε γνώση ξένων γλωσσών;</b></label>
+                <div class="multiple-choices">
+                    <label class="container-language">Καμία
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-language">Αγγλικά
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-language">Γαλλικά
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-language">Γερμανικά
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-language">Άλλη
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                </p>
+            </fieldset>
+
+            <div id="btn-register">
+                <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                <button type="submit" class="registerbtn">Register</button>
             </div>
         </form>
     </div>
@@ -227,44 +301,36 @@
                 <h2>Βρείτε μας</h2>
                 <ul>
                     <li><a href="https://www.facebook.com/auebgreece" target="_blank">
-                        <img srcset="../images/facebook-LR.jpg 320w,
+                            <img srcset="../images/facebook-LR.jpg 320w,
                                     ../images/facebook-MR.jpg 768w,
-                                    ../images/facebook-HR.jpg 1920w" 
-                            sizes="(max-width:480px) 5vw,
+                                    ../images/facebook-HR.jpg 1920w" sizes="(max-width:480px) 5vw,
                                     (max-width:960px) 2vw,
-                                    2vw" 
-                            src="../images/facebook-MR.jpg" alt="Facebook">
+                                    2vw" src="../images/facebook-MR.jpg" alt="Facebook">
                         </a>
                     </li>
                     <li><a href="https://www.instagram.com/aueb.gr" target="_blank">
-                        <img srcset="../images/instagram-LR.png 320w,
+                            <img srcset="../images/instagram-LR.png 320w,
                                     ../images/instagram-MR.png 768w,
-                                    ../images/instagram-HR.png 1920w" 
-                            sizes="(max-width:480px) 5vw,
+                                    ../images/instagram-HR.png 1920w" sizes="(max-width:480px) 5vw,
                                     (max-width:960px) 2vw,
-                                    2vw" 
-                            src="../images/instagram-MR.png" alt="Instagram">
+                                    2vw" src="../images/instagram-MR.png" alt="Instagram">
                         </a>
                     </li>
                     <li><a href="https://x.com/AUEB" target="_blank">
-                        <img srcset="../images/x-LR.png 320w,
+                            <img srcset="../images/x-LR.png 320w,
                                     ../images/x-MR.png 768w,
-                                    ../images/x-HR.png 1920w" 
-                            sizes="(max-width:480px) 5vw,
+                                    ../images/x-HR.png 1920w" sizes="(max-width:480px) 5vw,
                                     (max-width:960px) 2vw,
-                                    2vw" 
-                            src="../images/x-MR.png" alt="Twitter">
+                                    2vw" src="../images/x-MR.png" alt="Twitter">
                         </a>
                     </li>
                     <li><a href="https://gr.linkedin.com/school/athens-university-of-economics-and-business/"
                             target="_blank">
                             <img srcset="../images/linkedin-LR.png 320w,
                                     ../images/linkedin-MR.png 768w,
-                                    ../images/linkedin-HR.png 1920w" 
-                            sizes="(max-width:480px) 5vw,
+                                    ../images/linkedin-HR.png 1920w" sizes="(max-width:480px) 5vw,
                                     (max-width:960px) 2vw,
-                                    2vw" 
-                            src="../images/linkedin-MR.png" alt="LinkedIn">
+                                    2vw" src="../images/linkedin-MR.png" alt="LinkedIn">
                         </a>
                     </li>
                 </ul>
