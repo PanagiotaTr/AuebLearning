@@ -100,7 +100,7 @@
                 </p>
                 <p>
                     <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="π.χ. example@gmail.com"
+                    <input type="text" placeholder="π.χ. example@gmail.com" pattern="[A-Za-z0-9.-_]+@[a-z]+\.[a-z]{2,3}$"
                         title="Συμπληρώστε το email σας (π.χ. example@gmail.com)" name="email" id="email"
                         autocomplete="email" required>
                 </p>
@@ -187,12 +187,10 @@
                             ολοκληρώσει;</b></label>
                     <select id="education-level" name="education-level" required>
                         <option value="" disabled selected>Επιλέξτε</option>
-                        <option value="high-school">Γυμνάσιο</option>
                         <option value="high-school">Λύκειο</option>
-                        <option value="bachelor">ΑΕΙ/ΤΕΙ</option>
+                        <option value="bachelor">ΑΕΙ/ΙΕΚ</option>
                         <option value="master">Μεταπτυχιακές σπουδές</option>
                         <option value="phd">Διδακτορικές σπουδές</option>
-                        <option value="phd">Μεταδιδακτορικές σπουδές</option>
                         <option value="other">Άλλο</option>
                     </select>
                 </p>
