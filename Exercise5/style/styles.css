@@ -171,8 +171,8 @@ footer ul {
 
 /* Θέτουμε τις εικόνες που βρίσκονται μέσα στα social links (είναι απόγονοι) */
 #social-links img {
-    /* height: 20px; */
-    /* width: 20px; */
+    height: 20px;
+    width: 20px;
 }
 
 /* Θέτουμε το height του lower footer */
