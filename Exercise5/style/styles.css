@@ -1047,7 +1047,6 @@ nav > img {
     grid-template-areas:
         'header header header'
         'introduction introduction aside'
-        'introduction introduction aside'
         'footer footer footer';
 }
 
@@ -1093,7 +1092,6 @@ nav > img {
     grid-template-areas:
         'header header header'
         'categories categories aside'
-        'categories categories aside'
         'footer footer footer';
 }
 
@@ -1122,7 +1120,6 @@ nav > img {
     grid-template-areas:
         'header header header'
         'about-us about-us aside'
-        'about-us about-us aside'
         'footer footer footer';
 }
 
@@ -1144,7 +1141,6 @@ nav > img {
     row-gap: 0;
     grid-template-areas:
         'header header header'
-        'lesson lesson aside'
         'lesson lesson aside'
         'footer footer footer';
 }
@@ -1188,7 +1184,6 @@ nav > img {
     grid-template-areas:
         'header header header'
         'book book aside'
-        'book book aside'
         'footer footer footer';
 }
 
@@ -1229,7 +1224,6 @@ nav > img {
     row-gap: 0;
     grid-template-areas:
         'header header header'
-        'lecture lecture aside'
         'lecture lecture aside'
         'footer footer footer';
 }
@@ -1272,7 +1266,6 @@ img {
 
 .wrapper-register {
     row-gap: 0;
-    grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas:
         'header header header'
         '. title .'
@@ -1285,13 +1278,11 @@ img {
     grid-area: title;
 }
 
-.register-form{
+#register-form{
     grid-area: form;
-    display: flex;
-    flex-direction: column;
 }
 
-input[type=text], input[type=date], input[type=tel], input[type=password], input[type="checkbox"], input[type="number"]{
+input[type=text], input[type=date], input[type=tel], input[type=password], input[type="checkbox"], input[type="number"], input[type="email"]{
     width: 100%;
     box-sizing: border-box;
     padding: 1em;
@@ -1299,6 +1290,14 @@ input[type=text], input[type=date], input[type=tel], input[type=password], input
     border: 1px solid var(--primary-color);
     border-radius: 0.5em;
     background: white;
+}
+
+form input:invalid{
+    border-color: red;
+}
+
+form input:valid{
+    border-color: green;
 }
 
 
@@ -1309,6 +1308,7 @@ form{
     border-radius: 1em;
     padding: 1em;
     width: fit-content;
+    justify-self: center;
 }
 
 form fieldset{
@@ -1331,6 +1331,7 @@ form fieldset legend{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    text-align: center;
     border: 2px solid var(--primary-color);
 }
 
