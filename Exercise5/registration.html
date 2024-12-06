@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style/styles.css">
+    <script src="validation.js" type="text/JavaScript"></script>
 </head>
 
 <body class="wrapper wrapper-register">
@@ -80,7 +81,7 @@
         </header>
     </div>
 
-    <form id="register-form" name="gbForm" method="post" action="/register-user">
+    <form id="register-form" name="gbForm" action="#">
 
         <fieldset>
             <legend>Προσωπικά Στοιχεία</legend>
@@ -106,13 +107,13 @@
             <p>
                 <label for="address"><b>Διεύθυνση κατοικίας</b></label>
                 <input type="text" placeholder="π.χ. Λεωφόρος Αλεξάνδρας 160, Αθήνα 11521" name="address" id="address"
-                    pattern="([Α-ΩΆ-Ώ][α-ωά-ώ]* )+[0-9]+[Α-Ω], [Α-ΩΆ-Ώ][α-ωά-ώ]* [0-9]{5,6}"
+                    pattern="([Α-ΩΆ-Ώ][α-ωά-ώ]* )+[0-9]+[Α-Ω]?, [Α-ΩΆ-Ώ][α-ωά-ώ]* [0-9]{5,6}"
                     title="Συμπληρώστε την διεύθυνση σας π.χ. Λεωφόρος Αλεξάνδρας 160, Αθήνα 11521"
                     autocomplete="address-level1" required>
             </p>
             <p>
-                <label for="birth-date"><b>Ημερομηνία γέννησης</b></label>
-                <input type="date" name="birth-date" id="birth-date" autocomplete="bday" required>
+                <label for="birthdate"><b>Ημερομηνία γέννησης</b></label>
+                <input type="date" name="birth-date" id="birthdate" autocomplete="bday" required>
             </p>
             <p>
                 <label for="number"><b>Τηλέφωνο επικοινωνίας</b></label>
@@ -139,8 +140,8 @@
                     required>
             </p>
             <p>
-                <label for="verify-password"><b>Επιβεβαίωση Κωδικού</b></label>
-                <input type="password" placeholder="Επαληθεύστε τον κωδικό" name="verify-password" id="verify-password"
+                <label for="verify_password"><b>Επιβεβαίωση Κωδικού</b></label>
+                <input type="password" placeholder="Επαληθεύστε τον κωδικό" name="verify-password" id="verify_password"
                     maxlength="20" pattern="(?=.*?[A-Z])(?=.*?[@#$%^&*!])(?=.*?[0-9]).{8,}"
                     title="Συμπληρώστε τον κωδικό, ο οποίος θα πρέπει να περιλαμβάνει 8-20 χαρακτήρες εκ των οποίων 1 κεφάλαιο, 1 ειδικό χαρακτήρα και 1 αριθμό"
                     required>
@@ -264,7 +265,7 @@
 
         <div id="btn-register">
             <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-            <button type="submit" class="registerbtn">Register</button>
+            <button id="register_btn" type="submit" class="registerbtn">Register</button>
         </div>
     </form>
 
