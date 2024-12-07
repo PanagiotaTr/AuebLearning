@@ -26,6 +26,9 @@
    με μέγιστο μέγεθος ίση με 480px
  * Ρυθμίζουμε όλα τα στοιχεία έτσι ώστε να εμφανίζονται σε οθόνη 
    με μέγιστο μέγεθος ίση με 960px
+***************************************************************************
+ * Στοιχεία σελίδας - registration
+ * Θέτουμε την διάταξη στην σελίδα registration
 */
 
 /* Γενικές ρυθμίσεις σελιδών */
@@ -1262,8 +1265,9 @@ img {
     max-width: 100%;
 }
 
-/* Register */
-
+/* Στοιχεία σελίδας - registration */
+/* Θέτουμε την διάταξη στην σελίδα registration */
+/* Ορίζουμε την διάταξη της σελίδας με την εγγραφή */
 .wrapper-register {
     row-gap: 0;
     grid-template-areas:
@@ -1273,15 +1277,20 @@ img {
         'footer footer footer';
 }
 
+/* Στοιχεία σελίδας - registration */
+/* Θέτουμε το στυλ του τίτλου */
 .register-title{
     margin-top: 150px;
     grid-area: title;
 }
 
+/* Ορίζουμε το grid-area για το form βάσει της διάταξης της
+σελίδας registration */
 #register-form{
     grid-area: form;
 }
 
+/* Θέτουμε την μορφοποίηση των στοιχείων που αποτελούν input για την σελίδα registration */
 input[type=text], input[type=date], input[type=tel], input[type=password], input[type="checkbox"], input[type="number"], input[type="email"]{
     width: 100%;
     box-sizing: border-box;
@@ -1292,15 +1301,17 @@ input[type=text], input[type=date], input[type=tel], input[type=password], input
     background: white;
 }
 
+/* Θέτουμε κόκκινο χρώμα πλαισίου όταν το input είναι invalid */
 form input:invalid{
     border-color: red;
 }
 
+/* Θέτουμε πράσινο χρώμα πλαισίου όταν το input είναι valid */
 form input:valid{
     border-color: green;
 }
 
-
+/* Θέτουμε την γενική διάταξη του τμήματος form */
 form{
     display: flex;
     flex-flow: column nowrap;
@@ -1311,6 +1322,7 @@ form{
     justify-self: center;
 }
 
+/* Θέτουμε την διάταξη των επιμέρους στοιχείων του τμήματος form */
 form fieldset{
     display: flex;
     flex-flow: column nowrap;
@@ -1319,13 +1331,15 @@ form fieldset{
     margin-bottom: 2em;
 }
 
+/* Θέτουμε το στυλ των τίτλων του τμήματος form */
 form fieldset legend{
     color: var(--primary-color);
     font-size: 1.4em;
     padding: 0.5em;
 }
 
-
+/* Θέτουμε την διάταξη των στοιχείων που βρίσκονται σε boxes έτσι ώστε
+να εμφανίζονται σε μια γραμμή */
 .multiple-choices{
     display: flex;
     flex-direction: row;
@@ -1335,19 +1349,13 @@ form fieldset legend{
     border: 2px solid var(--primary-color);
 }
 
-#questions{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
+/* Θέτουμε την διάταξη του button register */
 #btn-register{
     display: flex;
     flex-direction: column;
 }
 
+/* Θέτουμε το στυλ του button */
 #btn-register button {
     background-color: var(--primary-color);
     color: white;
@@ -1358,7 +1366,8 @@ form fieldset legend{
     width: 100%;
     opacity: 0.9;
 }
-  
+
+/* Θέτουμε hover όταν το ποντίκι πηγαίνει πάνω από το button */
 #btn-register button:hover {
     opacity:1;
 }
@@ -1528,6 +1537,7 @@ form fieldset legend{
         align-items: center;
     }
 
+    /* Ορίζουμε την διάταξη της σελίδας με την εγγραφή */
     .wrapper-register{
         grid-template-areas:
         'header'
@@ -1536,6 +1546,7 @@ form fieldset legend{
         'footer';
     }
 
+    /* Θέτουμε το τμήμα του form να είναι κεντραρισμένο */
     form{
         justify-self: center;
     }
@@ -1673,6 +1684,7 @@ form fieldset legend{
         padding: 0px;
     }
 
+    /* Ορίζουμε την διάταξη της σελίδας με την εγγραφή */
     .wrapper-register{
         grid-template-areas: 
         'header header' 
@@ -1681,6 +1693,7 @@ form fieldset legend{
         'footer footer';
     }
 
+    /* Θέτουμε το τμήμα του form να είναι κεντραρισμένο */
     form{
         justify-self: center;
     }
