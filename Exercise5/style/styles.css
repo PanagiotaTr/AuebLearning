@@ -1372,6 +1372,19 @@ form fieldset legend{
     opacity:1;
 }
 
+/* Θετουμε flex στο checkbox για το agreement */
+#agreement-checkbox{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+/* Θέτουμε το width και το margin του checkbox του agreement */
+#cb_agreement{
+    width: fit-content;
+    margin: 0em;
+    margin-right: 0.3em;
+}
 
 
 /* Ρυθμίζουμε όλα τα στοιχεία έτσι ώστε να εμφανίζονται σε οθόνη 
