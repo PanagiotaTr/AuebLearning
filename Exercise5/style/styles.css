@@ -56,7 +56,7 @@
     font-display: swap;
     src: url(https://fonts.gstatic.com/s/roboto/v32/KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2) format('woff2');
     unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-  }
+}
 
 /* latin */
 @font-face {
@@ -66,7 +66,7 @@
     font-display: swap;
     src: url(https://fonts.gstatic.com/s/roboto/v32/KFOkCnqEu92Fr1MmgVxIIzI.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
+}
 
 /* Θέτουμε στο body το background, το font και το margin καθε σελίδας */
 body {
@@ -76,7 +76,7 @@ body {
 }
 
 /* Θέτουμε σε όλα τα λινκς χρώμα και υπογράμμιση, όταν το ποντίκι πηγαίνει επάνω */
-.hover a:hover{
+.hover a:hover {
     color: white;
     text-decoration: underline !important;
 }
@@ -104,25 +104,25 @@ footer {
 }
 
 /* Εφαρμόζουμε διάταξη στα άμεσα παιδιά του upper-footer */
-#upper-footer>*{
+#upper-footer>* {
     flex: 0 1 auto;
     display: flex;
-    flex-flow: column nowrap;  
-    align-items: stretch;  
+    flex-flow: column nowrap;
+    align-items: stretch;
     text-align: center;
 }
 
 /* Θέτουμε το στυλ στην παράγραφο του upper-footer */
-#upper-footer p{
+#upper-footer p {
     font-size: 1em;
-    max-width: 25rem; 
+    max-width: 25rem;
     margin: 0em;
 }
 
 /* Το footer χωρίζεται σε 2 μέρη (upper/lower), αυτό είναι το upper  */
 #upper-footer {
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
     justify-content: space-around;
     margin: 0px;
     padding: 0px;
@@ -133,7 +133,7 @@ footer {
 footer h2 {
     font-size: 1.3em;
     color: #e0e0e0;
-    margin: 0.5em;               
+    margin: 0.5em;
     text-decoration: underline;
 }
 
@@ -167,7 +167,7 @@ footer ul {
 /* Θέτουμε το div του footer που περιέχει τα social media links */
 #social-links ul {
     display: flex;
-    flex-flow: row wrap;          
+    flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
 }
@@ -186,9 +186,10 @@ footer ul {
     margin-top: 0.5em;
 }
 
-#lower-footer p{
-    margin: 0em;         
+#lower-footer p {
+    margin: 0em;
 }
+
 /* Θέτουμε την μετατροπή στις εικόνες του social links όταν γίνονται hover */
 #social-links img:hover {
     transform: scale(1.2);
@@ -202,11 +203,12 @@ footer ul {
     text-align: center;
     font-size: 30px;
     color: var(--primary-color);
-    letter-spacing: 1px;    
+    letter-spacing: 1px;
     display: grid;
     grid-template-columns: 5fr 1fr 5fr;
     grid-template-rows: 27px 0;
-    grid-gap: 30px; /*20*/
+    grid-gap: 30px;
+    /*20*/
     align-items: center;
 }
 
@@ -319,7 +321,7 @@ footer ul {
     margin: 1em;
     font-size: 12pt;
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         'name name'
         'card text';
     grid-template-columns: auto 1fr;
@@ -462,7 +464,7 @@ footer ul {
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: space-around;
-    align-items: center; 
+    align-items: center;
 }
 
 /* Θέτουμε την εικόνα που είναι παιδί του info-book */
@@ -496,7 +498,7 @@ footer ul {
 }
 
 /* Θέτουμε το μέγεθος των γραμμάτων της παραγράφου*/
-.book-lecture-information p{
+.book-lecture-information p {
     font-size: medium;
 }
 
@@ -508,7 +510,6 @@ figure {
 
 /* Θέτουμε τις εικόνες που είναι απόγονοι του article, τα οποία είναι αδέρφια element με id books */
 #books~article img {
-    /* width: 400px;  ΑΛΛΑΓΗ */  
     height: auto;
     border: 1px solid black;
 }
@@ -533,7 +534,7 @@ a[href^="#chapter"]:hover,
 a[href^="#table"]:hover,
 #books~a:hover,
 #lectures~a :hover {
-    color:var(--primary-color);
+    color: var(--primary-color);
 }
 
 /* Θέτουμε τα h3 που είναι παιδιά του article, τα οποία είναι αδέρφια element με id books */
@@ -579,8 +580,6 @@ a[href^="#table"]:hover,
 
 /* Θέτουμε τις εικόνες των κατηγοριών */
 .categories-info img {
-    /* width: 435px;
-    height: 250px;    ΑΛΛΑΓΗ */
     padding: 0.5em;
 }
 
@@ -645,7 +644,7 @@ a[href^="#table"]:hover,
 
 /* Θέτουμε τη διάταξη flex στη λίστα με τις υποκατηγορίες των μαθημάτων ώστε να τοποθετούνται σε μία στήλη*/
 .articlebox>ul {
-    display:flex;
+    display: flex;
     flex-flow: column nowrap;
     align-items: center;
     padding: 0px;
@@ -770,7 +769,7 @@ a[href^="#table"]:hover,
 
 /* Κλάση για το μήνυμα που εφμανίζεται πάνω από την εικόνα. Το θέλουμε σταθερό στο κέντρο και να μην αλλάζει όταν το detail 
 γίνεται open */
-.lesson-cover {             
+.lesson-cover {
     position: relative;
     display: flex;
     justify-content: center;
@@ -787,7 +786,7 @@ a[href^="#table"]:hover,
 /* Θέτουμε το πλαίσιο για την κάθε διάλεξη και για το κάθε βιβλίο στα 2 μαθήματα*/
 .info-box {
     border: 0px solid black;
-    padding: 0px;           
+    padding: 0px;
     border-radius: 5px;
     margin: 10px;
     font-size: medium;
@@ -869,7 +868,7 @@ aside ul li {
 }
 
 /* Αφαιρούμε την υπογράμμιση από τα λινκ της λίστα του aside-bar*/
-aside ul li a{
+aside ul li a {
     text-decoration: none;
 }
 
@@ -880,7 +879,7 @@ aside ul li:hover {
 }
 
 /* Θέτουμε χρώμα στα λινκ της λίστας, όταν το ποντίκι βρίσκεται επάνω*/
-aside ul li:hover a{
+aside ul li:hover a {
     color: white;
 }
 
@@ -892,12 +891,12 @@ aside ul li span {
 }
 
 /* Θέτουμε το "περισσότερα" του aside-bar να είναι στο κέντρο*/
-aside #aside-more{
+aside #aside-more {
     text-align: center;
 }
 
 /* Θέτουμε το λινκ του "περρισσότερα" στο aside-bar να είναι άσπρο και χωρίς υπογράμμιση*/
-aside #aside-more a{
+aside #aside-more a {
     color: white;
     text-decoration: none;
 }
@@ -923,12 +922,12 @@ aside #aside-more a{
 }
 
 /* Ορίζουμε την εικόνα να βρίσκεται στην ίδια γραμμή με άλλα στοιχεία */
-#aueb-header > img {
+#aueb-header>img {
     display: inline-block;
 }
 
 /* Θέτουμε την διάταξη για το navigation */
-#aueb-header > nav {
+#aueb-header>nav {
     border-top: 0.5px solid black;
     display: flex;
     justify-content: flex-start;
@@ -951,7 +950,7 @@ aside #aside-more a{
 }
 
 /* Θέτουμε το στυλ για τα στοιχεία του πρώτου επιπέδου */
-.nav-style > li {
+.nav-style>li {
     position: relative;
     text-align: center;
     padding: 1rem;
@@ -987,7 +986,7 @@ aside #aside-more a{
 }
 
 /* Θέτουμε την εμφάνιση του υπομενού όταν το ποντίκι βρίσκεται πάνω */
-.nav-style > li:hover > ul {
+.nav-style>li:hover>ul {
     display: block;
 }
 
@@ -1008,16 +1007,16 @@ aside #aside-more a{
 }
 
 /* Θέτουμε την εμφάνιση του υπομενού όταν το ποντίκι βρίσκεται πάνω */
-.nav-style li ul li:hover > ul {
+.nav-style li ul li:hover>ul {
     display: block;
 }
 
 /* Θέτουμε στο logo του navigation (παιδί του nav) ύψος, πλάτος, margin-right και border*/
-nav > img {
+nav>img {
     height: 4em;
     width: 4em;
     border: 2px solid var(--primary-color);
-    text-align:start;
+    text-align: start;
 }
 
 /* Θέτουμε την κεντρική εικόνα του header */
@@ -1027,12 +1026,11 @@ nav > img {
     clear: both;
     margin-left: auto;
     margin-right: auto;
-    /* width: 30%; ΑΛΛΑΓΗ*/
 }
 
 /* Θέτουμε μια γενική διάταξη της σελίδας (κοινή για όλες)*/
 /* Αποτελείται από 3 στήλες */
-.wrapper{
+.wrapper {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: auto auto auto auto;
@@ -1045,7 +1043,7 @@ nav > img {
 
 /* Θέτουμε την διάταξη στην σελίδα index */
 /* Ορίζουμε την διάταξη της αρχικής σελίδας */
-.wrapper-index{
+.wrapper-index {
     row-gap: 0;
     grid-template-areas:
         'header header header'
@@ -1054,7 +1052,7 @@ nav > img {
 }
 
 /* Θέτουμε το στυλ για το τμήμα του main */
-.introduction{
+.introduction {
     grid-area: introduction;
     display: flex;
     flex-direction: column;
@@ -1074,9 +1072,9 @@ nav > img {
 }
 
 /* Θέτουμε το μέγεθος της εικόνας και το περίγραμμά της*/
-#introduction-wrapper img{
+#introduction-wrapper img {
     max-width: 100%;
-    height: auto;           
+    height: auto;
     border: 0.5px solid black;
 }
 
@@ -1086,11 +1084,11 @@ nav > img {
     padding: 10px;
     font-size: 0.9rem;
     text-align: justify;
-} 
+}
 
 /* Θέτουμε την διάταξη στην σελίδα categories */
 /* Ορίζουμε την διάταξη της σελίδας categories*/
-.wrapper-categories{
+.wrapper-categories {
     row-gap: 0;
     grid-template-areas:
         'header header header'
@@ -1112,13 +1110,13 @@ nav > img {
 
 /* Θέτουμε το main-title να πιάνει και τις 2 στήλες 
 που έχουμε ορίσει στο categories */
-.categories .main-title{
+.categories .main-title {
     grid-column: span 2;
 }
 
 /* Θέτουμε την διάταξη στην σελίδα about-us */
 /* Ορίζουμε την διάταξη της σελίδας about-us*/
-.wrapper-about-us{
+.wrapper-about-us {
     row-gap: 0;
     grid-template-areas:
         'header header header'
@@ -1127,7 +1125,7 @@ nav > img {
 }
 
 /* Θέτουμε το στυλ για το τμήμα του main */
-.wr-about-us{
+.wr-about-us {
     grid-area: about-us;
     display: flex;
     flex-direction: column;
@@ -1140,7 +1138,7 @@ nav > img {
 
 /* Θέτουμε την διάταξη στις σελίδες machine-learning / cyber-security */
 /* Ορίζουμε την διάταξη των σελιδών cyber-security και machine-learning*/
-.wrapper-lesson{
+.wrapper-lesson {
     row-gap: 0;
     grid-template-areas:
         'header header header'
@@ -1149,7 +1147,7 @@ nav > img {
 }
 
 /* Θέτουμε το στυλ για το τμήμα του main */
-.wr-lesson{
+.wr-lesson {
     grid-area: lesson;
     flex-direction: column;
     display: flex;
@@ -1163,26 +1161,27 @@ nav > img {
 /* Θέτουμε τις στήλες του main-title στις σελίδες που
 παρουσιάζουμε το βιβλίο και την διάλεξη, λόγω του 
 μεγάλου σε μήκους τίτλου*/
-.wr-lecture .main-title h1, .wr-book .main-title h1{
+.wr-lecture .main-title h1,
+.wr-book .main-title h1 {
     grid-template-columns: 7fr 6fr 7fr;
 }
 
 /* Θέτουμε τη διάταξη για τα 2 πλαίσια που αφορούν τα βιβλία και 
 τις διαλέξεις των 2 μαθημάτων που έχουμε επιλέξει */
-.lecture-book-container{
-    display:flex;
+.lecture-book-container {
+    display: flex;
     flex-flow: row nowrap;
 }
 
 /* Θέτουμε το χρώμα και το μέγεθος του header */
-.lecture-book-container header{
+.lecture-book-container header {
     background-color: white;
     width: 100%;
 }
 
 /* Θέτουμε την διάταξη στην σελίδα machine-learning-book */
 /* Ορίζουμε την διάταξη της σελίδας με το βιβλίο*/
-.wrapper-book{
+.wrapper-book {
     row-gap: 0;
     grid-template-areas:
         'header header header'
@@ -1191,7 +1190,7 @@ nav > img {
 }
 
 /* Θέτουμε το στυλ για το τμήμα του main */
-.wr-book{
+.wr-book {
     grid-area: book;
     display: flex;
     flex-wrap: wrap;
@@ -1206,12 +1205,12 @@ nav > img {
 .flex-container {
     display: flex;
     align-items: flex-start;
-    gap: 2em;  /*ΑΛΛΑΓΗ ΔΕΝ ΦΑΙΝΟΤΑΝ ΩΡΑΙΟ*/
+    gap: 2em;
 }
 
 /* Θέτουμε το ύψος της εικόνας */
-.flex-container img{
-    height: auto;    /*ΑΛΛΑΓΗ*/
+.flex-container img {
+    height: auto;
 }
 
 /* Θέτουμε τη διάταξη με τα περιεχόμενα του βιβλίου*/
@@ -1223,7 +1222,7 @@ nav > img {
 
 /* Θέτουμε την διάταξη στην σελίδα machine-learning-lecture */
 /* Ορίζουμε την διάταξη της σελίδας με την διάλεξη*/
-.wrapper-lecture{
+.wrapper-lecture {
     row-gap: 0;
     grid-template-areas:
         'header header header'
@@ -1232,7 +1231,7 @@ nav > img {
 }
 
 /* Θέτουμε το στυλ για το τμήμα του main */
-.wr-lecture{
+.wr-lecture {
     grid-area: lecture;
     display: flex;
     flex-wrap: wrap;
@@ -1279,19 +1278,25 @@ img {
 
 /* Στοιχεία σελίδας - registration */
 /* Θέτουμε το στυλ του τίτλου */
-.register-title{
+.register-title {
     margin-top: 150px;
     grid-area: title;
 }
 
 /* Ορίζουμε το grid-area για το form βάσει της διάταξης της
 σελίδας registration */
-#register-form{
+#register-form {
     grid-area: form;
 }
 
 /* Θέτουμε την μορφοποίηση των στοιχείων που αποτελούν input για την σελίδα registration */
-input[type=text], input[type=date], input[type=tel], input[type=password], input[type="checkbox"], input[type="number"], input[type="email"]{
+input[type=text],
+input[type=date],
+input[type=tel],
+input[type=password],
+input[type="checkbox"],
+input[type="number"],
+input[type="email"] {
     width: 100%;
     box-sizing: border-box;
     padding: 1em;
@@ -1302,17 +1307,17 @@ input[type=text], input[type=date], input[type=tel], input[type=password], input
 }
 
 /* Θέτουμε κόκκινο χρώμα πλαισίου όταν το input είναι invalid */
-form input:invalid{
+form input:invalid {
     border-color: red;
 }
 
 /* Θέτουμε πράσινο χρώμα πλαισίου όταν το input είναι valid */
-form input:valid{
+form input:valid {
     border-color: green;
 }
 
 /* Θέτουμε την γενική διάταξη του τμήματος form */
-form{
+form {
     display: flex;
     flex-flow: column nowrap;
     border: 1px solid black;
@@ -1323,7 +1328,7 @@ form{
 }
 
 /* Θέτουμε την διάταξη των επιμέρους στοιχείων του τμήματος form */
-form fieldset{
+form fieldset {
     display: flex;
     flex-flow: column nowrap;
     border: 1px solid black;
@@ -1332,7 +1337,7 @@ form fieldset{
 }
 
 /* Θέτουμε το στυλ των τίτλων του τμήματος form */
-form fieldset legend{
+form fieldset legend {
     color: var(--primary-color);
     font-size: 1.4em;
     padding: 0.5em;
@@ -1340,7 +1345,7 @@ form fieldset legend{
 
 /* Θέτουμε την διάταξη των στοιχείων που βρίσκονται σε boxes έτσι ώστε
 να εμφανίζονται σε μια γραμμή */
-.multiple-choices{
+.multiple-choices {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1350,7 +1355,7 @@ form fieldset legend{
 }
 
 /* Θέτουμε την διάταξη του button register */
-#btn-register{
+#btn-register {
     display: flex;
     flex-direction: column;
 }
@@ -1369,18 +1374,18 @@ form fieldset legend{
 
 /* Θέτουμε hover όταν το ποντίκι πηγαίνει πάνω από το button */
 #btn-register button:hover {
-    opacity:1;
+    opacity: 1;
 }
 
 /* Θετουμε flex στο checkbox για το agreement */
-#agreement-checkbox{
+#agreement-checkbox {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
 }
 
 /* Θέτουμε το width και το margin του checkbox του agreement */
-#cb_agreement{
+#cb_agreement {
     width: fit-content;
     margin: 0em;
     margin-right: 0.3em;
@@ -1398,12 +1403,12 @@ form fieldset legend{
     }
 
     /* Διαμορφώνουμε το aueb-header έτσι ώστε να είναι σε στήλη */
-    #aueb-header > nav {
+    #aueb-header>nav {
         flex-direction: column;
     }
 
     /* Βάζουμε χρώμα στο padding μέσα στο οποίο περικλύεται η εικόνα */
-    nav > img{
+    nav>img {
         background-color: var(--background-color);
         padding-left: 40%;
         padding-right: 40%;
@@ -1417,7 +1422,7 @@ form fieldset legend{
     }
 
     /* Θέτουμε το στυλ για τα στοιχεία του πρώτου επιπέδου */
-    .nav-style > li {
+    .nav-style>li {
         width: 100%;
         border-right: none;
         border: 1px solid black;
@@ -1427,7 +1432,7 @@ form fieldset legend{
     .nav-style li ul {
         position: relative;
     }
-    
+
     /* Θέτουμε το width για τα στοιχεία του υπομενού */
     .nav-style li ul li {
         width: 100%;
@@ -1440,7 +1445,13 @@ form fieldset legend{
     }
 
     /* Ρυθμίζουμε την απόσταση του main από το menu*/
-    .introduction, .categories, .wr-lesson, .wr-about-us, .wr-book, .wr-lecture, .register-form {
+    .introduction,
+    .categories,
+    .wr-lesson,
+    .wr-about-us,
+    .wr-book,
+    .wr-lecture,
+    .register-form {
         margin-top: 20px;
     }
 
@@ -1450,7 +1461,7 @@ form fieldset legend{
         position: static;
         text-align: center;
         margin: 0 auto;
-        top: 0px; 
+        top: 0px;
         margin-bottom: 0px;
     }
 
@@ -1465,102 +1476,102 @@ form fieldset legend{
     }
 
     /* Θέτουμε την διάταξη στην σελίδα index */
-    .wrapper-index{
+    .wrapper-index {
         grid-template-areas:
-        'header'
-        'introduction'
-        'aside'
-        'footer';
+            'header'
+            'introduction'
+            'aside'
+            'footer';
     }
 
     /* Θέτουμε την διάταξη στην σελίδα categories */
-    .wrapper-categories{
+    .wrapper-categories {
         grid-template-areas:
-        'header'
-        'categories'
-        'aside'
-        'footer';
+            'header'
+            'categories'
+            'aside'
+            'footer';
     }
 
     /* Ρυθμίζουμε την διάταξη έτσι ώστε ανά γραμμή να εμφανίζεται μία κατηγορία */
-    .categories{
+    .categories {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
     }
 
     /* Ρυθμίζουμε το πλάτος των articlebox του categories */
-    .articlebox{
+    .articlebox {
         width: 90%;
     }
 
     /* Θέτουμε την διάταξη στην σελίδα machine-learning-book */
-    .wrapper-book{
+    .wrapper-book {
         grid-template-areas:
-        'header'
-        'book'
-        'aside'
-        'footer';
+            'header'
+            'book'
+            'aside'
+            'footer';
     }
 
     /* Ρυθμίζουμε τα στοιχεία έτσι ώστε να μεταφέρονται σε επόμενες γραμμές */
-    .flex-container{
+    .flex-container {
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
     }
 
     /* Θέτουμε την διάταξη στην σελίδα machine-learning-lecture */
-    .wrapper-lecture{
+    .wrapper-lecture {
         grid-template-areas:
-        'header'
-        'lecture'
-        'aside'
-        'footer';
+            'header'
+            'lecture'
+            'aside'
+            'footer';
     }
 
     /* Θέτουμε την διάταξη στις σελίδες machine-learning / cyber-security */
-    .wrapper-lesson{
+    .wrapper-lesson {
         grid-template-areas:
-        'header'
-        'lesson'
-        'aside'
-        'footer';
+            'header'
+            'lesson'
+            'aside'
+            'footer';
     }
 
     /* Ρυθμίζουμε τα στοιχεία έτσι ώστε να μεταφέρονται σε επόμενες γραμμές */
-    .lecture-book-container{
+    .lecture-book-container {
         flex-wrap: wrap;
         justify-content: center;
     }
 
     /* Θέτουμε την διάταξη στην σελίδα about-us */
-    .wrapper-about-us{
+    .wrapper-about-us {
         grid-template-areas:
-        'header'
-        'about-us'
-        'aside'
-        'footer';
+            'header'
+            'about-us'
+            'aside'
+            'footer';
     }
 
     /* Θέτουμε την διάταξη των στοιχείων του about-us */
-    .about-us{
-        display:flex;
+    .about-us {
+        display: flex;
         flex-flow: column nowrap;
         align-items: center;
     }
 
     /* Ορίζουμε την διάταξη της σελίδας με την εγγραφή */
-    .wrapper-register{
+    .wrapper-register {
         grid-template-areas:
-        'header'
-        'title'
-        'form'
-        'footer';
+            'header'
+            'title'
+            'form'
+            'footer';
     }
 
     /* Θέτουμε το τμήμα του form να είναι κεντραρισμένο */
-    form{
+    form {
         justify-self: center;
     }
 }
@@ -1570,42 +1581,47 @@ form fieldset legend{
 @media screen and (min-width:481px) and (max-width: 960px) {
 
     /* Θέτουμε την διάταξη του upper-footer*/
-    #upper-footer{
+    #upper-footer {
         flex-flow: row wrap;
+    }
+
+    /* Θέτουμε wrap στη λίστα του nav */
+    .nav-style {
+        flex-wrap: wrap;
     }
 
     /* Θέτουμε μια γενική διάταξη της σελίδας (κοινή για όλες)*/
     /* Αποτελείται από 2 στήλες */
-    .wrapper{
+    .wrapper {
         grid-template-columns: 3fr 1fr;
         min-height: 100vh;
     }
 
     /* Θέτουμε την διάταξη στην σελίδα index */
-    .wrapper-index{
-        grid-template-areas: 
+    .wrapper-index {
+        grid-template-areas:
             'header header'
             'introduction aside'
             'footer footer';
     }
 
     /* Θέτουμε την διάταξη στην σελίδα about-us */
-    .wrapper-about-us{
-        grid-template-areas: 
+    .wrapper-about-us {
+        grid-template-areas:
             'header header'
             'about-us aside'
             'footer footer';
     }
 
     /* Θέτουμε την διάταξη των στοιχείων του about-us */
-    .about-us{
-        display:flex;
+    .about-us {
+        display: flex;
         flex-flow: column nowrap;
         align-items: center;
     }
 
     /* Θέτουμε την διάταξη στην σελίδα categories */
-    .wrapper-categories{
+    .wrapper-categories {
         grid-template-areas:
             'header header'
             'categories aside'
@@ -1613,33 +1629,33 @@ form fieldset legend{
     }
 
     /* Ρυθμίζουμε την διάταξη έτσι ώστε ανά γραμμή να εμφανίζεται μία κατηγορία */
-    .categories{
-        display:flex;
+    .categories {
+        display: flex;
         flex-flow: column nowrap;
         align-items: center;
     }
 
     /* Ρυθμίζουμε το πλάτος του categories-info */
-    .categories-info{
+    .categories-info {
         width: 90%;
     }
 
     /* Θέτουμε την διάταξη στις σελίδες machine-learning / cyber-security */
-    .wrapper-lesson{
-        grid-template-areas: 
+    .wrapper-lesson {
+        grid-template-areas:
             'header header'
             'lesson aside'
             'footer footer';
     }
 
     /* Ρυθμίζουμε τα στοιχεία έτσι ώστε να μεταφέρονται σε επόμενες γραμμές */
-    .lecture-book-container{
+    .lecture-book-container {
         flex-wrap: wrap;
         justify-content: space-around;
     }
 
     /* Θέτουμε την διάταξη στην σελίδα machine-learning-lecture */
-    .wrapper-lecture{
+    .wrapper-lecture {
         grid-template-areas:
             'header header'
             'lecture aside'
@@ -1647,67 +1663,67 @@ form fieldset legend{
     }
 
     /* Ρυθμίζουμε το πλάτος του περιεχομένου της διάλεξης */
-    .flex-lecture-table{
+    .flex-lecture-table {
         width: 90%;
     }
 
     /* Θέτουμε την διάταξη στην σελίδα machine-learning-book */
-    .wrapper-book{
-        grid-template-areas: 
+    .wrapper-book {
+        grid-template-areas:
             'header header'
             'book aside'
             'footer footer';
     }
-    
+
     /* Ρυθμίζουμε τα στοιχεία έτσι ώστε να μεταφέρονται σε επόμενες γραμμές */
-    .flex-container{
+    .flex-container {
         flex-flow: column wrap;
         align-items: center;
     }
 
     /* Ρυθμίζουμε το πλάτος του πλαισίου με τις πληροφορίες της διάλεξης / του βιβλίου */
-    .book-lecture-information{
+    .book-lecture-information {
         width: 90%;
     }
 
     /* Φτιάχνουμε την διάταξη του aside bar */
-    aside{
+    aside {
         width: 80%;
         position: static;
         margin-left: 5px;
     }
 
     /* Ρυθμίζουμε το μέγεθος των γραμμάτων της h2 */
-    aside h2{
+    aside h2 {
         font-size: 1.2rem;
     }
 
     /* Ρυθμίζουμε το μέγεθος των γραμμάτων του span */
-    aside ul li span{
+    aside ul li span {
         font-size: 0.9rem;
     }
 
     /* Ρυθμίζουμε το μέγεθος των γραμμάτων των a */
-    aside ul li a{
+    aside ul li a {
         font-size: 0.9rem;
     }
 
     /* Ρυθμίζουμε το padding των li της λίστας */
-    aside ul li{
+    aside ul li {
         padding: 0px;
     }
 
     /* Ορίζουμε την διάταξη της σελίδας με την εγγραφή */
-    .wrapper-register{
-        grid-template-areas: 
-        'header header' 
-        'title title'
-        'form form'
-        'footer footer';
+    .wrapper-register {
+        grid-template-areas:
+            'header header'
+            'title title'
+            'form form'
+            'footer footer';
     }
 
     /* Θέτουμε το τμήμα του form να είναι κεντραρισμένο */
-    form{
+    form {
         justify-self: center;
     }
 }
