@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="el">
+
+<head>
+    <title>Μηχανική Μάθηση</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Machine Learning Course Description Platform">
+    <meta name="keywords" content="machine-learning, lesson, lecture, book">
+    <meta name="author" content="Georgios Sorogkas, Panagiota Triantafyllopoulou">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/hermes.jpg" type="image/png">
+    <link rel="stylesheet" href="style/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
+    <script type="text/javascript" src="js/category.js"></script>
+
+    <script id="category-book-template" type="text/x-handlebars-template">
+        {{#if empty}}
+        <p style="text-align: center;">Δεν βρέθηκαν αποτελέσματα για την κατηγορία.</p>
+        {{/if}}
+        {{#unless empty}}
+
+        {{#each array}}
+            <article class="information info-box">
+                <header>
+                    <h3>{{this.title}}</h3>
+                </header>
+
+                
+                <details class="lesson-container">
+                    <summary class="lesson-cover lesson-image">
+                        <img src="https://learning-hub-1whk.onrender.com/{{this.image}}" alt="{{this.title}}">
+                        <div class="hover-message-book-lecture">Κάντε κλικ στην εικόνα!</div>
+                    </summary>
+
+                
+                    <p>{{this.description}}</p>
+
+                    <ul>
+                        <li><em>Συγγραφέας/είς: </em>{{this.author}}</li>
+                        <li><em>Εκδότης: </em>{{this.publisher}}</li>
+                        <li><em>Ημερομηνία Έκδοσης: </em>{{this.publicationDate}}</li>
+                        <li><em>Τιμή: </em>{{this.cost}}€</li>
+                    </ul>
+                    <p>Περισσότερα για το συγκεκριμένο βιβλίο θα βρείτε <cite><a
+                                href="{{this.link}}"
+                                target="_blank">ΕΔΩ</a></cite></p>
+                </details>
+
+            </article>
+        {{/each}}
+        {{/unless}}
+    </script>
+
+    <script id="category-lecture-template" type="text/x-handlebars-template">
+        {{#if empty}}
+        <p style="text-align: center;">Δεν βρέθηκαν αποτελέσματα για την κατηγορία.</p>
+        {{/if}}
+        {{#unless empty}}
+
+        {{#each array}}
+            <article class="information info-box">
+                <header>
+                    <h3>{{this.title}}</h3>
+                </header>
+
+                
+                <details class="lesson-container">
+                    <summary class="lesson-cover lesson-image">
+                        <img src="https://learning-hub-1whk.onrender.com/{{this.image}}" alt="{{this.title}}">
+                        <div class="hover-message-book-lecture">Κάντε κλικ στην εικόνα!</div>
+                    </summary>
+
+                
+                    <p>{{this.description}}</p>
+
+                    <ul>
+                        <li><em>Τιμή: </em>{{this.cost}}€</li>
+                    </ul>
+                    <p>Περισσότερα για το συγκεκριμένο βιβλίο θα βρείτε <cite><a
+                                href="{{this.link}}"
+                                target="_blank">ΕΔΩ</a></cite></p>
+                </details>
+
+            </article>
+        {{/each}}
+        {{/unless}}
+    </script>
+
+
+</head>
+
+<body class="wrapper wrapper-lesson">
+    <header id="aueb-header" class="hover">
+        <img srcset="images/aueb-header-LR.png 320w,
+                images/aueb-header-MR.png 768w,
+                images/aueb-header-HR.png 1920w" sizes="(max-width:480px) 100vw,
+                (max-width:960px) 100vw,
+                100vw" src="images/aueb-header-MR.png" alt="AUEB Header">
+        <nav>
+            <img srcset="images/logo-LR.png 320w,
+                        images/logo-MR.png 768w,
+                        images/logo-HR.png 1920w" sizes="(max-width:480px) 100vw,
+                    (max-width:960px) 100vw,
+                    100vw" src="images/logo-MR.png" alt="Logo">
+            <ul class="nav-style nav-content">
+                <li> <a href="index.html">Αρχική Σελίδα</a></li>
+                <li> <a href="categories.html">Μαθήματα</a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="#">Τεχνητή Νοημοσύνη</a>
+                            <ul>
+                                <li> <a href="machine-learning.html">Μηχανική Μάθηση</a></li>
+                                <li> <a href="#">Νευρωνικά Δίκτυα</a></li>
+                                <li> <a href="#">MLP</a></li>
+                                <li> <a href="#">Ενισχυτική Μάθηση</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Προγρ/σμός στον Ιστό</a>
+                            <ul>
+                                <li> <a href="#">HTML5</a></li>
+                                <li> <a href="#">CSS</a></li>
+                                <li> <a href="#">JavaScript</a></li>
+                                <li> <a href="#">PHP</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Τεχνολογία Λογισμικού</a>
+                            <ul>
+                                <li> <a href="#">Απαιτήσεις Λογισμικού</a></li>
+                                <li> <a href="#">Αρχιτεκτονική Σχεδίαση</a></li>
+                                <li> <a href="#">Αντικ/φής Σχεδίαση</a></li>
+                                <li> <a href="#">Ποιότητα Λογισμικού</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Κυβερνοασφάλεια</a>
+                            <ul>
+                                <li> <a href="cryptography-cyber-security.html">Κρυπτογραφία</a></li>
+                                <li> <a href="#">Ασφάλεια Δικτύων</a></li>
+                                <li> <a href="#">Penetration Testing</a></li>
+                                <li> <a href="#">Έλεγχος Προσπέλασης</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li> <a href="about-us.html">Ποιοι Είμαστε</a></li>
+                <li> <a href="registration.html">Γίνε Μέλος</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="wr-lesson">
+
+        <header class="main-title">
+            <h1>Μηχανική Μάθηση</h1>
+        </header>
+
+        <!--Βιβλία-->
+        <section class="lesson-box hover">
+            <header class="lesson">
+                <h2>Βιβλία</h2>
+            </header>
+
+            <div id="hb-books" class="lecture-book-container">
+                <!--Πρώτο Βιβλίο στην Μηχανική Μάθηση-->
+                <!-- <article class="information info-box">
+                    <header>
+                        <h3>Machine Learning System Design</h3>
+                    </header>
+
+                    
+                    <details class="lesson-container">
+                        <summary class="lesson-cover lesson-image">
+                            <img srcset="images/machine-learning-first-book-LR.jpg 320w,
+                                        images/machine-learning-first-book-MR.jpg 768w,
+                                        images/machine-learning-first-book-HR.jpg 1920w" sizes="(max-width:480px) 90vw,
+                                    (max-width:960px) 60vw,
+                                    70vw" src="images/machine-learning-first-book-MR.jpg"
+                                alt="First Machine Learning Book">
+                            <div class="hover-message-book-lecture">Κάντε κλικ στην εικόνα!</div>
+                        </summary>
+
+                       
+                        <p>
+                            Το βιβλίο Machine Learning System Design από τις εκδόσεις Manning επικεντρώνεται στον
+                            σχεδιασμό και
+                            την
+                            ανάπτυξη συστημάτων μηχανικής μάθησης. Παρουσιάζει αρχιτεκτονικές πρακτικές, διαχείριση
+                            δεδομένων,
+                            ανάπτυξη μοντέλων και στρατηγικές κλιμάκωσης, βοηθώντας τους επαγγελματίες να εφαρμόσουν
+                            <abbr title="Machine Learning">ML</abbr> λύσεις σε
+                            πραγματικά περιβάλλοντα.
+                        </p>
+
+                        <ul>
+                            <li><em>Συγγραφέας/είς: </em>Valerii Babushkin, Arseny Kravchenko</li>
+                            <li><em>Εκδότης: </em>Manning</li>
+                            <li><em>Σελίδες: </em>384</li>
+                            <li><em>Αξιολόγηση: </em><abbr title="4.6" class="stars">★ ★ ★ ★ ☆</abbr></li>
+                            <li><em>Πλήθος αξιολογήσεων: </em>9</li>
+                        </ul>
+                        <p>Περισσότερα για το συγκεκριμένο βιβλίο θα βρείτε <cite><a
+                                    href="https://www.manning.com/books/machine-learning-system-design"
+                                    target="_blank">ΕΔΩ</a></cite></p>
+                    </details>
+
+                </article> -->
+
+                
+            </div>
+        </section>
+
+        <!-------------------------------------------------------------------------------------------------------------------------->
+
+        <!--Διαλέξεις-->
+        <section class="lesson-box hover">
+
+            <header class="lesson">
+                <h2>Διαλέξεις</h2>
+            </header>
+
+            <div id="hb-lectures" class="lecture-book-container">
+                <!--Πρώτη Διάλεξη στην Μηχανική Μάθηση-->
+                <!-- <article class="information info-box">
+                    <header>
+                        <h3>Machine Learning</h3>
+                    </header>
+
+                    
+                    <details class="lesson-container">
+                        <summary class="lesson-cover lesson-image">
+                            <img srcset="images/machinelearninglecture-LR.png 320w,
+                                        images/machinelearninglecture-MR.png 768w,
+                                        images/machinelearninglecture-HR.png 1920w" sizes="(max-width:480px) 90vw,
+                                    (max-width:960px) 60vw,
+                                    70vw" src="images/machinelearninglecture-MR.png"
+                                alt="First Machine Learning Lecture">
+                            <div class="hover-message-book-lecture">Κάντε κλικ στην εικόνα!</div>
+                        </summary>
+
+                        
+                        <p>Η εισαγωγική διάλεξη του μαθήματος "Machine Learning" του καθηγητή Yaser Abu-Mostafa
+                            επικεντρώνεται στην έννοια του "Learning Problem" (το πρόβλημα της μάθησης). Η διάλεξη
+                            εξετάζει τα
+                            βασικά είδη μηχανικής μάθησης, συμπεριλαμβανομένης της εποπτευόμενης και μη εποπτευόμενης
+                            μάθησης,
+                            καθώς και της μάθησης ενίσχυσης. Εισάγει επίσης τη διαδικασία και τις προκλήσεις της
+                            δημιουργίας
+                            μοντέλων που μπορούν να μάθουν από δεδομένα, προσδιορίζοντας τα στοιχεία που απαιτούνται για
+                            να
+                            αναπτυχθούν αποτελεσματικοί αλγόριθμοι μάθησης.
+                        </p>
+
+                        <ul>
+                            <li><em>Συντελεστής/ές: </em>Yaser Abu-Mostafa</li>
+                            <li><em>Διανομή: </em>Caltech</li>
+                            <li><em>Συνολική Διάρκεια: </em>20 Ώρες</li>
+                            <li><em>Αξιολόγηση: </em><abbr title="4.0" class="stars">★ ★ ★ ★ </abbr></li>
+                            <li><em>Πλήθος αξιολογήσεων: </em>40</li>
+                        </ul>
+
+                        <p>Περισσότερα για το συγκεκριμένη διάλεξη θα βρείτε <cite><a
+                                    href="machine-learning-lecture.html" target="_blank">ΕΔΩ</a></cite></p>
+                    </details>
+
+                </article> -->
+
+            </div>
+        </section>
+    </main>
+
+    <aside>
+        <h2>E-Learning Προγράμματα</h2>
+        <ul class="hover">
+            <li>
+                <span>14 Νοεμβρίου 2024</span>
+                <a href="https://diaviou.aueb.gr/programs/1731-key-account-management-1000106" target="_blank">
+                    Key Account Management
+                </a>
+            </li>
+            <li>
+                <span>12 Οκτωβρίου 2024</span>
+                <a href="https://diaviou.aueb.gr/programs/1837-analysi-dedomenon-kai-programmatismos-se-python-3-1000109"
+                    target="_blank">
+                    Python 3
+                </a>
+            </li>
+            <li>
+                <span>29 Αυγούστου 2024</span>
+                <a href="https://diaviou.aueb.gr/programs/1735-anaptyksi-web-efarmogon-me-html-css-javascript-jquery-ajax"
+                    target="_blank">
+                    Ανάπτυξη Web εφαρμογών
+                </a>
+            </li>
+            <li>
+                <span>27 Αυγούστου 2024</span>
+                <a href="https://diaviou.aueb.gr/programs/1779-programmatismos-me-java-apo-to-a-sto-o-1000163"
+                    target="_blank">
+                    Προγραμματισμός με Java
+                </a>
+            </li>
+        </ul>
+
+        <div id="aside-more" class="hover">
+            <a href="https://diaviou.aueb.gr/advanced-search-programs-gr/tag/programfollow/2/" target="_blank">
+                Περισσότερα
+            </a>
+        </div>
+    </aside>
+
+    <footer>
+        <div id="upper-footer" class="hover">
+            <div>
+                <h2>About Us</h2>
+                <p>Η Aueblearning είναι μια καινοτόμος πλατφόρμα e-learning που προσφέρει διαδραστικά μαθήματα και
+                    εξειδικευμένο περιεχόμενο για επαγγελματική και προσωπική ανάπτυξη. Στόχος μας είναι να εμπνεύσουμε
+                    και να ενισχύσουμε τη γνώση σε κάθε μαθητή.</p>
+            </div>
+            <div id="office-info">
+                <h2>Τα Γραφεία μας</h2>
+                <address>
+                    28ης Οκτωβρίου 76, Αθήνα<br>
+                    Αθήνα, Ελλάδα 10434<br>
+                    Phone: <a href="tel:+302109620030">(+30) 2109620030</a><br>
+                    Email: <a href="mailto:info@aueblearning.com">info@aueblearning.com</a>
+                </address>
+            </div>
+            <div id="policies">
+                <h2>Όροι & Πολιτικές</h2>
+                <ul>
+                    <li><a href="#">Πολιτική Cookies</a></li>
+                    <li><a href="#">Πολιτική Απορρήτου</a></li>
+                    <li><a href="#">Όροι Χρήσης</a></li>
+                </ul>
+            </div>
+            <div id="social-links">
+                <h2>Βρείτε μας</h2>
+                <ul>
+                    <li><a href="https://www.facebook.com/auebgreece" target="_blank"><img src="images/facebook.jpg"
+                                alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/aueb.gr" target="_blank"><img src="images/instagram.png"
+                                alt="Instagram"></a></li>
+                    <li><a href="https://x.com/AUEB" target="_blank"><img src="images/x.png" alt="Twitter"></a></li>
+                    <li><a href="https://gr.linkedin.com/school/athens-university-of-economics-and-business/"
+                            target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="lower-footer">
+            <p>©Copyright 2024 | Παναγιώτα Τριανταφυλλοπούλου - Γεώργιος Σόρογκας</p>
+        </div>
+    </footer>
+</body>
+
+</html>
