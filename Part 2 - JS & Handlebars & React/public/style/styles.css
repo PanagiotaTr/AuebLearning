@@ -1728,36 +1728,51 @@ form fieldset legend {
     }
 }
 
+/* ---------------------------------------- CSS FIXES FOR PART 2 ---------------------------------------- */
+
+
+/* -------------------------------- INDEX.HTML -------------------------------- */
+
 /* Ορίζουμε το background των εικόνων, όταν αυτές γίνονται hover */
 .hover-img a:hover{
     background-color: #333;
 }
 
-.make-container{
+
+/* ------------------------------ CATEGORY.HTML ------------------------------- */
+
+.lecture-book-container{
     flex-wrap: wrap;
     justify-content: center;
-    align-items: normal;
 }
 
-.make-container img{
-    max-width: 500px;
+.lesson-image > img{
+    width: 350px;
+    height: 400px;
 }
 
-.img-size img{
-    width: 500px;
-    height: 500px;
+.info-box{
+    width: 350px;
 }
 
-.fix-wr-book{
-    align-content: flex-start;
-}
+
+/* ----------------------------- SUBCATEGORY.HTML ----------------------------- */
 
 #info-book > article {
     margin-left: 1em;
     margin-bottom: 3em;
+    border: 0.5px solid black;
+    border-radius: 1em;
+    padding: 1em;
 }
 
 .book-lecture-information{
     width:40em;
+    align-self: center;
+}
+
+.flex-container img {
+    width: 350px;
+    height: 400px;
     align-self: center;
 }

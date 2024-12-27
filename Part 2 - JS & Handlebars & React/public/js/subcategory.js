@@ -7,22 +7,15 @@ window.addEventListener('load', function () {
 
     const urlParams = new URLSearchParams(window.location.search)
     const subcatId = urlParams.get('id')
-    const title = urlParams.get('title');
+    const title = urlParams.get('subcategory');
 
-    const subcatName = urlParams.get('subcategory')
-    console.log(subcatId)
-    console.log(subcatName)
+    document.title = title
 
-    document.title = `${subcatName}`
+    const titleScript = document.getElementById('subcategory-title');
+    templates.subcatTitle = Handlebars.compile(titleScript.textContent);
 
-    if (title) {
-        const templateSource = document.getElementById('subcategory-title').innerHTML;
-        const template = Handlebars.compile(templateSource);
-
-        const html = template({ title: title });
-
-        document.querySelector('.main-title').innerHTML = html;
-    }
+    const subcatTitleContent = templates.subcatTitle({ title: title });
+    document.querySelector('.main-title').innerHTML = subcatTitleContent;
 
     let headers = new Headers()
     headers.append('Accept', 'application/json')
@@ -39,7 +32,7 @@ window.addEventListener('load', function () {
         .then(learningItems => {
             for(let item of learningItems){
                 let features = item.features.split(';')
-                console.log(features)
+
                 let map = {}
                 features.forEach(feature => {
                     let [key,value] = feature.split(':')

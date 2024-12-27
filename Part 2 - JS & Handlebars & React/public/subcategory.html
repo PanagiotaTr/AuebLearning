@@ -3,7 +3,6 @@
 <html lang="el">
 
 <head>
-    <title>Βιβλίο Μηχανικής Μάθησης</title>
     <meta charset="UTF-8">
     <meta name="description" content="Machine Learning Book description platform">
     <meta name="keywords" content="machine-learning, book, table, section">
@@ -16,9 +15,7 @@
     <script src="js/subcategory.js" type="text/javascript"></script>
 
     <script id="subcategory-title" type="text/x-handlebars-template">
-        <header class="main-title">
             <h1>{{title}}</h1>
-        </header>
     </script>
 
     <script id="subcategory-items-template" type="text/x-handlebars-template">
@@ -32,16 +29,17 @@
                 <h2>{{this.title}}</h2>
             </header>
 
-            <div class="flex-container img-size">
+            <div class="flex-container">
                 <img src = "https://learning-hub-1whk.onrender.com/{{this.image}}" alt="{{this.title}}">
 
                 <div class="book-lecture-information">
                     <ul>
+                        <li><em>Type: </em>{{this.type}}</li>
                         {{#if this.author}}
-                        <li><em>Συγγραφέας/είς: </em>{{this.author}}</li>
+                        <li><em>Author(s): </em>{{this.author}}</li>
                         {{/if}}
                         {{#if this.publisher}}
-                        <li><em>Εκδότης: </em>{{this.publisher}}</li>
+                        <li><em>Publisher: </em>{{this.publisher}}</li>
                         {{/if}}
                         {{#each this.features}}
                         <li><em>{{@key}}: </em>{{this}}</li>
@@ -121,7 +119,7 @@
         </nav>
     </header>
 
-    <main class="wr-book fix-wr-book">
+    <main class="wr-book">
 
         <header class="main-title"></header>
 

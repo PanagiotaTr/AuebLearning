@@ -7,6 +7,11 @@ window.addEventListener('load', function () {
 
     const urlParams = new URLSearchParams(window.location.search)
     const categoryId = urlParams.get('id')
+    const categoryTitle = urlParams.get('category')
+
+    document.title = categoryTitle
+    let h1 = document.querySelector('.main-title > h1')
+    h1.innerHTML = categoryTitle
 
     let learningItemsUrl = `${baseUrl}learning-items?category=${categoryId}`
 
