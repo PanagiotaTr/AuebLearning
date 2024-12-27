@@ -44,8 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 subcategories.forEach(subcategory => {
                     const li = document.createElement('li');
                     li.textContent = subcategory.title;
+                    li.onclick = () => {
+                        window.location.href = `subcategory.html?id=${subcategory.id}&title=${encodeURIComponent(subcategory.title)}`;
+                    };
+                    li.style.cursor = 'pointer';
                     subcategoriesList.appendChild(li);
                 });
+                
             })
             .catch(error => {
                 console.error(`Σφάλμα κατά τη λήψη υποκατηγοριών για την κατηγορία ${categoryId}:`, error);

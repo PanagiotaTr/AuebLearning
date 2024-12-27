@@ -1727,3 +1727,37 @@ form fieldset legend {
         justify-self: center;
     }
 }
+
+/* Ορίζουμε το background των εικόνων, όταν αυτές γίνονται hover */
+.hover-img a:hover{
+    background-color: #333;
+}
+
+.make-container{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: normal;
+}
+
+.make-container img{
+    max-width: 500px;
+}
+
+.img-size img{
+    width: 500px;
+    height: 500px;
+}
+
+.fix-wr-book{
+    align-content: flex-start;
+}
+
+#info-book > article {
+    margin-left: 1em;
+    margin-bottom: 3em;
+}
+
+.book-lecture-information{
+    width:40em;
+    align-self: center;
+}
