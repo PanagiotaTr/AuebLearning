@@ -1734,7 +1734,7 @@ form fieldset legend {
 /* -------------------------------- INDEX.HTML -------------------------------- */
 
 /* Ορίζουμε το background των εικόνων, όταν αυτές γίνονται hover */
-.hover-img a:hover{
+.hover-img a:hover img{
     background-color: #333;
 }
 
@@ -1775,4 +1775,9 @@ form fieldset legend {
     width: 350px;
     height: 400px;
     align-self: center;
+}
+
+.wr-book{
+    flex-flow: column nowrap;
+    align-items: center;
 }

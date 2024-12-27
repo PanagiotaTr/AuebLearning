@@ -45,7 +45,7 @@ window.addEventListener('load', function () {
             let subcatItemsScript = document.getElementById("subcategory-items-template")
             templates.subcatItems = Handlebars.compile(subcatItemsScript.textContent)
         
-            let subcatItemsContent =  templates.subcatItems({array: learningItems})
+            let subcatItemsContent =  templates.subcatItems({array: learningItems, empty: learningItems.length == 0})
             let section = document.querySelector("#info-book")
             section.innerHTML = subcatItemsContent            
         })
