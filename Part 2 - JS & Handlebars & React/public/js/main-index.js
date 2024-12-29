@@ -1,59 +1,48 @@
 const baseUrl = "https://learning-hub-1whk.onrender.com";
 
+var templates = {}
+
 document.addEventListener('DOMContentLoaded', () => {
     const categoriesListContainer = document.querySelector("#categories-list");
 
-    const categoryTemplate = document.getElementById('categories-template').innerHTML;
-    const template = Handlebars.compile(categoryTemplate);
-
-    let headers = new Headers()
-    headers.append('Accept', 'application/json')
+    let headers = new Headers();
+    headers.append('Accept', 'application/json');
 
     let init = {
         method: "GET",
         headers: headers
-    }
+    };
 
-    fetch(`${baseUrl}/categories`,init)
-        .then(response => response.json())
-        .then(categories => {
-            categories = categories.map(category => ({
-                ...category,
-                img_url: `${baseUrl}/${category.img_url}`
-            }));
-            
-            const html = template({ categories });
-            categoriesListContainer.innerHTML = html;
+    fetch(`${baseUrl}/categories`, init)
+        .then(categoriesResponse => categoriesResponse.json())
+        .then(categoriesList => {
+            fetch(`${baseUrl}/subcategories`, init)
+                .then(subcategoriesResponse => subcategoriesResponse.json())
+                .then(subcategoriesList => {
+                    categoriesList.forEach(category => {
+                        category.subcategories = subcategoriesList
+                            .filter(subcategory => subcategory.category_id === category.id)
+                            .map(subcategory => ({
+                                ...subcategory,
+                                img_url: `${baseUrl}/${subcategory.img_url}`
+                            }));
 
-            categories.forEach(category => {
-                fetchSubcategories(category.id);
-            });
+                        category.img_url = `${baseUrl}/${category.img_url}`;
+                    });
+
+                    let categoryTemplate = document.getElementById('categories-template');
+                    templates.compiledTemplate = Handlebars.compile(categoryTemplate.textContent);
+                    let categoriesContent = templates.compiledTemplate({ categories: categoriesList });
+
+                    categoriesListContainer.innerHTML = categoriesContent;
+                })
+                .catch(error => {
+                    console.error("Σφάλμα κατά τη λήψη των υποκατηγοριών:", error);
+                    categoriesListContainer.innerHTML = "<p>Αποτυχία φόρτωσης υποκατηγοριών.</p>";
+                });
         })
         .catch(error => {
-            console.error("Σφάλμα κατά τη λήψη δεδομένων:", error);
+            console.error("Σφάλμα κατά τη λήψη των κατηγοριών:", error);
             categoriesListContainer.innerHTML = "<p>Αποτυχία φόρτωσης κατηγοριών.</p>";
         });
-
-
-    function fetchSubcategories(categoryId) {
-        fetch(`${baseUrl}/categories/${categoryId}/subcategories`,init)
-            .then(response => response.json())
-            .then(subcategories => {
-                const subcategoriesList = document.getElementById(`subcategories-${categoryId}`);
-
-                subcategories.forEach(subcategory => {
-                    const li = document.createElement('li');
-                    li.textContent = subcategory.title;
-                    li.onclick = () => {
-                        window.location.href = `subcategory.html?id=${subcategory.id}&title=${encodeURIComponent(subcategory.title)}`;
-                    };
-                    li.style.cursor = 'pointer';
-                    subcategoriesList.appendChild(li);
-                });
-                
-            })
-            .catch(error => {
-                console.error(`Σφάλμα κατά τη λήψη υποκατηγοριών για την κατηγορία ${categoryId}:`, error);
-            });
-    }
 });

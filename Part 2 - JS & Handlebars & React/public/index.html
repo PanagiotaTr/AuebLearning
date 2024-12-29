@@ -25,8 +25,12 @@
         {{#each categories}}
         <article class="categories-info articlebox hover hover-img">
             <h2>{{title}}</h2>
-            <a href="category.html?id={{this.id}}"><img src="{{img_url}}" alt="{{title}}"></a>
-            <ul id="subcategories-{{id}}"></ul>
+            <a href="category.html?id={{this.id}}&category={{title}}"><img src="{{img_url}}" alt="{{title}}"></a>
+            <ul>
+                {{#each subcategories}}
+                <li><a href="subcategory.html?id={{id}}&subcategory={{title}}">{{title}}</a></li>
+                {{/each}}
+            </ul>
         </article>
         {{/each}}
     </script>
