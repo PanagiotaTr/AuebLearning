@@ -3,7 +3,6 @@
 <html lang="el">
 
 <head>
-    <title>Μηχανική Μάθηση</title>
     <meta charset="UTF-8">
     <meta name="description" content="Machine Learning Course Description Platform">
     <meta name="keywords" content="machine-learning, lesson, lecture, book">
@@ -22,7 +21,7 @@
         {{#unless empty}}
 
         {{#each array}}
-            <article class="information info-box img-size">
+            <article class="information info-box">
                 <header>
                     <h3>{{this.title}}</h3>
                 </header>
@@ -38,10 +37,10 @@
                     <p>{{this.description}}</p>
 
                     <ul>
-                        <li><em>Συγγραφέας/είς: </em>{{this.author}}</li>
-                        <li><em>Εκδότης: </em>{{this.publisher}}</li>
-                        <li><em>Ημερομηνία Έκδοσης: </em>{{this.publicationDate}}</li>
-                        <li><em>Τιμή: </em>{{this.cost}}€</li>
+                        <li><em>Author(s): </em>{{this.author}}</li>
+                        <li><em>Publisher: </em>{{this.publisher}}</li>
+                        <li><em>Publication Date: </em>{{this.publicationDate}}</li>
+                        <li><em>Price: </em>{{this.cost}}€</li>
                     </ul>
                     <p>Περισσότερα για το συγκεκριμένο βιβλίο θα βρείτε <cite><a
                                 href="{{this.link}}"
@@ -155,7 +154,7 @@
     <main class="wr-lesson">
 
         <header class="main-title">
-            <h1>Μηχανική Μάθηση</h1>
+            <h1></h1>
         </header>
 
         <!--Βιβλία-->
@@ -164,7 +163,7 @@
                 <h2>Βιβλία</h2>
             </header>
 
-            <div id="hb-books" class="lecture-book-container make-container"></div>
+            <div id="hb-books" class="lecture-book-container"></div>
         </section>
 
         <!-------------------------------------------------------------------------------------------------------------------------->
@@ -176,7 +175,7 @@
                 <h2>Διαλέξεις</h2>
             </header>
 
-            <div id="hb-lectures" class="lecture-book-container make-container"></div>
+            <div id="hb-lectures" class="lecture-book-container"></div>
         </section>
     </main>
 

@@ -13,3 +13,14 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 let server = app.listen(8080)
+
+app.get('/', function (req, res) {
+
+    var options = {
+        root: path.join(__dirname, 'public')
+    }
+
+    res.sendFile('index.html', options, function (err) {
+        console.log(err)
+    })
+})
