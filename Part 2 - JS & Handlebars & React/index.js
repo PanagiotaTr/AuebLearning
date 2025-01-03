@@ -1,7 +1,12 @@
 const uuid = require('uuid');
 const express = require('express')
-
 const app = express()
+const MemoryInitializer = require('./models/memorydao/MemoryInitializer');
+
+
+let initializer = new MemoryInitializer()
+initializer.prepareData()
+console.log(initializer.getUserDao().findAll())
 
 app.use('/public', 
     express.static(__dirname + '/public'))
