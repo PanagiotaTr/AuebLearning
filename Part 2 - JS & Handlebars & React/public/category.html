@@ -11,6 +11,8 @@
     <link rel="icon" href="images/hermes.jpg" type="image/png">
     <link rel="stylesheet" href="style/styles.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
     <script type="text/javascript" src="js/category.js"></script>
 
@@ -148,8 +150,48 @@
                 <li> <a href="about-us.html">Ποιοι Είμαστε</a></li>
                 <li> <a href="registration.html">Γίνε Μέλος</a></li>
             </ul>
+            <div class="services-icons">
+
+                <button id="login-form-btn"><i class="fa fa-user-circle"></i></button>
+                <button id="view-favourites-btn"><i class="fa fa-shopping-cart"></i></button>
+
+            </div>
         </nav>
+
     </header>
+
+    <div class="login-overlay">
+        <div class="login-form">
+            <form id="login" name="login">
+                <div id="close-form-btn"><i class="fa fa-times-circle"></i></div>
+                <fieldset>
+                    <legend>Login</legend>
+
+                    <span class="auth-fail failure"></span>
+
+                    <p>
+                        <label for="username">Username</label>
+                        <input type="text" placeholder="Συμπληρώστε όνομα χρήστη" maxlength="15" pattern="[A-Za-z0-9]+"
+                            title="Συμπληρώστε το όνομα χρήστη με λατινικούς χαρακτήρες και αριθμούς" name="username"
+                            id="username" autocomplete="username" required>
+                    </p>
+
+                    <p>
+                        <label for="password">Password</label>
+                        <input type="password" placeholder="Συμπληρώστε τον κωδικό" name="password" id="password"
+                            maxlength="20" pattern="(?=.*?[A-Z])(?=.*?[@#$%^&*!])(?=.*?[0-9]).{8,}"
+                            title="Συμπληρώστε τον κωδικό, ο οποίος θα πρέπει να περιλαμβάνει 8-20 χαρακτήρες εκ των οποίων 1 κεφάλαιο, 1 ειδικό χαρακτήρα και 1 αριθμό"
+                            required>
+                    </p>
+                </fieldset>
+
+                <div class="buttons">
+                    <button type="submit" form="login" value="Submit" id="login-submit-btn">Submit</button>
+                    <button type="reset" form="login" value="Reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <main class="wr-lesson">
 

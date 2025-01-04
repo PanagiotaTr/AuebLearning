@@ -1755,6 +1755,44 @@ form fieldset legend {
     width: 350px;
 }
 
+.services-icons{
+    margin-left: auto;
+}
+
+.login-overlay{
+    z-index: 10;
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    align-items: center;
+    justify-content: center;
+}
+
+#login{
+    background-color: var(--background-color);
+}
+
+#login .buttons button{
+    background-color: var(--primary-color);
+    border-radius: 1em;
+    color: white;
+    width: 8em;
+}
+
+#login #login-submit-btn{
+    background-color: green;
+    border-radius: 1em;
+}
+
+#close-form-btn{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#close-form-btn i{
+    cursor: pointer;
+}
+
 
 /* ----------------------------- SUBCATEGORY.HTML ----------------------------- */
 

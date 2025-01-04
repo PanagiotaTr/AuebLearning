@@ -5,6 +5,11 @@ var templates = {}
 
 window.addEventListener('load', function () {
 
+    let closeButton = document.getElementById('close-form-btn')
+    closeButton.addEventListener('click', function(){
+        // SUMPLHRWMA GIA PUG (Isws na to baloume pio katw???)
+    })
+
     const urlParams = new URLSearchParams(window.location.search)
     const categoryId = urlParams.get('id')
     const categoryTitle = urlParams.get('category')
