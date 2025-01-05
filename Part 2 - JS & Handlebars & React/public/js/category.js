@@ -67,11 +67,56 @@ window.addEventListener('load', function () {
         loginWindow.style.display = 'none'
     })
 
+    // ελεγχος για τα πεδια του login
+    const username = document.getElementById('username');
+    const password = document.getElementById('password');
+    const usernameError = document.getElementById('username-error');
+    const passwordError = document.getElementById('password-error');
+
+
+    // ελεγχος username
+    function isUsernameValid() {
+        if (!username.checkValidity()) {
+            usernameError.textContent = "Το όνομα χρήστη δεν είναι σωστό.";
+            usernameError.style.display = 'block';
+            return false;
+        }
+        return true;
+    }
+
+    // ελεγχος password
+    function isPasswordValid() {
+        if (!password.checkValidity()) {
+            passwordError.textContent = "Ο κωδικός πρόσβασης δεν είναι σωστός.";
+            passwordError.style.display = 'block';
+            return false;
+        }
+        return true;
+    }
+
+    password.addEventListener('focus', function () {
+        if (!isUsernameValid()) {
+            usernameError.textContent = "Το όνομα χρήστη δεν είναι σωστό.";
+            usernameError.style.display = 'block';
+        }
+    });
+
     // button για το login 
     let checkLoginButton = document.getElementById('login-submit-btn')
     checkLoginButton.addEventListener('click', function (event) {
         
         event.preventDefault();
+
+        usernameError.style.display = 'none';
+        passwordError.style.display = 'none';
+
+        const validUsername = isUsernameValid();
+        const validPassword = isPasswordValid();
+
+        if (!validUsername || !validPassword) {
+            return;
+        }
+
         let formElements = document.getElementById('login');
     
         let headers = new Headers();
@@ -133,4 +178,16 @@ window.addEventListener('load', function () {
                 console.error("Error during login process:", err);
             });
     });
+
+    loginWindow.addEventListener('click', function () {
+        if (username.checkValidity()) {
+            usernameError.textContent = "";
+            usernameError.style.display = 'none';
+        }
+        if (password.checkValidity()) {
+            passwordError.textContent = "";
+            passwordError.style.display = 'none';
+        }
+    });
+
 })

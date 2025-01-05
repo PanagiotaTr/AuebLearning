@@ -177,8 +177,8 @@
                 
                     <p>
                         <label for="username">Username</label>
-                        <input type="text" placeholder="Συμπληρώστε όνομα χρήστη" maxlength="15" pattern="[A-Za-z0-9]+"
-                            title="Συμπληρώστε το όνομα χρήστη με λατινικούς χαρακτήρες και αριθμούς" name="username"
+                        <input type="text" placeholder="Συμπληρώστε το όνομα χρήστη" maxlength="15" pattern="[A-Za-z0-9]+"
+                            title="Συμπληρώστε όνομα χρήστη (πχ Pug)" name="username"
                             id="username" autocomplete="username" required>
                         <span class="error-message" id="username-error"></span>
                     </p>
@@ -187,12 +187,13 @@
                         <label for="password">Password</label>
                         <input type="password" placeholder="Συμπληρώστε τον κωδικό" name="password" id="password"
                             maxlength="20" pattern="(?=.*?[A-Z])(?=.*?[@#$%^&*!])(?=.*?[0-9]).{8,}"
-                            title="Συμπληρώστε τον κωδικό, ο οποίος θα πρέπει να περιλαμβάνει 8-20 χαρακτήρες εκ των οποίων 1 κεφάλαιο, 1 ειδικό χαρακτήρα και 1 αριθμό"
+                            title="Συμπληρώστε κωδικό (πχ Pug12345678#)"
                             required>
                         <span class="error-message" id="password-error"></span>
                     </p>
                 
                 </fieldset>
+                
                 
 
                 <div class="buttons">

@@ -16,7 +16,7 @@ class Login{
       userLogin.sessionId = sessionId
       let promise = initializer.getUserDao().update(userLogin)
 
-      console.log(initializer.getUserDao().findAll())
+      // console.log(initializer.getUserDao().findAll())
       return promise
         .then(updated => {
           if (updated) {

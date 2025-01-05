@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
         headers: headers
     };
 
+    showSearching();
+
     fetch(`${baseUrl}/categories`, init)
         .then(categoriesResponse => categoriesResponse.json())
         .then(categoriesList => {
@@ -46,3 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
             categoriesListContainer.innerHTML = "<p>Αποτυχία φόρτωσης κατηγοριών.</p>";
         });
 });
+
+function showSearching() {
+    const categoriesListContainer = document.querySelector("#categories-list");
+    categoriesListContainer.innerHTML = `
+        <div class="loading-container">
+            <img src='images/searching.gif' alt="Loading...">
+        </div>
+    `;
+}
