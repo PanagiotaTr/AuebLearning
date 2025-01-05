@@ -22,7 +22,7 @@ class UserMemoryDao extends UserDao{
             let updated = false
             let foundUser = UserMemoryDao.users.find(userObject => user.equals(userObject))
             if(foundUser !== undefined){
-                UserMemoryDao.foundUser.update(user)
+                foundUser.update(user)
                 updated = true
             }
             resolve(updated)

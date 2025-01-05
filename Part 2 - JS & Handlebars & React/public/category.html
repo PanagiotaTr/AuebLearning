@@ -151,11 +151,16 @@
                 <li> <a href="registration.html">Γίνε Μέλος</a></li>
             </ul>
             <div class="services-icons">
-
-                <button id="login-form-btn"><i class="fa fa-user-circle"></i></button>
-                <button id="view-favourites-btn"><i class="fa fa-shopping-cart"></i></button>
-
+                <div class="icon-wrapper">
+                    <button id="login-form-btn"><i class="fa fa-user-circle"></i></button>
+                    <span class="hover-message">Σύνδεση</span>
+                </div>
+                <div class="icon-wrapper">
+                    <button id="view-favourites-btn"><i class="fa fa-shopping-cart"></i></button>
+                    <span class="hover-message">Καλάθι</span>
+                </div>
             </div>
+            
         </nav>
 
     </header>
@@ -163,34 +168,44 @@
     <div class="login-overlay">
         <div class="login-form">
             <form id="login" name="login">
-                <div id="close-form-btn"><i class="fa fa-times-circle"></i></div>
+                <div class="icon-wrapper">
+                    <div id="close-form-btn"><i class="fa fa-times-circle"></i></div>
+                    <span class="hover-message">Έξοδος</span>
+                </div>
                 <fieldset>
                     <legend>Login</legend>
-
-                    <span class="auth-fail failure"></span>
-
+                
                     <p>
                         <label for="username">Username</label>
                         <input type="text" placeholder="Συμπληρώστε όνομα χρήστη" maxlength="15" pattern="[A-Za-z0-9]+"
                             title="Συμπληρώστε το όνομα χρήστη με λατινικούς χαρακτήρες και αριθμούς" name="username"
                             id="username" autocomplete="username" required>
+                        <span class="error-message" id="username-error"></span>
                     </p>
-
+                
                     <p>
                         <label for="password">Password</label>
                         <input type="password" placeholder="Συμπληρώστε τον κωδικό" name="password" id="password"
                             maxlength="20" pattern="(?=.*?[A-Z])(?=.*?[@#$%^&*!])(?=.*?[0-9]).{8,}"
                             title="Συμπληρώστε τον κωδικό, ο οποίος θα πρέπει να περιλαμβάνει 8-20 χαρακτήρες εκ των οποίων 1 κεφάλαιο, 1 ειδικό χαρακτήρα και 1 αριθμό"
                             required>
+                        <span class="error-message" id="password-error"></span>
                     </p>
+                
                 </fieldset>
+                
 
                 <div class="buttons">
                     <button type="submit" form="login" value="Submit" id="login-submit-btn">Submit</button>
-                    <button type="reset" form="login" value="Reset">Reset</button>
+                    <button type="reset" form="login" value="Reset" id="login-reset-btn">Reset</button>
                 </div>
             </form>
         </div>
+    </div>
+
+    <div class="login-overlay">
+        <span id="success-login-msg"><i class="fas fa-check-circle"></i> Επιτυχής σύνδεση!</span>
+        <span id="fail-login-msg"><i class="fas fa-times-circle"></i> Αποτυχία σύνδεσης! Συμπληρώστε τα στοιχεία σας ξανά..</span>
     </div>
 
     <main class="wr-lesson">

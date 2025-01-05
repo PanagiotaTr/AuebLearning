@@ -1756,7 +1756,42 @@ form fieldset legend {
 }
 
 .services-icons{
-    margin-left: auto;
+    display: flex;
+    margin-left:auto;
+    margin-right:5%;
+}
+
+.services-icons i{
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+.icon-wrapper {
+    position: relative;
+    text-align: center;
+}
+
+.hover-message {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+#login .hover-message{
+    left: 100%;
+    top: 30px;
+}
+
+.icon-wrapper:hover .hover-message {
+    display: block;
 }
 
 .login-overlay{
@@ -1769,7 +1804,13 @@ form fieldset legend {
 }
 
 #login{
+    display: none;
     background-color: var(--background-color);
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
 }
 
 #login .buttons button{
@@ -1777,11 +1818,14 @@ form fieldset legend {
     border-radius: 1em;
     color: white;
     width: 8em;
+    cursor: pointer;
 }
 
 #login #login-submit-btn{
     background-color: green;
     border-radius: 1em;
+    justify-self: flex-start;
+
 }
 
 #close-form-btn{
@@ -1791,6 +1835,47 @@ form fieldset legend {
 
 #close-form-btn i{
     cursor: pointer;
+}
+
+#success-login-msg {
+    display: none;
+    background-color: #dff0d8;
+    color: #438c44;
+    padding: 20px;
+    border: 1px solid #0c1a01;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    position: fixed;
+    top: 20%;
+    left: 45%;
+    z-index: 1000;
+}
+
+#fail-login-msg {
+    display: none;
+    background-color: #f0d8d8;
+    color: #c21f1f;
+    padding: 20px;
+    border: 1px solid #0c1a01;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    position: fixed;
+    top: 20%;
+    left: 35%;
+    z-index: 1000;
+}
+
+#login-reset-btn{
+    justify-self: flex-end;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
 }
 
 
