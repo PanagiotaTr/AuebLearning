@@ -759,12 +759,14 @@ a[href^="#table"]:hover,
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    /* gap: 20px;       MIKRH ALLAGH */
     max-width: 470px;
     position: relative;
     background-color: white;
     border: 0px solid;
-    border-radius: 5px;
+    /* border-radius: 5px;       MIKRH ALLAGH GIA EGKRISH APO PUG*/
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 /* Κλάση για το μήνυμα που εφμανίζεται πάνω από την εικόνα. Το θέλουμε σταθερό στο κέντρο και να μην αλλάζει όταν το detail 
@@ -1896,6 +1898,24 @@ form fieldset legend {
     margin-top: 5px;
     display: none;
 }
+
+.add-to-cart{
+    /* margin-top: 0.5em; */
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    width: 350px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 0px solid
+    
+}
+
+.add-to-cart-container{
+    background-color: white;
+}
+
+/* STH GRAMMH 767 EXOUME MIA MIKRH ALLAGH (GIA EGKRISH) */
 
 
 /* ----------------------------- SUBCATEGORY.HTML ----------------------------- */

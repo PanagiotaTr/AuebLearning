@@ -30,20 +30,24 @@ window.addEventListener('load', function () {
         .then(learningItems => {
             let bookItems = learningItems.filter(item => item.type === "Book")
             let lectureItems = learningItems.filter(item => item.type === "Lecture")
-            
+
             let bookItemsScript = document.getElementById("category-book-template")
             templates.bookItems = Handlebars.compile(bookItemsScript.textContent)
-            let bookContent = templates.bookItems({array: bookItems, empty: bookItems.length == 0})
+            let bookContent = templates.bookItems({ array: bookItems, empty: bookItems.length == 0 })
 
             let divBooks = document.querySelector('#hb-books')
             divBooks.innerHTML = bookContent
-            
+
             let lectureItemsScript = document.getElementById("category-lecture-template")
             templates.lectureItems = Handlebars.compile(lectureItemsScript.textContent)
-            let lectureContent = templates.bookItems({array: lectureItems, empty: lectureItems.length == 0})
+            let lectureContent = templates.lectureItems({ array: lectureItems, empty: lectureItems.length == 0 })
 
             let divLectures = document.querySelector('#hb-lectures')
             divLectures.innerHTML = lectureContent
+
+            // Παίρνουμε το κουμπί από κάθε προιον που έχει δημιουργηθεί από το Handlebars και προσθέτουμε τον listener
+            let addToCartBtns = document.querySelectorAll('.add-to-cart')
+            addToCartBtns.forEach(button => button.addEventListener('click', addToCart))
         })
         .catch(error => {
             console.error('Error fetching data:', error);
@@ -57,13 +61,13 @@ window.addEventListener('load', function () {
     let loginWindow = document.getElementById('login')
 
     // εμφανιση του login παραθυρου
-    choseLoginButton.addEventListener('click', function(){
+    choseLoginButton.addEventListener('click', function () {
         loginWindow.style.display = 'block'
     })
 
     // κλεισιμο του login παραθυρου (x)
     let closeButton = document.getElementById('close-form-btn')
-    closeButton.addEventListener('click', function(){
+    closeButton.addEventListener('click', function () {
         loginWindow.style.display = 'none'
     })
 
@@ -77,7 +81,7 @@ window.addEventListener('load', function () {
     // ελεγχος username
     function isUsernameValid() {
         if (!username.checkValidity()) {
-            usernameError.textContent = "Το όνομα χρήστη δεν είναι σωστό.";
+            usernameError.textContent = "Το όνομα χρήστη δεν έχει σωστή μορφή.";
             usernameError.style.display = 'block';
             return false;
         }
@@ -87,7 +91,7 @@ window.addEventListener('load', function () {
     // ελεγχος password
     function isPasswordValid() {
         if (!password.checkValidity()) {
-            passwordError.textContent = "Ο κωδικός πρόσβασης δεν είναι σωστός.";
+            passwordError.textContent = "Ο κωδικός πρόσβασης δεν έχει σωστή μορφή.";
             passwordError.style.display = 'block';
             return false;
         }
@@ -104,7 +108,7 @@ window.addEventListener('load', function () {
     // button για το login 
     let checkLoginButton = document.getElementById('login-submit-btn')
     checkLoginButton.addEventListener('click', function (event) {
-        
+
         event.preventDefault();
 
         usernameError.style.display = 'none';
@@ -118,17 +122,17 @@ window.addEventListener('load', function () {
         }
 
         let formElements = document.getElementById('login');
-    
+
         let headers = new Headers();
-        headers.append("Content-Type", "application/x-www-form-urlencoded");
+        headers.append('Content-Type', 'application/json');
 
         let formData = new FormData(formElements);
-        let urlForm = new URLSearchParams(formData).toString();
+        let bodyLogin = JSON.stringify({username: formData.get('username'), password: formData.get('password')})
 
         let init = {
             method: "POST",
             headers: headers,
-            body: urlForm
+            body: bodyLogin
         };
 
         fetch('/login', init)
@@ -171,7 +175,7 @@ window.addEventListener('load', function () {
             })
             .then(object => {
                 console.log("User logged in:", object);
-                userLogin.username = object.username;
+                userLogin.username = formData.get('username');
                 userLogin.sessionId = object.sessionId;
             })
             .catch(err => {
@@ -190,4 +194,82 @@ window.addEventListener('load', function () {
         }
     });
 
+
+    // --------------------------------- ADD TO CART ---------------------------------------- 
+
+
 })
+
+function addToCart(event) {
+    let addToCartBtn = event.target
+    if (event.target.tagName === 'I') {
+        addToCartBtn = event.target.closest('button')
+    }
+
+    if (userLogin.username === undefined || userLogin.sessionId === undefined) {
+        let target = document.getElementById('fail-login-msg');
+        displayErrorMessage(target,'Παρακαλώ συνδεθείτε για να προσθέσετε το προϊόν στο καλάθι!')
+
+    }
+    else {
+        let headers = new Headers()
+        headers.append('Content-Type', 'application/json');
+
+        let title = addToCartBtn.dataset.title
+        let id = addToCartBtn.dataset.id
+        let type = addToCartBtn.dataset.type
+        let cost = addToCartBtn.dataset.cost
+        let image = addToCartBtn.dataset.image
+
+        let body = JSON.stringify({ username: userLogin.username, sessionId: userLogin.sessionId, title: title, id: id, type: type, cost: cost, image: image})
+
+        let init = {
+            method : "POST",
+            headers : headers,
+            body : body
+        }
+
+        fetch('/cart/add',init)
+            .then(response => {
+                switch(response.status){
+                    case 200:
+                        console.log("Success")
+                        displaySuccessMessage(document.getElementById('success-login-msg'), "Το προϊόν προστέθηκε με επιτυχία!")
+                        break;
+                    case 409:
+                        console.log("Item already in cart")
+                        displayErrorMessage(document.getElementById('fail-login-msg'), "Το προϊόν υπάρχει ήδη στο καλάθι σας!")
+                        throw new Error("Item already in cart")
+                    default:
+                        console.log("Unexpected Error")
+                        throw new Error("Unexpected Error")
+                }
+            })
+            .catch(err => {
+                console.log(err)
+            })
+
+    }
+}
+
+function displayErrorMessage(target,message){
+    target.style.display = 'block';
+    target.innerHTML = `<i class="fas fa-times-circle"></i> ${message}`
+
+    setTimeout(() => {
+        target.style.display = 'none';
+        target.innerHTML = '<i class="fas fa-times-circle"></i> Αποτυχία σύνδεσης! Συμπληρώστε τα στοιχεία σας'
+    }, 3000);
+}
+
+function displaySuccessMessage(target,message){
+    
+    target.style.display = 'block';
+    target.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`
+
+    setTimeout(() => {
+        target.style.display = 'none';
+        target.innerHTML = '<i class="fas fa-check-circle"></i> Επιτυχής σύνδεση!</span>'
+    }, 3000);
+}
+

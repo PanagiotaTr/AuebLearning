@@ -48,6 +48,13 @@
                                 href="{{this.link}}"
                                 target="_blank">ΕΔΩ</a></cite></p>
                 </details>
+                <div class="add-to-cart-container">
+                    <button class="add-to-cart" data-title="{{this.title}}" data-id="{{this.id}}" data-type="{{this.type}}" data-cost="{{this.cost}}" data-image="{{this.image}}"> 
+                        <i class="fa fa-shopping-cart"></i>
+                    </button>
+                    <span class="hover-cart-message">Προσθήκη στο καλάθι</span>
+                </div>
+
 
             </article>
         {{/each}}
@@ -77,12 +84,18 @@
                     <p>{{this.description}}</p>
 
                     <ul>
-                        <li><em>Τιμή: </em>{{this.cost}}€</li>
+                        <li><em>Price: </em>{{this.cost}}€</li>
                     </ul>
-                    <p>Περισσότερα για το συγκεκριμένο βιβλίο θα βρείτε <cite><a
+                    <p>Περισσότερα για τη συγκεκριμένη διάλεξη θα βρείτε <cite><a
                                 href="{{this.link}}"
                                 target="_blank">ΕΔΩ</a></cite></p>
                 </details>
+                <div class="add-to-cart-container">
+                    <button class="add-to-cart" data-title="{{this.title}}" data-id="{{this.id}}" data-type="{{this.type}}" data-cost="{{this.cost}}" data-image="{{this.image}}"> 
+                        <i class="fa fa-shopping-cart"></i>
+                    </button>
+                    <span class="hover-cart-message">Προσθήκη στο καλάθι</span>
+                </div>
 
             </article>
         {{/each}}
@@ -160,7 +173,7 @@
                     <span class="hover-message">Καλάθι</span>
                 </div>
             </div>
-            
+
         </nav>
 
     </header>
@@ -174,27 +187,26 @@
                 </div>
                 <fieldset>
                     <legend>Login</legend>
-                
+
                     <p>
                         <label for="username">Username</label>
-                        <input type="text" placeholder="Συμπληρώστε το όνομα χρήστη" maxlength="15" pattern="[A-Za-z0-9]+"
-                            title="Συμπληρώστε όνομα χρήστη (πχ Pug)" name="username"
+                        <input type="text" placeholder="Συμπληρώστε το όνομα χρήστη" maxlength="15"
+                            pattern="[A-Za-z0-9]+" title="Συμπληρώστε όνομα χρήστη (πχ Pug)" name="username"
                             id="username" autocomplete="username" required>
                         <span class="error-message" id="username-error"></span>
                     </p>
-                
+
                     <p>
                         <label for="password">Password</label>
                         <input type="password" placeholder="Συμπληρώστε τον κωδικό" name="password" id="password"
                             maxlength="20" pattern="(?=.*?[A-Z])(?=.*?[@#$%^&*!])(?=.*?[0-9]).{8,}"
-                            title="Συμπληρώστε κωδικό (πχ Pug12345678#)"
-                            required>
+                            title="Συμπληρώστε κωδικό (πχ Pug12345678#)" required>
                         <span class="error-message" id="password-error"></span>
                     </p>
-                
+
                 </fieldset>
-                
-                
+
+
 
                 <div class="buttons">
                     <button type="submit" form="login" value="Submit" id="login-submit-btn">Submit</button>
@@ -206,7 +218,8 @@
 
     <div class="login-overlay">
         <span id="success-login-msg"><i class="fas fa-check-circle"></i> Επιτυχής σύνδεση!</span>
-        <span id="fail-login-msg"><i class="fas fa-times-circle"></i> Αποτυχία σύνδεσης! Συμπληρώστε τα στοιχεία σας ξανά..</span>
+        <span id="fail-login-msg"><i class="fas fa-times-circle"></i> Αποτυχία σύνδεσης! Συμπληρώστε τα στοιχεία σας
+            ξανά..</span>
     </div>
 
     <main class="wr-lesson">

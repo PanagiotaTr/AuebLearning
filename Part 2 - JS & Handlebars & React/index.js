@@ -2,7 +2,8 @@ const uuid = require('uuid');
 const express = require('express')
 const app = express()
 const MemoryInitializer = require('./models/memorydao/MemoryInitializer');
-const Login = require('./public/js/Login')
+const Login = require('./public/js/Login');
+const CartItemService = require('./public/js/CartItemService');
 
 
 let initializer = new MemoryInitializer()
@@ -34,7 +35,8 @@ app.get('/', function (req, res) {
 
 app.post('/login', function (req, res) {
 
-    const { username, password } = req.body;
+    const username = req.body.username
+    const password = req.body.password
     const result = Login.checkUser(username, password)
     result
         .then(sessionId => {
@@ -48,4 +50,25 @@ app.post('/login', function (req, res) {
         .catch(error => {
             res.status(error.getStatus).send(error.message);
         })
+})
+
+app.post('/cart/add', function (req, res) {
+
+    const username = req.body.username
+    const sessionId = req.body.sessionId
+    const title = req.body.title
+    const id = req.body.id
+    const type = req.body.type
+    const cost = req.body.cost
+    const image = req.body.image
+
+    const result = CartItemService.addToCart(username,sessionId,title,id,type,cost,image)
+    result.then(ack => {
+        console.log("EPESTREPSE STO INDEX")
+        console.log(ack)
+        res.status(ack).send()
+    })
+    .catch(err => {
+        console.log(err)
+    })
 })
