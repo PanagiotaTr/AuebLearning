@@ -1806,6 +1806,11 @@ form fieldset legend {
     white-space: nowrap;
 }
 
+#sign-out-btn img, button{
+    cursor: pointer;
+}
+
+
 #login .hover-message{
     left: 100%;
     top: 30px;
@@ -1869,8 +1874,9 @@ form fieldset legend {
     font-size: 16px;
     position: fixed;
     top: 20%;
-    left: 45%;
-    z-index: 1000;
+    left: 35%;
+    right: 35%;
+    z-index: 1001;
 }
 
 #fail-login-msg {
@@ -1885,7 +1891,33 @@ form fieldset legend {
     position: fixed;
     top: 20%;
     left: 35%;
+    right: 35%;
     z-index: 1000;
+}
+
+.hover-cart-message {
+    display: none;
+    position: absolute;
+    transform: translateX(60%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.hover-container:hover .hover-cart-message {
+    display: block;
+}
+
+.add-to-cart {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 #login-reset-btn{

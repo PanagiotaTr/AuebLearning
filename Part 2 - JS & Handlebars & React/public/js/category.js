@@ -25,6 +25,7 @@ window.addEventListener('load', function () {
         headers: headers
     }
 
+
     fetch(learningItemsUrl, init)
         .then(response => response.json())
         .then(learningItems => {
@@ -60,6 +61,14 @@ window.addEventListener('load', function () {
     // button για το παραθυρο του login
     let loginWindow = document.getElementById('login')
 
+    // button για το παραθυρο του sign-out
+    let signOutButton = document.getElementById('sign-out-btn')
+    
+    // αποσύνδεση λογαριασμου
+    signOutButton.addEventListener('click', function(){
+        choseLoginButton.style.display = 'block'
+    })
+
     // εμφανιση του login παραθυρου
     choseLoginButton.addEventListener('click', function () {
         loginWindow.style.display = 'block'
@@ -76,27 +85,6 @@ window.addEventListener('load', function () {
     const password = document.getElementById('password');
     const usernameError = document.getElementById('username-error');
     const passwordError = document.getElementById('password-error');
-
-
-    // ελεγχος username
-    function isUsernameValid() {
-        if (!username.checkValidity()) {
-            usernameError.textContent = "Το όνομα χρήστη δεν έχει σωστή μορφή.";
-            usernameError.style.display = 'block';
-            return false;
-        }
-        return true;
-    }
-
-    // ελεγχος password
-    function isPasswordValid() {
-        if (!password.checkValidity()) {
-            passwordError.textContent = "Ο κωδικός πρόσβασης δεν έχει σωστή μορφή.";
-            passwordError.style.display = 'block';
-            return false;
-        }
-        return true;
-    }
 
     password.addEventListener('focus', function () {
         if (!isUsernameValid()) {
@@ -141,8 +129,10 @@ window.addEventListener('load', function () {
                     // console.log("Login successful.");
                     let loginWindow = document.getElementById('login');
                     let successfulMsg = document.getElementById('success-login-msg');
+                    
 
                     loginWindow.style.display = 'none';
+                    choseLoginButton.style.display = 'none'
 
                     successfulMsg.style.display = 'block';
                     setTimeout(() => {
@@ -273,3 +263,22 @@ function displaySuccessMessage(target,message){
     }, 3000);
 }
 
+// ελεγχος username
+function isUsernameValid() {
+    if (!username.checkValidity()) {
+        usernameError.textContent = "Το όνομα χρήστη δεν έχει σωστή μορφή.";
+        usernameError.style.display = 'block';
+        return false;
+    }
+    return true;
+}
+
+// ελεγχος password
+function isPasswordValid() {
+    if (!password.checkValidity()) {
+        passwordError.textContent = "Ο κωδικός πρόσβασης δεν έχει σωστή μορφή.";
+        passwordError.style.display = 'block';
+        return false;
+    }
+    return true;
+}
