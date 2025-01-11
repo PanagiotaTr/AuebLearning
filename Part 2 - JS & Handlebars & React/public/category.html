@@ -198,17 +198,17 @@
                     <p>
                         <label for="username">Username</label>
                         <input type="text" placeholder="Συμπληρώστε το όνομα χρήστη" maxlength="15"
-                            pattern="[A-Za-z0-9]+" title="Συμπληρώστε όνομα χρήστη (πχ Pug)" name="username"
+                            pattern="[A-Za-z0-9]+" title="Συμπληρώστε όνομα χρήστη" name="username"
                             id="username" autocomplete="username" required>
-                        <span class="error-message" id="username-error"></span>
+                        <span class="error-message" id="username-error">Το όνομα χρήστη δεν έχει σωστή μορφή.</span>
                     </p>
 
                     <p>
                         <label for="password">Password</label>
                         <input type="password" placeholder="Συμπληρώστε τον κωδικό" name="password" id="password"
                             maxlength="20" pattern="(?=.*?[A-Z])(?=.*?[@#$%^&*!])(?=.*?[0-9]).{8,}"
-                            title="Συμπληρώστε κωδικό (πχ Pug12345678#)" required>
-                        <span class="error-message" id="password-error"></span>
+                            title="Συμπληρώστε κωδικό" required>
+                        <span class="error-message" id="password-error">Ο κωδικός πρόσβασης δεν έχει σωστή μορφή.</span>
                     </p>
 
                 </fieldset>
@@ -216,7 +216,7 @@
 
 
                 <div class="buttons">
-                    <button type="submit" form="login" value="Submit" id="login-submit-btn">Submit</button>
+                    <button type="button" form="login" value="Submit" id="login-submit-btn">Submit</button>
                     <button type="reset" form="login" value="Reset" id="login-reset-btn">Reset</button>
                 </div>
             </form>

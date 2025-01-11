@@ -13,7 +13,7 @@ window.addEventListener('load', function () {
 
     document.title = categoryTitle
     let h1 = document.querySelector('.main-title > h1')
-    h1.innerHTML = categoryTitle
+    h1.textContent = categoryTitle
 
     let learningItemsUrl = `${baseUrl}learning-items?category=${categoryId}`
 
@@ -56,56 +56,47 @@ window.addEventListener('load', function () {
 
     ///////////////////////////////////////        LOGIN PART        ///////////////////////////////////////
 
-    // button οταν κανει κλικ το ανθρωπακι-user
-    let choseLoginButton = document.getElementById('login-form-btn')
-    // button για το παραθυρο του login
-    let loginWindow = document.getElementById('login')
+    // button που ανοίγει το login form
+    let loginBtn = document.getElementById('login-form-btn')
+    // Η φόρμα του login
+    let loginForm = document.getElementById('login')
 
     // button για το παραθυρο του sign-out
     let signOutButton = document.getElementById('sign-out-btn')
     
     // αποσύνδεση λογαριασμου
     signOutButton.addEventListener('click', function(){
-        choseLoginButton.style.display = 'block'
+        loginBtn.style.display = 'block'
+        signOutButton.style.display = 'none'
+        userLogin.sessionId = undefined
+        userLogin.username = undefined
     })
 
     // εμφανιση του login παραθυρου
-    choseLoginButton.addEventListener('click', function () {
-        loginWindow.style.display = 'block'
+    loginBtn.addEventListener('click', function () {
+        loginForm.style.display = 'block'
     })
 
     // κλεισιμο του login παραθυρου (x)
-    let closeButton = document.getElementById('close-form-btn')
-    closeButton.addEventListener('click', function () {
-        loginWindow.style.display = 'none'
+    let closeFormButton = document.querySelector('#close-form-btn i')
+    closeFormButton.addEventListener('click', function () {
+        loginForm.style.display = 'none'
     })
 
     // ελεγχος για τα πεδια του login
-    const username = document.getElementById('username');
-    const password = document.getElementById('password');
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
     const usernameError = document.getElementById('username-error');
     const passwordError = document.getElementById('password-error');
-
-    password.addEventListener('focus', function () {
-        if (!isUsernameValid()) {
-            usernameError.textContent = "Το όνομα χρήστη δεν είναι σωστό.";
-            usernameError.style.display = 'block';
-        }
-    });
 
     // button για το login 
     let checkLoginButton = document.getElementById('login-submit-btn')
     checkLoginButton.addEventListener('click', function (event) {
+  
+        let usernameValid = isUsernameValid(usernameInput,usernameError)
+        let passwordValid = isPasswordValid(passwordInput,passwordError)
 
-        event.preventDefault();
-
-        usernameError.style.display = 'none';
-        passwordError.style.display = 'none';
-
-        const validUsername = isUsernameValid();
-        const validPassword = isPasswordValid();
-
-        if (!validUsername || !validPassword) {
+        if (!usernameValid || !passwordValid) {
             return;
         }
 
@@ -115,7 +106,7 @@ window.addEventListener('load', function () {
         headers.append('Content-Type', 'application/json');
 
         let formData = new FormData(formElements);
-        let bodyLogin = JSON.stringify({username: formData.get('username'), password: formData.get('password')})
+        let bodyLogin = JSON.stringify({'username': formData.get('username'), 'password': formData.get('password')})
 
         let init = {
             method: "POST",
@@ -127,13 +118,13 @@ window.addEventListener('load', function () {
             .then(response => {
                 if (response.status === 200) {
                     // console.log("Login successful.");
-                    let loginWindow = document.getElementById('login');
                     let successfulMsg = document.getElementById('success-login-msg');
                     
 
-                    loginWindow.style.display = 'none';
-                    choseLoginButton.style.display = 'none'
-
+                    loginForm.style.display = 'none';
+                    loginBtn.style.display = 'none'
+                    signOutButton.style.display = 'block'
+                    
                     successfulMsg.style.display = 'block';
                     setTimeout(() => {
                         successfulMsg.style.display = 'none';
@@ -142,16 +133,15 @@ window.addEventListener('load', function () {
                     return response.json();
                 } else if (response.status === 401) {
                     // console.error("Authentication failed.");
-                    let loginWindow = document.getElementById('login')
                     let failMsg = document.getElementById('fail-login-msg');
 
-                    loginWindow.style.display = 'none';
+                    loginForm.style.display = 'none';
 
                     failMsg.style.display = 'block';
 
                     setTimeout(() => {
                         failMsg.style.display = 'none';
-                        loginWindow.style.display = 'block';
+                        loginForm.style.display = 'block';
                     }, 3000);
 
                     throw new Error("Fail login");
@@ -164,7 +154,7 @@ window.addEventListener('load', function () {
                 }
             })
             .then(object => {
-                console.log("User logged in:", object);
+                console.log("User logged in:", object.sessionId);
                 userLogin.username = formData.get('username');
                 userLogin.sessionId = object.sessionId;
             })
@@ -173,20 +163,14 @@ window.addEventListener('load', function () {
             });
     });
 
-    loginWindow.addEventListener('click', function () {
-        if (username.checkValidity()) {
-            usernameError.textContent = "";
+    loginForm.addEventListener('click', function () {
+        if (usernameInput.checkValidity()) {
             usernameError.style.display = 'none';
         }
-        if (password.checkValidity()) {
-            passwordError.textContent = "";
+        if (passwordInput.checkValidity()) {
             passwordError.style.display = 'none';
         }
     });
-
-
-    // --------------------------------- ADD TO CART ---------------------------------------- 
-
 
 })
 
@@ -211,7 +195,7 @@ function addToCart(event) {
         let cost = addToCartBtn.dataset.cost
         let image = addToCartBtn.dataset.image
 
-        let body = JSON.stringify({ username: userLogin.username, sessionId: userLogin.sessionId, title: title, id: id, type: type, cost: cost, image: image})
+        let body = JSON.stringify({ 'username': userLogin.username, 'sessionId': userLogin.sessionId, 'title': title, 'id': id, 'type': type, 'cost': cost, 'image': image})
 
         let init = {
             method : "POST",
@@ -219,7 +203,7 @@ function addToCart(event) {
             body : body
         }
 
-        fetch('/cart/add',init)
+        fetch('/cart',init)
             .then(response => {
                 switch(response.status){
                     case 200:
@@ -264,9 +248,8 @@ function displaySuccessMessage(target,message){
 }
 
 // ελεγχος username
-function isUsernameValid() {
-    if (!username.checkValidity()) {
-        usernameError.textContent = "Το όνομα χρήστη δεν έχει σωστή μορφή.";
+function isUsernameValid(usernameInput,usernameError) {
+    if (!usernameInput.checkValidity()) {
         usernameError.style.display = 'block';
         return false;
     }
@@ -274,9 +257,8 @@ function isUsernameValid() {
 }
 
 // ελεγχος password
-function isPasswordValid() {
-    if (!password.checkValidity()) {
-        passwordError.textContent = "Ο κωδικός πρόσβασης δεν έχει σωστή μορφή.";
+function isPasswordValid(passwordInput,passwordError) {
+    if (!passwordInput.checkValidity()) {
         passwordError.style.display = 'block';
         return false;
     }
