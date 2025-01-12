@@ -57,26 +57,6 @@ window.addEventListener('load', function () {
 
     ///////////////////////////////////////        LOGIN PART        ///////////////////////////////////////
 
-    // ελεγχος username
-    function isUsernameValid() {
-        if (!username.checkValidity()) {
-            usernameError.textContent = "Το όνομα χρήστη δεν έχει σωστή μορφή.";
-            usernameError.style.display = 'block';
-            return false;
-        }
-        return true;
-    }
-
-    // ελεγχος password
-    function isPasswordValid() {
-        if (!password.checkValidity()) {
-            passwordError.textContent = "Ο κωδικός πρόσβασης δεν έχει σωστή μορφή.";
-            passwordError.style.display = 'block';
-            return false;
-        }
-        return true;
-    }
-
     // button που ανοίγει το login form
     let loginBtn = document.getElementById('login-form-btn')
     // Η φόρμα του login
@@ -122,7 +102,6 @@ window.addEventListener('load', function () {
         }
 
         let formElements = document.getElementById('login');
-        let cartLink = document.getElementById("view-card-btn");
 
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
