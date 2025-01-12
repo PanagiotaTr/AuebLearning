@@ -52,7 +52,7 @@ app.post('/login', function (req, res) {
         })
 })
 
-app.post('/cart/add', function (req, res) {
+app.post('/cart', function (req, res) {
 
     const username = req.body.username
     const sessionId = req.body.sessionId
