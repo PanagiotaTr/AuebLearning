@@ -10,8 +10,8 @@ class CartItemService{
         const user = initializer.getUserDao().findUser(username,sessionId)
         return user.then(foundUser => {
             if(foundUser!=undefined){
-                console.log(foundUser.getSize)
                 let learningItem = new LearningItem(title,id,type,cost,image)
+                // console.log(foundUser.getSize)
                 return foundUser.addLearningItem(learningItem)
             }
         })
@@ -27,6 +27,46 @@ class CartItemService{
         })
     }
 
+    static showCart(username,sessionId,title,id,type,cost,image){
+        const user = initializer.getUserDao().findUser(username,sessionId)
+        return user
+            .then(foundUser => {
+                if(foundUser!=undefined){
+                    const learningItems = foundUser.getSize;
+                    console.log(learningItems)
+                    console.log("-------------------------------------------")
+                    if (learningItems.length === 0) {
+                        throw new Error("Το καλάθι αγορών είναι άδειο!");
+                    }
+                
+                    const cartItems = learningItems.map(item => ({
+                        id: item.id,
+                        type: item.type,
+                        title: item.title,
+                        cost: item.cost
+                    }));
+
+                    const totalCost = cartItems.reduce((sum, item) => sum + Number(item.cost), 0);
+                    // console.log(cartItems)
+                    // console.log(totalCost)
+
+                    console.log(JSON.stringify({
+                        cartItems: cartItems,
+                        totalCost: totalCost
+                    }))                    
+
+                    return JSON.stringify({
+                        cartItems: cartItems,
+                        totalCost: totalCost
+                    });
+                } else {
+                    throw new Error("Ο χρήστης δεν βρέθηκε.");
+                }
+            })
+            .catch(error => {
+                throw error;
+            });
+    }
 
 }
 

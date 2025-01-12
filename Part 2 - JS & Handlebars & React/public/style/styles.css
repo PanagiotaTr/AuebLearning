@@ -1393,6 +1393,128 @@ form fieldset legend {
     margin-right: 0.3em;
 }
 
+/* ----------------------------- CART.HTML ----------------------------- */
+
+.wrapper-card{
+    row-gap: 0;
+    grid-template-areas:
+        'header header header'
+        'card card aside'
+        'footer footer footer';
+}
+
+.wr-card {
+    grid-area: card;
+    display: flex;
+    justify-self: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 200px;
+}
+
+.product-item {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-icon {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.product-price {
+    font-size: 16px;
+    color: #e63946;
+    font-weight: bold;
+}
+
+#make-table-card td{
+    text-align: center;
+    row-gap: 10px;
+}
+
+td button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 50px;
+}
+
+.wr-card #chapter-table>thead>tr>th{
+    background-color: #d7cbcb;
+}
+
+.wr-card #chapter-table tr{
+    margin-bottom: 10px;
+}
+
+#chapter-table td:nth-child(5) {
+    background-color: var(--background-color);
+    border: 1px solid var(--background-color);
+    text-align: left;
+}
+
+/* Στυλ για το aside bar */
+.sidebar {
+    background-color: #f4f4f4;
+    grid-area: aside;
+}
+
+.sidebar h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.sidebar #total-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.complete-order-btn {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.complete-order-btn:hover {
+    background-color: #2ecc71;
+}
+
+#chapter-table tbody tr {
+    border-bottom: 20px solid transparent;
+}
+
+
+
 
 /* Ρυθμίζουμε όλα τα στοιχεία έτσι ώστε να εμφανίζονται σε οθόνη 
    με μέγιστο μέγεθος ίση με 480px*/
@@ -1453,6 +1575,7 @@ form fieldset legend {
     .wr-about-us,
     .wr-book,
     .wr-lecture,
+    .wr-card,
     .register-form {
         margin-top: 20px;
     }
@@ -1475,6 +1598,14 @@ form fieldset legend {
         row-gap: 2rem;
         padding: 0;
         margin: 0 auto;
+    }
+
+    .wrapper-card {
+        grid-template-areas:
+            'header'
+            'card'
+            'aside'
+            'footer';
     }
 
     /* Θέτουμε την διάταξη στην σελίδα index */
@@ -1597,6 +1728,13 @@ form fieldset legend {
     .wrapper {
         grid-template-columns: 3fr 1fr;
         min-height: 100vh;
+    }
+
+    .wrapper-card {
+        grid-template-areas:
+            'header header'
+            'card aside'
+            'footer footer';
     }
 
     /* Θέτουμε την διάταξη στην σελίδα index */
@@ -1975,3 +2113,4 @@ form fieldset legend {
     flex-flow: column nowrap;
     align-items: center;
 }
+

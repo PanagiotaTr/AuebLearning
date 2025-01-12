@@ -64,11 +64,39 @@ app.post('/cart/add', function (req, res) {
 
     const result = CartItemService.addToCart(username,sessionId,title,id,type,cost,image)
     result.then(ack => {
-        console.log("EPESTREPSE STO INDEX")
-        console.log(ack)
+        // console.log("EPESTREPSE STO INDEX")
+        // console.log(ack)
         res.status(ack).send()
     })
     .catch(err => {
         console.log(err)
     })
 })
+
+app.get('/cart', function (req, res) {
+
+    console.log("Pass")
+
+    const username = req.query.username
+    const sessionId = req.query.sessionId
+    const title = req.query.title
+    const id = req.query.id
+    const type = req.query.type
+    const cost = req.query.cost
+    const image = req.query.image
+
+    console.log(username)
+
+    const result = CartItemService.showCart(username,sessionId,title,id,type,cost,image)
+
+    result
+    .then(result => {
+        res.status(200).send(result);
+        console.log(result)
+        console.log("PASS")
+    })
+    .catch(error => {
+        res.status(error.getStatus).send(error.message);
+    })
+})
+

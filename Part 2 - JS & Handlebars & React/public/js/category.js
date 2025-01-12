@@ -17,6 +17,7 @@ window.addEventListener('load', function () {
 
     let learningItemsUrl = `${baseUrl}learning-items?category=${categoryId}`
 
+
     let headers = new Headers()
     headers.append('Accept', 'application/json')
 
@@ -55,6 +56,26 @@ window.addEventListener('load', function () {
         });
 
     ///////////////////////////////////////        LOGIN PART        ///////////////////////////////////////
+
+    // ελεγχος username
+    function isUsernameValid() {
+        if (!username.checkValidity()) {
+            usernameError.textContent = "Το όνομα χρήστη δεν έχει σωστή μορφή.";
+            usernameError.style.display = 'block';
+            return false;
+        }
+        return true;
+    }
+
+    // ελεγχος password
+    function isPasswordValid() {
+        if (!password.checkValidity()) {
+            passwordError.textContent = "Ο κωδικός πρόσβασης δεν έχει σωστή μορφή.";
+            passwordError.style.display = 'block';
+            return false;
+        }
+        return true;
+    }
 
     // button οταν κανει κλικ το ανθρωπακι-user
     let choseLoginButton = document.getElementById('login-form-btn')
@@ -110,6 +131,7 @@ window.addEventListener('load', function () {
         }
 
         let formElements = document.getElementById('login');
+        let cartLink = document.getElementById("view-card-btn");
 
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
@@ -164,7 +186,7 @@ window.addEventListener('load', function () {
                 }
             })
             .then(object => {
-                console.log("User logged in:", object);
+                // console.log("User logged in:", object);
                 userLogin.username = formData.get('username');
                 userLogin.sessionId = object.sessionId;
             })
@@ -184,6 +206,18 @@ window.addEventListener('load', function () {
         }
     });
 
+    const cartButton = document.getElementById("view-card-btn");
+    cartButton.addEventListener("click", function (event) {
+        if (userLogin.username && userLogin.sessionId) {
+            window.location.href = `cart.html?username=${encodeURIComponent(userLogin.username)}&sessionId=${encodeURIComponent(userLogin.sessionId)}`;
+        } else {
+            event.preventDefault();
+            displayErrorMessage(
+                document.getElementById("fail-login-msg"),
+                "Παρακαλώ συνδεθείτε για να δείτε το καλάθι σας!"
+            );
+        }
+    });
 
     // --------------------------------- ADD TO CART ---------------------------------------- 
 
@@ -261,24 +295,4 @@ function displaySuccessMessage(target,message){
         target.style.display = 'none';
         target.innerHTML = '<i class="fas fa-check-circle"></i> Επιτυχής σύνδεση!</span>'
     }, 3000);
-}
-
-// ελεγχος username
-function isUsernameValid() {
-    if (!username.checkValidity()) {
-        usernameError.textContent = "Το όνομα χρήστη δεν έχει σωστή μορφή.";
-        usernameError.style.display = 'block';
-        return false;
-    }
-    return true;
-}
-
-// ελεγχος password
-function isPasswordValid() {
-    if (!password.checkValidity()) {
-        passwordError.textContent = "Ο κωδικός πρόσβασης δεν έχει σωστή μορφή.";
-        passwordError.style.display = 'block';
-        return false;
-    }
-    return true;
 }
