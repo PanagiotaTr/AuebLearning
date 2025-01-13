@@ -1404,6 +1404,8 @@ form fieldset legend {
 }
 
 .wr-card {
+    flex-direction: column;
+    justify-content: center;
     grid-area: card;
     display: flex;
     justify-self: center;

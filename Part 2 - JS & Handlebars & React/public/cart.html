@@ -18,6 +18,7 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
+
     <script type="text/babel">
 
         window.addEventListener('load', main);
@@ -29,7 +30,6 @@
                 <>
                     <HeaderPart />
                     <MainPart />
-                    <AsidePart totalCost = {cartTotalCost}/>
                     <FooterPart />
                 </>
             );
@@ -138,10 +138,13 @@
 
         function MainPart() {
             return (
-                <main className="wr-card">
-                    <MainPartTitle />
-                    <MainPartContent cartList = {cartList} />
-                </main>
+                <>
+                    <main className="wr-card">
+                        <MainPartTitle />
+                        <MainPartContent initialCartList={cartList} />
+                    </main>
+                    <AsidePart totalCost = {cartTotalCost}/>
+                </>
             )
         }
 
@@ -153,12 +156,14 @@
             )
         }
 
-        function MainPartContent({cartList}) {
+        function MainPartContent({ initialCartList }) {
+
             return (
+
                 <table id="chapter-table">
                     <thead>
                         <tr>
-                            <th>Αριθμός</th>
+                            <th>Κωδικός</th>
                             <th>Τίτλος</th>
                             <th>Ποσότητα</th>
                             <th>Τιμή</th>
@@ -168,7 +173,7 @@
                     <tbody className="product-list">
                         {
                             cartList.map(l => (
-                                <CartItem key={l.id} title={l.title} cost={l.cost}/>
+                                <CartItem key={l.id} id={l.id} type={l.type} title={l.title} cost={l.cost}/>
                             ))
                         }
                     </tbody>
@@ -176,11 +181,19 @@
             )
         }
 
-        function CartItem({ id, title, cost }) {
+        function CartItem({ key, id, type, title, cost}) {
+
+            let icon;
+            if (type === "Book") {
+                icon = <i className="fa fa-book"></i>;
+            } else if (type === "Lecture") {
+                icon = <i className="fa fa-chalkboard-teacher"></i>;
+            }
+
             return (
                 <tr id='make-table-card'>
-                    <td>{0}</td>
-                    <td className="product-title">{title}</td>
+                    <td>{id}</td>
+                    <td className="product-title">{icon} {title}</td>
                     <td>
                         <button>-</button>
                         <span>1</span>
@@ -188,7 +201,7 @@
                     </td>
                     <td className="product-price">€{cost}</td>
                     <td className="delete-td">
-                        <button className="delete-btn">
+                        <button className="delete-btn" id="delete-Item-btn">
                             <i className="fa fa-trash"></i>
                         </button>
                     </td>
@@ -196,12 +209,12 @@
             )
         }
 
-        function AsidePart({totalCost}) {
+        function AsidePart({ totalCost }) {
             return (
                 <aside className="sidebar">
                     <div className="sidebar-content">
                         <h3>Συνολικό Ποσό</h3>
-                        <p id="total-price">{totalCost}</p>
+                        <p id="total-price">€{totalCost.toLocaleString('de-DE')}</p>
                     </div>
                     <button className="complete-order-btn">Ολοκλήρωση Αγοράς</button>
                 </aside>
