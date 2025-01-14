@@ -28,7 +28,7 @@ fetch(url, init)
             return response.json()
         }
         else if (response.status === 401){
-            throw new Error("Fail");
+            throw new Error("Error - Ο χρήστης δεν βρέθηκε");
         }
         else if (response.status === 501) {
             throw new Error("Server error");
@@ -44,4 +44,7 @@ fetch(url, init)
     .catch(error => {
         console.error('Σφάλμα κατά τη φόρτωση του καλαθιού:', error);
         alert('Δεν ήταν δυνατή η φόρτωση του καλαθιού σας. Προσπαθήστε ξανά αργότερα.');
+        cartList = []
+        cartTotalCost = 0
+        window.location.href = "index.html";
     });

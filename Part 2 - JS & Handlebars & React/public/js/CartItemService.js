@@ -57,7 +57,7 @@ class CartItemService{
                         totalCost: totalCost
                     });
                 } else {
-                    err = new Error("Ο χρήστης δεν βρέθηκε.")
+                    let err = new Error("Ο χρήστης δεν βρέθηκε.")
                     err.code = 401
                     throw err
                 }
