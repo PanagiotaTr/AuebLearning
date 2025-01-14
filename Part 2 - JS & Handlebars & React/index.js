@@ -106,7 +106,7 @@ app.delete('/cart', function (req, res) {
             res.status(ack).send({newTotalCost})
         })
         .catch(error => {
-            res.status(error.code).send(error.message)
+            res.status(error.code).send(error)
         })
 
 })

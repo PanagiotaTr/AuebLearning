@@ -193,8 +193,7 @@
             if (removed) return null
 
             function handleDelete(){
-                setRemoved(true)
-                removeItemFromCart(id,updateTotalCost)
+                removeItemFromCart(id,updateTotalCost,setRemoved)
             }
 
             let icon;

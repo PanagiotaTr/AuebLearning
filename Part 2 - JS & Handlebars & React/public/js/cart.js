@@ -56,7 +56,7 @@ fetch(url, init)
         window.location.href = "index.html";
     });
 
-function removeItemFromCart(id,updateTotalCost){
+function removeItemFromCart(id,updateTotalCost,setRemoved){
 
     let headers = new Headers()
     headers.append('Content-Type', 'application/json')
@@ -77,13 +77,21 @@ function removeItemFromCart(id,updateTotalCost){
                 err.code = 404
                 throw err
             }
+            else if (response.status === 401){
+                let err = new Error('Ο χρήστης δεν βρέθηκε')
+                err.code = 401
+                throw err
+            }
             else{
-                
+                let err = new Error('Μη αναμενόμενο σφάλμα κατά την ενημέρωση του καλαθιού')
+                err.code = 500
+                throw err
             }
         })
         .then(response => {
             let newTotalCost = response.newTotalCost
+            setRemoved(true)
             updateTotalCost(newTotalCost)
         })
-        .catch(err => {throw err})
+        .catch(err => {alert(`${err.code} - ${err.message}`)})
 }

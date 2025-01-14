@@ -76,7 +76,7 @@ class CartItemService{
                 }else{
                     let error = new Error("Ο χρήστης δεν βρέθηκε")
                     error.code = 401
-                    throw err
+                    throw error
                 }
             })
             .then(({ack, newTotalCost}) => {
