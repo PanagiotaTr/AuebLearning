@@ -28,13 +28,19 @@ fetch(url, init)
             return response.json()
         }
         else if (response.status === 401){
-            throw new Error("Error - Ο χρήστης δεν βρέθηκε");
+            let err = new Error("Ο χρήστης δεν βρέθηκε")
+            err.code = 401
+            throw err
         }
         else if (response.status === 501) {
-            throw new Error("Server error");
+            let err = new Error("Server error")
+            err.code = 501
+            throw err
         }
         else{
-            throw new Error("Unexpected error");
+            let err = new Error("Unexpected error")
+            err.code = 500
+            throw err
         }
     })
     .then(itemsJson => {
@@ -43,7 +49,8 @@ fetch(url, init)
     })
     .catch(error => {
         console.error('Σφάλμα κατά τη φόρτωση του καλαθιού:', error);
-        alert('Δεν ήταν δυνατή η φόρτωση του καλαθιού σας. Προσπαθήστε ξανά αργότερα.');
+        // alert('Δεν ήταν δυνατή η φόρτωση του καλαθιού σας. Προσπαθήστε ξανά αργότερα.');
+        alert(`${error.code} - ${error} - Δεν ήταν δυνατή η φόρτωση του καλαθιού σας. Προσπαθήστε ξανά αργότερα. `)
         cartList = []
         cartTotalCost = 0
         window.location.href = "index.html";
