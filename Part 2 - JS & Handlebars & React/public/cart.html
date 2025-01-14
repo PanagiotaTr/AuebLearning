@@ -137,13 +137,19 @@
         }
 
         function MainPart() {
+            const [totalCost, setTotalCost] = React.useState(cartTotalCost)
+            
+            function updateTotalCost(newCost){
+                setTotalCost(newCost)
+            }
+
             return (
                 <>
                     <main className="wr-card">
                         <MainPartTitle />
-                        <MainPartContent initialCartList={cartList} />
+                        <MainPartContent initialCartList={cartList} updateTotalCost={updateTotalCost} />
                     </main>
-                    <AsidePart totalCost = {cartTotalCost}/>
+                    <AsidePart totalCost = {totalCost}/>
                 </>
             )
         }
@@ -156,7 +162,7 @@
             )
         }
 
-        function MainPartContent({ initialCartList }) {
+        function MainPartContent({ initialCartList, updateTotalCost}) {
 
             return (
 
@@ -173,7 +179,7 @@
                     <tbody className="product-list">
                         {
                             cartList.map(l => (
-                                <CartItem key={l.id} id={l.id} type={l.type} title={l.title} cost={l.cost}/>
+                                <CartItem key={l.id} id={l.id} type={l.type} title={l.title} cost={l.cost} updateTotalCost={updateTotalCost}/>
                             ))
                         }
                     </tbody>
@@ -181,7 +187,15 @@
             )
         }
 
-        function CartItem({id, type, title, cost}) {
+        function CartItem({id, type, title, cost,updateTotalCost}) {
+
+            const [removed, setRemoved] = React.useState(false)
+            if (removed) return null
+
+            function handleDelete(){
+                setRemoved(true)
+                removeItemFromCart(id,updateTotalCost)
+            }
 
             let icon;
             if (type === "Book") {
@@ -201,7 +215,7 @@
                     </td>
                     <td className="product-price">€{cost}</td>
                     <td className="delete-td">
-                        <button className="delete-btn" id="delete-Item-btn">
+                        <button className="delete-btn" id="delete-Item-btn" onClick={handleDelete}>
                             <i className="fa fa-trash"></i>
                         </button>
                     </td>

@@ -19,7 +19,7 @@ class User {
 
     set setSessionId(sessionId) { this.sessionId = sessionId; }
 
-    get getSize() { return this.learningItems }
+    get getCart() { return this.learningItems }
 
     equals(other) {
         if (other == null) {
@@ -43,13 +43,29 @@ class User {
         return new Promise((resolve, reject) => {
             let itemFound = this.learningItems.find(item => item.equals(learningItem))
             let ack = 0
-            if (itemFound == undefined) {
+            if (itemFound === undefined) {
                 this.learningItems.push(learningItem)
                 ack = 200
             } else {
                 ack = 409
             }
             resolve(ack)
+        })
+    }
+
+    removeLearningItem(id){
+        return new Promise((resolve, reject) => {
+            let itemFound = this.learningItems.find(item => item.getId === id)
+            let ack = 0
+            let newTotalCost = 0
+            if (itemFound !== undefined){
+                this.learningItems = this.learningItems.filter(item => !item.equals(itemFound))
+                newTotalCost = this.learningItems.length !== 0? this.learningItems.reduce((sum, item) => sum + Number(item.cost), 0) : 0;
+                ack = 200
+            }else{
+                ack = 404
+            }
+            resolve({ack, newTotalCost})
         })
     }
 

@@ -55,3 +55,35 @@ fetch(url, init)
         cartTotalCost = 0
         window.location.href = "index.html";
     });
+
+function removeItemFromCart(id,updateTotalCost){
+
+    let headers = new Headers()
+    headers.append('Content-Type', 'application/json')
+
+    let body = JSON.stringify({'username': username, 'sessionId': sessionId, 'id': id})
+    let init = {
+        method: "DELETE",
+        headers: headers,
+        body: body
+    }
+    fetch('/cart',init)
+        .then(response => {
+            if (response.status === 200){
+                return response.json()
+            }
+            else if (response.status === 404){
+                let err = new Error('Δεν βρέθηκε το προϊόν στο καλάθι σας')
+                err.code = 404
+                throw err
+            }
+            else{
+                
+            }
+        })
+        .then(response => {
+            let newTotalCost = response.newTotalCost
+            updateTotalCost(newTotalCost)
+        })
+        .catch(err => {throw err})
+}

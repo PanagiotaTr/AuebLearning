@@ -79,15 +79,10 @@ app.get('/cart', function (req, res) {
 
     const username = req.query.username
     const sessionId = req.query.sessionId
-    const title = req.query.title
-    const id = req.query.id
-    const type = req.query.type
-    const cost = req.query.cost
-    const image = req.query.image
 
     console.log(username)
 
-    const result = CartItemService.showCart(username,sessionId,title,id,type,cost,image)
+    const result = CartItemService.showCart(username,sessionId)
 
     result
     .then(result => {
@@ -98,5 +93,21 @@ app.get('/cart', function (req, res) {
     .catch(error => {
         res.status(error.code).send(error.message);
     })
+})
+
+app.delete('/cart', function (req, res) {
+    let username = req.body.username
+    let sessionId = req.body.sessionId
+    let id = req.body.id
+
+    const result = CartItemService.removeFromCart(username,sessionId,id)
+    result
+        .then(({ack, newTotalCost}) => {
+            res.status(ack).send({newTotalCost})
+        })
+        .catch(error => {
+            res.status(error.code).send(error.message)
+        })
+
 })
 

@@ -32,7 +32,7 @@ class CartItemService{
         return user
             .then(foundUser => {
                 if(foundUser!=undefined){
-                    const learningItems = foundUser.getSize;
+                    const learningItems = foundUser.getCart;
                     console.log(learningItems)
                     console.log("-------------------------------------------")
                     
@@ -67,6 +67,29 @@ class CartItemService{
             });
     }
 
+    static removeFromCart(username,sessionId,id){
+        const user = initializer.getUserDao().findUser(username,sessionId)
+        return user
+            .then(foundUser => {
+                if (foundUser !== undefined){
+                    return foundUser.removeLearningItem(id)
+                }else{
+                    let error = new Error("Ο χρήστης δεν βρέθηκε")
+                    error.code = 401
+                    throw err
+                }
+            })
+            .then(({ack, newTotalCost}) => {
+                if(ack){
+                    return {ack, newTotalCost}
+                }else{
+                    let error = new Error("Μη αναμενόμενο σφάλμα κατά την ενημέρωση του καλαθιού")
+                    error.code = 500
+                    throw error
+                }
+            })
+            .catch(error => {throw error})
+    }
 }
 
 module.exports = CartItemService
