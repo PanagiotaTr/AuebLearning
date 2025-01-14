@@ -35,10 +35,7 @@ class CartItemService{
                     const learningItems = foundUser.getSize;
                     console.log(learningItems)
                     console.log("-------------------------------------------")
-                    if (learningItems.length === 0) {
-                        throw new Error("Το καλάθι αγορών είναι άδειο!");
-                    }
-                
+                    
                     const cartItems = learningItems.map(item => ({
                         id: item.id,
                         type: item.type,
@@ -46,7 +43,7 @@ class CartItemService{
                         cost: item.cost
                     }));
 
-                    const totalCost = cartItems.reduce((sum, item) => sum + Number(item.cost), 0);
+                    const totalCost = cartItems.length !== 0? cartItems.reduce((sum, item) => sum + Number(item.cost), 0) : 0;
                     // console.log(cartItems)
                     // console.log(totalCost)
 
@@ -60,7 +57,9 @@ class CartItemService{
                         totalCost: totalCost
                     });
                 } else {
-                    throw new Error("Ο χρήστης δεν βρέθηκε.");
+                    err = new Error("Ο χρήστης δεν βρέθηκε.")
+                    err.code = 401
+                    throw err
                 }
             })
             .catch(error => {

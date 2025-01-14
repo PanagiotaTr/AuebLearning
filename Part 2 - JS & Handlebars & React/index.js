@@ -96,7 +96,7 @@ app.get('/cart', function (req, res) {
         console.log("PASS")
     })
     .catch(error => {
-        res.status(error.getStatus).send(error.message);
+        res.status(error.code).send(error.message);
     })
 })
 
