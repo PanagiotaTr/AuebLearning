@@ -5,6 +5,14 @@ const urlParams = new URLSearchParams(window.location.search);
 const username = urlParams.get('username');
 const sessionId = urlParams.get('sessionId');
 
+/**
+ * A async function that fetches the cart of a user in order to be displayed
+ * 
+ * This function sends a GET request to receive the content of the users cart. If successful, the cart is successfully
+ * displayed. If an error occurs, an alert is displayed containing the error code and the corresponding message
+ * 
+ * @returns {Promise<{cartList: Array<LearningItem>, cartTotalCost: number}>}
+ */
 function fetchCartData() {
     if (!username || !sessionId) {
         console.log("Παρακαλώ, συνδεθείτε για να δείτε το καλάθι σας.");
@@ -60,6 +68,17 @@ function fetchCartData() {
 
 
 }
+
+/**
+ * Removes an item from the cart of a user
+ * 
+ * This function sends a DELETE request to remove a learningItem from the cart of a user. If successful, it updates
+ * the total cost of the cart and changes the state of the item to removed so it doesnt display
+ * 
+ * @param {number} id - The id of the learning item that is going to be removed from the cart
+ * @param {(newCost: number) => void} updateTotalCost - Function that sets the new total cost of the cart
+ * @param {(removed: boolean) => void} setRemoved  - Function that sets the removed state of a learningItem
+ */
 function removeItemFromCart(id, updateTotalCost, setRemoved) {
 
     let headers = new Headers()

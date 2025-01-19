@@ -43,6 +43,11 @@ class User {
         this.sessionId = user.sessionId;
     }
 
+    /**
+     * 
+     * @param {LearningItem} learningItem - The learningItem that is going to be added to users cart
+     * @returns {Promise<number>} - A promise that resolves the status of the request
+     */
     addLearningItem(learningItem) {
         return new Promise((resolve, reject) => {
             let itemFound = this.learningItems.find(item => item.equals(learningItem))
@@ -57,6 +62,12 @@ class User {
         })
     }
 
+    /**
+     * 
+     * @param {number} id - The id of the learningItem that is going to be removed from users cart
+     * @returns {Promise<{ack: number, newTotalCost: number}>} - A promise that resolves the ack (status of the request) and
+     * newTotalCost (new cost of the cart)
+     */
     removeLearningItem(id){
         return new Promise((resolve, reject) => {
             let itemFound = this.learningItems.find(item => item.getId === id)
