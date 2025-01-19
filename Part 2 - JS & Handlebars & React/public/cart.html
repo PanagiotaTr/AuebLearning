@@ -24,15 +24,21 @@
         window.addEventListener('load', main);
 
         function main() {
-            const container = document.getElementById("root");
-            const root = ReactDOM.createRoot(container);
-            root.render(
-                <>
-                    <HeaderPart />
-                    <MainPart />
-                    <FooterPart />
-                </>
-            );
+            fetchCartData()
+                .then(result => {
+                    console.log(result.cartTotalCost)
+                    console.log(result.cartList)
+                    const container = document.getElementById("root");
+                    const root = ReactDOM.createRoot(container);
+                    root.render(
+                        <>
+                            <HeaderPart />
+                            <MainPart cartList={cartList} />
+                            <FooterPart />
+                        </>
+                    );
+                })
+                .catch(err => console.log(err))
         }
 
         function HeaderPart() {
@@ -136,10 +142,10 @@
             );
         }
 
-        function MainPart() {
+        function MainPart({ cartList }) {
             const [totalCost, setTotalCost] = React.useState(cartTotalCost)
-            
-            function updateTotalCost(newCost){
+
+            function updateTotalCost(newCost) {
                 setTotalCost(newCost)
             }
 
@@ -149,7 +155,7 @@
                         <MainPartTitle />
                         <MainPartContent initialCartList={cartList} updateTotalCost={updateTotalCost} />
                     </main>
-                    <AsidePart totalCost = {totalCost}/>
+                    <AsidePart totalCost={totalCost} />
                 </>
             )
         }
@@ -162,7 +168,7 @@
             )
         }
 
-        function MainPartContent({ initialCartList, updateTotalCost}) {
+        function MainPartContent({ initialCartList, updateTotalCost }) {
 
             return (
 
@@ -179,7 +185,7 @@
                     <tbody className="product-list">
                         {
                             cartList.map(l => (
-                                <CartItem key={l.id} id={l.id} type={l.type} title={l.title} cost={l.cost} updateTotalCost={updateTotalCost}/>
+                                <CartItem key={l.id} id={l.id} type={l.type} title={l.title} cost={l.cost} updateTotalCost={updateTotalCost} />
                             ))
                         }
                     </tbody>
@@ -187,13 +193,13 @@
             )
         }
 
-        function CartItem({id, type, title, cost,updateTotalCost}) {
+        function CartItem({ id, type, title, cost, updateTotalCost }) {
 
             const [removed, setRemoved] = React.useState(false)
             if (removed) return null
 
-            function handleDelete(){
-                removeItemFromCart(id,updateTotalCost,setRemoved)
+            function handleDelete() {
+                removeItemFromCart(id, updateTotalCost, setRemoved)
             }
 
             let icon;
