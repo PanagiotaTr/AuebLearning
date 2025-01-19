@@ -1,11 +1,12 @@
 const UserMemoryDao = require("../memorydao/UserMemoryDao");
+const UserMongoDao = require("../mongodao/UserMongoDao");
 
 class Initializer {
     
     prepareData(){};
 
     getUserDao() {
-      return new UserMemoryDao();
+      return process.env.useMongoDb === undefined? new UserMemoryDao() : new UserMongoDao()
     }
 }
   

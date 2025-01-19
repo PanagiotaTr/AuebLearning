@@ -1,3 +1,5 @@
+const LearningItem = require("./LearningItem");
+
 class User {
 
     constructor(username, password) {
@@ -20,6 +22,8 @@ class User {
     set setSessionId(sessionId) { this.sessionId = sessionId; }
 
     get getCart() { return this.learningItems }
+
+    set setCart(learningItems) {this.learningItems = learningItems.map(item => new LearningItem(item.title, item.id, item.type, item.cost, item.image))}
 
     equals(other) {
         if (other == null) {

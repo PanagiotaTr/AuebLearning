@@ -3,18 +3,24 @@ const UserMemoryDao = require("../memorydao/UserMemoryDao");
 const User = require("../domain/User");
 
 class MemoryInitializer extends Initializer {
-    
+
   prepareData() {
 
-    const user1 = new User("Pug", "Pug12345678#")
-    const user2 = new User("George", "George123#")
-    const user3 = new User("example", "Pass1234@")
+    // Users are already defined if mongoDB is used, so init them only for local DAO
 
-    this.getUserDao().save(user1);
-    this.getUserDao().save(user2);
-    this.getUserDao().save(user3);
+    if(process.env.useMongoDb === undefined){
+      console.log('Initiallizing Data...')
+      const user1 = new User("user", "User123#")
+      const user2 = new User("george", "George123#")
+      const user3 = new User("example", "Pass1234@")
+      const user4 = new User("test","test123#")
 
-    // console.log("Prostethikan Users");
+      this.getUserDao().save(user1)
+      this.getUserDao().save(user2)
+      this.getUserDao().save(user3)
+      this.getUserDao().save(user4)
+    }
+
   }
 
 }

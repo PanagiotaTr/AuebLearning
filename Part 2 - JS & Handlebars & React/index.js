@@ -5,10 +5,24 @@ const MemoryInitializer = require('./models/memorydao/MemoryInitializer');
 const Login = require('./public/js/Login');
 const CartItemService = require('./public/js/CartItemService');
 
+const args = process.argv.slice(2);
+
+if (args.length === 0) {
+    console.log("No arguments were given. Using local memory DAO.")
+} else if (args.length === 3) {
+    console.log("Three arguments were given. Using mongoDB.")
+    process.env.useMongoDb = true
+    process.env.username = args[0]
+    process.env.password = args[1]
+    process.env.host = args[2]
+} else {
+    console.log("Run without args for default use or insert username,password and host for mongoDB version")
+    process.exit();
+}
 
 let initializer = new MemoryInitializer()
 initializer.prepareData()
-// console.log(initializer.getUserDao().findAll())
+
 console.log("The server is open..")
 
 app.use('/public', 
@@ -48,7 +62,7 @@ app.post('/login', function (req, res) {
             }
         })
         .catch(error => {
-            res.status(error.getStatus).send(error.message);
+            res.status(error.getStatus).send(error);
         })
 })
 
@@ -64,8 +78,6 @@ app.post('/cart', function (req, res) {
 
     const result = CartItemService.addToCart(username,sessionId,title,id,type,cost,image)
     result.then(ack => {
-        // console.log("EPESTREPSE STO INDEX")
-        // console.log(ack)
         res.status(ack).send()
     })
     .catch(err => {
@@ -75,20 +87,14 @@ app.post('/cart', function (req, res) {
 
 app.get('/cart', function (req, res) {
 
-    console.log("Pass")
-
     const username = req.query.username
     const sessionId = req.query.sessionId
-
-    console.log(username)
 
     const result = CartItemService.showCart(username,sessionId)
 
     result
     .then(result => {
         res.status(200).send(result);
-        console.log(result)
-        console.log("PASS")
     })
     .catch(error => {
         res.status(error.code).send(error.message);
