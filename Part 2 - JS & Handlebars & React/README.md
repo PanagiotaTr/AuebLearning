@@ -1,53 +1,34 @@
-# Welcome to Aueb Learning
+# Welcome to AuebLearning
 
-Welcome to **Aueb Learning**, your comprehensive platform for enhancing your programming skills and knowledge. This README file will guide you on how to run Node.js files with and without arguments, along with some user credentials for demonstration purposes.
+This is the second part of the project, which contains javascript, handlebars, react and mongoDB.
 
-## Running a Node.js File
+## How to run
 
-You can run a Node.js file in two different ways:
+You can choose to use either the local DAO version or the MongoDB implementation. :
 
-### 1. Running Without Arguments
-To execute a Node.js file without any arguments, use the following command:
+### 1. Local DAO
+To run this version:
+1. Open the command line from the root directory of the project
+2. Write the following command
 ```bash
-node filename.js
+node index.js
 ```
-**Example:**
-```bash
-node app.js
-```
-This will run the `app.js` file without any additional parameters.
+3. Finally visit localhost:8080 on your browser to interact with the site
 
-### 2. Running With Arguments
-You can pass arguments to a Node.js file by specifying them after the file name.
+### 2. Using mongoDB
+1. Open the command line from the root directory of the project
+2. Write the following command
 ```bash
-node filename.js arg1 arg2
+node index.js AuebLearning AuebLearningPass aueblearning.b5vcm.mongodb.net/
 ```
-**Example:**
-```bash
-node app.js 123 hello
-```
-In this example, `123` and `hello` are arguments passed to the `app.js` script. You can access these arguments inside your script using `process.argv`.
+3. Finally visit localhost:8080 on your browser to interact with the site
 
-```javascript
-// Example app.js
-console.log('Arguments:', process.argv.slice(2));
-```
-Running `node app.js 123 hello` will output:
-```
-Arguments: [ '123', 'hello' ]
-```
 
 ## User Credentials (Sample)
 Here are some sample user credentials for demonstration purposes:
 
-| Username | Password  | Role         |
-|----------|-----------|--------------|
-| user1    | pass123   | student      |
-| admin    | adminPass | administrator |
-| guest    | guest123  | guest        |
-
-> **Note:** These are dummy credentials. Replace them with your actual user management system.
-
-## Conclusion
-We hope this guide helps you get started with running Node.js files and understanding basic usage. Happy coding!
+| Username | Password  | 
+|----------|-----------|
+| user     | User123#  | 
+| example  | Pass1234@ | 
 
