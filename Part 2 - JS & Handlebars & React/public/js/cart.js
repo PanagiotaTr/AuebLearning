@@ -4,7 +4,7 @@ var cartTotalCost
 const urlParams = new URLSearchParams(window.location.search);
 const username = urlParams.get('username');
 const sessionId = urlParams.get('sessionId');
-
+document.title = 'Καλάθι'
 /**
  * A async function that fetches the cart of a user in order to be displayed
  * 

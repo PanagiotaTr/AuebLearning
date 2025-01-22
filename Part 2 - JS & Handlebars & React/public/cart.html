@@ -26,8 +26,6 @@
         function main() {
             fetchCartData()
                 .then(result => {
-                    console.log(result.cartTotalCost)
-                    console.log(result.cartList)
                     const container = document.getElementById("root");
                     const root = ReactDOM.createRoot(container);
                     root.render(
@@ -126,18 +124,6 @@
                         <li><a href="about-us.html">Ποιοι Είμαστε</a></li>
                         <li><a href="registration.html">Γίνε Μέλος</a></li>
                     </ul>
-                    <div className="services-icons">
-                        <div className="icon-wrapper">
-                            <a href="cart.html">
-                                <button id="view-favourites-btn"><i className="fa fa-shopping-cart"></i></button>
-                                <span className="hover-message">Καλάθι</span>
-                            </a>
-                        </div>
-                        <div className="icon-wrapper">
-                            <button id="sign-out-btn"><i className="fa fa-sign-out"></i></button>
-                            <span className="hover-message">Αποσύνδεση</span>
-                        </div>
-                    </div>
                 </nav>
             );
         }
