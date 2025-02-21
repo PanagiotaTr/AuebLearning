@@ -6,12 +6,12 @@
 
 <h2 align="center">Description<h2>
 
-<p align="center">
-This project involves the development of an e-learning website in the field of Computer Science, based on books and recorded lectures. The project includes static content in HTML/CSS, as well as an interactive application developed with HTML5 and Node.js.</p>
+<h3 align="center" font-size: 14px>
+This project involves the development of an e-learning website in the field of Computer Science, based on books and recorded lectures. The project includes static content in HTML/CSS, as well as an interactive application developed with HTML5 and Node.js.</h3>
 
-<p align="center">
+<h3 align="center">
 The goal is to create a simplified educational platform, providing users with access to learning materials in a user-friendly and functional manner.
-</p>
+</h3>
 
 <h2 align="center">Contents<h2>
 
@@ -45,6 +45,5 @@ The goal is to create a simplified educational platform, providing users with ac
 This project was developed during the academic year 2024-2025.</p>
 
 <h2 align="center">Contributors<h2>
-<p align="center">  
-<li>Panagiota Triantafyllopoulou (https://github.com/PanagiotaTr)</li>
-<li>Georgios Sorogkas (https://github.com/giwrgosor)</li></p>
+<li align="center">Panagiota Triantafyllopoulou (https://github.com/PanagiotaTr)</li>
+<li align="center">Georgios Sorogkas (https://github.com/giwrgosor)</li>
