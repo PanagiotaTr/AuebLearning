@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <strong>## Description</strong><br>
+  <h2>Description<h2><br>
   This project involves the development of an e-learning website in the field of Computer Science, based on books and recorded lectures. The project includes static content in HTML/CSS, as well as an interactive application developed with HTML5 and Node.js.<br><br>
   The goal is to create a simplified educational platform, providing users with access to learning materials in a user-friendly and functional manner.
 </p>
