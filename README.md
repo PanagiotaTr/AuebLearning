@@ -23,7 +23,7 @@ The goal is to create a simplified educational platform, providing users with ac
   <tr>
     <td>
       <ul>
-        <li>ᴇxᴇʀᴄɪsᴇ ¹ - ᴡᴇʙsɪᴛᴇ sᴛʀᴜᴄᴛᴜʀᴇ ᴀɴᴅ ᴄᴏɴᴛᴇɴᴛ</li>
+        <li>ᴇxᴇʀᴄɪsᴇ 1 - ᴡᴇʙsɪᴛᴇ sᴛʀᴜᴄᴛᴜʀᴇ ᴀɴᴅ ᴄᴏɴᴛᴇɴᴛ</li>
         <li>Exercise 2 - Content Formatting</li>
         <li>Exercise 3 - Website Layout</li>
         <li>Exercise 4 - Responsive Design</li>
