@@ -23,11 +23,11 @@ The goal is to create a simplified educational platform, providing users with ac
   <tr>
     <td>
       <ul>
-        <h4>Exercise 1 - Website Structure and Content</h4>
-        <p>Exercise 2 - Content Formatting</p>
-        <li>Exercise 3 - Website Layout</li>
-        <li>Exercise 4 - Responsive Design</li>
-        <li>Exercise 5 - HTML Forms and Validation</li>
+        <li><small>Exercise 1 - Website Structure and Content</small></li>
+        <li><small>Exercise 2 - Content Formatting</small></li>
+        <li><small>Exercise 3 - Website Layout</small></li>
+        <li><small>Exercise 4 - Responsive Design</small></li>
+        <li><small>Exercise 5 - HTML Forms and Validation</small></li>
       </ul>
     </td>
     <td>
