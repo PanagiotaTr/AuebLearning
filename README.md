@@ -15,13 +15,13 @@ The goal is to create a simplified educational platform, providing users with ac
 
 <h2 align="center">Contents<h2>
 
-| **Part 1** | **Part 2** |
+| **ᴘᴀʀᴛ 1** | **ᴘᴀʀᴛ 2** |
 |------------|------------|
-| **Exercise 1** - Website Structure and Content  | **Case 1** - Navigation through Categories and Subcategories of Learning Material |
-| **Exercise 2** - Content Formatting  | **Case 2** - Adding Learning Material to the Shopping Cart |
-| **Exercise 3** - Website Layout  | **Case 3** - Managing the Shopping Cart |
-| **Exercise 4** - Responsive Design  |  |
-| **Exercise 5** - HTML Forms and Validation  |  |
+| **ᴇxᴇʀᴄɪsᴇ 1** - Wᴇʙsɪᴛᴇ Sᴛʀᴜᴄᴛᴜʀᴇ ᴀɴᴅ Cᴏɴᴛᴇɴᴛ  | **Cᴀsᴇ 1** - Nᴀᴠɪɢᴀᴛɪᴏɴ ᴛʜʀᴏᴜɢʜ Cᴀᴛᴇɢᴏʀɪᴇs |
+| **ᴇxᴇʀᴄɪsᴇ 2** - Cᴏɴᴛᴇɴᴛ Fᴏʀᴍᴀᴛᴛɪɴɢ  | **Cᴀsᴇ 2** - Aᴅᴅɪɴɢ Lᴇᴀʀɴɪɴɢ Mᴀᴛᴇʀɪᴀʟ |
+| **ᴇxᴇʀᴄɪsᴇ 3** - Wᴇʙsɪᴛᴇ Lᴀʏᴏᴜᴛ  | **Cᴀsᴇ 3** - Mᴀɴᴀɢɪɴɢ ᴛʜᴇ Sʜᴏᴘᴘɪɴɢ Cᴀʀᴛ |
+| **ᴇxᴇʀᴄɪsᴇ 4** - Rᴇsᴘᴏɴsɪᴠᴇ Dᴇsɪɢɴ  |  |
+| **ᴇxᴇʀᴄɪsᴇ 5** - Hᴛᴍʟ Fᴏʀᴍs ᴀɴᴅ Vᴀʟɪᴅᴀᴛɪᴏɴ  |  |
 
 <h2 align="center">Project Development</h2>
 <p align="center">
