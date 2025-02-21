@@ -1,4 +1,4 @@
-<h1 style="color: red;">Project in the Course "Web Technologies and Programming"</h1>
+# Project in the Course "Web Technologies and Programming"
 
 <p align="center">
   <img src="Part%201%20-%20HTML%20&%20CSS/images/logo.png" alt="Project Logo">
