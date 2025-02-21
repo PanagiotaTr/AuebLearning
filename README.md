@@ -16,16 +16,13 @@ The goal is to create a simplified educational platform, providing users with ac
 <h2 align="center">Contents<h2>
 
 ### Part1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Part2
-- **Exercise 1** - Website Structure and Content  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - **Case 1** - Navigation through Categories/Subcategories of Learning Material 
-- **Exercise 2** - Content Formatting  
-- **Exercise 3** - Website Layout  
+- **Exercise 1** - Website Structure and Content  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - **Case 1** - Navigation through Categories/Subcategories
+- **Exercise 2** - Content Formatting  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - **Case 2** - Adding Learning Material to the Shopping Cart  
+- **Exercise 3** - Website Layout  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- **Case 3** - Managing the Shopping Cart 
 - **Exercise 4** - Responsive Design  
 - **Exercise 5** - HTML Forms and Validation  
-
-### Part 2  
-- **Case 1** - Navigation through Categories and Subcategories of Learning Material  
-- **Case 2** - Adding Learning Material to the Shopping Cart  
-- **Case 3** - Managing the Shopping Cart  
+ 
+ 
 
 
 <h2 align="center">Project Development</h2>
