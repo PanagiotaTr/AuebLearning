@@ -1,14 +1,16 @@
-# Project στο μάθημα "Τεχνολογίες και Προγραμματισμός στον Ιστό"
+# Project in the Course "Web Technologies and Programming"
 
-<img src="Part%201%20-%20HTML%20&%20CSS/images/logo.png" alt="Project Logo">
+<p align="center">
+  <img src="Part%201%20-%20HTML%20&%20CSS/images/logo.png" alt="Project Logo">
+</p>
 
-## Περιγραφή 
+## Description
 
-Η παρούσα υλοποίηση αφορά έναν δικτυακό τόπο e-learning στον τομέα της Πληροφορικής, βασισμένο σε βιβλία και βιντεοσκοπημένες διαλέξεις. Το έργο περιλαμβάνει στατικό περιεχόμενο σε HTML/CSS, καθώς και μια διαδραστική εφαρμογή αναπτυγμένη με HTML5 και Node.js.
+This project involves the development of an e-learning website in the field of Computer Science, based on books and recorded lectures. The project includes static content in HTML/CSS, as well as an interactive application developed with HTML5 and Node.js.
 
-Ο στόχος είναι η δημιουργία μιας απλουστευμένης πλατφόρμας εκπαίδευσης, παρέχοντας στους χρήστες πρόσβαση σε εκπαιδευτικό υλικό με έναν φιλικό και λειτουργικό τρόπο.
+The goal is to create a simplified educational platform, providing users with access to learning materials in a user-friendly and functional manner.
 
-## Περιεχόμενα
+## Contents
 
 <table>
   <tr>
@@ -18,24 +20,27 @@
   <tr>
     <td>
       <ul>
-        <li>Άσκηση 1 - Δομή και Περιεχόμενο Ιστότοπου</li>
-        <li>Άσκηση 2 - Μορφοποίηση Περιεχομένου</li>
-        <li>Άσκηση 3 - Διάταξη Ιστότοπου</li>
-        <li>Άσκηση 4 - Responsive Design</li>
-        <li>Άσκηση 5 - HTML Forms and Validation</li>
+        <li>Exercise 1 - Website Structure and Content</li>
+        <li>Exercise 2 - Content Formatting</li>
+        <li>Exercise 3 - Website Layout</li>
+        <li>Exercise 4 - Responsive Design</li>
+        <li>Exercise 5 - HTML Forms and Validation</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>ΠΧ1 - Πλοήγηση σε κατηγορίες και υποκατηγορίες εκπαιδευτικού υλικού</li>
-        <li>ΠΧ2 - Προσθήκη εκπαιδευτικού υλικού στο καλάθι αγορών</li>
-        <li>ΠΧ3 - Διαχείριση του καλαθιού αγορών</li>
+        <li>Case 1 - Navigation through Categories and Subcategories of Learning Material</li>
+        <li>Case 2 - Adding Learning Material to the Shopping Cart</li>
+        <li>Case 3 - Managing the Shopping Cart</li>
       </ul>
     </td>
   </tr>
 </table>
 
-## Επιμέλεια Εργασίας
+## Project Development
+This project was developed during the academic year 2024-2025.
 
-Το παρόν έργο αναπτύχθηκε κατά το ακαδημαϊκό έτος 2024-2025.
 
+## Contributors
+<li>Panagiota Triantafyllopoulou (https://github.com/PanagiotaTr)</li>
+<li>Georgios Sorogkas (https://github.com/giwrgosor)</li>
