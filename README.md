@@ -15,30 +15,17 @@ The goal is to create a simplified educational platform, providing users with ac
 
 <h2 align="center">Contents<h2>
 
-<table>
-  <tr>
-    <th>Part 1</th>
-    <th>Part 2</th>
-  </tr>
-  <tr>
-    <td>
-      <ul>
-        <li><small>Exercise 1 - Website Structure and Content</small></li>
-        <li><small>Exercise 2 - Content Formatting</small></li>
-        <li><small>Exercise 3 - Website Layout</small></li>
-        <li><small>Exercise 4 - Responsive Design</small></li>
-        <li><small>Exercise 5 - HTML Forms and Validation</small></li>
-      </ul>
-    </td>
-    <td>
-      <ul>
-        <li>Case 1 - Navigation through Categories and Subcategories of Learning Material</li>
-        <li>Case 2 - Adding Learning Material to the Shopping Cart</li>
-        <li>Case 3 - Managing the Shopping Cart</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+#### Part 1
+- **Exercise 1** - Website Structure and Content  
+- **Exercise 2** - Content Formatting  
+- **Exercise 3** - Website Layout  
+- **Exercise 4** - Responsive Design  
+- **Exercise 5** - HTML Forms and Validation  
+
+#### Part 2
+- **Case 1** - Navigation through Categories and Subcategories of Learning Material  
+- **Case 2** - Adding Learning Material to the Shopping Cart  
+- **Case 3** - Managing the Shopping Cart  
 
 <h2 align="center">Project Development</h2>
 <p align="center">
