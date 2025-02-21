@@ -15,13 +15,30 @@ The goal is to create a simplified educational platform, providing users with ac
 
 <h2 align="center">Contents<h2>
 
-| **ᴘᴀʀᴛ 1** | **ᴘᴀʀᴛ 2** |
-|------------|------------|
-| **ᴇxᴇʀᴄɪsᴇ 1** - Wᴇʙsɪᴛᴇ Sᴛʀᴜᴄᴛᴜʀᴇ ᴀɴᴅ Cᴏɴᴛᴇɴᴛ  | **Cᴀsᴇ 1** - Nᴀᴠɪɢᴀᴛɪᴏɴ ᴛʜʀᴏᴜɢʜ Cᴀᴛᴇɢᴏʀɪᴇs |
-| **ᴇxᴇʀᴄɪsᴇ 2** - Cᴏɴᴛᴇɴᴛ Fᴏʀᴍᴀᴛᴛɪɴɢ  | **Cᴀsᴇ 2** - Aᴅᴅɪɴɢ Lᴇᴀʀɴɪɴɢ Mᴀᴛᴇʀɪᴀʟ |
-| **ᴇxᴇʀᴄɪsᴇ 3** - Wᴇʙsɪᴛᴇ Lᴀʏᴏᴜᴛ  | **Cᴀsᴇ 3** - Mᴀɴᴀɢɪɴɢ ᴛʜᴇ Sʜᴏᴘᴘɪɴɢ Cᴀʀᴛ |
-| **ᴇxᴇʀᴄɪsᴇ 4** - Rᴇsᴘᴏɴsɪᴠᴇ Dᴇsɪɢɴ  |  |
-| **ᴇxᴇʀᴄɪsᴇ 5** - Hᴛᴍʟ Fᴏʀᴍs ᴀɴᴅ Vᴀʟɪᴅᴀᴛɪᴏɴ  |  |
+<table>
+  <tr>
+    <th>Part 1</th>
+    <th>Part 2</th>
+  </tr>
+  <tr>
+    <td>
+      <ul>
+        <li>ᴇxᴇʀᴄɪsᴇ ¹ - ᴡᴇʙsɪᴛᴇ sᴛʀᴜᴄᴛᴜʀᴇ ᴀɴᴅ ᴄᴏɴᴛᴇɴᴛ</li>
+        <li>Exercise 2 - Content Formatting</li>
+        <li>Exercise 3 - Website Layout</li>
+        <li>Exercise 4 - Responsive Design</li>
+        <li>Exercise 5 - HTML Forms and Validation</li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li>Case 1 - Navigation through Categories and Subcategories of Learning Material</li>
+        <li>Case 2 - Adding Learning Material to the Shopping Cart</li>
+        <li>Case 3 - Managing the Shopping Cart</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 <h2 align="center">Project Development</h2>
 <p align="center">
