@@ -40,10 +40,10 @@ The goal is to create a simplified educational platform, providing users with ac
   </tr>
 </table>
 
-<h2 align="center">Project Development<h2>
+<p align="center">Project Development</p>
 <h3 align="center">
 This project was developed during the academic year 2024-2025.</h3>
 
-<h2 align="center">Contributors<h2>
+<p align="center">Contributors</p>
 <h3><li align="center">Panagiota Triantafyllopoulou (https://github.com/PanagiotaTr)</li></h3>
 <h3><li align="center">Georgios Sorogkas (https://github.com/giwrgosor)</li></h3>
