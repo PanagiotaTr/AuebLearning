@@ -4,15 +4,16 @@
   <img src="Part%201%20-%20HTML%20&%20CSS/images/logo.png" alt="Project Logo">
 </p>
 
-<h2 align="center">Description<h2><br>
+<h2 align="center">Description<h2>
 
 <p align="center">
-This project involves the development of an e-learning website in the field of Computer Science, based on books and recorded lectures. The project includes static content in HTML/CSS, as well as an interactive application developed with HTML5 and Node.js.
-  
+This project involves the development of an e-learning website in the field of Computer Science, based on books and recorded lectures. The project includes static content in HTML/CSS, as well as an interactive application developed with HTML5 and Node.js.</p>
+
+<p align="center">
 The goal is to create a simplified educational platform, providing users with access to learning materials in a user-friendly and functional manner.
 </p>
 
-## Contents
+<h2 align="center">Contents<h2>
 
 <table>
   <tr>
@@ -39,10 +40,11 @@ The goal is to create a simplified educational platform, providing users with ac
   </tr>
 </table>
 
-## Project Development
-This project was developed during the academic year 2024-2025.
+<h2 align="center">Project Development<h2>
+<p align="center">
+This project was developed during the academic year 2024-2025.</p>
 
-
-## Contributors
+<h2 align="center">Contributors<h2>
+<p align="center">  
 <li>Panagiota Triantafyllopoulou (https://github.com/PanagiotaTr)</li>
-<li>Georgios Sorogkas (https://github.com/giwrgosor)</li>
+<li>Georgios Sorogkas (https://github.com/giwrgosor)</li></p>
