@@ -4,14 +4,14 @@
   <img src="Part%201%20-%20HTML%20&%20CSS/images/logo.png" alt="Project Logo">
 </p>
 
-<p align="center">Description</p>
+<h2 align="center">Description</h2>
 
-<h3 align="center">
-This project involves the development of an e-learning website in the field of Computer Science, based on books and recorded lectures. The project includes static content in HTML/CSS, as well as an interactive application developed with HTML5 and Node.js.</h3>
+<p align="center">
+This project involves the development of an e-learning website in the field of Computer Science, based on books and recorded lectures. The project includes static content in HTML/CSS, as well as an interactive application developed with HTML5 and Node.js.</p>
 
-<h3 align="center">
+<p align="center">
 The goal is to create a simplified educational platform, providing users with access to learning materials in a user-friendly and functional manner.
-</h3>
+</p>
 
 <h2 align="center">Contents<h2>
 
