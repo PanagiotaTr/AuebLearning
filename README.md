@@ -23,7 +23,7 @@ The goal is to create a simplified educational platform, providing users with ac
   <tr>
     <td>
       <ul>
-        <li>Exercise 1 - Website Structure and Content</li>
+        <p><li>Exercise 1 - Website Structure and Content</li></p>
         <li>Exercise 2 - Content Formatting</li>
         <li>Exercise 3 - Website Layout</li>
         <li>Exercise 4 - Responsive Design</li>
@@ -43,7 +43,7 @@ The goal is to create a simplified educational platform, providing users with ac
 <h2 align="center">Project Development</h2>
 <p align="center">
 This project was developed during the academic year 2024-2025.</p>
-
+<br>
 <h2 align="center">Contributors</h2>
 <p><li align="center">Panagiota Triantafyllopoulou (https://github.com/PanagiotaTr)</li></p>
 <p><li align="center">Georgios Sorogkas (https://github.com/giwrgosor)</li></p>
