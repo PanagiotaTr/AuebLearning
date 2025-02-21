@@ -15,7 +15,7 @@ The goal is to create a simplified educational platform, providing users with ac
 
 <h2 align="center">Contents<h2>
 
-<table style="font-size: 12px;">
+<table>
   <tr>
     <th>Part 1</th>
     <th>Part 2</th>
@@ -23,7 +23,7 @@ The goal is to create a simplified educational platform, providing users with ac
   <tr>
     <td>
       <ul>
-        <li>Exercise 1 - Website Structure and Content</li>
+        <h4><li>Exercise 1 - Website Structure and Content</li></h4>
         <li>Exercise 2 - Content Formatting</li>
         <li>Exercise 3 - Website Layout</li>
         <li>Exercise 4 - Responsive Design</li>
